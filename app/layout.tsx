@@ -6,10 +6,9 @@ import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
-import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL('https://yanchenhao.com'),
   title: {
     default: 'Yanchenhao\'s Corner',
     template: '%s | Yanchenhao\'s Corner',
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Yanchenhao\'s Corner',
     description: 'Yanchenhao\'s Corner',
-    url: baseUrl,
+    url: 'https://yanchenhao.com',
     siteName: 'Yanchenhao\'s Corner',
     locale: 'en_US',
     type: 'website',
