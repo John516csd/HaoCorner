@@ -1,5 +1,102 @@
 @import 'tailwindcss';
 
+/* 添加 Noto Sans 字体 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS 重置 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 360px;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 重置列表样式 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置链接样式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 重置按钮样式 */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* 重置输入框样式 */
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+/* 重置图片样式 */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 重置表格样式 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 文字外轮廓效果 */
+.text-outline {
+  -webkit-text-stroke: 2px black;
+  color: white;
+}
+
+.text-outline-thin {
+  -webkit-text-stroke: 1px black;
+  color: white;
+}
+
+.text-outline-thick {
+  -webkit-text-stroke: 3px black;
+  color: white;
+}
+
+/* 设置全局字体为 Noto Sans */
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;

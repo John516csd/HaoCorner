@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Johnny 文字效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        /* CSS版本 - 方法1：多重阴影 */
+        .css-version-1 {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #000;
+            text-shadow: 
+                /* 白色描边 - 8个方向 */
+                -3px -3px 0 #fff,
+                -3px 0px 0 #fff,
+                -3px 3px 0 #fff,
+                0px -3px 0 #fff,
+                0px 3px 0 #fff,
+                3px -3px 0 #fff,
+                3px 0px 0 #fff,
+                3px 3px 0 #fff,
+                /* 更多方向以实现圆润效果 */
+                -2px -2px 0 #fff,
+                -2px 2px 0 #fff,
+                2px -2px 0 #fff,
+                2px 2px 0 #fff,
+                -4px 0px 0 #fff,
+                4px 0px 0 #fff,
+                0px -4px 0 #fff,
+                0px 4px 0 #fff,
+                /* 半透明阴影 */
+                6px 6px 12px rgba(0, 0, 0, 0.3),
+                8px 8px 24px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+
+        /* CSS版本 - 方法2：使用webkit描边 */
+        .css-version-2 {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #000;
+            -webkit-text-stroke: 3px #fff;
+            text-stroke: 3px #fff;
+            filter: drop-shadow(6px 6px 12px rgba(0, 0, 0, 0.3)) 
+                    drop-shadow(8px 8px 24px rgba(0, 0, 0, 0.2));
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+
+        /* SVG版本样式 */
+        .svg-container {
+            margin: 20px 0;
+        }
+
+        .svg-text {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-weight: 900;
+            font-size: 80px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .css-version-1,
+            .css-version-2 {
+                font-size: 3rem;
+            }
+            
+            .svg-text {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .css-version-1,
+            .css-version-2 {
+                font-size: 2.5rem;
+                -webkit-text-stroke: 2px #fff;
+                text-stroke: 2px #fff;
+            }
+            
+            .css-version-1 {
+                text-shadow: 
+                    -2px -2px 0 #fff,
+                    -2px 0px 0 #fff,
+                    -2px 2px 0 #fff,
+                    0px -2px 0 #fff,
+                    0px 2px 0 #fff,
+                    2px -2px 0 #fff,
+                    2px 0px 0 #fff,
+                    2px 2px 0 #fff,
+                    -1px -1px 0 #fff,
+                    -1px 1px 0 #fff,
+                    1px -1px 0 #fff,
+                    1px 1px 0 #fff,
+                    4px 4px 8px rgba(0, 0, 0, 0.3),
+                    6px 6px 16px rgba(0, 0, 0, 0.2);
+            }
+            
+            .svg-text {
+                font-size: 40px;
+            }
+        }
+
+        .demo-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .code-display {
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ff88;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            text-align: left;
+            margin-top: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+
+        .method-label {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Hi, I'm Johnny - 文字效果演示（真正的Outline效果）</h1>
+        
+        <div class="demo-section">
+            <div class="method-label">方法一：CSS 多重阴影</div>
+            <div class="css-version-1">Hi, I'm Johnny</div>
+            <div class="code-display">text-shadow: 
+    /* 白色描边 - 8个方向 */
+    -3px -3px 0 #fff, -3px 0px 0 #fff, -3px 3px 0 #fff,
+    0px -3px 0 #fff, 0px 3px 0 #fff,
+    3px -3px 0 #fff, 3px 0px 0 #fff, 3px 3px 0 #fff,
+    /* 更多方向以实现圆润效果 */
+    -2px -2px 0 #fff, -2px 2px 0 #fff, 2px -2px 0 #fff, 2px 2px 0 #fff,
+    -4px 0px 0 #fff, 4px 0px 0 #fff, 0px -4px 0 #fff, 0px 4px 0 #fff,
+    /* 半透明阴影 */
+    6px 6px 12px rgba(0, 0, 0, 0.3), 8px 8px 24px rgba(0, 0, 0, 0.2);</div>
+        </div>
+
+        <div class="demo-section">
+            <div class="method-label">方法二：CSS Webkit描边</div>
+            <div class="css-version-2">Hi, I'm Johnny</div>
+            <div class="code-display">-webkit-text-stroke: 3px #fff;
+filter: drop-shadow(6px 6px 12px rgba(0, 0, 0, 0.3)) 
+        drop-shadow(8px 8px 24px rgba(0, 0, 0, 0.2));</div>
+        </div>
+
+        <div class="demo-section">
+            <div class="method-label">方法三：SVG 真正的Outline（不侵蚀文字）</div>
+            <div class="svg-container">
+                <svg width="800" height="120" viewBox="0 0 800 120">
+                    <defs>
+                        <!-- 定义阴影滤镜 -->
+                        <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+                            <feDropShadow dx="6" dy="6" stdDeviation="6" flood-color="rgba(0,0,0,0.3)"/>
+                            <feDropShadow dx="8" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.2)"/>
+                        </filter>
+                    </defs>
+                    
+                    <!-- 第一层：白色描边（更粗，只有描边） -->
+                    <text x="50%" y="70%" 
+                          text-anchor="middle" 
+                          class="svg-text"
+                          fill="none" 
+                          stroke="#fff" 
+                          stroke-width="12"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          filter="url(#shadow)">
+                        Hi, I'm Johnny
+                    </text>
+                    
+                    <!-- 第二层：黑色文字（覆盖在描边上） -->
+                    <text x="50%" y="70%" 
+                          text-anchor="middle" 
+                          class="svg-text"
+                          fill="#000" 
+                          stroke="none">
+                        Hi, I'm Johnny
+                    </text>
+                </svg>
+            </div>
+            <div class="code-display"><!-- 第一层：白色描边（只有描边，无填充） -->
+&lt;text fill="none" 
+      stroke="#fff" 
+      stroke-width="12"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      filter="url(#shadow)"&gt;
+    Hi, I'm Johnny
+&lt;/text&gt;
+
+<!-- 第二层：黑色文字（覆盖在描边上） -->
+&lt;text fill="#000" stroke="none"&gt;
+    Hi, I'm Johnny
+&lt;/text&gt;</div>
+        </div>
+
+        <div class="demo-section">
+            <div class="method-label">方法四：SVG 多层描边（更精细控制）</div>
+            <div class="svg-container">
+                <svg width="800" height="120" viewBox="0 0 800 120">
+                    <defs>
+                        <!-- 定义阴影滤镜 -->
+                        <filter id="shadow2" x="-30%" y="-30%" width="160%" height="160%">
+                            <feDropShadow dx="6" dy="6" stdDeviation="6" flood-color="rgba(0,0,0,0.3)"/>
+                            <feDropShadow dx="8" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.2)"/>
+                        </filter>
+                    </defs>
+                    
+                    <!-- 第一层：最粗的白色描边 -->
+                    <text x="50%" y="70%" 
+                          text-anchor="middle" 
+                          class="svg-text"
+                          fill="none" 
+                          stroke="#fff" 
+                          stroke-width="14"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          filter="url(#shadow2)">
+                        Hi, I'm Johnny
+                    </text>
+                    
+                    <!-- 第二层：中等的白色描边（增加平滑度） -->
+                    <text x="50%" y="70%" 
+                          text-anchor="middle" 
+                          class="svg-text"
+                          fill="none" 
+                          stroke="#fff" 
+                          stroke-width="10"
+                          stroke-linejoin="round"
+                          stroke-linecap="round">
+                        Hi, I'm Johnny
+                    </text>
+                    
+                    <!-- 第三层：细的白色描边（进一步平滑） -->
+                    <text x="50%" y="70%" 
+                          text-anchor="middle" 
+                          class="svg-text"
+                          fill="none" 
+                          stroke="#fff" 
+                          stroke-width="6"
+                          stroke-linejoin="round"
+                          stroke-linecap="round">
+                        Hi, I'm Johnny
+                    </text>
+                    
+                    <!-- 第四层：黑色文字本体 -->
+                    <text x="50%" y="70%" 
+                          text-anchor="middle" 
+                          class="svg-text"
+                          fill="#000" 
+                          stroke="none">
+                        Hi, I'm Johnny
+                    </text>
+                </svg>
+            </div>
+            <div class="code-display"><!-- 多层描边，从粗到细，最后覆盖文字本体 -->
+&lt;text fill="none" stroke="#fff" stroke-width="14"&gt;...&lt;/text&gt;
+&lt;text fill="none" stroke="#fff" stroke-width="10"&gt;...&lt;/text&gt;
+&lt;text fill="none" stroke="#fff" stroke-width="6"&gt;...&lt;/text&gt;
+&lt;text fill="#000" stroke="none"&gt;Hi, I'm Johnny&lt;/text&gt;</div>
+        </div>
+    </div>
+
+    <script>
+        // 添加一些交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const textElements = document.querySelectorAll('.css-version-1, .css-version-2, .svg-container');
+            
+            textElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
