@@ -4,6 +4,7 @@ export default function Page() {
   return (
     <div>
       <HeroBanner />
+      <div className="w-full h-screen bg-black"></div>
     </div>
   )
 }

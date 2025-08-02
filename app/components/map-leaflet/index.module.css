@@ -1,0 +1,50 @@
+/* 自定义标记图标样式 */
+.custom-marker-icon {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
+}
+
+.custom-marker-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* 自定义弹窗样式 */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+    margin: 12px 16px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.leaflet-popup-tip {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 地图容器样式 */
+.leaflet-container {
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* 自定义标记动画 */
+@keyframes markerPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pulse-marker {
+    animation: markerPulse 2s infinite;
+}
