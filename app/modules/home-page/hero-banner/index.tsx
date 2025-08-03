@@ -41,7 +41,7 @@ const HeroBanner = () => {
                 padding: '32px 16px 24px',
                 borderRadius: '4px',
                 boxShadow: '0 0 40px 10px rgba(0, 0, 0, 0.1)',
-            }} data-speed="0.5">
+            }}>
                 <picture className="w-full h-full">
                     <source srcSet="/images/me.jpg" type="image/jpg" />
                     <img src="/images/me.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
@@ -53,7 +53,7 @@ const HeroBanner = () => {
                     </picture>
                 </div>
             </div>
-            <div className="flex flex-col items-start justify-start gap-[24px]" data-speed="0.5">
+            <div className="flex flex-col items-start justify-start gap-[24px]">
                 <picture className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] ml-[24px] lg:ml-[40px]">
                     <source srcSet="/images/halo.webp" type="image/webp" />
                     <img src="/images/halo.png" alt="Hero Banner" className="w-full h-full object-cover" />
