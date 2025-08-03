@@ -27,16 +27,16 @@ export default function SvgText({
             height={estimatedHeight}
             viewBox={`0 0 ${estimatedWidth} ${estimatedHeight}`}
             preserveAspectRatio="xMidYMid meet"
-            style={{ 
-                maxWidth: '100vw', 
+            style={{
+                maxWidth: '100vw',
                 overflow: 'visible',
                 minWidth: `${Math.min(estimatedWidth, 800)}px`
             }}
         >
             <defs>
-                <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-                    <feDropShadow dx="6" dy="6" stdDeviation="6" flood-color="rgba(0,0,0,0.3)" />
-                    <feDropShadow dx="8" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.2)" />
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="6" dy="6" stdDeviation="6" floodColor="rgba(0,0,0,0.1)" />
+                    <feDropShadow dx="8" dy="8" stdDeviation="12" floodColor="rgba(0,0,0,0.1)" />
                 </filter>
             </defs>
 

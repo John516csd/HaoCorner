@@ -1,15 +1,13 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* 添加 Noto Sans 字体 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* CSS 重置 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -21,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -94,7 +92,7 @@ table {
 
 /* 设置全局字体为 Noto Sans */
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 ::selection {
@@ -150,7 +148,7 @@ html {
 
 .prose .anchor:after {
   @apply text-neutral-300 dark:text-neutral-700;
-  content: '#';
+  content: "#";
 }
 
 .prose *:hover > .anchor {
@@ -228,8 +226,8 @@ pre {
 }
 
 /* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

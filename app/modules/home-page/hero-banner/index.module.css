@@ -1,0 +1,10 @@
+.snow_mountain {
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 70%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}

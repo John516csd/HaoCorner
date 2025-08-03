@@ -29,6 +29,9 @@ importers:
       geist:
         specifier: 1.2.2
         version: 1.2.2(next@15.3.0-canary.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+      gsap:
+        specifier: ^3.13.0
+        version: 3.13.0
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
@@ -540,6 +543,9 @@ packages:
     resolution: {integrity: sha512-uRDrxhvdnPwWJmh+K5+/5LXSKwvJzaYCl9tDXgiBi4hj7hB4K7+n/WLcvJMFs5btvyn0r9OSwCd1s6CmqAsxEw==}
     peerDependencies:
       next: '>=13.2.0 <15'
+
+  gsap@3.13.0:
+    resolution: {integrity: sha512-QL7MJ2WMjm1PHWsoFrAQH/J8wUeqZvMtHO58qdekHpCfhvhSL4gSiz6vJf5EeMP0LOn3ZCprL2ki/gjED8ghVw==}
 
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
@@ -1384,6 +1390,8 @@ snapshots:
   geist@1.2.2(next@15.3.0-canary.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)):
     dependencies:
       next: 15.3.0-canary.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+
+  gsap@3.13.0: {}
 
   hasown@2.0.2:
     dependencies:
