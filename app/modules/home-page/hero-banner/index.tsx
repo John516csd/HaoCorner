@@ -37,8 +37,8 @@ const HeroBanner = () => {
 
     return <section className="relative h-screen w-full flex flex-col items-center justify-center bg-[#00b4ff] overflow-hidden">
         <div className="relative flex flex-col md:flex-row items-center md:items-end justify-center md:justify-end gap-[24px] z-10 px-[24px] md:px-[40px]">
-            <div className="relative flex flex-col items-center justify-center max-w-full sm:max-w-[500px] overflow-hidden gap-4 bg-white" style={{
-                padding: '32px 16px 24px',
+            <div className="relative flex flex-col items-center justify-center max-w-full sm:max-w-[400px] overflow-hidden gap-4 bg-white" style={{
+                padding: '16px 16px 24px',
                 borderRadius: '4px',
                 boxShadow: '0 0 40px 10px rgba(0, 0, 0, 0.1)',
             }}>
@@ -46,12 +46,17 @@ const HeroBanner = () => {
                     <source srcSet="/images/me.jpg" type="image/jpg" />
                     <img src="/images/me.jpg" alt="Hero Banner" className="w-full h-full object-cover" />
                 </picture>
-                <div className="w-full flex flex-row items-center justify-start">
+                <div className="w-full text-left text-lg text-black" style={{
+                    fontFamily: 'Permanent Marker',
+                }}>
+                    Kangding, Sichuan, China
+                </div>
+                {/* <div className="w-full flex flex-row items-center justify-start">
                     <picture className="w-[24px] h-[24px] md:w-[32px] md:h-[32px]">
                         <source srcSet="/images/camera.webp" type="image/webp" />
                         <img src="/images/camera.png" alt="Hero Banner" className="w-full h-full object-cover" />
                     </picture>
-                </div>
+                </div> */}
             </div>
             <div className="flex flex-col items-start justify-start gap-[24px]">
                 <picture className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] ml-[24px] lg:ml-[40px]">
