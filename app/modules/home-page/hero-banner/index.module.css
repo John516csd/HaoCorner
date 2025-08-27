@@ -1,3 +1,104 @@
+/* 基础样式 - 桌面端优先 */
+.hero_banner {
+    perspective: 1000px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main_container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    gap: 24px;
+    z-index: 10;
+    padding: 0 40px;
+}
+
+.card_container {
+    width: 100%;
+    position: relative;
+    max-width: 400px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card_inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    /* transform: rotateY(180deg); */
+}
+
+.card_container:hover .card_inner {
+    transform: rotateY(180deg);
+}
+
+.front_layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 16px 16px 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    backface-visibility: hidden;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image_container {
+    width: 100%;
+    aspect-ratio: 681 / 909;
+}
+
+.picture_full {
+    width: 100%;
+    height: 100%;
+}
+
+.image_full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location_text {
+    width: 100%;
+    text-align: left;
+    font-size: 1.125rem;
+    color: black;
+    font-family: "Permanent Marker";
+}
+
+.right_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.halo_picture {
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+}
+
 .snow_mountain {
     position: absolute;
     bottom: -30%;
@@ -7,4 +108,120 @@
     overflow: hidden;
     z-index: 1;
     pointer-events: none;
+}
+
+.back_layer {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f0c10;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top_bar,
+.instax_container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top_bar {
+    padding: 4px 0;
+    background: #5a5a5a;
+    border-top: 8px solid #fff;
+}
+
+.top_bar_text_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.top_bar_text {
+    flex-shrink: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: white;
+    font-family: "Inter";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.dont_put_in_mouth_img_container {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dont_put_in_mouth_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.instax_container {
+    padding: 16px 0;
+    background: #5a5a5a;
+    margin-top: auto;
+    border-bottom: 8px solid #fff;
+}
+
+.instax_img_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+}
+
+.instax_img_container {
+    flex-shrink: 0;
+    width: 60px;
+    aspect-ratio: 82 / 42;
+}
+
+.instax_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+/* 大屏幕断点 - lg: 最大宽度 1023px */
+@media (max-width: 1023px) {
+    .halo_picture {
+        margin-left: 24px;
+    }
+}
+
+/* 中等屏幕断点 - md: 最大宽度 767px */
+@media (max-width: 767px) {
+    .main_container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .halo_picture {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* 小屏幕断点 - sm: 最大宽度 639px */
+@media (max-width: 639px) {
+    .card_container {
+        max-width: 360px;
+    }
 }
