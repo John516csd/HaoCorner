@@ -96,8 +96,8 @@ body {
 }
 
 ::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+  background-color: #fef08a;
+  color: #1f2937;
 }
 
 :root {
@@ -242,4 +242,15 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20%, 40% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
+}
+
+.animate-wave {
+  animation: wave 2.5s infinite;
 }
