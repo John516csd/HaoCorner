@@ -9,7 +9,6 @@ interface VinylCardProps {
   title: string;
   artist: string;
   rotation?: number;
-  tapeColor?: 'red' | 'blue' | 'yellow' | 'green' | 'pink' | 'white';
   className?: string;
   delay?: number;
   shouldReset?: boolean;
@@ -20,7 +19,6 @@ export function VinylCard({
   title, 
   artist, 
   rotation = 0, 
-  tapeColor = 'white',
   className,
   delay = 0,
   shouldReset = false
@@ -41,60 +39,61 @@ export function VinylCard({
       animate={dragControls}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay, type: 'spring', stiffness: 200, damping: 20 }}
-      whileHover="hover"
+      whileHover={{ scale: 1.05 }}
       drag
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}
-      whileDrag={{ scale: 1.05, zIndex: 50 }}
-      className={cn("relative flex flex-col items-center group w-48 md:w-56 cursor-grab active:cursor-grabbing", className)}
+      whileDrag={{ scale: 1.1, zIndex: 50 }}
+      className={cn("relative flex flex-col items-center justify-center group w-64 md:w-72 cursor-grab active:cursor-grabbing pb-12", className)}
     >
-      {/* Tape to stick the cover */}
-      <Tape 
-        color={tapeColor} 
-        rotation={-rotation + 2} 
-        isDragging={isDragging}
-        className="absolute -top-4 z-30 pointer-events-none" 
-      />
 
-      <div className="relative w-full aspect-square mb-4">
-        {/* The Vinyl Record */}
+      <div className="relative w-full aspect-square mb-4 flex items-center justify-center">
+        {/* The Vinyl Record Body (Pure Record Style) */}
         <motion.div 
-          variants={{
-            hover: { x: 30, rotate: 90 }
+          animate={{ rotate: 360 }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          className="relative w-full h-full bg-[#121212] rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] flex items-center justify-center border-4 border-[#222]"
+          style={{
+            background: 'radial-gradient(circle, #2a2a2a 0%, #111 40%, #0a0a0a 100%)'
           }}
-          transition={{ type: 'spring', stiffness: 100, damping: 15 }}
-          className="absolute inset-0 bg-[#121212] rounded-full shadow-[2px_2px_10px_rgba(0,0,0,0.3)] z-0 flex items-center justify-center border border-[#222]"
         >
-          {/* Vinyl Grooves */}
-          <div className="w-[90%] h-[90%] rounded-full border border-white/5 flex items-center justify-center">
-            <div className="w-[80%] h-[80%] rounded-full border border-white/10 flex items-center justify-center">
-              <div className="w-[70%] h-[70%] rounded-full border border-white/5 flex items-center justify-center">
-                {/* Vinyl Label */}
-                <div className="w-[40%] h-[40%] rounded-full bg-red-400 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
-              </div>
-            </div>
+          {/* Detailed Vinyl Grooves */}
+          <div className="absolute inset-2 rounded-full border border-white/5 pointer-events-none"></div>
+          <div className="absolute inset-4 rounded-full border border-black/50 pointer-events-none"></div>
+          <div className="absolute inset-6 rounded-full border border-white/5 pointer-events-none"></div>
+          <div className="absolute inset-8 rounded-full border border-black/50 pointer-events-none"></div>
+          <div className="absolute inset-10 rounded-full border border-white/5 pointer-events-none"></div>
+          <div className="absolute inset-14 rounded-full border border-black/30 pointer-events-none"></div>
+          
+          {/* Light reflection gradient overlay */}
+          <div 
+            className="absolute inset-0 rounded-full opacity-30 pointer-events-none"
+            style={{
+              background: 'conic-gradient(from 45deg, transparent 0deg, rgba(255,255,255,0.2) 45deg, transparent 90deg, transparent 180deg, rgba(255,255,255,0.2) 225deg, transparent 270deg)'
+            }}
+          ></div>
+
+          {/* Center Label (Album Cover as Circle) */}
+          <div className="relative w-[45%] h-[45%] rounded-full overflow-hidden border-2 border-[#111] shadow-[inset_0_2px_10px_rgba(0,0,0,0.5)] z-10 bg-gray-200">
+            <img 
+              src={coverSrc} 
+              alt={`${title} by ${artist}`}
+              className="w-full h-full object-cover"
+            />
+            
+            {/* The spindle hole */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#faf9f6] rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),0_1px_2px_rgba(255,255,255,0.2)] border border-gray-400"></div>
           </div>
         </motion.div>
-
-        {/* The Album Cover */}
-        <div className="absolute inset-0 z-10 bg-white p-1 pb-2 shadow-[2px_4px_12px_rgba(0,0,0,0.15)] rounded-sm">
-          <img 
-            src={coverSrc} 
-            alt={`${title} by ${artist}`}
-            className="w-full h-full object-cover"
-          />
-        </div>
       </div>
 
       {/* Hand-written text underneath */}
-      <div className="text-center z-20">
-        <h3 className="font-['Kalam'] font-bold text-xl text-gray-800 leading-tight">
+      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-max text-center z-20 bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-[2px_4px_10px_rgba(0,0,0,0.1)] border border-gray-200/50 min-w-[200px]">
+        <h3 className="font-['Kalam'] font-bold text-xl md:text-2xl text-gray-800 leading-tight">
           {title}
         </h3>
-        <p className="font-['Caveat'] text-lg text-gray-600">
+        <p className="font-['Caveat'] text-lg md:text-xl text-gray-600">
           {artist}
         </p>
       </div>

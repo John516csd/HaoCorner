@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion } from "motion/react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import {
   Laptop,
   Palette,
@@ -24,6 +24,76 @@ import { NavBar } from "./components/figma-ui/NavBar";
 export default function Page() {
   const [resetKey, setResetKey] = useState(0);
 
+  const [activeSongIndex, setActiveSongIndex] = useState(0);
+  const [currentDate, setCurrentDate] = useState("");
+
+  useEffect(() => {
+    const updateDate = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = { 
+        month: 'short', 
+        day: 'numeric', 
+        year: 'numeric',
+        weekday: 'short'
+      };
+      // "Sun, Mar 28, 2026"
+      const dateString = now.toLocaleDateString('en-US', options);
+      const parts = dateString.split(', ');
+      if (parts.length === 3) {
+         const weekday = parts[0];
+         const monthDay = parts[1];
+         const year = parts[2];
+         setCurrentDate(`${monthDay}, ${year}   ${weekday}`);
+      } else {
+         setCurrentDate(dateString);
+      }
+    };
+    updateDate();
+    const intervalId = setInterval(updateDate, 60000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const [weatherInfo, setWeatherInfo] = useState<{ icon: string, temp: string } | null>(null);
+
+  useEffect(() => {
+    // Attempt to get user location and weather
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          try {
+            const { latitude, longitude } = position.coords;
+            // Using Open-Meteo API for free, no-key-required weather data
+            const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
+            const data = await res.json();
+            
+            if (data && data.current_weather) {
+              const code = data.current_weather.weathercode;
+              const temp = Math.round(data.current_weather.temperature);
+              
+              // WMO Weather interpretation codes
+              let icon = "☀️"; // default clear
+              if (code === 0) icon = "☀️"; // Clear sky
+              else if (code === 1 || code === 2 || code === 3) icon = "🌤️"; // Mainly clear, partly cloudy, and overcast
+              else if (code >= 45 && code <= 48) icon = "🌫️"; // Fog
+              else if (code >= 51 && code <= 67) icon = "🌧️"; // Drizzle / Rain
+              else if (code >= 71 && code <= 77) icon = "❄️"; // Snow
+              else if (code >= 80 && code <= 82) icon = "🌧️"; // Rain showers
+              else if (code >= 85 && code <= 86) icon = "❄️"; // Snow showers
+              else if (code >= 95) icon = "⛈️"; // Thunderstorm
+              
+              setWeatherInfo({ icon, temp: `${temp}°C` });
+            }
+          } catch (error) {
+            console.error("Failed to fetch weather data:", error);
+          }
+        },
+        (error) => {
+          console.error("Geolocation error:", error);
+        }
+      );
+    }
+  }, []);
+
   const handleResetLayout = () => {
     // Incrementing key forces re-render or triggers useEffect in children to reset position
     setResetKey((prev) => prev + 1);
@@ -36,26 +106,110 @@ export default function Page() {
   const codePhotoUrl =
     "https://images.unsplash.com/photo-1633185072510-7fa0f164d24b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNib29rJTIwY29kZXxlbnwxfHx8fDE3NzQ3MDAwMDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 
-  const album1Url =
-    "https://images.unsplash.com/photo-1679563837531-116c2fbe25b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRybyUyMGNpdHklMjBzdW5zZXR8ZW58MXx8fHwxNzc0NzAwNzM0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
-  const album2Url =
-    "https://images.unsplash.com/photo-1595981234969-8259b94fde88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFlc3RoZXRpYyUyMGFsYnVtJTIwY292ZXJ8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
-  const album3Url =
-    "https://images.unsplash.com/photo-1767462372382-b9fc964774d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMHJvY2slMjBiYW5kJTIwcGhvdG9ncmFwaHl8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+  const favoriteSongs = [
+    {
+      title: "Midnight City",
+      artist: "Sunset Groove",
+      duration: "3:45",
+      coverUrl: "https://images.unsplash.com/photo-1679563837531-116c2fbe25b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRybyUyMGNpdHklMjBzdW5zZXR8ZW58MXx8fHwxNzc0NzAwNzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      lyrics: "Waiting in a car, waiting for a ride in the dark...",
+      tapeColor: "yellow" as const,
+    },
+    {
+      title: "Plastic Love",
+      artist: "Mariya Takeuchi",
+      duration: "4:12",
+      coverUrl: "https://images.unsplash.com/photo-1595981234969-8259b94fde88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFlc3RoZXRpYyUyMGFsYnVtJTIwY292ZXJ8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      lyrics: "I'm just playing games, I know that's plastic love...",
+      tapeColor: "pink" as const,
+    },
+    {
+      title: "Indie Rock",
+      artist: "The Wanderers",
+      duration: "3:50",
+      coverUrl: "https://images.unsplash.com/photo-1767462372382-b9fc964774d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMHJvY2slMjBiYW5kJTIwcGhvdG9ncmFwaHl8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      lyrics: "We are young and we are free, dancing in the summer breeze...",
+      tapeColor: "blue" as const,
+    },
+    {
+      title: "Lo-Fi Rain",
+      artist: "Chill Beats",
+      duration: "2:30",
+      coverUrl: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2ZpJTIwcmFpbnxlbnwxfHx8fDE3NzQ3MTAyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      lyrics: "Just the sound of the rain against the window pane...",
+      tapeColor: "green" as const,
+    },
+    {
+      title: "Neon Nights",
+      artist: "Synthwave Rider",
+      duration: "4:05",
+      coverUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NzQ3MTAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      lyrics: "Driving through the neon glow, leaving everything I know...",
+      tapeColor: "white" as const,
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-[#faf9f6] relative overflow-x-hidden font-sans text-gray-800">
-      {/* Notebook Paper Background Grid */}
+      {/* Notebook Paper Background Grid with subtle dotted lines */}
       <div
-        className="fixed inset-0 pointer-events-none opacity-20 z-0"
+        className="fixed inset-0 pointer-events-none z-0"
         style={{
-          backgroundImage:
-            "radial-gradient(#9ca3af 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
+          backgroundColor: '#f8f7f2', // Base paper color slightly warmer
+          backgroundImage: `
+            linear-gradient(90deg, transparent 95%, rgba(0, 0, 0, 0.08) 95%),
+            linear-gradient(0deg, transparent 95%, rgba(0, 0, 0, 0.08) 95%)
+          `,
+          backgroundSize: '24px 24px, 24px 24px',
+          backgroundPosition: '0 0, 0 0'
         }}
       />
-      {/* Notebook red margin line */}
-      <div className="fixed top-0 bottom-0 left-8 md:left-20 w-[2px] bg-red-400/30 z-0" />
+      {/* Secondary overlay to create the dashed/dotted line effect on the grid */}
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(90deg, #f8f7f2 50%, transparent 50%),
+            linear-gradient(0deg, #f8f7f2 50%, transparent 50%)
+          `,
+          backgroundSize: '4px 4px, 4px 4px',
+          backgroundPosition: '0 0, 0 0',
+          opacity: 0.9
+        }}
+      />
+      {/* Notebook ring binder holes */}
+      <div className="fixed top-0 bottom-0 left-0 w-8 z-0 flex flex-col justify-evenly py-20 pointer-events-none">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div key={i} className="w-5 h-5 rounded-full bg-[#111] shadow-inner -ml-2 border-2 border-gray-300 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.8)]" />
+        ))}
+      </div>
+      {/* Vertical texts on the left margin */}
+      <div className="fixed top-1/2 -left-14 transform -translate-y-1/2 -rotate-90 pointer-events-none z-0 flex items-center gap-12 font-['Noto_Sans'] text-gray-400 text-xs tracking-widest font-semibold uppercase opacity-60">
+        <span>[SNL] Paper</span>
+        <span className="text-gray-500 font-bold">Crena</span>
+        <span>The Paper MS-69</span>
+      </div>
+
+      {/* Handwritten Date and Weather - Vertical on the left */}
+      <div className="fixed top-1/2 left-8 md:left-12 transform -translate-y-1/2 z-10 flex flex-col items-center gap-8 pointer-events-none mix-blend-multiply opacity-70">
+        <div 
+          className="font-['Kalam'] text-xl md:text-2xl font-bold text-gray-800 tracking-wider whitespace-nowrap" 
+          style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}
+        >
+          {currentDate}
+        </div>
+        {weatherInfo && (
+          <div className="flex flex-col items-center gap-3 font-['Kalam'] text-xl md:text-2xl font-bold text-gray-700">
+            <span className="text-2xl md:text-3xl filter grayscale contrast-200 transform -rotate-90">{weatherInfo.icon}</span>
+            <span style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}>
+              {weatherInfo.temp}
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Notebook red margin line - replaced with a subtle indent line to match the grid */}
+      <div className="fixed top-0 bottom-0 left-12 md:left-16 w-[1px] bg-gray-300/50 z-0" />
 
       <NavBar />
 
@@ -146,14 +300,20 @@ export default function Page() {
                 className="w-72 sm:w-80"
                 shouldReset={resetKey > 0}
               />
-              <Sticker
-                className="absolute -bottom-6 -right-8 w-16 h-16 bg-[#ffecb3] border-[#ffecb3]"
-                rotation={12}
-                delay={0.4}
-                shouldReset={resetKey > 0}
+              
+              {/* Paperclip overlaying the corner */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.8, type: "spring", stiffness: 200, damping: 20 }}
+                className="absolute -top-6 -right-2 text-[#9ca3af] z-20 cursor-grab active:cursor-grabbing hover:text-[#6b7280] transition-colors"
+                drag
+                dragMomentum={false}
               >
-                <MapPin className="text-[#e65100]" size={28} />
-              </Sticker>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform rotate-[30deg] drop-shadow-[2px_4px_4px_rgba(0,0,0,0.2)]">
+                  <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                </svg>
+              </motion.div>
             </div>
 
             <PostIt
@@ -432,84 +592,113 @@ export default function Page() {
         </div>
 
         {/* New Scrapbook Collage Layout */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 mt-10 mb-36 relative w-full max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32 mt-10 mb-36 relative w-full max-w-6xl mx-auto">
           {/* Left: Featured Album */}
-          <div className="relative flex-shrink-0 z-20">
-            <VinylCard
-              coverSrc={album1Url}
-              title="City Pop Vibes"
-              artist="Sunset Groove"
-              rotation={-4}
-              tapeColor="yellow"
-              className="w-64 md:w-80"
-              delay={0.2}
-            />
+          <div className="relative flex-shrink-0 z-20 w-72 md:w-80 h-[380px] flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeSongIndex}
+                initial={{ opacity: 0, scale: 0.8, rotate: -30 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                exit={{ opacity: 0, scale: 0.8, rotate: 30 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className="absolute flex items-center justify-center w-full h-full"
+              >
+                <VinylCard
+                  coverSrc={favoriteSongs[activeSongIndex].coverUrl}
+                  title={favoriteSongs[activeSongIndex].title}
+                  artist={favoriteSongs[activeSongIndex].artist}
+                  rotation={0}
+                  className="w-64 md:w-72"
+                  delay={0.2}
+                  shouldReset={resetKey > 0}
+                />
+              </motion.div>
+            </AnimatePresence>
+
             {/* Doodle arrow pointing to the feature */}
             <Doodle
               path="M 80,10 Q 50,40 20,20 L 30,15 M 20,20 L 25,30"
               className="absolute -right-16 -top-8 w-24 h-24 text-pink-400 opacity-80"
               delay={1.2}
             />
-            <div className="absolute -right-20 -top-12 font-['Caveat'] text-2xl text-pink-500 rotate-12 hidden md:block z-30 bg-white/80 px-2 rounded-md shadow-sm border border-pink-100">
-              Absolute<br />Favorite!
-            </div>
+
+            {/* Lyrics Sticker */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`lyrics-${activeSongIndex}`}
+                initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+                animate={{ opacity: 1, scale: 1, rotate: -8 }}
+                exit={{ opacity: 0, scale: 0.8, rotate: 0 }}
+                transition={{ delay: 0.2, type: "spring", stiffness: 200, damping: 20 }}
+                className="absolute -bottom-8 -left-20 md:-bottom-4 md:-left-32 z-40"
+              >
+                <PostIt
+                  color="yellow"
+                  rotation={0}
+                  className="w-48 md:w-56 p-5 text-center font-['Caveat'] text-xl md:text-2xl shadow-[2px_4px_12px_rgba(0,0,0,0.15)] text-gray-800"
+                  shouldReset={resetKey > 0}
+                  tape={false}
+                >
+                  <Tape color="pink" rotation={5} className="-top-3 left-1/2 -translate-x-1/2 w-16" />
+                  "{favoriteSongs[activeSongIndex].lyrics}"
+                </PostIt>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Right: Playlist + Scattered Records */}
-          <div className="relative w-full max-w-md mt-16 md:mt-0 flex-shrink-0 z-10">
+          {/* Right: Playlist */}
+          <div className="relative w-full max-w-md mt-16 md:mt-0 flex-shrink-0 z-10 pt-4">
             <PostIt
               color="blue"
               rotation={3}
               className="w-full p-6 md:p-8 z-10 relative shadow-[2px_8px_20px_rgba(0,0,0,0.15)]"
               tape={false}
+              shouldReset={resetKey > 0}
             >
               <Tape color="pink" rotation={-2} className="-top-3 left-1/2 -translate-x-1/2 w-20" />
 
-              <h3 className="font-['Kalam'] text-2xl md:text-3xl font-bold mb-4 text-gray-800 flex items-center gap-2">
+              <h3 className="font-['Kalam'] text-2xl md:text-3xl font-bold mb-6 text-gray-800 flex items-center gap-2">
                 <Heart size={24} className="text-red-400 fill-red-400" />
                 Vibe Check
               </h3>
 
-              <ul className="font-['Caveat'] text-xl md:text-2xl space-y-3 text-gray-700">
-                <li className="flex justify-between border-b-2 border-dashed border-blue-200/50 pb-1">
-                  <span>1. Midnight City</span>
-                  <span className="text-gray-400">3:45</span>
-                </li>
-                <li className="flex justify-between border-b-2 border-dashed border-blue-200/50 pb-1">
-                  <span>2. Plastic Love</span>
-                  <span className="text-gray-400">4:12</span>
-                </li>
-                <li className="flex justify-between border-b-2 border-dashed border-blue-200/50 pb-1">
-                  <span>3. Sunset Groove</span>
-                  <span className="text-gray-400">3:50</span>
-                </li>
-                <li className="flex justify-between border-b-2 border-dashed border-blue-200/50 pb-1">
-                  <span>4. Lo-Fi Rain</span>
-                  <span className="text-gray-400">2:30</span>
-                </li>
+              <ul className="font-['Caveat'] text-2xl md:text-3xl space-y-4 text-gray-700">
+                {favoriteSongs.map((song, idx) => (
+                  <li
+                    key={idx}
+                    onClick={() => setActiveSongIndex(idx)}
+                    className="flex justify-between items-center border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
+                  >
+                    <span className="relative inline-block">
+                      {idx + 1}. {song.title}
+                      {activeSongIndex === idx && (
+                        <motion.svg
+                          layoutId="song-underline"
+                          className="absolute -bottom-1 left-0 w-full h-3 text-yellow-400 z-0 overflow-visible"
+                          viewBox="0 0 100 20"
+                          preserveAspectRatio="none"
+                        >
+                          <motion.path
+                            d="M 5,15 Q 50,25 95,15"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="6"
+                            strokeLinecap="round"
+                            initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }}
+                            transition={{ duration: 0.3, ease: "easeOut" }}
+                          />
+                        </motion.svg>
+                      )}
+                    </span>
+                    <span className="text-gray-400 group-hover:text-gray-600 transition-colors text-xl md:text-2xl">
+                      {song.duration}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </PostIt>
-
-            {/* Overlapping smaller albums */}
-            <VinylCard
-              coverSrc={album2Url}
-              title="Abstract Lo-Fi"
-              artist="Chill Beats"
-              rotation={-12}
-              tapeColor="green"
-              className="absolute -bottom-32 -left-12 md:-bottom-36 md:-left-28 w-40 md:w-44 z-20"
-              delay={0.6}
-            />
-
-            <VinylCard
-              coverSrc={album3Url}
-              title="Indie Rock"
-              artist="The Wanderers"
-              rotation={8}
-              tapeColor="white"
-              className="absolute -bottom-24 -right-10 md:-bottom-28 md:-right-24 w-44 md:w-48 z-30"
-              delay={0.8}
-            />
           </div>
         </div>
 
