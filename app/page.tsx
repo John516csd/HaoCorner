@@ -21,6 +21,8 @@ import { Tape } from "./components/figma-ui/Tape";
 import { Doodle } from "./components/figma-ui/Doodle";
 import { VinylCard } from "./components/figma-ui/VinylCard";
 import { NavBar } from "./components/figma-ui/NavBar";
+import { NotebookPaper } from "./components/figma-ui/NotebookPaper";
+import { VoiceMemo } from "./components/figma-ui/VoiceMemo";
 
 export default function Page() {
   const [resetKey, setResetKey] = useState(0);
@@ -623,21 +625,36 @@ export default function Page() {
                     shouldReset={resetKey > 0}
                   />
                 </div>
-                {/* PostIt below, slightly offset */}
+                {/* Content below, slightly offset */}
                 <div className="pl-4">
-                  <PostIt
-                    color={item.postItColor}
-                    rotation={item.postItRotation}
-                    className="w-full max-w-xs p-5 shadow-md"
-                    shouldReset={resetKey > 0}
-                  >
-                    <h3 className="font-['Kalam'] font-bold text-xl mb-2 text-gray-800">
-                      {item.title}
-                    </h3>
-                    <p className="font-['Caveat'] text-lg leading-relaxed text-gray-700">
-                      {item.description}
-                    </p>
-                  </PostIt>
+                  {index % 2 === 1 ? (
+                    <NotebookPaper
+                      headerText={item.title}
+                      rotation={item.postItRotation}
+                      className="w-full max-w-xs h-auto min-h-[160px]"
+                      shouldReset={resetKey > 0}
+                      tape={true}
+                    >
+                      <p className="text-lg text-gray-700">
+                        {item.description}
+                      </p>
+                    </NotebookPaper>
+                  ) : (
+                    <PostIt
+                      color={item.postItColor}
+                      rotation={item.postItRotation}
+                      className="w-full max-w-xs p-5 shadow-md"
+                      shouldReset={resetKey > 0}
+                      tape={true}
+                    >
+                      <h3 className="font-['Kalam'] font-bold text-xl mb-2 text-gray-800">
+                        {item.title}
+                      </h3>
+                      <p className="font-['Caveat'] text-lg leading-relaxed text-gray-700">
+                        {item.description}
+                      </p>
+                    </PostIt>
+                  )}
                 </div>
               </div>
 
@@ -679,19 +696,34 @@ export default function Page() {
                     />
                   </motion.div>
 
-                  <PostIt
-                    color={item.postItColor}
-                    rotation={item.postItRotation}
-                    className="min-w-[200px] max-w-[260px] p-6 shadow-md mt-6"
-                    shouldReset={resetKey > 0}
-                  >
-                    <h3 className="font-['Kalam'] font-bold text-2xl mb-3 text-gray-800">
-                      {item.title}
-                    </h3>
-                    <p className="font-['Caveat'] text-[1.15rem] leading-relaxed text-gray-700">
-                      {item.description}
-                    </p>
-                  </PostIt>
+                  {index % 2 === 1 ? (
+                    <NotebookPaper
+                      headerText={item.title}
+                      rotation={item.postItRotation}
+                      className="min-w-[200px] max-w-[260px] min-h-[180px] mt-6"
+                      shouldReset={resetKey > 0}
+                      tape={true}
+                    >
+                      <p className="text-[1.15rem] text-gray-700">
+                        {item.description}
+                      </p>
+                    </NotebookPaper>
+                  ) : (
+                    <PostIt
+                      color={item.postItColor}
+                      rotation={item.postItRotation}
+                      className="min-w-[200px] max-w-[260px] p-6 shadow-md mt-6"
+                      shouldReset={resetKey > 0}
+                      tape={true}
+                    >
+                      <h3 className="font-['Kalam'] font-bold text-2xl mb-3 text-gray-800">
+                        {item.title}
+                      </h3>
+                      <p className="font-['Caveat'] text-[1.15rem] leading-relaxed text-gray-700">
+                        {item.description}
+                      </p>
+                    </PostIt>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -761,7 +793,7 @@ export default function Page() {
               delay={1.2}
             />
 
-            {/* Lyrics Sticker */}
+            {/* Lyrics Sticker - Now a PostIt again */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={`lyrics-${activeSongIndex}`}
@@ -779,16 +811,13 @@ export default function Page() {
                 <PostIt
                   color="yellow"
                   rotation={0}
-                  className="w-48 md:w-56 p-5 text-center font-['Caveat'] text-xl md:text-2xl shadow-[2px_4px_12px_rgba(0,0,0,0.15)] text-gray-800"
+                  className="w-48 md:w-56 p-5 text-center font-['Caveat'] text-xl md:text-2xl shadow-[2px_4px_12px_rgba(0,0,0,0.15)] text-gray-800 mt-4"
                   shouldReset={resetKey > 0}
-                  tape={false}
+                  tape={true}
                 >
-                  <Tape
-                    color="pink"
-                    rotation={5}
-                    className="-top-3 left-1/2 -translate-x-1/2 w-16"
-                  />
-                  "{favoriteSongs[activeSongIndex].lyrics}"
+                  <div className="pt-4">
+                    "{favoriteSongs[activeSongIndex].lyrics}"
+                  </div>
                 </PostIt>
               </motion.div>
             </AnimatePresence>
@@ -799,56 +828,52 @@ export default function Page() {
             <PostIt
               color="blue"
               rotation={3}
-              className="w-full p-6 md:p-8 z-10 relative shadow-[2px_8px_20px_rgba(0,0,0,0.15)]"
-              tape={false}
+              className="w-full p-6 md:p-8 z-10 relative shadow-[2px_8px_20px_rgba(0,0,0,0.15)] mt-4"
+              tape={true}
               shouldReset={resetKey > 0}
             >
-              <Tape
-                color="pink"
-                rotation={-2}
-                className="-top-3 left-1/2 -translate-x-1/2 w-20"
-              />
+              <div className="pt-2">
+                <h3 className="font-['Kalam'] text-2xl md:text-3xl font-bold mb-6 text-gray-800 flex items-center gap-2">
+                  <Heart size={24} className="text-red-400 fill-red-400" />
+                  Vibe Check
+                </h3>
 
-              <h3 className="font-['Kalam'] text-2xl md:text-3xl font-bold mb-6 text-gray-800 flex items-center gap-2">
-                <Heart size={24} className="text-red-400 fill-red-400" />
-                Vibe Check
-              </h3>
-
-              <ul className="font-['Caveat'] text-2xl md:text-3xl space-y-4 text-gray-700">
-                {favoriteSongs.map((song, idx) => (
-                  <li
-                    key={idx}
-                    onClick={() => setActiveSongIndex(idx)}
-                    className="flex justify-between items-center border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
-                  >
-                    <span className="relative inline-block">
-                      {idx + 1}. {song.title}
-                      {activeSongIndex === idx && (
-                        <motion.svg
-                          layoutId="song-underline"
-                          className="absolute -bottom-1 left-0 w-full h-3 text-yellow-400 z-0 overflow-visible"
-                          viewBox="0 0 100 20"
-                          preserveAspectRatio="none"
-                        >
-                          <motion.path
-                            d="M 5,15 Q 50,25 95,15"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="6"
-                            strokeLinecap="round"
-                            initial={{ pathLength: 0 }}
-                            animate={{ pathLength: 1 }}
-                            transition={{ duration: 0.3, ease: "easeOut" }}
-                          />
-                        </motion.svg>
-                      )}
-                    </span>
-                    <span className="text-gray-400 group-hover:text-gray-600 transition-colors text-xl md:text-2xl">
-                      {song.duration}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="font-['Caveat'] text-2xl md:text-3xl space-y-4 text-gray-700">
+                  {favoriteSongs.map((song, idx) => (
+                    <li
+                      key={idx}
+                      onClick={() => setActiveSongIndex(idx)}
+                      className="flex justify-between items-center border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
+                    >
+                      <span className="relative inline-block">
+                        {idx + 1}. {song.title}
+                        {activeSongIndex === idx && (
+                          <motion.svg
+                            layoutId="song-underline"
+                            className="absolute -bottom-1 left-0 w-full h-3 text-yellow-400 z-0 overflow-visible"
+                            viewBox="0 0 100 20"
+                            preserveAspectRatio="none"
+                          >
+                            <motion.path
+                              d="M 5,15 Q 50,25 95,15"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="6"
+                              strokeLinecap="round"
+                              initial={{ pathLength: 0 }}
+                              animate={{ pathLength: 1 }}
+                              transition={{ duration: 0.3, ease: "easeOut" }}
+                            />
+                          </motion.svg>
+                        )}
+                      </span>
+                      <span className="text-gray-400 group-hover:text-gray-600 transition-colors text-xl md:text-2xl">
+                        {song.duration}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </PostIt>
           </div>
         </div>
@@ -878,14 +903,9 @@ export default function Page() {
             color="yellow"
             rotation={1}
             className="w-full text-center p-12 text-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative"
-            tape={false}
+            tape={true}
             shouldReset={resetKey > 0}
           >
-            <Tape
-              color="blue"
-              className="-top-4 left-1/2 -translate-x-1/2 w-32 pointer-events-none z-20"
-              rotation={0}
-            />
             
             <div className="mb-6 font-['Kalam'] font-bold text-4xl text-gray-800 relative z-10 mt-2">
               Let's create something cool together!
