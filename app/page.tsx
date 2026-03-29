@@ -12,6 +12,7 @@ import {
   Heart,
   Music,
   RotateCcw,
+  Mail,
 } from "lucide-react";
 import { Polaroid } from "./components/figma-ui/Polaroid";
 import { Sticker } from "./components/figma-ui/Sticker";
@@ -30,22 +31,22 @@ export default function Page() {
   useEffect(() => {
     const updateDate = () => {
       const now = new Date();
-      const options: Intl.DateTimeFormatOptions = { 
-        month: 'short', 
-        day: 'numeric', 
-        year: 'numeric',
-        weekday: 'short'
+      const options: Intl.DateTimeFormatOptions = {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        weekday: "short",
       };
       // "Sun, Mar 28, 2026"
-      const dateString = now.toLocaleDateString('en-US', options);
-      const parts = dateString.split(', ');
+      const dateString = now.toLocaleDateString("en-US", options);
+      const parts = dateString.split(", ");
       if (parts.length === 3) {
-         const weekday = parts[0];
-         const monthDay = parts[1];
-         const year = parts[2];
-         setCurrentDate(`${monthDay}, ${year}   ${weekday}`);
+        const weekday = parts[0];
+        const monthDay = parts[1];
+        const year = parts[2];
+        setCurrentDate(`${monthDay}, ${year}   ${weekday}`);
       } else {
-         setCurrentDate(dateString);
+        setCurrentDate(dateString);
       }
     };
     updateDate();
@@ -53,7 +54,10 @@ export default function Page() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const [weatherInfo, setWeatherInfo] = useState<{ icon: string, temp: string } | null>(null);
+  const [weatherInfo, setWeatherInfo] = useState<{
+    icon: string;
+    temp: string;
+  } | null>(null);
 
   useEffect(() => {
     // Attempt to get user location and weather
@@ -63,24 +67,27 @@ export default function Page() {
           try {
             const { latitude, longitude } = position.coords;
             // Using Open-Meteo API for free, no-key-required weather data
-            const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
+            const res = await fetch(
+              `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
+            );
             const data = await res.json();
-            
+
             if (data && data.current_weather) {
               const code = data.current_weather.weathercode;
               const temp = Math.round(data.current_weather.temperature);
-              
+
               // WMO Weather interpretation codes
               let icon = "☀️"; // default clear
               if (code === 0) icon = "☀️"; // Clear sky
-              else if (code === 1 || code === 2 || code === 3) icon = "🌤️"; // Mainly clear, partly cloudy, and overcast
+              else if (code === 1 || code === 2 || code === 3)
+                icon = "🌤️"; // Mainly clear, partly cloudy, and overcast
               else if (code >= 45 && code <= 48) icon = "🌫️"; // Fog
               else if (code >= 51 && code <= 67) icon = "🌧️"; // Drizzle / Rain
               else if (code >= 71 && code <= 77) icon = "❄️"; // Snow
               else if (code >= 80 && code <= 82) icon = "🌧️"; // Rain showers
               else if (code >= 85 && code <= 86) icon = "❄️"; // Snow showers
               else if (code >= 95) icon = "⛈️"; // Thunderstorm
-              
+
               setWeatherInfo({ icon, temp: `${temp}°C` });
             }
           } catch (error) {
@@ -111,7 +118,8 @@ export default function Page() {
       title: "Midnight City",
       artist: "Sunset Groove",
       duration: "3:45",
-      coverUrl: "https://images.unsplash.com/photo-1679563837531-116c2fbe25b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRybyUyMGNpdHklMjBzdW5zZXR8ZW58MXx8fHwxNzc0NzAwNzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      coverUrl:
+        "https://images.unsplash.com/photo-1679563837531-116c2fbe25b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRybyUyMGNpdHklMjBzdW5zZXR8ZW58MXx8fHwxNzc0NzAwNzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       lyrics: "Waiting in a car, waiting for a ride in the dark...",
       tapeColor: "yellow" as const,
     },
@@ -119,7 +127,8 @@ export default function Page() {
       title: "Plastic Love",
       artist: "Mariya Takeuchi",
       duration: "4:12",
-      coverUrl: "https://images.unsplash.com/photo-1595981234969-8259b94fde88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFlc3RoZXRpYyUyMGFsYnVtJTIwY292ZXJ8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      coverUrl:
+        "https://images.unsplash.com/photo-1595981234969-8259b94fde88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFlc3RoZXRpYyUyMGFsYnVtJTIwY292ZXJ8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       lyrics: "I'm just playing games, I know that's plastic love...",
       tapeColor: "pink" as const,
     },
@@ -127,7 +136,8 @@ export default function Page() {
       title: "Indie Rock",
       artist: "The Wanderers",
       duration: "3:50",
-      coverUrl: "https://images.unsplash.com/photo-1767462372382-b9fc964774d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMHJvY2slMjBiYW5kJTIwcGhvdG9ncmFwaHl8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      coverUrl:
+        "https://images.unsplash.com/photo-1767462372382-b9fc964774d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMHJvY2slMjBiYW5kJTIwcGhvdG9ncmFwaHl8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       lyrics: "We are young and we are free, dancing in the summer breeze...",
       tapeColor: "blue" as const,
     },
@@ -135,7 +145,8 @@ export default function Page() {
       title: "Lo-Fi Rain",
       artist: "Chill Beats",
       duration: "2:30",
-      coverUrl: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2ZpJTIwcmFpbnxlbnwxfHx8fDE3NzQ3MTAyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      coverUrl:
+        "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2ZpJTIwcmFpbnxlbnwxfHx8fDE3NzQ3MTAyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       lyrics: "Just the sound of the rain against the window pane...",
       tapeColor: "green" as const,
     },
@@ -143,10 +154,63 @@ export default function Page() {
       title: "Neon Nights",
       artist: "Synthwave Rider",
       duration: "4:05",
-      coverUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NzQ3MTAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      coverUrl:
+        "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NzQ3MTAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       lyrics: "Driving through the neon glow, leaving everything I know...",
       tapeColor: "white" as const,
-    }
+    },
+  ];
+
+  const timelineData = [
+    {
+      id: "origin",
+      year: "199X",
+      range: "— 201X",
+      title: "Where it started",
+      description:
+        "Born and raised in my hometown. The early days of curiosity and exploring the world.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1514565131-fce0801e5785?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjaXR5c2NhcGV8ZW58MXx8fHwxNzc0NzkwMzIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      postItColor: "yellow" as const,
+      polaroidRotation: -3,
+      postItRotation: 2,
+    },
+    {
+      id: "education",
+      year: "201X",
+      range: "— 202X",
+      title: "University Days",
+      description:
+        "Dived deep into Computer Science. Late night coding sessions and endless cups of coffee. ☕",
+      imageUrl: codePhotoUrl,
+      postItColor: "blue" as const,
+      polaroidRotation: 3,
+      postItRotation: -2,
+    },
+    {
+      id: "career",
+      year: "202X",
+      range: "— Now",
+      title: "Frontend Engineer",
+      description:
+        "Building cool, interactive web applications. Turning complex problems into sleek UI.",
+      imageUrl: sushiPhotoUrl,
+      postItColor: "pink" as const,
+      polaroidRotation: -2,
+      postItRotation: -3,
+    },
+    {
+      id: "life",
+      year: "Always",
+      range: "",
+      title: "Life Beyond Code",
+      description:
+        "Huge fan of live music, photography, and exploring the outdoors. 🎸📸",
+      imageUrl: concertPhotoUrl,
+      postItColor: "green" as const,
+      polaroidRotation: 4,
+      postItRotation: 3,
+    },
   ];
 
   return (
@@ -155,13 +219,13 @@ export default function Page() {
       <div
         className="fixed inset-0 pointer-events-none z-0"
         style={{
-          backgroundColor: '#f8f7f2', // Base paper color slightly warmer
+          backgroundColor: "#f8f7f2", // Base paper color slightly warmer
           backgroundImage: `
             linear-gradient(90deg, transparent 95%, rgba(0, 0, 0, 0.08) 95%),
             linear-gradient(0deg, transparent 95%, rgba(0, 0, 0, 0.08) 95%)
           `,
-          backgroundSize: '24px 24px, 24px 24px',
-          backgroundPosition: '0 0, 0 0'
+          backgroundSize: "24px 24px, 24px 24px",
+          backgroundPosition: "0 0, 0 0",
         }}
       />
       {/* Secondary overlay to create the dashed/dotted line effect on the grid */}
@@ -172,15 +236,18 @@ export default function Page() {
             linear-gradient(90deg, #f8f7f2 50%, transparent 50%),
             linear-gradient(0deg, #f8f7f2 50%, transparent 50%)
           `,
-          backgroundSize: '4px 4px, 4px 4px',
-          backgroundPosition: '0 0, 0 0',
-          opacity: 0.9
+          backgroundSize: "4px 4px, 4px 4px",
+          backgroundPosition: "0 0, 0 0",
+          opacity: 0.9,
         }}
       />
       {/* Notebook ring binder holes */}
       <div className="fixed top-0 bottom-0 left-0 w-8 z-0 flex flex-col justify-evenly py-20 pointer-events-none">
         {Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="w-5 h-5 rounded-full bg-[#111] shadow-inner -ml-2 border-2 border-gray-300 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.8)]" />
+          <div
+            key={i}
+            className="w-5 h-5 rounded-full bg-[#111] shadow-inner -ml-2 border-2 border-gray-300 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.8)]"
+          />
         ))}
       </div>
       {/* Vertical texts on the left margin */}
@@ -192,16 +259,28 @@ export default function Page() {
 
       {/* Handwritten Date and Weather - Vertical on the left */}
       <div className="fixed top-1/2 left-8 md:left-12 transform -translate-y-1/2 z-10 flex flex-col items-center gap-8 pointer-events-none mix-blend-multiply opacity-70">
-        <div 
-          className="font-['Kalam'] text-xl md:text-2xl font-bold text-gray-800 tracking-wider whitespace-nowrap" 
-          style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}
+        <div
+          className="font-['Kalam'] text-xl md:text-2xl font-bold text-gray-800 tracking-wider whitespace-nowrap"
+          style={{
+            writingMode: "vertical-rl",
+            textOrientation: "mixed",
+            transform: "rotate(180deg)",
+          }}
         >
           {currentDate}
         </div>
         {weatherInfo && (
           <div className="flex flex-col items-center gap-3 font-['Kalam'] text-xl md:text-2xl font-bold text-gray-700">
-            <span className="text-2xl md:text-3xl filter grayscale contrast-200 transform -rotate-90">{weatherInfo.icon}</span>
-            <span style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}>
+            <span className="text-2xl md:text-3xl filter grayscale contrast-200 transform -rotate-90">
+              {weatherInfo.icon}
+            </span>
+            <span
+              style={{
+                writingMode: "vertical-rl",
+                textOrientation: "mixed",
+                transform: "rotate(180deg)",
+              }}
+            >
               {weatherInfo.temp}
             </span>
           </div>
@@ -300,17 +379,32 @@ export default function Page() {
                 className="w-72 sm:w-80"
                 shouldReset={resetKey > 0}
               />
-              
+
               {/* Paperclip overlaying the corner */}
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.8, type: "spring", stiffness: 200, damping: 20 }}
+                transition={{
+                  delay: 0.8,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 20,
+                }}
                 className="absolute -top-6 -right-2 text-[#9ca3af] z-20 cursor-grab active:cursor-grabbing hover:text-[#6b7280] transition-colors"
                 drag
                 dragMomentum={false}
               >
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform rotate-[30deg] drop-shadow-[2px_4px_4px_rgba(0,0,0,0.2)]">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="transform rotate-[30deg] drop-shadow-[2px_4px_4px_rgba(0,0,0,0.2)]"
+                >
                   <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
                 </svg>
               </motion.div>
@@ -323,7 +417,8 @@ export default function Page() {
               shouldReset={resetKey > 0}
             >
               <div className="text-xl">
-                Exploring the world<br />& building stuff 🚀
+                Exploring the world
+                <br />& building stuff 🚀
               </div>
             </PostIt>
           </div>
@@ -382,21 +477,38 @@ export default function Page() {
               transition={{ delay: 0.6 }}
               className="text-2xl font-['Caveat'] text-gray-600 mb-10 max-w-md leading-relaxed"
             >
-              A creative developer passionate about crafting beautiful, interactive
-              digital experiences. Let's make something amazing together!
+              A creative developer passionate about crafting beautiful,
+              interactive digital experiences. Let's make something amazing
+              together!
             </motion.p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
-              <Sticker rotation={-6} delay={0.5} className="px-5 py-2 bg-blue-50 text-blue-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-blue-100/50">
+              <Sticker
+                rotation={-6}
+                delay={0.5}
+                className="px-5 py-2 bg-blue-50 text-blue-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-blue-100/50"
+              >
                 ✨ Endless Creativity
               </Sticker>
-              <Sticker rotation={8} delay={0.6} className="px-5 py-2 bg-yellow-50 text-yellow-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-yellow-100/50">
+              <Sticker
+                rotation={8}
+                delay={0.6}
+                className="px-5 py-2 bg-yellow-50 text-yellow-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-yellow-100/50"
+              >
                 🤖 AI-Driven
               </Sticker>
-              <Sticker rotation={-4} delay={0.7} className="px-5 py-2 bg-green-50 text-green-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-green-100/50">
+              <Sticker
+                rotation={-4}
+                delay={0.7}
+                className="px-5 py-2 bg-green-50 text-green-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-green-100/50"
+              >
                 🚀 Fast Learner
               </Sticker>
-              <Sticker rotation={10} delay={0.8} className="px-5 py-2 bg-pink-50 text-pink-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-pink-100/50">
+              <Sticker
+                rotation={10}
+                delay={0.8}
+                className="px-5 py-2 bg-pink-50 text-pink-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-pink-100/50"
+              >
                 🧩 Problem Solver
               </Sticker>
             </div>
@@ -424,8 +536,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* About / Interests Section */}
-      <section id="about" className="relative w-full max-w-5xl mx-auto px-6 py-20 z-10">
+      {/* About / Timeline Section */}
+      <section
+        id="about"
+        className="relative w-full max-w-5xl mx-auto px-6 py-24 z-10"
+      >
         {/* Section Doodle Decor */}
         <Doodle
           path="M 10,50 Q 50,10 90,50 T 170,50"
@@ -434,12 +549,12 @@ export default function Page() {
           delay={0.2}
         />
 
-        <div className="flex flex-col items-center mb-16 relative">
+        <div className="flex flex-col items-center mb-24 relative">
           <Tape color="pink" className="top-0" rotation={-2} />
 
           <div className="relative">
             <h2 className="text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 mt-4 bg-white/50 backdrop-blur-sm px-6 py-2 rounded-lg border-2 border-dashed border-gray-300 shadow-sm relative z-10">
-              What I'm About
+              My Journey
             </h2>
             {/* Outline highlight behind text */}
             <Doodle
@@ -451,119 +566,144 @@ export default function Page() {
             />
           </div>
 
-          <Sticker className="absolute -right-4 md:right-1/4 top-8 bg-red-50 p-2" rotation={18}>
+          <Sticker
+            className="absolute -right-4 md:right-1/4 top-8 bg-red-50 p-2"
+            rotation={18}
+          >
             <Heart className="text-red-500" />
           </Sticker>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
-          {/* Card 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="relative flex flex-col items-center"
-          >
-            <Polaroid
-              imageSrc={codePhotoUrl}
-              caption="Shenzhen, China"
-              rotation={3}
-              className="w-full mb-6 z-10"
-              shouldReset={resetKey > 0}
-            />
-            <PostIt
-              color="blue"
-              rotation={-5}
-              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm font-['Caveat']"
-              shouldReset={resetKey > 0}
+        {/* Journal-style Timeline Layout */}
+        <div className="relative w-full flex flex-col">
+          {/* Single continuous dashed spine line — desktop only */}
+          <div
+            className="hidden md:block absolute top-0 bottom-0 pointer-events-none"
+            style={{
+              left: "calc(10rem + 24px)",
+              borderLeft: "2px dashed #c9cdd4",
+              zIndex: 0,
+            }}
+          />
+
+          {timelineData.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: 0.55,
+                delay: 0.05,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="relative py-8 md:py-14"
             >
-              Born and raised here! 🏙️
-              Currently working as a Frontend Engineer.
-            </PostIt>
+              {/* ── Mobile layout: horizontal strip (year | photo) then postit below ── */}
+              <div className="flex md:hidden flex-col gap-4">
+                {/* Top row: year badge + polaroid side by side */}
+                <div className="flex flex-row items-start gap-4">
+                  {/* Year badge */}
+                  <div className="flex-shrink-0 pt-2">
+                    <span className="font-['Kalam'] font-bold text-2xl text-gray-800 leading-tight block">
+                      {item.year}
+                    </span>
+                    {item.range && (
+                      <span className="font-['Caveat'] text-base text-gray-400 block">
+                        {item.range}
+                      </span>
+                    )}
+                  </div>
+                  {/* Polaroid */}
+                  <Polaroid
+                    imageSrc={item.imageUrl}
+                    caption={item.year + (item.range ? " " + item.range : "")}
+                    rotation={item.polaroidRotation}
+                    className="w-44 flex-shrink-0"
+                    shouldReset={resetKey > 0}
+                  />
+                </div>
+                {/* PostIt below, slightly offset */}
+                <div className="pl-4">
+                  <PostIt
+                    color={item.postItColor}
+                    rotation={item.postItRotation}
+                    className="w-full max-w-xs p-5 shadow-md"
+                    shouldReset={resetKey > 0}
+                  >
+                    <h3 className="font-['Kalam'] font-bold text-xl mb-2 text-gray-800">
+                      {item.title}
+                    </h3>
+                    <p className="font-['Caveat'] text-lg leading-relaxed text-gray-700">
+                      {item.description}
+                    </p>
+                  </PostIt>
+                </div>
+              </div>
 
-            <Doodle
-              path="M20,50 Q50,20 80,50 T20,50"
-              className="absolute -left-16 top-1/2 w-24 h-24 text-blue-300 opacity-60 hidden md:block"
-              delay={0.6}
-            />
-          </motion.div>
+              {/* ── Desktop layout: [year col] [dot] [polaroid + postit] ── */}
+              <div className="hidden md:flex flex-row items-start gap-0">
+                {/* Left: year stamp */}
+                <div className="flex-shrink-0 w-40 flex flex-col items-end pr-6 pt-5 z-10">
+                  <span className="font-['Kalam'] font-bold text-4xl text-gray-800 leading-tight">
+                    {item.year}
+                  </span>
+                  {item.range && (
+                    <span className="font-['Caveat'] text-lg text-gray-400 mt-1">
+                      {item.range}
+                    </span>
+                  )}
+                </div>
 
-          {/* Card 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.2 }}
-            className="relative flex flex-col items-center mt-8 md:mt-16"
-          >
-            <Polaroid
-              imageSrc={sushiPhotoUrl}
-              caption="Tencent / IEG"
-              rotation={-4}
-              className="w-full mb-6 z-10"
-              shouldReset={resetKey > 0}
-            />
-            <PostIt
-              color="pink"
-              rotation={2}
-              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm font-['Caveat']"
-              shouldReset={resetKey > 0}
-            >
-              Building cool stuff at Tencent Interactive Entertainment Group. 🎮
-            </PostIt>
+                {/* Dot on the spine */}
+                <div
+                  className="flex-shrink-0 flex items-start pt-6 z-10"
+                  style={{ width: "49px" }}
+                >
+                  <div className="w-5 h-5 rounded-full bg-[#faf9f6] border-[2.5px] border-gray-400 shadow-sm mx-auto mt-0.5" />
+                </div>
 
-            {/* Sparkles doodle */}
-            <Doodle
-              path="M 50,10 L 50,90 M 10,50 L 90,50 M 20,20 L 80,80 M 20,80 L 80,20"
-              className="absolute -right-12 top-0 w-16 h-16 text-yellow-400 opacity-60 hidden md:block"
-              delay={0.8}
-            />
-          </motion.div>
+                {/* Right: Polaroid + PostIt */}
+                <div className="flex flex-row items-start gap-6 flex-1 pl-8 z-10">
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                    className="flex-shrink-0"
+                  >
+                    <Polaroid
+                      imageSrc={item.imageUrl}
+                      caption={item.year + (item.range ? " " + item.range : "")}
+                      rotation={item.polaroidRotation}
+                      className="w-56"
+                      shouldReset={resetKey > 0}
+                    />
+                  </motion.div>
 
-          {/* Card 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.4 }}
-            className="relative flex flex-col items-center mt-4 md:mt-[-20px]"
-          >
-            <Polaroid
-              imageSrc={concertPhotoUrl}
-              caption="Beyond Code"
-              rotation={5}
-              className="w-full mb-6 z-10"
-              shouldReset={resetKey > 0}
-            />
-            <PostIt
-              color="green"
-              rotation={-3}
-              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm font-['Caveat']"
-              shouldReset={resetKey > 0}
-            >
-              When I'm not coding, I'm into photography, hiking, and exploring indie music. 📸 ⛰️
-            </PostIt>
-
-            <Sticker
-              tape
-              className="absolute -bottom-6 -right-4 bg-purple-50 p-3"
-              rotation={-15}
-              shouldReset={resetKey > 0}
-            >
-              <Music className="text-purple-500" />
-            </Sticker>
-
-            <Doodle
-              path="M 10,80 Q 30,20 50,50 T 90,20"
-              className="absolute -bottom-16 left-1/2 w-24 h-16 text-green-400 opacity-50"
-              delay={1.0}
-            />
-          </motion.div>
+                  <PostIt
+                    color={item.postItColor}
+                    rotation={item.postItRotation}
+                    className="min-w-[200px] max-w-[260px] p-6 shadow-md mt-6"
+                    shouldReset={resetKey > 0}
+                  >
+                    <h3 className="font-['Kalam'] font-bold text-2xl mb-3 text-gray-800">
+                      {item.title}
+                    </h3>
+                    <p className="font-['Caveat'] text-[1.15rem] leading-relaxed text-gray-700">
+                      {item.description}
+                    </p>
+                  </PostIt>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
       {/* Music Section */}
-      <section id="music" className="relative w-full max-w-5xl mx-auto px-6 py-24 z-10">
+      <section
+        id="music"
+        className="relative w-full max-w-5xl mx-auto px-6 py-24 z-10"
+      >
         <div className="flex flex-col items-center mb-16 relative">
           <Tape color="blue" className="top-0 w-32" rotation={3} />
 
@@ -628,7 +768,12 @@ export default function Page() {
                 initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
                 animate={{ opacity: 1, scale: 1, rotate: -8 }}
                 exit={{ opacity: 0, scale: 0.8, rotate: 0 }}
-                transition={{ delay: 0.2, type: "spring", stiffness: 200, damping: 20 }}
+                transition={{
+                  delay: 0.2,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 20,
+                }}
                 className="absolute -bottom-8 -left-20 md:-bottom-4 md:-left-32 z-40"
               >
                 <PostIt
@@ -638,7 +783,11 @@ export default function Page() {
                   shouldReset={resetKey > 0}
                   tape={false}
                 >
-                  <Tape color="pink" rotation={5} className="-top-3 left-1/2 -translate-x-1/2 w-16" />
+                  <Tape
+                    color="pink"
+                    rotation={5}
+                    className="-top-3 left-1/2 -translate-x-1/2 w-16"
+                  />
                   "{favoriteSongs[activeSongIndex].lyrics}"
                 </PostIt>
               </motion.div>
@@ -654,7 +803,11 @@ export default function Page() {
               tape={false}
               shouldReset={resetKey > 0}
             >
-              <Tape color="pink" rotation={-2} className="-top-3 left-1/2 -translate-x-1/2 w-20" />
+              <Tape
+                color="pink"
+                rotation={-2}
+                className="-top-3 left-1/2 -translate-x-1/2 w-20"
+              />
 
               <h3 className="font-['Kalam'] text-2xl md:text-3xl font-bold mb-6 text-gray-800 flex items-center gap-2">
                 <Heart size={24} className="text-red-400 fill-red-400" />
@@ -710,29 +863,33 @@ export default function Page() {
       </section>
 
       {/* Footer / Connect Section */}
-      <section id="contact" className="relative w-full max-w-4xl mx-auto px-6 py-32 flex flex-col items-center z-10">
+      <section
+        id="contact"
+        className="relative w-full max-w-4xl mx-auto px-6 py-32 flex flex-col items-center z-10"
+      >
         <Doodle
           path="M 10,50 L 90,50 M 20,40 L 80,40"
           className="absolute top-10 left-10 w-32 h-20 text-blue-200 opacity-50 stroke-[4px]"
           delay={0.3}
         />
 
-        <PostIt
-          color="yellow"
-          rotation={1}
-          className="w-full max-w-xl text-center p-12 text-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative"
-          tape={false}
-          shouldReset={resetKey > 0}
-        >
-          <Tape
-            color="blue"
-            className="-top-4 left-1/2 -translate-x-1/2 w-32 pointer-events-none"
-            rotation={0}
-          />
-
-          <div className="mb-6 font-bold relative z-10">
-            Let's create something cool together!
-          </div>
+        <div className="relative w-full max-w-xl">
+          <PostIt
+            color="yellow"
+            rotation={1}
+            className="w-full text-center p-12 text-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative"
+            tape={false}
+            shouldReset={resetKey > 0}
+          >
+            <Tape
+              color="blue"
+              className="-top-4 left-1/2 -translate-x-1/2 w-32 pointer-events-none z-20"
+              rotation={0}
+            />
+            
+            <div className="mb-6 font-['Kalam'] font-bold text-4xl text-gray-800 relative z-10 mt-2">
+              Let's create something cool together!
+            </div>
 
           {/* Doodle underline inside the post-it */}
           <Doodle
@@ -742,33 +899,38 @@ export default function Page() {
             delay={1.2}
           />
 
-          <div className="flex justify-center gap-6 mt-8">
-            <a
-              href="mailto:hello@example.com"
-              className="transform hover:scale-110 hover:-rotate-6 transition-all bg-black text-white px-6 py-2 rounded-full font-sans text-lg font-bold flex items-center justify-center"
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mt-10">
+            <motion.a
+              href="mailto:yanchenhao57@gmail.com"
+              whileHover={{ scale: 1.05, rotate: [0, -3, 3, 0] }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[255px_15px_225px_15px/15px_225px_15px_255px] cursor-grab active:cursor-grabbing"
             >
+              <Mail className="w-5 h-5" />
               Email Me
-            </a>
-            <a
-              href="https://github.com/yanchenhao"
+            </motion.a>
+            <motion.a
+              href="https://github.com/John516csd"
               target="_blank"
               rel="noreferrer"
-              className="transform hover:scale-110 hover:rotate-6 transition-all border-4 border-black text-black px-6 py-2 rounded-full font-sans text-lg font-bold relative group flex items-center justify-center"
+              whileHover={{ scale: 1.05, rotate: [0, 3, -3, 0] }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[15px_225px_15px_255px/255px_15px_225px_15px] cursor-grab active:cursor-grabbing"
             >
-              GitHub
-              {/* Little arrow pointing to GitHub on hover */}
               <svg
-                className="absolute -right-8 -top-8 w-8 h-8 text-black opacity-0 group-hover:opacity-100 transition-opacity rotate-[120deg]"
-                viewBox="0 0 40 40"
+                viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                className="w-5 h-5"
               >
-                <path d="M10,30 Q25,10 35,15 M35,15 L28,12 M35,15 L32,22" />
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
-            </a>
+              GitHub
+            </motion.a>
           </div>
 
           <Doodle
@@ -778,9 +940,11 @@ export default function Page() {
             strokeDasharray="10 10"
           />
         </PostIt>
+        </div>
 
         <div className="mt-20 font-['Caveat'] text-2xl text-gray-400 flex items-center gap-2">
-          Made with <Heart size={20} className="text-red-400 fill-red-400" /> in my digital journal
+          Made with <Heart size={20} className="text-red-400 fill-red-400" /> in
+          my digital journal
         </div>
       </section>
     </div>

@@ -44,12 +44,10 @@ export function PostIt({ children, className, color = 'yellow', rotation = 3, ta
       whileDrag={{ scale: 1.1, zIndex: 50 }}
       className={cn(
         "relative p-4 shadow-[2px_4px_10px_rgba(0,0,0,0.15)] font-['Caveat'] text-2xl text-gray-800 cursor-grab active:cursor-grabbing",
+        "rounded-[255px_15px_225px_15px/15px_225px_15px_255px]",
         colorMap[color],
         className
       )}
-      style={{
-        clipPath: 'polygon(0% 0%, 100% 1%, 98% 99%, 1% 100%)', // slight imperfection
-      }}
       {...props}
     >
       {tape && (
@@ -57,7 +55,7 @@ export function PostIt({ children, className, color = 'yellow', rotation = 3, ta
           color="white" 
           rotation={-2} 
           isDragging={isDragging}
-          className="-top-3 left-1/2 -translate-x-1/2 w-16 h-6 pointer-events-none" 
+          className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 pointer-events-none z-20" 
         />
       )}
       <div className="pt-2">
