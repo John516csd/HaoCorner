@@ -40,18 +40,16 @@ export function NotebookPaper({ children, className, headerText, rotation = -2, 
         "rounded-[255px_15px_225px_15px/15px_225px_15px_255px] bg-[#fdfbf7]",
         className
       )}
-      style={{ overflow: 'visible' }}
+      style={{ overflow: 'visible', ...props.style }}
       {...props}
     >
           {tape && (
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
-              <Tape 
-                color="white" 
-                rotation={-3} 
-                isDragging={isDragging}
-                className="w-20 h-7" 
-              />
-            </div>
+            <Tape 
+              color="white" 
+              rotation={-3} 
+              isDragging={isDragging}
+              className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-7 z-50 pointer-events-none" 
+            />
           )}
 
           {/* Yellow Header */}

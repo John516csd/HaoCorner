@@ -48,18 +48,16 @@ export function PostIt({ children, className, color = 'yellow', rotation = 3, ta
         colorMap[color],
         className
       )}
-      style={{ overflow: 'visible' }}
+      style={{ overflow: 'visible', ...props.style }}
       {...props}
     >
           {tape && (
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
-              <Tape 
-                color="white" 
-                rotation={-2} 
-                isDragging={isDragging}
-                className="w-16 h-6" 
-              />
-            </div>
+            <Tape 
+              color="white" 
+              rotation={-2} 
+              isDragging={isDragging}
+              className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 z-50 pointer-events-none" 
+            />
           )}
           <div className="pt-2">
         {children}

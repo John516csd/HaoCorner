@@ -38,7 +38,7 @@ export function VoiceMemo({ className, title = "Voice", rotation = 4, shouldRese
         "rounded-[12px_12px_24px_16px/12px_12px_16px_24px]", // slightly imperfect card shape
         className
       )}
-      style={{ overflow: 'visible' }}
+      style={{ overflow: 'visible', ...props.style }}
       {...props}
     >
                 {tape && (

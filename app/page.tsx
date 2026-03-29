@@ -778,6 +778,7 @@ export default function Page() {
                   coverSrc={favoriteSongs[activeSongIndex].coverUrl}
                   title={favoriteSongs[activeSongIndex].title}
                   artist={favoriteSongs[activeSongIndex].artist}
+                  lyrics={favoriteSongs[activeSongIndex].lyrics}
                   rotation={0}
                   className="w-64 md:w-72"
                   delay={0.2}
@@ -792,35 +793,6 @@ export default function Page() {
               className="absolute -right-16 -top-8 w-24 h-24 text-pink-400 opacity-80"
               delay={1.2}
             />
-
-            {/* Lyrics Sticker - Now a PostIt again */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`lyrics-${activeSongIndex}`}
-                initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
-                animate={{ opacity: 1, scale: 1, rotate: -8 }}
-                exit={{ opacity: 0, scale: 0.8, rotate: 0 }}
-                transition={{
-                  delay: 0.2,
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 20,
-                }}
-                className="absolute -bottom-8 -left-20 md:-bottom-4 md:-left-32 z-40"
-              >
-                <PostIt
-                  color="yellow"
-                  rotation={0}
-                  className="w-48 md:w-56 p-5 text-center font-['Caveat'] text-xl md:text-2xl shadow-[2px_4px_12px_rgba(0,0,0,0.15)] text-gray-800 mt-4"
-                  shouldReset={resetKey > 0}
-                  tape={true}
-                >
-                  <div className="pt-4">
-                    "{favoriteSongs[activeSongIndex].lyrics}"
-                  </div>
-                </PostIt>
-              </motion.div>
-            </AnimatePresence>
           </div>
 
           {/* Right: Playlist */}
@@ -845,12 +817,13 @@ export default function Page() {
                       onClick={() => setActiveSongIndex(idx)}
                       className="flex justify-between items-center border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
                     >
-                      <span className="relative inline-block">
-                        {idx + 1}. {song.title}
-                        {activeSongIndex === idx && (
-                          <motion.svg
+                    <span className="relative inline-block z-10">
+                      {idx + 1}. {song.title}
+                      <span className="text-gray-500/80 text-lg md:text-xl ml-2">- {song.artist}</span>
+                      {activeSongIndex === idx && (
+                        <motion.svg
                             layoutId="song-underline"
-                            className="absolute -bottom-1 left-0 w-full h-3 text-yellow-400 z-0 overflow-visible"
+                            className="absolute -bottom-2 left-0 w-full h-3 text-yellow-400 -z-10 overflow-visible opacity-80"
                             viewBox="0 0 100 20"
                             preserveAspectRatio="none"
                           >
@@ -858,7 +831,7 @@ export default function Page() {
                               d="M 5,15 Q 50,25 95,15"
                               fill="none"
                               stroke="currentColor"
-                              strokeWidth="6"
+                              strokeWidth="3"
                               strokeLinecap="round"
                               initial={{ pathLength: 0 }}
                               animate={{ pathLength: 1 }}

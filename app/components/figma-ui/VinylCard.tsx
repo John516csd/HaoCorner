@@ -8,6 +8,7 @@ interface VinylCardProps {
   coverSrc: string;
   title: string;
   artist: string;
+  lyrics?: string;
   rotation?: number;
   className?: string;
   delay?: number;
@@ -18,6 +19,7 @@ export function VinylCard({
   coverSrc, 
   title, 
   artist, 
+  lyrics,
   rotation = 0, 
   className,
   delay = 0,
@@ -89,13 +91,34 @@ export function VinylCard({
       </div>
 
       {/* Hand-written text underneath */}
-      <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-max text-center z-20 bg-white/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-[2px_4px_10px_rgba(0,0,0,0.1)] border border-gray-200/50 min-w-[200px]">
-        <h3 className="font-['Kalam'] font-bold text-xl md:text-2xl text-gray-800 leading-tight">
-          {title}
-        </h3>
-        <p className="font-['Caveat'] text-lg md:text-xl text-gray-600">
-          {artist}
-        </p>
+      <div className={cn(
+        "absolute -bottom-6 left-1/2 -translate-x-1/2 text-center z-20 shadow-[2px_4px_10px_rgba(0,0,0,0.1)] border border-gray-200/50 min-w-[200px] overflow-hidden",
+        lyrics ? "w-max max-w-[280px] px-6 py-4 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] bg-[#fff7b0]" : "w-max px-6 py-2 rounded-full bg-white/90 backdrop-blur-sm"
+      )}>
+        {lyrics && (
+          <div 
+            className="absolute inset-0 pointer-events-none z-0 opacity-40"
+            style={{
+              backgroundImage: 'linear-gradient(#d1d5db 1px, transparent 1px)',
+              backgroundSize: '100% 2rem',
+              backgroundPosition: '0 1.5rem'
+            }}
+          />
+        )}
+        {lyrics ? (
+          <p className="font-['Caveat'] text-xl md:text-2xl text-gray-800 leading-[2rem] relative z-10 pt-1">
+            "{lyrics}"
+          </p>
+        ) : (
+          <>
+            <h3 className="font-['Kalam'] font-bold text-xl md:text-2xl text-gray-800 leading-tight relative z-10">
+              {title}
+            </h3>
+            <p className="font-['Caveat'] text-lg md:text-xl text-gray-600 relative z-10">
+              {artist}
+            </p>
+          </>
+        )}
       </div>
     </motion.div>
   );
