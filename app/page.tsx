@@ -11,7 +11,6 @@ import {
   MapPin,
   Heart,
   Music,
-  RotateCcw,
   Mail,
 } from "lucide-react";
 import { Polaroid } from "./components/figma-ui/Polaroid";
@@ -25,8 +24,6 @@ import { NotebookPaper } from "./components/figma-ui/NotebookPaper";
 import { VoiceMemo } from "./components/figma-ui/VoiceMemo";
 
 export default function Page() {
-  const [resetKey, setResetKey] = useState(0);
-
   const [activeSongIndex, setActiveSongIndex] = useState(0);
   const [currentDate, setCurrentDate] = useState("");
 
@@ -103,10 +100,6 @@ export default function Page() {
     }
   }, []);
 
-  const handleResetLayout = () => {
-    // Incrementing key forces re-render or triggers useEffect in children to reset position
-    setResetKey((prev) => prev + 1);
-  };
   const heroPhotoUrl = "/images/me.jpg";
   const sushiPhotoUrl =
     "https://images.unsplash.com/photo-1664882589261-498d42a9ad44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHBsYXRlfGVufDF8fHx8MTc3NDYxOTE2MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
@@ -294,19 +287,6 @@ export default function Page() {
 
       <NavBar />
 
-      {/* Reset Layout Button */}
-      <motion.button
-        whileHover={{ scale: 1.1, rotate: -5 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={handleResetLayout}
-        className="fixed bottom-6 right-6 z-50 bg-white border-2 border-dashed border-gray-300 rounded-full p-4 shadow-[2px_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors group"
-      >
-        <RotateCcw className="w-6 h-6 group-hover:-rotate-90 transition-transform duration-500" />
-        <span className="absolute -top-10 right-0 font-['Caveat'] text-lg text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-white px-2 py-1 rounded-md shadow-sm border border-gray-100 pointer-events-none">
-          Clean up desk!
-        </span>
-      </motion.button>
-
       {/* Hero Section */}
       <section
         id="hero"
@@ -379,7 +359,6 @@ export default function Page() {
                 caption="KANGDING, SICHUAN, CHINA"
                 rotation={-4}
                 className="w-72 sm:w-80"
-                shouldReset={resetKey > 0}
               />
 
               {/* Paperclip overlaying the corner */}
@@ -416,7 +395,6 @@ export default function Page() {
               color="yellow"
               rotation={8}
               className="absolute -left-4 md:-left-16 bottom-0 w-44 z-20"
-              shouldReset={resetKey > 0}
             >
               <div className="text-xl">
                 Exploring the world
@@ -622,7 +600,6 @@ export default function Page() {
                     caption={item.year + (item.range ? " " + item.range : "")}
                     rotation={item.polaroidRotation}
                     className="w-44 flex-shrink-0"
-                    shouldReset={resetKey > 0}
                   />
                 </div>
                 {/* Content below, slightly offset */}
@@ -632,7 +609,6 @@ export default function Page() {
                       headerText={item.title}
                       rotation={item.postItRotation}
                       className="w-full max-w-xs h-auto min-h-[160px]"
-                      shouldReset={resetKey > 0}
                       tape={true}
                     >
                       <p className="text-lg text-gray-700">
@@ -644,7 +620,6 @@ export default function Page() {
                       color={item.postItColor}
                       rotation={item.postItRotation}
                       className="w-full max-w-xs p-5 shadow-md"
-                      shouldReset={resetKey > 0}
                       tape={true}
                     >
                       <h3 className="font-['Kalam'] font-bold text-xl mb-2 text-gray-800">
@@ -692,7 +667,6 @@ export default function Page() {
                       caption={item.year + (item.range ? " " + item.range : "")}
                       rotation={item.polaroidRotation}
                       className="w-56"
-                      shouldReset={resetKey > 0}
                     />
                   </motion.div>
 
@@ -701,7 +675,6 @@ export default function Page() {
                       headerText={item.title}
                       rotation={item.postItRotation}
                       className="min-w-[200px] max-w-[260px] min-h-[180px] mt-6"
-                      shouldReset={resetKey > 0}
                       tape={true}
                     >
                       <p className="text-[1.15rem] text-gray-700">
@@ -713,7 +686,6 @@ export default function Page() {
                       color={item.postItColor}
                       rotation={item.postItRotation}
                       className="min-w-[200px] max-w-[260px] p-6 shadow-md mt-6"
-                      shouldReset={resetKey > 0}
                       tape={true}
                     >
                       <h3 className="font-['Kalam'] font-bold text-2xl mb-3 text-gray-800">
@@ -782,7 +754,6 @@ export default function Page() {
                   rotation={0}
                   className="w-64 md:w-72"
                   delay={0.2}
-                  shouldReset={resetKey > 0}
                 />
               </motion.div>
             </AnimatePresence>
@@ -802,7 +773,6 @@ export default function Page() {
               rotation={3}
               className="w-full p-6 md:p-8 z-10 relative shadow-[2px_8px_20px_rgba(0,0,0,0.15)] mt-4"
               tape={true}
-              shouldReset={resetKey > 0}
             >
               <div className="pt-2">
                 <h3 className="font-['Kalam'] text-2xl md:text-3xl font-bold mb-6 text-gray-800 flex items-center gap-2">
@@ -877,7 +847,6 @@ export default function Page() {
             rotation={1}
             className="w-full text-center p-12 text-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative"
             tape={true}
-            shouldReset={resetKey > 0}
           >
             
             <div className="mb-6 font-['Kalam'] font-bold text-4xl text-gray-800 relative z-10 mt-2">

@@ -2,15 +2,17 @@
 import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { motion, useAnimationControls } from 'motion/react';
+import { Tape } from './Tape';
 
 interface VoiceMemoProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   title?: string;
   rotation?: number;
+  tape?: boolean;
   shouldReset?: boolean;
   children?: React.ReactNode;
 }
 
-export function VoiceMemo({ className, title = "Voice", rotation = 4, shouldReset = false, children, ...props }: VoiceMemoProps) {
+export function VoiceMemo({ className, title = "Voice", rotation = 4, tape = true, shouldReset = false, children, ...props }: VoiceMemoProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
 
