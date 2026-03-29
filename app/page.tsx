@@ -229,7 +229,7 @@ export default function Page() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative w-full max-w-6xl mx-auto px-6 py-12 md:py-24 min-h-[90vh] flex items-center justify-center z-10"
+        className="relative w-full max-w-6xl mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen flex items-center justify-center z-10"
       >
         {/* ================= BACKGROUND DOODLES ================= */}
         {/* Top left corner stars */}
@@ -386,18 +386,18 @@ export default function Page() {
               digital experiences. Let's make something amazing together!
             </motion.p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-2">
-              <Sticker rotation={-6} delay={0.5} className="px-4 py-2 bg-blue-50 text-blue-700 font-['Caveat'] text-xl font-bold cursor-grab active:cursor-grabbing">
-                React & Next.js
+            <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
+              <Sticker rotation={-6} delay={0.5} className="px-5 py-2 bg-blue-50 text-blue-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-blue-100/50">
+                ✨ Endless Creativity
               </Sticker>
-              <Sticker rotation={8} delay={0.6} className="px-4 py-2 bg-yellow-50 text-yellow-700 font-['Caveat'] text-xl font-bold cursor-grab active:cursor-grabbing">
-                TypeScript
+              <Sticker rotation={8} delay={0.6} className="px-5 py-2 bg-yellow-50 text-yellow-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-yellow-100/50">
+                🤖 AI-Driven
               </Sticker>
-              <Sticker rotation={-4} delay={0.7} className="px-4 py-2 bg-green-50 text-green-700 font-['Caveat'] text-xl font-bold cursor-grab active:cursor-grabbing">
-                Tailwind CSS
+              <Sticker rotation={-4} delay={0.7} className="px-5 py-2 bg-green-50 text-green-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-green-100/50">
+                🚀 Fast Learner
               </Sticker>
-              <Sticker rotation={10} delay={0.8} className="px-4 py-2 bg-pink-50 text-pink-700 font-['Caveat'] text-xl font-bold cursor-grab active:cursor-grabbing">
-                GSAP & Motion
+              <Sticker rotation={10} delay={0.8} className="px-5 py-2 bg-pink-50 text-pink-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-pink-100/50">
+                🧩 Problem Solver
               </Sticker>
             </div>
 
@@ -466,7 +466,7 @@ export default function Page() {
           >
             <Polaroid
               imageSrc={codePhotoUrl}
-              caption="Late Night Coding"
+              caption="Shenzhen, China"
               rotation={3}
               className="w-full mb-6 z-10"
               shouldReset={resetKey > 0}
@@ -474,11 +474,11 @@ export default function Page() {
             <PostIt
               color="blue"
               rotation={-5}
-              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm"
+              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm font-['Caveat']"
               shouldReset={resetKey > 0}
             >
-              Building sleek, scalable web applications is my jam. I love diving
-              deep into React and crafting smooth animations.
+              Born and raised here! 🏙️
+              Currently working as a Frontend Engineer.
             </PostIt>
 
             <Doodle
@@ -498,7 +498,7 @@ export default function Page() {
           >
             <Polaroid
               imageSrc={sushiPhotoUrl}
-              caption="Fuel for code"
+              caption="Tencent / IEG"
               rotation={-4}
               className="w-full mb-6 z-10"
               shouldReset={resetKey > 0}
@@ -506,11 +506,10 @@ export default function Page() {
             <PostIt
               color="pink"
               rotation={2}
-              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm"
+              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm font-['Caveat']"
               shouldReset={resetKey > 0}
             >
-              When I'm not coding, I'm hunting for the best sushi in town or trying
-              out new coffee beans. 🍣☕
+              Building cool stuff at Tencent Interactive Entertainment Group. 🎮
             </PostIt>
 
             {/* Sparkles doodle */}
@@ -531,7 +530,7 @@ export default function Page() {
           >
             <Polaroid
               imageSrc={concertPhotoUrl}
-              caption="Live Music Vibes"
+              caption="Beyond Code"
               rotation={5}
               className="w-full mb-6 z-10"
               shouldReset={resetKey > 0}
@@ -539,11 +538,10 @@ export default function Page() {
             <PostIt
               color="green"
               rotation={-3}
-              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm"
+              className="w-full text-center p-6 text-xl mt-[-20px] z-0 shadow-sm font-['Caveat']"
               shouldReset={resetKey > 0}
             >
-              Huge fan of live music and indie bands. Catch me at a local gig on the
-              weekends! 🎸
+              When I'm not coding, I'm into photography, hiking, and exploring indie music. 📸 ⛰️
             </PostIt>
 
             <Sticker
