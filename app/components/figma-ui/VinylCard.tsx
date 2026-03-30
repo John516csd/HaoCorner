@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 interface VinylCardProps {
   coverSrc: string;
@@ -27,6 +28,7 @@ export function VinylCard({
 }: VinylCardProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
+  const isMobile = useIsMobile();
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -42,7 +44,7 @@ export function VinylCard({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay, type: 'spring', stiffness: 200, damping: 20 }}
       whileHover={{ scale: 1.05 }}
-      drag
+      drag={!isMobile}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}

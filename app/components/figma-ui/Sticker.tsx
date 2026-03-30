@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 interface StickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ interface StickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDra
 export function Sticker({ children, className, rotation = 5, delay = 0, tape = false, shouldReset = false, ...props }: StickerProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
+  const isMobile = useIsMobile();
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -30,7 +32,7 @@ export function Sticker({ children, className, rotation = 5, delay = 0, tape = f
       viewport={{ once: true }}
       transition={{ delay, type: 'spring', stiffness: 260, damping: 20 }}
       whileHover={{ scale: 1.15, rotate: rotation > 0 ? rotation + 5 : rotation - 5 }}
-      drag
+      drag={!isMobile}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}

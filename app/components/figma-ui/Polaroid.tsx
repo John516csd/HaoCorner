@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 interface PolaroidProps {
   imageSrc: string;
@@ -16,6 +17,7 @@ interface PolaroidProps {
 export function Polaroid({ imageSrc, caption, className, rotation = -3, tapeColor = 'white', shouldReset = false }: PolaroidProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
+  const isMobile = useIsMobile();
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -31,7 +33,7 @@ export function Polaroid({ imageSrc, caption, className, rotation = -3, tapeColo
       viewport={{ once: true }}
       transition={{ type: 'spring', stiffness: 200, damping: 15 }}
       whileHover={{ scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 50 }}
-      drag
+      drag={!isMobile}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}

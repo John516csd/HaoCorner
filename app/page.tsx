@@ -22,10 +22,12 @@ import { VinylCard } from "./components/figma-ui/VinylCard";
 import { NavBar } from "./components/figma-ui/NavBar";
 import { NotebookPaper } from "./components/figma-ui/NotebookPaper";
 import { VoiceMemo } from "./components/figma-ui/VoiceMemo";
+import { useIsMobile } from "./hooks/use-mobile";
 
 export default function Page() {
   const [activeSongIndex, setActiveSongIndex] = useState(0);
   const [currentDate, setCurrentDate] = useState("");
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const updateDate = () => {
@@ -246,14 +248,14 @@ export default function Page() {
         ))}
       </div>
       {/* Vertical texts on the left margin */}
-      <div className="fixed top-1/2 -left-14 transform -translate-y-1/2 -rotate-90 pointer-events-none z-0 flex items-center gap-12 font-['Noto_Sans'] text-gray-400 text-xs tracking-widest font-semibold uppercase opacity-60">
+      <div className="hidden md:flex fixed top-1/2 -left-14 transform -translate-y-1/2 -rotate-90 pointer-events-none z-0 items-center gap-12 font-['Noto_Sans'] text-gray-400 text-xs tracking-widest font-semibold uppercase opacity-60">
         <span>[SNL] Paper</span>
         <span className="text-gray-500 font-bold">Crena</span>
         <span>The Paper MS-69</span>
       </div>
 
       {/* Handwritten Date and Weather - Vertical on the left */}
-      <div className="fixed top-1/2 left-8 md:left-12 transform -translate-y-1/2 z-10 flex flex-col items-center gap-8 pointer-events-none mix-blend-multiply opacity-70">
+      <div className="hidden md:flex fixed top-1/2 left-8 md:left-12 transform -translate-y-1/2 z-10 flex-col items-center gap-8 pointer-events-none mix-blend-multiply opacity-70">
         <div
           className="font-['Kalam'] text-xl md:text-2xl font-bold text-gray-800 tracking-wider whitespace-nowrap"
           style={{
@@ -372,7 +374,7 @@ export default function Page() {
                   damping: 20,
                 }}
                 className="absolute -top-6 -right-2 text-[#9ca3af] z-20 cursor-grab active:cursor-grabbing hover:text-[#6b7280] transition-colors"
-                drag
+                drag={!isMobile}
                 dragMomentum={false}
               >
                 <svg

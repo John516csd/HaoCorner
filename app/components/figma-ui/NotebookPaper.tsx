@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
+import { useIsMobile } from '../../hooks/use-mobile';
 
 interface NotebookPaperProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ interface NotebookPaperProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 
 export function NotebookPaper({ children, className, headerText, rotation = -2, tape = true, shouldReset = false, ...props }: NotebookPaperProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
+  const isMobile = useIsMobile();
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -30,7 +32,7 @@ export function NotebookPaper({ children, className, headerText, rotation = -2, 
       viewport={{ once: true }}
       transition={{ delay: 0.2, type: 'spring' }}
       whileHover={{ scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 40 }}
-      drag
+      drag={!isMobile}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}
