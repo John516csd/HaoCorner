@@ -90,6 +90,21 @@ table {
   color: white;
 }
 
+/* Emoji 贴纸白边效果 */
+.emoji-sticker-outline {
+  /* Using text-shadow instead of multiple drop-shadow filters for better performance */
+  text-shadow: 
+    -2px -2px 0 #fff,
+    0   -2px 0 #fff,
+    2px -2px 0 #fff,
+    2px  0   0 #fff,
+    2px  2px 0 #fff,
+    0    2px 0 #fff,
+    -2px  2px 0 #fff,
+    -2px  0   0 #fff,
+    0 4px 6px rgba(0,0,0,0.2);
+}
+
 /* 设置全局字体为 Noto Sans */
 body {
   font-family: "Noto Sans", sans-serif;

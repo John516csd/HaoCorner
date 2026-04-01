@@ -22,11 +22,99 @@ import { VinylCard } from "./components/figma-ui/VinylCard";
 import { NavBar } from "./components/figma-ui/NavBar";
 import { NotebookPaper } from "./components/figma-ui/NotebookPaper";
 import { VoiceMemo } from "./components/figma-ui/VoiceMemo";
+import { PhotoFolder } from "./components/figma-ui/PhotoFolder";
+import { PhotoModal } from "./components/figma-ui/PhotoModal";
 import { useIsMobile } from "./hooks/use-mobile";
+
+// Photo Folder Mock Data
+const photoFolders = [
+  {
+    id: "japan",
+    title: "Japan 2024",
+    photoCount: 83,
+    coverPhotos: [
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1542051812871-75f56cc9a3a0?w=500&h=500&fit=crop",
+    ],
+    stickers: (
+      <>
+        <div className="absolute top-4 left-6 text-4xl transform -rotate-12 emoji-sticker-outline">
+          🇯🇵
+        </div>
+        <div className="absolute bottom-5 right-6 text-5xl transform rotate-6 emoji-sticker-outline">
+          ⛩️
+        </div>
+      </>
+    ),
+    photos: [
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1542051812871-75f56cc9a3a0?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&fit=crop",
+    ]
+  },
+  {
+    id: "paris",
+    title: "Paris 2024",
+    photoCount: 62,
+    coverPhotos: [
+      "https://images.unsplash.com/photo-1502602898657-3e90760b3746?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1520939822890-a3399479e00b?w=500&h=500&fit=crop",
+    ],
+    stickers: (
+      <>
+        <div className="absolute top-6 left-8 text-5xl transform rotate-6 emoji-sticker-outline">
+          🗼
+        </div>
+        <div className="absolute bottom-6 right-8 text-4xl transform -rotate-12 emoji-sticker-outline">
+          🥐
+        </div>
+      </>
+    ),
+    photos: [
+      "https://images.unsplash.com/photo-1502602898657-3e90760b3746?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1520939822890-a3399479e00b?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&fit=crop",
+    ]
+  },
+  {
+    id: "street",
+    title: "Street Vibes",
+    photoCount: 145,
+    coverPhotos: [
+      "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1555805562-b911c750b380?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1605371924599-2d0365da26f5?w=500&h=500&fit=crop",
+    ],
+    stickers: (
+      <>
+        <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[60%] transform rotate-[-8deg] z-40 emoji-sticker-outline">
+          <span className="text-4xl">📷</span>
+        </div>
+        <div className="absolute bottom-6 right-6 transform rotate-[12deg] z-40 emoji-sticker-outline">
+          <span className="text-3xl" style={{ filter: 'grayscale(0.2)' }}>🎞️</span>
+        </div>
+      </>
+    ),
+    photos: [
+      "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1555805562-b911c750b380?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1605371924599-2d0365da26f5?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1534533983617-640a3dd9dce8?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&fit=crop",
+      "https://images.unsplash.com/photo-1494548162494-384bba4ab999?w=800&fit=crop",
+    ]
+  }
+];
 
 export default function Page() {
   const [activeSongIndex, setActiveSongIndex] = useState(0);
   const [currentDate, setCurrentDate] = useState("");
+  const [selectedFolder, setSelectedFolder] = useState<typeof photoFolders[0] | null>(null);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -831,6 +919,57 @@ export default function Page() {
           delay={1.5}
         />
       </section>
+
+      {/* Photography Section */}
+      <section
+        id="photography"
+        className="relative w-full max-w-6xl mx-auto px-6 py-24 z-10"
+      >
+        <div className="flex flex-col items-center mb-16 relative">
+          <Tape color="white" className="top-0 w-32" rotation={-2} />
+
+          <div className="relative mt-4">
+            <h2 className="text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 bg-[#fdfbf7] px-8 py-2 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-[2px_4px_10px_rgba(0,0,0,0.1)] relative z-10">
+              Moments
+            </h2>
+            <Doodle
+              path="M 0,20 Q 50,0 100,20"
+              className="w-[120%] h-full text-pink-300 absolute -top-4 -left-4 -z-10 opacity-60 stroke-[12px]"
+              fill="none"
+              viewBox="0 0 100 40"
+              delay={0.6}
+            />
+          </div>
+          
+          <Sticker
+            rotation={12}
+            className="absolute right-4 md:right-1/4 top-10 bg-white p-2"
+          >
+            <Camera className="text-gray-800" size={28} />
+          </Sticker>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 justify-items-center">
+          {photoFolders.map((folder, idx) => (
+            <PhotoFolder
+              key={folder.id}
+              title={folder.title}
+              photoCount={folder.photoCount}
+              coverPhotos={folder.coverPhotos}
+              stickers={folder.stickers}
+              delay={idx * 0.15}
+              onClick={() => setSelectedFolder(folder)}
+            />
+          ))}
+        </div>
+      </section>
+
+      <PhotoModal
+        isOpen={selectedFolder !== null}
+        onClose={() => setSelectedFolder(null)}
+        folderTitle={selectedFolder?.title || ""}
+        photos={selectedFolder?.photos || []}
+      />
 
       {/* Footer / Connect Section */}
       <section
