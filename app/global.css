@@ -16,6 +16,16 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
+  /* 隐藏原生滚动条但保留滚动功能 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 隐藏基于 WebKit 浏览器的原生滚动条 */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -92,7 +102,12 @@ table {
 
 /* Emoji 贴纸白边效果 */
 .emoji-sticker-outline {
-  /* Using text-shadow instead of multiple drop-shadow filters for better performance */
+  /* Using SVG filter for better outline on complex shapes like the Torii gate */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)) url(#solid-outline);
+}
+
+/* Fallback if SVG filter doesn't work well */
+.emoji-sticker-outline-text {
   text-shadow: 
     -2px -2px 0 #fff,
     0   -2px 0 #fff,

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { cn } from "../../lib/utils";
-import { motion, useAnimationControls } from "motion/react";
+import { motion } from "motion/react";
 
 interface PhotoFolderProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   title: string;
@@ -12,6 +12,23 @@ interface PhotoFolderProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'o
   onClick?: () => void;
   delay?: number;
 }
+
+const photoVariants = [
+  {
+    closed: { rotate: -15, x: -28, y: 12, zIndex: 10 },
+    open:   { rotate: -22, x: -48, y: -22, zIndex: 10 },
+  },
+  {
+    closed: { rotate: -2, x: 0, y: -4, zIndex: 12 },
+    open:   { rotate: -2, x: 0, y: -30, zIndex: 12 },
+  },
+  {
+    closed: { rotate: 18, x: 28, y: 12, zIndex: 11 },
+    open:   { rotate: 26, x: 48, y: -18, zIndex: 11 },
+  },
+];
+
+const springTransition = { type: "spring" as const, stiffness: 260, damping: 22 };
 
 export function PhotoFolder({
   title,
@@ -23,90 +40,100 @@ export function PhotoFolder({
   delay = 0,
   ...props
 }: PhotoFolderProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay, type: "spring", stiffness: 200, damping: 20 }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      whileTap={{ scale: 0.95 }}
       onClick={onClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
       className={cn(
-        "group relative flex flex-col items-center cursor-pointer",
+        "relative flex flex-col items-center cursor-pointer select-none",
         className
       )}
       {...props}
     >
-      <div className="relative w-40 h-32 sm:w-48 sm:h-36 mt-4">
-        {/* Back Cover & Tab - Faint Blue Tint */}
-        <div className="absolute bottom-0 w-full h-[85%] bg-[#e2eaf4] rounded-xl rounded-tr-sm shadow-inner" />
-        <div className="absolute top-[3%] left-0 w-[45%] h-[15%] bg-[#e2eaf4] rounded-t-lg" />
+      {/* Folder body container - extra top padding for photos to fan out into */}
+      <div className="relative w-[160px] h-[150px] sm:w-[190px] sm:h-[170px] mt-2">
 
-        {/* Photos Sticking Out */}
-        <div className="absolute inset-0 top-[10%] left-0 right-0 flex justify-center items-end px-2 z-10 transition-transform duration-300 group-hover:-translate-y-4">
-          {coverPhotos.map((src, idx) => {
-            // Adjust rotations and translations to match the reference image closely
-            // Left photo
-            let rotation = -14;
-            let translateX = -22;
-            let translateY = -12;
-            let zIndex = 10;
-            
-            // Middle photo
-            if (idx % 3 === 1) {
-              rotation = 0;
-              translateX = 0;
-              translateY = -24;
-              zIndex = 12;
-            }
-            // Right photo
-            else if (idx % 3 === 2) {
-              rotation = 14;
-              translateX = 22;
-              translateY = -12;
-              zIndex = 11;
-            }
-            
-            return (
-              <div
-                key={idx}
-                className="absolute w-16 h-20 sm:w-20 sm:h-24 bg-white p-[3px] shadow-[0_2px_8px_rgba(0,0,0,0.15)] border border-gray-200/60 rounded-[3px] origin-bottom"
-                style={{
-                  transform: `translateX(${translateX}px) translateY(${translateY}px) rotate(${rotation}deg)`,
-                  zIndex: zIndex,
-                }}
-              >
-                <div className="relative w-full h-full bg-gray-100 overflow-hidden rounded-[2px]">
-                  <img
-                    src={src}
-                    alt={`Cover ${idx}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+        {/* 1. Back cover — top-left is square so the tab merges flush with it */}
+        <div className="absolute bottom-0 left-0 w-full h-[78%] bg-[#e0eaf6] rounded-[16px] rounded-tl-none shadow-[inset_0_2px_10px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.04)]" />
+        {/* Tab */}
+        <div className="absolute bottom-[78%] left-0 w-[38%] h-[16%] bg-[#e0eaf6] rounded-tl-[16px] rounded-tr-[14px]" />
+
+        {/* 2. Cover photos – fan out on hover using Framer Motion */}
+        {coverPhotos.slice(0, 3).map((src, idx) => {
+          const v = photoVariants[idx] ?? photoVariants[0];
+          return (
+            <motion.div
+              key={idx}
+              animate={isHovered ? "open" : "closed"}
+              variants={{
+                closed: { rotate: v.closed.rotate, x: v.closed.x, y: v.closed.y },
+                open:   { rotate: v.open.rotate,   x: v.open.x,   y: v.open.y   },
+              }}
+              transition={springTransition}
+              className="absolute bg-[#f8fafc] p-[4px] shadow-[0_3px_10px_rgba(0,0,0,0.18)] border border-gray-200/60 rounded-[12px]"
+              style={{
+                width: 80,
+                height: 88,
+                bottom: "22%",
+                left: "50%",
+                marginLeft: -40,
+                zIndex: v.closed.zIndex,
+                transformOrigin: "bottom center",
+              }}
+            >
+              <div className="w-full h-full bg-gray-100 overflow-hidden rounded-[8px]">
+                <img src={src} alt={`Cover ${idx}`} className="w-full h-full object-cover" />
               </div>
-            );
-          })}
-        </div>
+            </motion.div>
+          );
+        })}
 
-        {/* Frosted Front Cover - Faint Blue Tint */}
-        <div className="absolute bottom-0 w-full h-[85%] rounded-xl rounded-tr-sm bg-[#f0f6ff]/40 backdrop-blur-md border border-white/70 shadow-[0_8px_32px_rgba(0,10,30,0.06)] z-20 flex items-center justify-center p-2">
-          {/* Stickers inside or on the front cover */}
-          {stickers && (
-            <div className="absolute inset-0 w-full h-full overflow-hidden rounded-xl z-30">
-              {stickers}
+        {/* 3. Front flap – perspective container */}
+        <div
+          className="absolute bottom-0 left-0 right-0 z-20"
+          style={{ height: "78%", perspective: "600px" }}
+        >
+          <motion.div
+            animate={isHovered ? "open" : "closed"}
+            variants={{
+              closed: { rotateX: -18, translateZ: 5, y: 0 },
+              open:   { rotateX: -45, translateZ: 20, y: 8 },
+            }}
+            transition={springTransition}
+            style={{ transformOrigin: "bottom", width: "100%", height: "100%" }}
+            className="bg-[#edf2f9]/75 backdrop-blur-md border-[1.5px] border-white/70 rounded-[16px] shadow-[0_8px_32px_rgba(0,10,30,0.07)] relative overflow-hidden"
+          >
+            {/* Stickers slot */}
+            {stickers && (
+              <div className="absolute inset-0 w-full h-full overflow-hidden rounded-[16px] z-30">
+                {stickers}
+              </div>
+            )}
+
+            {/* Heat-press seam lines at bottom */}
+            <div className="absolute bottom-[10px] left-3 right-3 flex flex-col gap-[5px] z-20">
+              <div className="h-[2px] w-full rounded-full bg-white/70 shadow-[0_1px_0px_rgba(255,255,255,0.8)]" />
+              <div className="h-[2px] w-full rounded-full bg-white/70 shadow-[0_1px_0px_rgba(255,255,255,0.8)]" />
             </div>
-          )}
-          {/* Folder bottom line detail */}
-          <div className="absolute bottom-3 left-4 right-4 h-1 border-b-2 border-white/50 rounded-full" />
+          </motion.div>
         </div>
       </div>
 
-      <div className="mt-4 text-center">
-        <h3 className="font-['Kalam'] text-xl sm:text-2xl font-bold text-gray-800">
+      {/* Title & count */}
+      <div className="mt-5 text-center">
+        <h3 className="font-['Kalam'] text-[22px] sm:text-2xl font-bold text-[#1e293b]">
           {title}
         </h3>
-        <p className="font-['Caveat'] text-lg text-gray-500 bg-gray-200/50 rounded-full px-3 py-0.5 inline-block mt-1">
+        <p className="font-['Caveat'] text-[17px] text-[#64748b] bg-[#f1f5f9] rounded-full px-3 py-0.5 inline-block mt-1">
           {photoCount} photos
         </p>
       </div>

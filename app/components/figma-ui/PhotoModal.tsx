@@ -15,41 +15,20 @@ interface PhotoModalProps {
 export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalProps) {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Prevent scrolling on body when modal is open, but keep the scrollbar space
-  // so the layout doesn't shift
+  // Prevent scrolling on body when modal is open
   useEffect(() => {
     if (isOpen) {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
         timeoutRef.current = null;
       }
-      // Get the current scrollbar width
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
       
       document.body.style.overflow = "hidden";
-      
-      // Add padding to body to compensate for the missing scrollbar
-      if (scrollbarWidth > 0) {
-        document.body.style.paddingRight = `${scrollbarWidth}px`;
-        
-        // Also apply padding to any fixed headers in the main app layout if they exist
-        // This targets the main sticky/fixed navbar to prevent it from jumping
-        const fixedHeaders = document.querySelectorAll('header.fixed, header.sticky, .fixed-nav, nav.fixed');
-        fixedHeaders.forEach(el => {
-          (el as HTMLElement).style.paddingRight = `${scrollbarWidth}px`;
-        });
-      }
       
       return () => {
         // Delay restoring the scrollbar to match the Framer Motion exit animation duration
         timeoutRef.current = setTimeout(() => {
           document.body.style.overflow = "";
-          document.body.style.paddingRight = "";
-          
-          const fixedHeaders = document.querySelectorAll('header.fixed, header.sticky, .fixed-nav, nav.fixed');
-          fixedHeaders.forEach(el => {
-            (el as HTMLElement).style.paddingRight = "";
-          });
         }, 300);
       };
     }
@@ -60,7 +39,6 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
     };
   }, []);
 

@@ -39,10 +39,10 @@ const photoFolders = [
     ],
     stickers: (
       <>
-        <div className="absolute top-4 left-6 text-4xl transform -rotate-12 emoji-sticker-outline">
+        <div className="absolute top-4 left-4 text-3xl transform -rotate-12 emoji-sticker-outline-text">
           🇯🇵
         </div>
-        <div className="absolute bottom-5 right-6 text-5xl transform rotate-6 emoji-sticker-outline">
+        <div className="absolute bottom-3 right-3 text-[3.5rem] transform rotate-[15deg] emoji-sticker-outline origin-bottom-right">
           ⛩️
         </div>
       </>
@@ -66,10 +66,10 @@ const photoFolders = [
     ],
     stickers: (
       <>
-        <div className="absolute top-6 left-8 text-5xl transform rotate-6 emoji-sticker-outline">
+        <div className="absolute top-4 left-5 text-4xl transform rotate-6 emoji-sticker-outline-text">
           🗼
         </div>
-        <div className="absolute bottom-6 right-8 text-4xl transform -rotate-12 emoji-sticker-outline">
+        <div className="absolute bottom-4 right-5 text-3xl transform -rotate-12 emoji-sticker-outline-text">
           🥐
         </div>
       </>
@@ -92,11 +92,11 @@ const photoFolders = [
     ],
     stickers: (
       <>
-        <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[60%] transform rotate-[-8deg] z-40 emoji-sticker-outline">
-          <span className="text-4xl">📷</span>
+        <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[60%] transform rotate-[-8deg] z-40 emoji-sticker-outline-text">
+          <span className="text-3xl">📷</span>
         </div>
-        <div className="absolute bottom-6 right-6 transform rotate-[12deg] z-40 emoji-sticker-outline">
-          <span className="text-3xl" style={{ filter: 'grayscale(0.2)' }}>🎞️</span>
+        <div className="absolute bottom-4 right-4 transform rotate-[12deg] z-40 emoji-sticker-outline-text">
+          <span className="text-2xl" style={{ filter: 'grayscale(0.2)' }}>🎞️</span>
         </div>
       </>
     ),
@@ -925,6 +925,18 @@ export default function Page() {
         id="photography"
         className="relative w-full max-w-6xl mx-auto px-6 py-24 z-10"
       >
+        <svg className="hidden">
+          <filter id="solid-outline">
+            <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
+            <feFlood floodColor="white" floodOpacity="1" result="WHITE"></feFlood>
+            <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
+            <feMerge>
+              <feMergeNode in="OUTLINE" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </svg>
+
         <div className="flex flex-col items-center mb-16 relative">
           <Tape color="white" className="top-0 w-32" rotation={-2} />
 
