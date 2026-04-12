@@ -143,52 +143,6 @@ export default function Page() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const [weatherInfo, setWeatherInfo] = useState<{
-    icon: string;
-    temp: string;
-  } | null>(null);
-
-  useEffect(() => {
-    // Attempt to get user location and weather
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          try {
-            const { latitude, longitude } = position.coords;
-            // Using Open-Meteo API for free, no-key-required weather data
-            const res = await fetch(
-              `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
-            );
-            const data = await res.json();
-
-            if (data && data.current_weather) {
-              const code = data.current_weather.weathercode;
-              const temp = Math.round(data.current_weather.temperature);
-
-              // WMO Weather interpretation codes
-              let icon = "☀️"; // default clear
-              if (code === 0) icon = "☀️"; // Clear sky
-              else if (code === 1 || code === 2 || code === 3)
-                icon = "🌤️"; // Mainly clear, partly cloudy, and overcast
-              else if (code >= 45 && code <= 48) icon = "🌫️"; // Fog
-              else if (code >= 51 && code <= 67) icon = "🌧️"; // Drizzle / Rain
-              else if (code >= 71 && code <= 77) icon = "❄️"; // Snow
-              else if (code >= 80 && code <= 82) icon = "🌧️"; // Rain showers
-              else if (code >= 85 && code <= 86) icon = "❄️"; // Snow showers
-              else if (code >= 95) icon = "⛈️"; // Thunderstorm
-
-              setWeatherInfo({ icon, temp: `${temp}°C` });
-            }
-          } catch (error) {
-            console.error("Failed to fetch weather data:", error);
-          }
-        },
-        (error) => {
-          console.error("Geolocation error:", error);
-        }
-      );
-    }
-  }, []);
 
   const heroPhotoUrl = "/images/me.jpg";
   const sushiPhotoUrl =
@@ -354,22 +308,6 @@ export default function Page() {
         >
           {currentDate}
         </div>
-        {weatherInfo && (
-          <div className="flex flex-col items-center gap-3 font-['Kalam'] text-xl md:text-2xl font-bold text-gray-700">
-            <span className="text-2xl md:text-3xl filter grayscale contrast-200 transform -rotate-90">
-              {weatherInfo.icon}
-            </span>
-            <span
-              style={{
-                writingMode: "vertical-rl",
-                textOrientation: "mixed",
-                transform: "rotate(180deg)",
-              }}
-            >
-              {weatherInfo.temp}
-            </span>
-          </div>
-        )}
       </div>
 
       {/* Notebook red margin line - replaced with a subtle indent line to match the grid */}
@@ -796,7 +734,7 @@ export default function Page() {
       {/* Music Section */}
       <section
         id="music"
-        className="relative w-full max-w-5xl mx-auto px-6 py-24 z-10"
+        className="relative w-full max-w-5xl mx-auto px-6 pt-24 pb-12 z-10"
       >
         <div className="flex flex-col items-center mb-16 relative">
           <Tape color="blue" className="top-0 w-32" rotation={3} />
@@ -824,7 +762,7 @@ export default function Page() {
         </div>
 
         {/* New Scrapbook Collage Layout */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32 mt-10 mb-36 relative w-full max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32 mt-10 mb-16 relative w-full max-w-6xl mx-auto">
           {/* Left: Featured Album */}
           <div className="relative flex-shrink-0 z-20 w-72 md:w-80 h-[380px] flex items-center justify-center">
             <AnimatePresence mode="wait">
@@ -923,7 +861,7 @@ export default function Page() {
       {/* Photography Section */}
       <section
         id="photography"
-        className="relative w-full max-w-6xl mx-auto px-6 py-24 z-10"
+        className="relative w-full max-w-6xl mx-auto px-6 pt-12 pb-24 z-10"
       >
         <svg className="hidden">
           <filter id="solid-outline">
