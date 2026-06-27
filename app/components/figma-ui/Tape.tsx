@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { cn } from '../../lib/utils';
+import { initialWhenVisible } from '../../lib/motion';
 import { motion } from 'motion/react';
 
 interface TapeProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
@@ -21,7 +22,7 @@ const colorMap = {
 export function Tape({ className, color = 'white', rotation = -4, isDragging = false, ...props }: TapeProps) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={initialWhenVisible({ opacity: 0.75 })}
       animate={{ 
         opacity: isDragging ? 0.75 : 1, 
         rotate: rotation,

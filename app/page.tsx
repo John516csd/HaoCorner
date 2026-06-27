@@ -25,6 +25,7 @@ import { VoiceMemo } from "./components/figma-ui/VoiceMemo";
 import { PhotoFolder } from "./components/figma-ui/PhotoFolder";
 import { PhotoModal } from "./components/figma-ui/PhotoModal";
 import { useIsMobile } from "./hooks/use-mobile";
+import { initialWhenVisible } from "./lib/motion";
 
 // Photo Folder Mock Data
 const photoFolders = [
@@ -281,7 +282,7 @@ export default function Page() {
         }}
       />
       {/* Notebook ring binder holes */}
-      <div className="fixed top-0 bottom-0 left-0 w-8 z-0 flex flex-col justify-evenly py-20 pointer-events-none">
+      <div className="hidden md:flex fixed top-0 bottom-0 left-0 w-8 z-0 flex-col justify-evenly py-20 pointer-events-none">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
@@ -311,14 +312,14 @@ export default function Page() {
       </div>
 
       {/* Notebook red margin line - replaced with a subtle indent line to match the grid */}
-      <div className="fixed top-0 bottom-0 left-12 md:left-16 w-[1px] bg-gray-300/50 z-0" />
+      <div className="hidden md:block fixed top-0 bottom-0 left-12 md:left-16 w-[1px] bg-gray-300/50 z-0" />
 
       <NavBar />
 
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative w-full max-w-6xl mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen flex items-center justify-center z-10"
+        className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-16 lg:pt-40 lg:pb-32 min-h-screen flex items-center justify-center z-10"
       >
         {/* ================= BACKGROUND DOODLES ================= */}
         {/* Top left corner stars */}
@@ -330,7 +331,7 @@ export default function Page() {
         {/* Top right swirly cloud */}
         <Doodle
           path="M 20,50 C 20,30 40,20 50,30 C 60,10 80,10 90,30 C 110,30 110,60 90,70 C 80,90 40,90 30,70 C 10,70 10,50 20,50 Z"
-          className="w-48 h-48 text-blue-300 top-20 right-10 md:right-32 opacity-40"
+          className="hidden sm:block w-48 h-48 text-blue-300 top-20 right-10 lg:right-32 opacity-40"
           viewBox="0 0 120 100"
           delay={0.6}
         />
@@ -344,7 +345,7 @@ export default function Page() {
         {/* Arrow pointing at the Polaroid */}
         <Doodle
           path="M 10,10 Q 30,30 50,50 L 40,50 M 50,50 L 50,40"
-          className="w-20 h-20 text-pink-400 top-[30%] left-[10%] md:left-[25%] opacity-60 rotate-45"
+          className="w-16 h-16 sm:w-20 sm:h-20 text-pink-400 top-[28%] left-[8%] lg:left-[25%] opacity-50 sm:opacity-60 rotate-45"
           delay={1.2}
         />
         {/* Zig-zags on the bottom left */}
@@ -361,11 +362,11 @@ export default function Page() {
         />
         {/* ==================================================== */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center w-full max-w-5xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center w-full max-w-5xl">
           {/* Left Column - Polaroid Gallery */}
-          <div className="relative flex justify-center items-center h-[500px]">
+          <div className="relative flex justify-center items-center h-[380px] sm:h-[430px] lg:h-[500px]">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: -15, x: -40, y: -20 }}
+              initial={initialWhenVisible({ opacity: 1, scale: 0.9, rotate: -15, x: -40, y: -20 })}
               animate={{ opacity: 1, scale: 1, rotate: -12, x: -40, y: -20 }}
               transition={{ delay: 0.2 }}
               className="absolute z-0 w-48 hidden md:block"
@@ -386,12 +387,12 @@ export default function Page() {
                 imageSrc={heroPhotoUrl}
                 caption="KANGDING, SICHUAN, CHINA"
                 rotation={-4}
-                className="w-72 sm:w-80"
+                className="w-[78vw] max-w-72 sm:w-80"
               />
 
               {/* Paperclip overlaying the corner */}
               <motion.div
-                initial={{ opacity: 0, scale: 0 }}
+                initial={initialWhenVisible({ opacity: 1, scale: 0.8 })}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   delay: 0.8,
@@ -417,24 +418,24 @@ export default function Page() {
                   <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48" />
                 </svg>
               </motion.div>
-            </div>
 
-            <PostIt
-              color="yellow"
-              rotation={8}
-              className="absolute -left-4 md:-left-16 bottom-0 w-44 z-20"
-            >
-              <div className="text-xl">
-                Exploring the world
-                <br />& building stuff 🚀
-              </div>
-            </PostIt>
+              <PostIt
+                color="yellow"
+                rotation={8}
+                className="absolute -left-4 sm:-left-7 lg:-left-10 -bottom-4 sm:-bottom-5 lg:-bottom-6 w-40 sm:w-44 z-30"
+              >
+                <div className="text-xl">
+                  Exploring the world
+                  <br />& building stuff 🚀
+                </div>
+              </PostIt>
+            </div>
           </div>
 
           {/* Right Column - Introduction & Stickers */}
-          <div className="relative flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="relative flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.div
-              initial={{ scale: 0, rotate: -30 }}
+              initial={initialWhenVisible({ scale: 0.85, rotate: -30 })}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ type: "spring", delay: 0.3 }}
               whileHover={{ rotate: 15, scale: 1.1 }}
@@ -446,13 +447,13 @@ export default function Page() {
             </motion.div>
 
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={initialWhenVisible({ y: 20, opacity: 1 })}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
               className="relative mb-6"
             >
               <h1
-                className="text-5xl md:text-7xl font-bold font-['Kalam'] tracking-tight"
+                className="text-[clamp(2.6rem,12vw,3.35rem)] lg:text-7xl font-bold font-['Kalam'] tracking-tight leading-[0.95]"
                 style={{
                   color: "#1f2937",
                   textShadow:
@@ -480,49 +481,49 @@ export default function Page() {
             </motion.div>
 
             <motion.p
-              initial={{ opacity: 0 }}
+              initial={initialWhenVisible({ opacity: 0.85 })}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-2xl font-['Caveat'] text-gray-600 mb-10 max-w-md leading-relaxed"
+              className="text-[1.35rem] sm:text-2xl font-['Caveat'] text-gray-600 mb-8 sm:mb-10 max-w-md leading-relaxed"
             >
               A creative developer passionate about crafting beautiful,
               interactive digital experiences. Let's make something amazing
               together!
             </motion.p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 sm:gap-3 mt-2 sm:mt-4">
               <Sticker
                 rotation={-6}
                 delay={0.5}
-                className="px-5 py-2 bg-blue-50 text-blue-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-blue-100/50"
+                className="px-4 sm:px-5 py-2 bg-blue-50 text-blue-700 font-['Kalam'] text-lg sm:text-xl cursor-grab active:cursor-grabbing shadow-sm border border-blue-100/50"
               >
                 ✨ Endless Creativity
               </Sticker>
               <Sticker
                 rotation={8}
                 delay={0.6}
-                className="px-5 py-2 bg-yellow-50 text-yellow-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-yellow-100/50"
+                className="px-4 sm:px-5 py-2 bg-yellow-50 text-yellow-700 font-['Kalam'] text-lg sm:text-xl cursor-grab active:cursor-grabbing shadow-sm border border-yellow-100/50"
               >
                 🤖 AI-Driven
               </Sticker>
               <Sticker
                 rotation={-4}
                 delay={0.7}
-                className="px-5 py-2 bg-green-50 text-green-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-green-100/50"
+                className="px-4 sm:px-5 py-2 bg-green-50 text-green-700 font-['Kalam'] text-lg sm:text-xl cursor-grab active:cursor-grabbing shadow-sm border border-green-100/50"
               >
                 🚀 Fast Learner
               </Sticker>
               <Sticker
                 rotation={10}
                 delay={0.8}
-                className="px-5 py-2 bg-pink-50 text-pink-700 font-['Kalam'] text-xl cursor-grab active:cursor-grabbing shadow-sm border border-pink-100/50"
+                className="px-4 sm:px-5 py-2 bg-pink-50 text-pink-700 font-['Kalam'] text-lg sm:text-xl cursor-grab active:cursor-grabbing shadow-sm border border-pink-100/50"
               >
                 🧩 Problem Solver
               </Sticker>
             </div>
 
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={initialWhenVisible({ opacity: 0.8 })}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
               className="absolute -top-10 -right-4 text-pink-400 rotate-12 hidden md:block"
@@ -586,7 +587,7 @@ export default function Page() {
         <div className="relative w-full flex flex-col">
           {/* Single continuous dashed spine line — desktop only */}
           <div
-            className="hidden md:block absolute top-0 bottom-0 pointer-events-none"
+            className="hidden lg:block absolute top-0 bottom-0 pointer-events-none"
             style={{
               left: "calc(10rem + 24px)",
               borderLeft: "2px dashed #c9cdd4",
@@ -597,7 +598,7 @@ export default function Page() {
           {timelineData.map((item, index) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={initialWhenVisible({ opacity: 1, y: 40 })}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{
@@ -608,7 +609,7 @@ export default function Page() {
               className="relative py-8 md:py-14"
             >
               {/* ── Mobile layout: horizontal strip (year | photo) then postit below ── */}
-              <div className="flex md:hidden flex-col gap-4">
+              <div className="flex lg:hidden flex-col gap-4">
                 {/* Top row: year badge + polaroid side by side */}
                 <div className="flex flex-row items-start gap-4">
                   {/* Year badge */}
@@ -662,7 +663,7 @@ export default function Page() {
               </div>
 
               {/* ── Desktop layout: [year col] [dot] [polaroid + postit] ── */}
-              <div className="hidden md:flex flex-row items-start gap-0">
+              <div className="hidden lg:flex flex-row items-start gap-0">
                 {/* Left: year stamp */}
                 <div className="flex-shrink-0 w-40 flex flex-col items-end pr-6 pt-5 z-10">
                   <span className="font-['Kalam'] font-bold text-4xl text-gray-800 leading-tight">
@@ -734,13 +735,13 @@ export default function Page() {
       {/* Music Section */}
       <section
         id="music"
-        className="relative w-full max-w-5xl mx-auto px-6 pt-24 pb-12 z-10"
+        className="relative w-full max-w-5xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-12 z-10"
       >
         <div className="flex flex-col items-center mb-16 relative">
           <Tape color="blue" className="top-0 w-32" rotation={3} />
 
           <div className="relative">
-            <h2 className="text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 mt-4 bg-white/50 backdrop-blur-sm px-8 py-2 rounded-lg border-2 border-dashed border-gray-300 shadow-sm relative z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 mt-4 bg-white/50 backdrop-blur-sm px-6 sm:px-8 py-2 rounded-lg border-2 border-dashed border-gray-300 shadow-sm relative z-10">
               On Repeat 🎧
             </h2>
             <Doodle
@@ -762,13 +763,13 @@ export default function Page() {
         </div>
 
         {/* New Scrapbook Collage Layout */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32 mt-10 mb-16 relative w-full max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 sm:gap-14 lg:gap-32 mt-6 sm:mt-10 mb-14 sm:mb-16 relative w-full max-w-6xl mx-auto">
           {/* Left: Featured Album */}
-          <div className="relative flex-shrink-0 z-20 w-72 md:w-80 h-[380px] flex items-center justify-center">
+          <div className="relative flex-shrink-0 z-20 w-[min(72vw,17rem)] sm:w-72 lg:w-80 h-[320px] sm:h-[360px] lg:h-[380px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSongIndex}
-                initial={{ opacity: 0, scale: 0.8, rotate: -30 }}
+                initial={initialWhenVisible({ opacity: 1, scale: 0.9, rotate: -30 })}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 exit={{ opacity: 0, scale: 0.8, rotate: 30 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
@@ -780,7 +781,7 @@ export default function Page() {
                   artist={favoriteSongs[activeSongIndex].artist}
                   lyrics={favoriteSongs[activeSongIndex].lyrics}
                   rotation={0}
-                  className="w-64 md:w-72"
+                  className="w-[min(70vw,16rem)] sm:w-64 lg:w-72"
                   delay={0.2}
                 />
               </motion.div>
@@ -789,35 +790,35 @@ export default function Page() {
             {/* Doodle arrow pointing to the feature */}
             <Doodle
               path="M 80,10 Q 50,40 20,20 L 30,15 M 20,20 L 25,30"
-              className="absolute -right-16 -top-8 w-24 h-24 text-pink-400 opacity-80"
+              className="hidden sm:block absolute -right-16 -top-8 w-24 h-24 text-pink-400 opacity-80"
               delay={1.2}
             />
           </div>
 
           {/* Right: Playlist */}
-          <div className="relative w-full max-w-md mt-16 md:mt-0 flex-shrink-0 z-10 pt-4">
+          <div className="relative w-full max-w-[calc(100vw-32px)] sm:max-w-md mt-8 lg:mt-0 flex-shrink-0 z-10 pt-4">
             <PostIt
               color="blue"
-              rotation={3}
-              className="w-full p-6 md:p-8 z-10 relative shadow-[2px_8px_20px_rgba(0,0,0,0.15)] mt-4"
+              rotation={isMobile ? 0 : 3}
+              className="w-full max-w-[calc(100vw-32px)] p-4 sm:p-6 md:p-8 z-10 relative shadow-[2px_8px_20px_rgba(0,0,0,0.15)] mt-4"
               tape={true}
             >
               <div className="pt-2">
-                <h3 className="font-['Kalam'] text-2xl md:text-3xl font-bold mb-6 text-gray-800 flex items-center gap-2">
+                <h3 className="font-['Kalam'] text-2xl sm:text-3xl font-bold mb-5 sm:mb-6 text-gray-800 flex items-center gap-2">
                   <Heart size={24} className="text-red-400 fill-red-400" />
                   Vibe Check
                 </h3>
 
-                <ul className="font-['Caveat'] text-2xl md:text-3xl space-y-4 text-gray-700">
+                <ul className="font-['Caveat'] text-xl sm:text-2xl md:text-3xl space-y-4 text-gray-700">
                   {favoriteSongs.map((song, idx) => (
                     <li
                       key={idx}
                       onClick={() => setActiveSongIndex(idx)}
-                      className="flex justify-between items-center border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
+                      className="flex items-start justify-between gap-3 border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
                     >
-                    <span className="relative inline-block z-10">
+                    <span className="relative z-10 min-w-0 flex-1 leading-tight">
                       {idx + 1}. {song.title}
-                      <span className="text-gray-500/80 text-lg md:text-xl ml-2">- {song.artist}</span>
+                      <span className="block sm:inline text-gray-500/80 text-base sm:text-lg md:text-xl sm:ml-2">- {song.artist}</span>
                       {activeSongIndex === idx && (
                         <motion.svg
                             layoutId="song-underline"
@@ -838,7 +839,7 @@ export default function Page() {
                           </motion.svg>
                         )}
                       </span>
-                      <span className="text-gray-400 group-hover:text-gray-600 transition-colors text-xl md:text-2xl">
+                      <span className="text-gray-400 group-hover:text-gray-600 transition-colors text-lg sm:text-xl md:text-2xl flex-shrink-0 leading-tight pt-0.5">
                         {song.duration}
                       </span>
                     </li>
@@ -861,7 +862,7 @@ export default function Page() {
       {/* Photography Section */}
       <section
         id="photography"
-        className="relative w-full max-w-6xl mx-auto px-6 pt-12 pb-24 z-10"
+        className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-20 sm:pb-24 z-10"
       >
         <svg className="hidden">
           <filter id="solid-outline">
@@ -879,7 +880,7 @@ export default function Page() {
           <Tape color="white" className="top-0 w-32" rotation={-2} />
 
           <div className="relative mt-4">
-            <h2 className="text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 bg-[#fdfbf7] px-8 py-2 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-[2px_4px_10px_rgba(0,0,0,0.1)] relative z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 bg-[#fdfbf7] px-6 sm:px-8 py-2 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-[2px_4px_10px_rgba(0,0,0,0.1)] relative z-10">
               Moments
             </h2>
             <Doodle
@@ -899,7 +900,7 @@ export default function Page() {
           </Sticker>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 justify-items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 lg:gap-16 justify-items-center">
           {photoFolders.map((folder, idx) => (
             <PhotoFolder
               key={folder.id}
@@ -924,7 +925,7 @@ export default function Page() {
       {/* Footer / Connect Section */}
       <section
         id="contact"
-        className="relative w-full max-w-4xl mx-auto px-6 py-32 flex flex-col items-center z-10"
+        className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 py-24 sm:py-32 flex flex-col items-center z-10"
       >
         <Doodle
           path="M 10,50 L 90,50 M 20,40 L 80,40"
@@ -935,12 +936,12 @@ export default function Page() {
         <div className="relative w-full max-w-xl">
           <PostIt
             color="yellow"
-            rotation={1}
-            className="w-full text-center p-12 text-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative"
+            rotation={isMobile ? 0 : 1}
+            className="w-full max-w-[calc(100vw-32px)] text-center p-6 sm:p-8 md:p-12 text-2xl sm:text-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative"
             tape={true}
           >
             
-            <div className="mb-6 font-['Kalam'] font-bold text-4xl text-gray-800 relative z-10 mt-2">
+            <div className="mb-6 font-['Kalam'] font-bold text-3xl sm:text-4xl text-gray-800 relative z-10 mt-2">
               Let's create something cool together!
             </div>
 
@@ -952,12 +953,12 @@ export default function Page() {
             delay={1.2}
           />
 
-          <div className="flex flex-col sm:flex-row justify-center gap-6 mt-10">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-10">
             <motion.a
               href="mailto:yanchenhao57@gmail.com"
               whileHover={{ scale: 1.05, rotate: [0, -3, 3, 0] }}
               transition={{ duration: 0.3 }}
-              className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[255px_15px_225px_15px/15px_225px_15px_255px] cursor-grab active:cursor-grabbing"
+              className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[255px_15px_225px_15px/15px_225px_15px_255px] cursor-grab active:cursor-grabbing"
             >
               <Mail className="w-5 h-5" />
               Email Me
@@ -968,7 +969,7 @@ export default function Page() {
               rel="noreferrer"
               whileHover={{ scale: 1.05, rotate: [0, 3, -3, 0] }}
               transition={{ duration: 0.3 }}
-              className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[15px_225px_15px_255px/255px_15px_225px_15px] cursor-grab active:cursor-grabbing"
+              className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[15px_225px_15px_255px/255px_15px_225px_15px] cursor-grab active:cursor-grabbing"
             >
               <svg
                 viewBox="0 0 24 24"

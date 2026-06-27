@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
+import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
 import { useIsMobile } from '../../hooks/use-mobile';
@@ -26,7 +27,7 @@ export function NotebookPaper({ children, className, headerText, rotation = -2, 
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -20, rotate: rotation - 10 }}
+      initial={initialWhenVisible({ opacity: 1, x: -20, rotate: rotation - 10 })}
       animate={dragControls}
       whileInView={{ opacity: 1, x: 0, rotate: rotation }}
       viewport={{ once: true }}

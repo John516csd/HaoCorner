@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
+import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
 import { useIsMobile } from '../../hooks/use-mobile';
@@ -33,12 +34,12 @@ export function PostIt({ children, className, color = 'yellow', rotation = 3, ta
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 20, rotate: rotation + 10 }}
+      initial={initialWhenVisible({ opacity: 1, x: 0, rotate: rotation })}
       animate={dragControls}
       whileInView={{ opacity: 1, x: 0, rotate: rotation }}
       viewport={{ once: true }}
       transition={{ delay: 0.3, type: 'spring' }}
-      whileHover={{ scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 40 }}
+      whileHover={isMobile ? undefined : { scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 40 }}
       drag={!isMobile}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}

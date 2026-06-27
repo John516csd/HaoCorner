@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import { cn } from "../../lib/utils";
+import { initialWhenVisible } from "../../lib/motion";
 
 interface PhotoModalProps {
   isOpen: boolean;
@@ -95,7 +96,7 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={initialWhenVisible({ opacity: 0.96 })}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
@@ -122,7 +123,7 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
               {photos.map((src, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={initialWhenVisible({ opacity: 1, y: 20 })}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.05, duration: 0.4 }}
                   className="break-inside-avoid relative group mb-6"

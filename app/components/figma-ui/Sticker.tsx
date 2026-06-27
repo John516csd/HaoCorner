@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
+import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
 import { useIsMobile } from '../../hooks/use-mobile';
@@ -26,7 +27,7 @@ export function Sticker({ children, className, rotation = 5, delay = 0, tape = f
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0, rotate: rotation - 20 }}
+      initial={initialWhenVisible({ opacity: 1, scale: 0.85, rotate: rotation - 20 })}
       animate={dragControls}
       whileInView={{ opacity: 1, scale: 1, rotate: rotation }}
       viewport={{ once: true }}

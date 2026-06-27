@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
+import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
 import { useIsMobile } from '../../hooks/use-mobile';
@@ -38,7 +39,7 @@ export function VinylCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30, rotate: rotation - 10 }}
+      initial={initialWhenVisible({ opacity: 1, y: 30, rotate: rotation - 10 })}
       whileInView={{ opacity: 1, y: 0, rotate: rotation }}
       animate={dragControls}
       viewport={{ once: true, margin: "-50px" }}

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { cn } from "../../lib/utils";
+import { initialWhenVisible } from "../../lib/motion";
 import { motion } from "motion/react";
 
 interface PhotoFolderProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
@@ -44,7 +45,7 @@ export function PhotoFolder({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={initialWhenVisible({ opacity: 1, y: 30 })}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay, type: "spring", stiffness: 200, damping: 20 }}
@@ -60,7 +61,7 @@ export function PhotoFolder({
       {...props}
     >
       {/* Folder body container - extra top padding for photos to fan out into */}
-      <div className="relative w-[160px] h-[150px] sm:w-[190px] sm:h-[170px] mt-2">
+      <div className="relative w-[140px] h-[132px] sm:w-[190px] sm:h-[170px] mt-2">
 
         {/* 1. Back cover — top-left is square so the tab merges flush with it */}
         <div className="absolute bottom-0 left-0 w-full h-[78%] bg-[#e0eaf6] rounded-[16px] rounded-tl-none shadow-[inset_0_2px_10px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.04)]" />
@@ -130,10 +131,10 @@ export function PhotoFolder({
 
       {/* Title & count */}
       <div className="mt-5 text-center">
-        <h3 className="font-['Kalam'] text-[22px] sm:text-2xl font-bold text-[#1e293b]">
+        <h3 className="font-['Kalam'] text-xl sm:text-2xl font-bold text-[#1e293b]">
           {title}
         </h3>
-        <p className="font-['Caveat'] text-[17px] text-[#64748b] bg-[#f1f5f9] rounded-full px-3 py-0.5 inline-block mt-1">
+        <p className="font-['Caveat'] text-base sm:text-[17px] text-[#64748b] bg-[#f1f5f9] rounded-full px-3 py-0.5 inline-block mt-1">
           {photoCount} photos
         </p>
       </div>
