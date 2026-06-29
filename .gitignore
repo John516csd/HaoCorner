@@ -36,3 +36,14 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /demo
+
+# uploaded raw photo sources; optimized versions are committed
+/public/jeju/*
+!/public/jeju/optimized/
+!/public/jeju/optimized/**
+/public/xinjiang/*
+!/public/xinjiang/optimized/
+!/public/xinjiang/optimized/**
+/public/street-vibe/*
+!/public/street-vibe/optimized/
+!/public/street-vibe/optimized/**

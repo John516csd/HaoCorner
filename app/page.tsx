@@ -2,17 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import {
-  Laptop,
-  Palette,
-  Camera,
-  Code,
-  Sparkles,
-  MapPin,
-  Heart,
-  Music,
-  Mail,
-} from "lucide-react";
+import { Camera, Heart, Music, Mail } from "lucide-react";
 import { Polaroid } from "./components/figma-ui/Polaroid";
 import { Sticker } from "./components/figma-ui/Sticker";
 import { PostIt } from "./components/figma-ui/PostIt";
@@ -24,73 +14,118 @@ import { NotebookPaper } from "./components/figma-ui/NotebookPaper";
 import { VoiceMemo } from "./components/figma-ui/VoiceMemo";
 import { PhotoFolder } from "./components/figma-ui/PhotoFolder";
 import { PhotoModal } from "./components/figma-ui/PhotoModal";
+import { TimelinePhotoLightbox } from "./components/figma-ui/TimelinePhotoLightbox";
 import { useIsMobile } from "./hooks/use-mobile";
 import { initialWhenVisible } from "./lib/motion";
 
 // Photo Folder Mock Data
+const jejuPhotos = [
+  "/jeju/optimized/DSCF1514.jpg",
+  "/jeju/optimized/DSCF1528.jpg",
+  "/jeju/optimized/DSCF1563.jpg",
+  "/jeju/optimized/DSCF1363.jpg",
+  "/jeju/optimized/DSCF1597.jpg",
+  "/jeju/optimized/DSCF1396.jpg",
+  "/jeju/optimized/DSCF1383.jpg",
+  "/jeju/optimized/DSCF1368.jpg",
+  "/jeju/optimized/DSCF1395.jpg",
+  "/jeju/optimized/DSCF1633.jpg",
+  "/jeju/optimized/DSCF1318.jpg",
+  "/jeju/optimized/DSCF1523.jpg",
+  "/jeju/optimized/DSCF1723.jpg",
+  "/jeju/optimized/DSCF1694.jpg",
+  "/jeju/optimized/DSCF1492.jpg",
+  "/jeju/optimized/DSCF1525.jpg",
+];
+
+const xinjiangPhotos = [
+  "/xinjiang/optimized/DSCF1820.jpg",
+  "/xinjiang/optimized/DSCF1829.jpg",
+  "/xinjiang/optimized/DSCF1854.jpg",
+  "/xinjiang/optimized/DSCF1855.jpg",
+  "/xinjiang/optimized/DSCF1856.jpg",
+  "/xinjiang/optimized/DSCF1862.jpg",
+  "/xinjiang/optimized/DSCF1864.jpg",
+  "/xinjiang/optimized/DSCF1895.jpg",
+  "/xinjiang/optimized/DSCF1928.jpg",
+  "/xinjiang/optimized/DSCF1932.jpg",
+  "/xinjiang/optimized/DSCF1957.jpg",
+  "/xinjiang/optimized/DSCF2014.jpg",
+  "/xinjiang/optimized/DSCF2021.jpg",
+  "/xinjiang/optimized/DSCF2047.jpg",
+  "/xinjiang/optimized/DSCF2063.jpg",
+  "/xinjiang/optimized/DSCF2090.jpg",
+  "/xinjiang/optimized/DSCF2097.jpg",
+  "/xinjiang/optimized/DSCF2108.jpg",
+  "/xinjiang/optimized/DSCF2114.jpg",
+  "/xinjiang/optimized/DSCF2123.jpg",
+  "/xinjiang/optimized/IDG_20260617_113120_748.jpg",
+];
+
+const streetVibePhotos = [
+  "/street-vibe/optimized/DSCF0259.jpg",
+  "/street-vibe/optimized/DSCF1198.jpg",
+  "/street-vibe/optimized/DSCF1214.jpg",
+  "/street-vibe/optimized/DSCF1228.jpg",
+  "/street-vibe/optimized/IDG_20260102_170939_893.jpg",
+  "/street-vibe/optimized/IDG_20260102_172015_065.jpg",
+  "/street-vibe/optimized/IDG_20260103_114159_988.jpg",
+  "/street-vibe/optimized/IDG_20260103_122437_006.jpg",
+  "/street-vibe/optimized/IDG_20260103_122941_767.jpg",
+  "/street-vibe/optimized/IDG_20260103_125128_532.jpg",
+  "/street-vibe/optimized/IDG_20260108_174548_539.jpg",
+  "/street-vibe/optimized/IDG_20260513_190259_974.jpg",
+  "/street-vibe/optimized/IDG_20260513_191107_275.jpg",
+  "/street-vibe/optimized/IDG_20260513_191210_421.jpg",
+  "/street-vibe/optimized/IDG_20260524_180357_350.jpg",
+  "/street-vibe/optimized/IMG_20250708_191226.jpg",
+];
+
 const photoFolders = [
   {
-    id: "japan",
-    title: "Japan 2024",
-    photoCount: 83,
-    coverPhotos: [
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1542051812871-75f56cc9a3a0?w=500&h=500&fit=crop",
-    ],
+    id: "jeju",
+    title: "Jeju",
+    date: "2026-04",
+    photoCount: jejuPhotos.length,
+    coverPhotos: jejuPhotos.slice(0, 3),
     stickers: (
       <>
         <div className="absolute top-4 left-4 text-3xl transform -rotate-12 emoji-sticker-outline-text">
-          🇯🇵
+          🇰🇷
         </div>
-        <div className="absolute bottom-3 right-3 text-[3.5rem] transform rotate-[15deg] emoji-sticker-outline origin-bottom-right">
-          ⛩️
+        <div className="absolute bottom-3 right-3 text-[3.4rem] transform rotate-[14deg] emoji-sticker-outline origin-bottom-right">
+          🏖️
         </div>
       </>
     ),
-    photos: [
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1542051812871-75f56cc9a3a0?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&fit=crop",
-    ]
+    photos: jejuPhotos,
   },
   {
-    id: "paris",
-    title: "Paris 2024",
-    photoCount: 62,
-    coverPhotos: [
-      "https://images.unsplash.com/photo-1502602898657-3e90760b3746?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1520939822890-a3399479e00b?w=500&h=500&fit=crop",
-    ],
+    id: "xinjiang",
+    title: "Xinjiang",
+    date: "2026-06",
+    photoCount: xinjiangPhotos.length,
+    coverPhotos: xinjiangPhotos.slice(0, 3),
     stickers: (
       <>
-        <div className="absolute top-4 left-5 text-4xl transform rotate-6 emoji-sticker-outline-text">
-          🗼
+        <div className="absolute top-4 left-5 text-3xl transform -rotate-12 emoji-sticker-outline-text">
+          🐑
         </div>
-        <div className="absolute bottom-4 right-5 text-3xl transform -rotate-12 emoji-sticker-outline-text">
-          🥐
+        <div className="absolute top-5 right-6 text-3xl transform rotate-8 emoji-sticker-outline-text">
+          🏔️
+        </div>
+        <div className="absolute bottom-3 right-4 text-3xl transform rotate-[12deg] emoji-sticker-outline-text">
+          🌿
         </div>
       </>
     ),
-    photos: [
-      "https://images.unsplash.com/photo-1502602898657-3e90760b3746?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1520939822890-a3399479e00b?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&fit=crop",
-    ]
+    photos: xinjiangPhotos,
   },
   {
     id: "street",
     title: "Street Vibes",
-    photoCount: 145,
-    coverPhotos: [
-      "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1555805562-b911c750b380?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1605371924599-2d0365da26f5?w=500&h=500&fit=crop",
-    ],
+    photoCount: streetVibePhotos.length,
+    coverPhotos: streetVibePhotos.slice(0, 3),
     stickers: (
       <>
         <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[60%] transform rotate-[-8deg] z-40 emoji-sticker-outline-text">
@@ -101,14 +136,7 @@ const photoFolders = [
         </div>
       </>
     ),
-    photos: [
-      "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1555805562-b911c750b380?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1605371924599-2d0365da26f5?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1534533983617-640a3dd9dce8?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800&fit=crop",
-      "https://images.unsplash.com/photo-1494548162494-384bba4ab999?w=800&fit=crop",
-    ]
+    photos: streetVibePhotos,
   }
 ];
 
@@ -116,6 +144,7 @@ export default function Page() {
   const [activeSongIndex, setActiveSongIndex] = useState(0);
   const [currentDate, setCurrentDate] = useState("");
   const [selectedFolder, setSelectedFolder] = useState<typeof photoFolders[0] | null>(null);
+  const [selectedTimelinePhotoId, setSelectedTimelinePhotoId] = useState<string | null>(null);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -146,12 +175,6 @@ export default function Page() {
 
 
   const heroPhotoUrl = "/images/me.jpg";
-  const sushiPhotoUrl =
-    "https://images.unsplash.com/photo-1664882589261-498d42a9ad44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHBsYXRlfGVufDF8fHx8MTc3NDYxOTE2MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
-  const concertPhotoUrl =
-    "https://images.unsplash.com/photo-1576514129883-2f1d47a65da6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwc3RhZ2V8ZW58MXx8fHwxNzc0NjAxMDcwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
-  const codePhotoUrl =
-    "https://images.unsplash.com/photo-1633185072510-7fa0f164d24b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNib29rJTIwY29kZXxlbnwxfHx8fDE3NzQ3MDAwMDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 
   const favoriteSongs = [
     {
@@ -204,37 +227,36 @@ export default function Page() {
   const timelineData = [
     {
       id: "origin",
-      year: "199X",
-      range: "— 201X",
-      title: "Where it started",
+      year: "2000",
+      range: "— 2018",
+      title: "Roots in Zhaoqing",
       description:
-        "Born and raised in my hometown. The early days of curiosity and exploring the world.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1514565131-fce0801e5785?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjaXR5c2NhcGV8ZW58MXx8fHwxNzc0NzkwMzIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "Born in Zhaoqing, I spent my first 18 years there, from primary school to high school. Home gave me warmth, patience, and the first spark to look further.",
+      imageUrl: "/images/childhood-zhaoqing.jpg",
       postItColor: "yellow" as const,
       polaroidRotation: -3,
       postItRotation: 2,
     },
     {
       id: "education",
-      year: "201X",
-      range: "— 202X",
-      title: "University Days",
+      year: "2018",
+      range: "— 2022",
+      title: "University in Guangzhou",
       description:
-        "Dived deep into Computer Science. Late night coding sessions and endless cups of coffee. ☕",
-      imageUrl: codePhotoUrl,
+        "Studied Software Engineering at Guangdong Polytechnic Normal University in Tianhe, Guangzhou. Earned my bachelor's degree through four years of classes, projects, and debugging.",
+      imageUrl: "/images/university-graduation.jpg",
       postItColor: "blue" as const,
       polaroidRotation: 3,
       postItRotation: -2,
     },
     {
       id: "career",
-      year: "202X",
+      year: "2022",
       range: "— Now",
       title: "Frontend Engineer",
       description:
-        "Building cool, interactive web applications. Turning complex problems into sleek UI.",
-      imageUrl: sushiPhotoUrl,
+        "Started as a frontend intern at Sangfor, then joined Notta as a frontend engineer. Since 2022, I've been building product experiences for real users.",
+      imageUrl: "/images/workstation.webp",
       postItColor: "pink" as const,
       polaroidRotation: -2,
       postItRotation: -3,
@@ -245,13 +267,43 @@ export default function Page() {
       range: "",
       title: "Life Beyond Code",
       description:
-        "Huge fan of live music, photography, and exploring the outdoors. 🎸📸",
-      imageUrl: concertPhotoUrl,
+        "I love making things with code, but I also want to keep moving: across oceans, toward snow mountains, with music in my ears and a camera nearby.",
+      imageUrl: "/images/snow-mountain-journey.webp",
       postItColor: "green" as const,
       polaroidRotation: 4,
       postItRotation: 3,
     },
   ];
+
+  const getTimelineCaption = (item: (typeof timelineData)[number]) =>
+    item.year + (item.range ? ` ${item.range}` : "");
+
+  const getTimelinePhotoAspectClassName = (
+    item: (typeof timelineData)[number]
+  ) =>
+    item.id === "education" || item.id === "career"
+      ? "aspect-[16/10]"
+      : undefined;
+
+  const getTimelineTapeColor = (
+    item: (typeof timelineData)[number]
+  ): "blue" | "pink" | "white" =>
+    item.id === "education" ? "blue" : item.id === "career" ? "pink" : "white";
+
+  const selectedTimelineItem =
+    timelineData.find((item) => item.id === selectedTimelinePhotoId) || null;
+
+  const selectedTimelinePhoto = selectedTimelineItem
+    ? {
+        id: selectedTimelineItem.id,
+        imageUrl: selectedTimelineItem.imageUrl,
+        title: selectedTimelineItem.title,
+        caption: getTimelineCaption(selectedTimelineItem),
+        rotation: selectedTimelineItem.polaroidRotation,
+        imageAspectClassName:
+          getTimelinePhotoAspectClassName(selectedTimelineItem),
+      }
+    : null;
 
   return (
     <div className="min-h-screen bg-[#faf9f6] relative overflow-x-hidden font-sans text-gray-800">
@@ -452,6 +504,40 @@ export default function Page() {
               transition={{ delay: 0.4 }}
               className="relative mb-6"
             >
+              <motion.svg
+                aria-hidden="true"
+                className="hidden sm:block absolute -right-5 -top-9 lg:-right-9 lg:-top-10 w-16 h-16 lg:w-20 lg:h-20 overflow-visible pointer-events-none text-pink-400"
+                viewBox="0 0 80 80"
+                fill="none"
+                initial={initialWhenVisible({
+                  opacity: 0,
+                  scale: 0.85,
+                  rotate: -8,
+                })}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ delay: 0.75, duration: 0.45, ease: "easeOut" }}
+              >
+                <motion.path
+                  d="M12 48 C22 36 36 38 42 46 C48 55 36 61 28 56"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ delay: 0.9, duration: 0.7, ease: "easeInOut" }}
+                />
+                <motion.path
+                  d="M50 12 L55 26 M43 21 L62 17 M58 49 L62 60 M52 55 L68 52"
+                  stroke="#facc15"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ delay: 1.05, duration: 0.55, ease: "easeInOut" }}
+                />
+              </motion.svg>
+
               <h1
                 className="text-[clamp(2.6rem,12vw,3.35rem)] lg:text-7xl font-bold font-['Kalam'] tracking-tight leading-[0.95]"
                 style={{
@@ -521,26 +607,6 @@ export default function Page() {
                 🧩 Problem Solver
               </Sticker>
             </div>
-
-            <motion.div
-              initial={initialWhenVisible({ opacity: 0.8 })}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
-              className="absolute -top-10 -right-4 text-pink-400 rotate-12 hidden md:block"
-            >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M10,30 Q25,10 35,15 M35,15 L28,12 M35,15 L32,22" />
-              </svg>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -608,9 +674,9 @@ export default function Page() {
               }}
               className="relative py-8 md:py-14"
             >
-              {/* ── Mobile layout: horizontal strip (year | photo) then postit below ── */}
+              {/* ── Mobile layout: horizontal strip (year | visual) then postit below ── */}
               <div className="flex lg:hidden flex-col gap-4">
-                {/* Top row: year badge + polaroid side by side */}
+                {/* Top row: year badge + visual side by side */}
                 <div className="flex flex-row items-start gap-4">
                   {/* Year badge */}
                   <div className="flex-shrink-0 pt-2">
@@ -623,12 +689,19 @@ export default function Page() {
                       </span>
                     )}
                   </div>
-                  {/* Polaroid */}
                   <Polaroid
                     imageSrc={item.imageUrl}
-                    caption={item.year + (item.range ? " " + item.range : "")}
+                    caption={getTimelineCaption(item)}
+                    imageAspectClassName={getTimelinePhotoAspectClassName(item)}
                     rotation={item.polaroidRotation}
-                    className="w-44 flex-shrink-0"
+                    tapeColor={getTimelineTapeColor(item)}
+                    ariaLabel={`Open ${item.title} photo`}
+                    onClick={() => setSelectedTimelinePhotoId(item.id)}
+                    className={`flex-shrink-0 ${
+                      item.id === "education" || item.id === "career"
+                        ? "w-60"
+                        : "w-44"
+                    }`}
                   />
                 </div>
                 {/* Content below, slightly offset */}
@@ -662,7 +735,7 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* ── Desktop layout: [year col] [dot] [polaroid + postit] ── */}
+              {/* ── Desktop layout: [year col] [dot] [visual + postit] ── */}
               <div className="hidden lg:flex flex-row items-start gap-0">
                 {/* Left: year stamp */}
                 <div className="flex-shrink-0 w-40 flex flex-col items-end pr-6 pt-5 z-10">
@@ -684,7 +757,7 @@ export default function Page() {
                   <div className="w-5 h-5 rounded-full bg-[#faf9f6] border-[2.5px] border-gray-400 shadow-sm mx-auto mt-0.5" />
                 </div>
 
-                {/* Right: Polaroid + PostIt */}
+                {/* Right: visual + PostIt */}
                 <div className="flex flex-row items-start gap-6 flex-1 pl-8 z-10">
                   <motion.div
                     whileHover={{ scale: 1.02 }}
@@ -693,9 +766,17 @@ export default function Page() {
                   >
                     <Polaroid
                       imageSrc={item.imageUrl}
-                      caption={item.year + (item.range ? " " + item.range : "")}
+                      caption={getTimelineCaption(item)}
+                      imageAspectClassName={getTimelinePhotoAspectClassName(item)}
                       rotation={item.polaroidRotation}
-                      className="w-56"
+                      tapeColor={getTimelineTapeColor(item)}
+                      ariaLabel={`Open ${item.title} photo`}
+                      onClick={() => setSelectedTimelinePhotoId(item.id)}
+                      className={
+                        item.id === "education" || item.id === "career"
+                          ? "w-80"
+                          : "w-56"
+                      }
                     />
                   </motion.div>
 
@@ -905,6 +986,7 @@ export default function Page() {
             <PhotoFolder
               key={folder.id}
               title={folder.title}
+              date={folder.date}
               photoCount={folder.photoCount}
               coverPhotos={folder.coverPhotos}
               stickers={folder.stickers}
@@ -918,8 +1000,19 @@ export default function Page() {
       <PhotoModal
         isOpen={selectedFolder !== null}
         onClose={() => setSelectedFolder(null)}
-        folderTitle={selectedFolder?.title || ""}
+        folderTitle={
+          selectedFolder
+            ? selectedFolder.date
+              ? `${selectedFolder.title} · ${selectedFolder.date}`
+              : selectedFolder.title
+            : ""
+        }
         photos={selectedFolder?.photos || []}
+      />
+
+      <TimelinePhotoLightbox
+        photo={selectedTimelinePhoto}
+        onClose={() => setSelectedTimelinePhotoId(null)}
       />
 
       {/* Footer / Connect Section */}

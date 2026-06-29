@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 
 interface PhotoFolderProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   title: string;
+  date?: string;
   photoCount: number;
   coverPhotos: string[];
   stickers?: React.ReactNode;
@@ -30,9 +31,40 @@ const photoVariants = [
 ];
 
 const springTransition = { type: "spring" as const, stiffness: 260, damping: 22 };
+const previewFrames = [
+  { maxWidth: 98, maxHeight: 76 },
+  { maxWidth: 106, maxHeight: 78 },
+  { maxWidth: 98, maxHeight: 76 },
+];
+
+function getPreviewSize(aspectRatio: number | undefined, idx: number) {
+  const frame = previewFrames[idx] ?? previewFrames[0];
+
+  if (!aspectRatio) {
+    return {
+      width: frame.maxWidth,
+      height: Math.round(frame.maxWidth * 0.68),
+    };
+  }
+
+  const frameRatio = frame.maxWidth / frame.maxHeight;
+
+  if (aspectRatio >= frameRatio) {
+    return {
+      width: frame.maxWidth,
+      height: Math.round(frame.maxWidth / aspectRatio),
+    };
+  }
+
+  return {
+    width: Math.round(frame.maxHeight * aspectRatio),
+    height: frame.maxHeight,
+  };
+}
 
 export function PhotoFolder({
   title,
+  date,
   photoCount,
   coverPhotos,
   stickers,
@@ -42,6 +74,7 @@ export function PhotoFolder({
   ...props
 }: PhotoFolderProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [imageRatios, setImageRatios] = useState<Record<string, number>>({});
 
   return (
     <motion.div
@@ -71,6 +104,8 @@ export function PhotoFolder({
         {/* 2. Cover photos – fan out on hover using Framer Motion */}
         {coverPhotos.slice(0, 3).map((src, idx) => {
           const v = photoVariants[idx] ?? photoVariants[0];
+          const previewSize = getPreviewSize(imageRatios[src], idx);
+
           return (
             <motion.div
               key={idx}
@@ -80,19 +115,43 @@ export function PhotoFolder({
                 open:   { rotate: v.open.rotate,   x: v.open.x,   y: v.open.y   },
               }}
               transition={springTransition}
-              className="absolute bg-[#f8fafc] p-[4px] shadow-[0_3px_10px_rgba(0,0,0,0.18)] border border-gray-200/60 rounded-[12px]"
+              className="absolute bg-[#f8fafc] p-[4px] shadow-[0_3px_10px_rgba(0,0,0,0.18)] border border-gray-200/60 rounded-[12px] will-change-transform"
               style={{
-                width: 80,
-                height: 88,
+                width: previewSize.width,
+                height: previewSize.height,
                 bottom: "22%",
                 left: "50%",
-                marginLeft: -40,
+                marginLeft: -(previewSize.width / 2),
                 zIndex: v.closed.zIndex,
                 transformOrigin: "bottom center",
               }}
             >
-              <div className="w-full h-full bg-gray-100 overflow-hidden rounded-[8px]">
-                <img src={src} alt={`Cover ${idx}`} className="w-full h-full object-cover" />
+              <div className="h-full w-full bg-white overflow-hidden rounded-[8px]">
+                <img
+                  src={src}
+                  alt={`Cover ${idx + 1}`}
+                  className="block h-full w-full"
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                  onLoad={(event) => {
+                    const { naturalWidth, naturalHeight } = event.currentTarget;
+
+                    if (!naturalWidth || !naturalHeight) {
+                      return;
+                    }
+
+                    const nextRatio = naturalWidth / naturalHeight;
+
+                    setImageRatios((currentRatios) => {
+                      if (currentRatios[src] === nextRatio) {
+                        return currentRatios;
+                      }
+
+                      return { ...currentRatios, [src]: nextRatio };
+                    });
+                  }}
+                />
               </div>
             </motion.div>
           );
@@ -134,6 +193,11 @@ export function PhotoFolder({
         <h3 className="font-['Kalam'] text-xl sm:text-2xl font-bold text-[#1e293b]">
           {title}
         </h3>
+        {date && (
+          <p className="font-['Caveat'] text-base text-[#94a3b8] leading-none mt-0.5">
+            {date}
+          </p>
+        )}
         <p className="font-['Caveat'] text-base sm:text-[17px] text-[#64748b] bg-[#f1f5f9] rounded-full px-3 py-0.5 inline-block mt-1">
           {photoCount} photos
         </p>

@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { X } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { initialWhenVisible } from "../../lib/motion";
@@ -15,6 +15,10 @@ interface PhotoModalProps {
 
 export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalProps) {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const shouldReduceMotion = useReducedMotion();
+  const selectedPhoto =
+    selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : null;
 
   // Prevent scrolling on body when modal is open
   useEffect(() => {
@@ -35,6 +39,32 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      setSelectedPhotoIndex(null);
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+
+      if (selectedPhotoIndex !== null) {
+        setSelectedPhotoIndex(null);
+      } else {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose, selectedPhotoIndex]);
+
+  useEffect(() => {
+    if (selectedPhotoIndex !== null && selectedPhotoIndex >= photos.length) {
+      setSelectedPhotoIndex(null);
+    }
+  }, [photos.length, selectedPhotoIndex]);
+
   // Clean up on unmount completely
   useEffect(() => {
     return () => {
@@ -43,50 +73,16 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
     };
   }, []);
 
-  // Image component that handles its own aspect ratio padding
+  // Keep each photo at its natural aspect ratio inside the masonry layout.
   const ImageWithAspect = ({ src, idx }: { src: string, idx: number }) => {
-    // Determine orientation based on index to mock different image shapes
-    // In a real app, the image data should include width/height
-    const isPortrait = idx % 3 === 0;
-    const isSquare = idx % 5 === 0;
-    const isLandscape = !isPortrait && !isSquare;
-    
-    // Set aspect ratio (width / height)
-    // Make them look slightly different to give a masonry feel
-    let ratio = 1.5;
-    if (idx === 0) ratio = 0.67; // Portrait
-    else if (idx === 1) ratio = 1.5; // Landscape
-    else if (idx === 2) ratio = 1.2; // Slightly landscape
-    else if (idx === 3) ratio = 0.8; // Portrait
-    else if (idx === 4) ratio = 1; // Square
-    else if (isPortrait) ratio = 0.75;
-    else if (isSquare) ratio = 1;
-    
     return (
-      <div 
-        className="relative w-full overflow-hidden rounded-sm"
-        style={{ paddingBottom: `${(1 / ratio) * 100}%` }} // CSS trick for aspect ratio
-      >
-        {/* Placeholder for loading */}
-        <div className="absolute inset-0 bg-gray-100 animate-pulse z-0 flex items-center justify-center">
-           <svg className="w-8 h-8 text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-              <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"/>
-           </svg>
-        </div>
-        
+      <div className="w-full overflow-hidden rounded-sm bg-gray-100">
         <img
           src={src}
           alt={`Photo ${idx + 1} from ${folderTitle}`}
-          className="absolute inset-0 w-full h-full object-cover z-10"
+          className="h-auto w-full object-contain"
           loading="lazy"
-          onLoad={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.opacity = "1";
-            // Find the placeholder and hide it
-            const placeholder = target.previousElementSibling as HTMLElement;
-            if (placeholder) placeholder.style.display = "none";
-          }}
-          style={{ opacity: 0, transition: "opacity 0.3s ease-in-out" }}
+          decoding="async"
         />
       </div>
     );
@@ -128,13 +124,78 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
                   transition={{ delay: idx * 0.05, duration: 0.4 }}
                   className="break-inside-avoid relative group mb-6"
                 >
-                  <div className="bg-white p-2 md:p-3 shadow-md hover:shadow-xl transition-shadow rounded-sm flex items-center justify-center relative">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedPhotoIndex(idx)}
+                    className="block w-full cursor-zoom-in bg-white p-2 md:p-3 shadow-md hover:shadow-xl transition-shadow rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-4 focus-visible:ring-offset-white/70"
+                    aria-label={`Open photo ${idx + 1} from ${folderTitle}`}
+                  >
                     <ImageWithAspect src={src} idx={idx} />
-                  </div>
+                  </button>
                 </motion.div>
               ))}
             </div>
           </div>
+
+          <AnimatePresence>
+            {selectedPhoto && selectedPhotoIndex !== null && (
+              <motion.div
+                className="fixed inset-0 z-[130] flex cursor-zoom-out items-center justify-center bg-[#faf9f6]/90 px-4 py-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.18 }}
+                onClick={() => setSelectedPhotoIndex(null)}
+                role="dialog"
+                aria-modal="true"
+                aria-label={`Photo ${selectedPhotoIndex + 1} preview`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setSelectedPhotoIndex(null)}
+                  className="absolute right-4 top-4 z-20 rounded-full bg-white/85 p-2 text-gray-800 shadow-[0_6px_18px_rgba(31,41,55,0.14)] transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 sm:right-8 sm:top-8"
+                  aria-label="Close photo preview"
+                >
+                  <X size={24} />
+                </button>
+
+                <motion.div
+                  className="relative max-h-[86vh] max-w-[min(92vw,1120px)] cursor-default bg-white p-2 shadow-[0_18px_44px_rgba(28,33,42,0.22),0_8px_18px_rgba(28,33,42,0.12)] transform-gpu sm:p-3"
+                  initial={
+                    shouldReduceMotion
+                      ? { opacity: 0 }
+                      : { opacity: 0, y: 24, scale: 0.94 }
+                  }
+                  animate={
+                    shouldReduceMotion
+                      ? { opacity: 1 }
+                      : { opacity: 1, y: 0, scale: 1 }
+                  }
+                  exit={
+                    shouldReduceMotion
+                      ? { opacity: 0 }
+                      : { opacity: 0, y: 16, scale: 0.96 }
+                  }
+                  transition={{
+                    duration: shouldReduceMotion ? 0 : 0.26,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <img
+                    src={selectedPhoto}
+                    alt={`Photo ${selectedPhotoIndex + 1} from ${folderTitle}`}
+                    className="max-h-[78vh] w-auto max-w-full select-none object-contain"
+                    decoding="async"
+                    draggable={false}
+                  />
+                  <div className="mt-2 text-center font-['Caveat'] text-xl text-gray-500">
+                    {selectedPhotoIndex + 1} / {photos.length}
+                  </div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       )}
     </AnimatePresence>
