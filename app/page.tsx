@@ -132,19 +132,25 @@ const photoFolders = [
           <span className="text-3xl">📷</span>
         </div>
         <div className="absolute bottom-4 right-4 transform rotate-[12deg] z-40 emoji-sticker-outline-text">
-          <span className="text-2xl" style={{ filter: 'grayscale(0.2)' }}>🎞️</span>
+          <span className="text-2xl" style={{ filter: "grayscale(0.2)" }}>
+            🎞️
+          </span>
         </div>
       </>
     ),
     photos: streetVibePhotos,
-  }
+  },
 ];
 
 export default function Page() {
   const [activeSongIndex, setActiveSongIndex] = useState(0);
   const [currentDate, setCurrentDate] = useState("");
-  const [selectedFolder, setSelectedFolder] = useState<typeof photoFolders[0] | null>(null);
-  const [selectedTimelinePhotoId, setSelectedTimelinePhotoId] = useState<string | null>(null);
+  const [selectedFolder, setSelectedFolder] = useState<
+    (typeof photoFolders)[0] | null
+  >(null);
+  const [selectedTimelinePhotoId, setSelectedTimelinePhotoId] = useState<
+    string | null
+  >(null);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -173,54 +179,45 @@ export default function Page() {
     return () => clearInterval(intervalId);
   }, []);
 
-
   const heroPhotoUrl = "/images/me.jpg";
 
   const favoriteSongs = [
     {
-      title: "Midnight City",
-      artist: "Sunset Groove",
-      duration: "3:45",
-      coverUrl:
-        "https://images.unsplash.com/photo-1679563837531-116c2fbe25b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRybyUyMGNpdHklMjBzdW5zZXR8ZW58MXx8fHwxNzc0NzAwNzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      lyrics: "Waiting in a car, waiting for a ride in the dark...",
+      title: "今天只做一件事",
+      artist: "陈奕迅",
+      coverUrl: "/cover/1.png",
+      lyrics: "慢慢地迈向听朝\n静静地怀念昨日",
       tapeColor: "yellow" as const,
     },
     {
-      title: "Plastic Love",
-      artist: "Mariya Takeuchi",
-      duration: "4:12",
-      coverUrl:
-        "https://images.unsplash.com/photo-1595981234969-8259b94fde88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFlc3RoZXRpYyUyMGFsYnVtJTIwY292ZXJ8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      lyrics: "I'm just playing games, I know that's plastic love...",
+      title: "我们万岁",
+      artist: "陈奕迅",
+      coverUrl: "/cover/2.png",
+      lyrics: "情人游天地\n日月换行李",
       tapeColor: "pink" as const,
     },
     {
-      title: "Indie Rock",
-      artist: "The Wanderers",
-      duration: "3:50",
-      coverUrl:
-        "https://images.unsplash.com/photo-1767462372382-b9fc964774d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMHJvY2slMjBiYW5kJTIwcGhvdG9ncmFwaHl8ZW58MXx8fHwxNzc0NzAwNzI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      lyrics: "We are young and we are free, dancing in the summer breeze...",
+      title: "任意门",
+      artist: "五月天",
+      coverUrl: "/cover/5.png",
+      lyrics: "你问我全世界是哪里最美\n答案是你身边 只要是你身边",
+      tapeColor: "white" as const,
+    },
+    {
+      title: "I Love You So",
+      artist: "The Walters",
+      coverUrl: "/cover/3.png",
+      lyrics:
+        "I've got to get away and let you go, I've got to get over \nBut I love you so",
       tapeColor: "blue" as const,
     },
     {
-      title: "Lo-Fi Rain",
-      artist: "Chill Beats",
-      duration: "2:30",
-      coverUrl:
-        "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2ZpJTIwcmFpbnxlbnwxfHx8fDE3NzQ3MTAyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      lyrics: "Just the sound of the rain against the window pane...",
+      title: "Home (feat. Hikaru Utada)",
+      artist: "Charlie Puth & 宇多田光 / Hikaru Utada",
+      coverUrl: "/cover/4.png",
+      lyrics:
+        "Ooo, don't you know (Don't you know?)\nThat you're the one\nwho makes this house a home",
       tapeColor: "green" as const,
-    },
-    {
-      title: "Neon Nights",
-      artist: "Synthwave Rider",
-      duration: "4:05",
-      coverUrl:
-        "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NzQ3MTAyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      lyrics: "Driving through the neon glow, leaving everything I know...",
-      tapeColor: "white" as const,
     },
   ];
 
@@ -418,7 +415,13 @@ export default function Page() {
           {/* Left Column - Polaroid Gallery */}
           <div className="relative flex justify-center items-center h-[380px] sm:h-[430px] lg:h-[500px]">
             <motion.div
-              initial={initialWhenVisible({ opacity: 1, scale: 0.9, rotate: -15, x: -40, y: -20 })}
+              initial={initialWhenVisible({
+                opacity: 1,
+                scale: 0.9,
+                rotate: -15,
+                x: -40,
+                y: -20,
+              })}
               animate={{ opacity: 1, scale: 1, rotate: -12, x: -40, y: -20 }}
               transition={{ delay: 0.2 }}
               className="absolute z-0 w-48 hidden md:block"
@@ -534,7 +537,11 @@ export default function Page() {
                   strokeLinecap="round"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
-                  transition={{ delay: 1.05, duration: 0.55, ease: "easeInOut" }}
+                  transition={{
+                    delay: 1.05,
+                    duration: 0.55,
+                    ease: "easeInOut",
+                  }}
                 />
               </motion.svg>
 
@@ -767,7 +774,9 @@ export default function Page() {
                     <Polaroid
                       imageSrc={item.imageUrl}
                       caption={getTimelineCaption(item)}
-                      imageAspectClassName={getTimelinePhotoAspectClassName(item)}
+                      imageAspectClassName={getTimelinePhotoAspectClassName(
+                        item
+                      )}
                       rotation={item.polaroidRotation}
                       tapeColor={getTimelineTapeColor(item)}
                       ariaLabel={`Open ${item.title} photo`}
@@ -850,7 +859,11 @@ export default function Page() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSongIndex}
-                initial={initialWhenVisible({ opacity: 1, scale: 0.9, rotate: -30 })}
+                initial={initialWhenVisible({
+                  opacity: 1,
+                  scale: 0.9,
+                  rotate: -30,
+                })}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 exit={{ opacity: 0, scale: 0.8, rotate: 30 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
@@ -885,23 +898,28 @@ export default function Page() {
               tape={true}
             >
               <div className="pt-2">
-                <h3 className="font-['Kalam'] text-2xl sm:text-3xl font-bold mb-5 sm:mb-6 text-gray-800 flex items-center gap-2">
+                <h3 className="font-handnote-title text-2xl sm:text-3xl font-bold mb-5 sm:mb-6 text-gray-800 flex items-center gap-2">
                   <Heart size={24} className="text-red-400 fill-red-400" />
                   Vibe Check
                 </h3>
+                <p className="font-['Caveat'] text-base sm:text-lg text-gray-500 -mt-4 mb-5 pl-8">
+                  This playlist changes over time.
+                </p>
 
-                <ul className="font-['Caveat'] text-xl sm:text-2xl md:text-3xl space-y-4 text-gray-700">
+                <ul className="font-handnote text-lg sm:text-xl md:text-2xl space-y-4 text-gray-700">
                   {favoriteSongs.map((song, idx) => (
                     <li
-                      key={idx}
+                      key={song.title}
                       onClick={() => setActiveSongIndex(idx)}
                       className="flex items-start justify-between gap-3 border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
                     >
-                    <span className="relative z-10 min-w-0 flex-1 leading-tight">
-                      {idx + 1}. {song.title}
-                      <span className="block sm:inline text-gray-500/80 text-base sm:text-lg md:text-xl sm:ml-2">- {song.artist}</span>
-                      {activeSongIndex === idx && (
-                        <motion.svg
+                      <span className="relative z-10 min-w-0 flex-1 leading-tight">
+                        {idx + 1}. {song.title}
+                        <span className="block sm:inline text-gray-500/80 text-base sm:text-lg md:text-xl sm:ml-2">
+                          - {song.artist}
+                        </span>
+                        {activeSongIndex === idx && (
+                          <motion.svg
                             layoutId="song-underline"
                             className="absolute -bottom-2 left-0 w-full h-3 text-yellow-400 -z-10 overflow-visible opacity-80"
                             viewBox="0 0 100 20"
@@ -920,8 +938,11 @@ export default function Page() {
                           </motion.svg>
                         )}
                       </span>
-                      <span className="text-gray-400 group-hover:text-gray-600 transition-colors text-lg sm:text-xl md:text-2xl flex-shrink-0 leading-tight pt-0.5">
-                        {song.duration}
+                      <span
+                        aria-hidden="true"
+                        className="text-gray-400 group-hover:text-gray-600 transition-colors text-lg sm:text-xl md:text-2xl flex-shrink-0 leading-tight pt-0.5"
+                      >
+                        ♪
                       </span>
                     </li>
                   ))}
@@ -947,9 +968,23 @@ export default function Page() {
       >
         <svg className="hidden">
           <filter id="solid-outline">
-            <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
-            <feFlood floodColor="white" floodOpacity="1" result="WHITE"></feFlood>
-            <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
+            <feMorphology
+              in="SourceAlpha"
+              result="DILATED"
+              operator="dilate"
+              radius="2"
+            ></feMorphology>
+            <feFlood
+              floodColor="white"
+              floodOpacity="1"
+              result="WHITE"
+            ></feFlood>
+            <feComposite
+              in="WHITE"
+              in2="DILATED"
+              operator="in"
+              result="OUTLINE"
+            ></feComposite>
             <feMerge>
               <feMergeNode in="OUTLINE" />
               <feMergeNode in="SourceGraphic" />
@@ -972,7 +1007,7 @@ export default function Page() {
               delay={0.6}
             />
           </div>
-          
+
           <Sticker
             rotation={12}
             className="absolute right-4 md:right-1/4 top-10 bg-white p-2"
@@ -1033,60 +1068,59 @@ export default function Page() {
             className="w-full max-w-[calc(100vw-32px)] text-center p-6 sm:p-8 md:p-12 text-2xl sm:text-3xl shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative"
             tape={true}
           >
-            
             <div className="mb-6 font-['Kalam'] font-bold text-3xl sm:text-4xl text-gray-800 relative z-10 mt-2">
               Let's create something cool together!
             </div>
 
-          {/* Doodle underline inside the post-it */}
-          <Doodle
-            path="M 10,10 Q 50,20 90,5"
-            className="absolute top-20 left-[10%] w-[80%] h-4 text-red-400 opacity-70"
-            viewBox="0 0 100 20"
-            delay={1.2}
-          />
+            {/* Doodle underline inside the post-it */}
+            <Doodle
+              path="M 10,10 Q 50,20 90,5"
+              className="absolute top-20 left-[10%] w-[80%] h-4 text-red-400 opacity-70"
+              viewBox="0 0 100 20"
+              delay={1.2}
+            />
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-10">
-            <motion.a
-              href="mailto:yanchenhao57@gmail.com"
-              whileHover={{ scale: 1.05, rotate: [0, -3, 3, 0] }}
-              transition={{ duration: 0.3 }}
-              className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[255px_15px_225px_15px/15px_225px_15px_255px] cursor-grab active:cursor-grabbing"
-            >
-              <Mail className="w-5 h-5" />
-              Email Me
-            </motion.a>
-            <motion.a
-              href="https://github.com/John516csd"
-              target="_blank"
-              rel="noreferrer"
-              whileHover={{ scale: 1.05, rotate: [0, 3, -3, 0] }}
-              transition={{ duration: 0.3 }}
-              className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[15px_225px_15px_255px/255px_15px_225px_15px] cursor-grab active:cursor-grabbing"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-5 h-5"
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-10">
+              <motion.a
+                href="mailto:yanchenhao57@gmail.com"
+                whileHover={{ scale: 1.05, rotate: [0, -3, 3, 0] }}
+                transition={{ duration: 0.3 }}
+                className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[255px_15px_225px_15px/15px_225px_15px_255px] cursor-grab active:cursor-grabbing"
               >
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-              GitHub
-            </motion.a>
-          </div>
+                <Mail className="w-5 h-5" />
+                Email Me
+              </motion.a>
+              <motion.a
+                href="https://github.com/John516csd"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.05, rotate: [0, 3, -3, 0] }}
+                transition={{ duration: 0.3 }}
+                className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[15px_225px_15px_255px/255px_15px_225px_15px] cursor-grab active:cursor-grabbing"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5"
+                >
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                GitHub
+              </motion.a>
+            </div>
 
-          <Doodle
-            path="M50,80 Q20,80 20,50 Q20,20 50,20 Q80,20 80,50 M70,40 L80,50 L70,60"
-            className="absolute bottom-4 right-10 w-16 h-16 text-red-400"
-            delay={1.5}
-            strokeDasharray="10 10"
-          />
-        </PostIt>
+            <Doodle
+              path="M50,80 Q20,80 20,50 Q20,20 50,20 Q80,20 80,50 M70,40 L80,50 L70,60"
+              className="absolute bottom-4 right-10 w-16 h-16 text-red-400"
+              delay={1.5}
+              strokeDasharray="10 10"
+            />
+          </PostIt>
         </div>
 
         <div className="mt-20 font-['Caveat'] text-2xl text-gray-400 flex items-center gap-2">

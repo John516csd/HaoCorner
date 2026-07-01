@@ -109,7 +109,7 @@ export function VinylCard({
           />
         )}
         {lyrics ? (
-          <p className="font-['Caveat'] text-xl md:text-2xl text-gray-800 leading-[2rem] relative z-10 pt-1">
+          <p className="font-handnote whitespace-pre-line text-xl md:text-2xl text-gray-800 leading-[2rem] relative z-10 pt-1">
             "{lyrics}"
           </p>
         ) : (
