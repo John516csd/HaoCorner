@@ -13,12 +13,116 @@ interface PhotoModalProps {
   photos: string[];
 }
 
+type PhotoSize = {
+  width: number;
+  height: number;
+};
+
+const fallbackPhotoSize = { width: 4, height: 3 };
+
+const photoSizes: Record<string, PhotoSize> = {
+  "/jeju/optimized/DSCF1318.jpg": { width: 1014, height: 1800 },
+  "/jeju/optimized/DSCF1363.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1368.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1383.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1395.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1396.jpg": { width: 1014, height: 1800 },
+  "/jeju/optimized/DSCF1492.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1514.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1523.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1525.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1528.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1563.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1597.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1633.jpg": { width: 1014, height: 1800 },
+  "/jeju/optimized/DSCF1694.jpg": { width: 1800, height: 1014 },
+  "/jeju/optimized/DSCF1723.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1820.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1829.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1854.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1855.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1856.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1862.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1864.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1895.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1928.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1932.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF1957.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2014.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2021.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2047.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2063.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2090.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2097.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2108.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2114.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/DSCF2123.jpg": { width: 1800, height: 1014 },
+  "/xinjiang/optimized/IDG_20260617_113120_748.jpg": { width: 1800, height: 1350 },
+  "/street-vibe/optimized/DSCF0259.jpg": { width: 1800, height: 1200 },
+  "/street-vibe/optimized/DSCF1198.jpg": { width: 1800, height: 1014 },
+  "/street-vibe/optimized/DSCF1214.jpg": { width: 1014, height: 1800 },
+  "/street-vibe/optimized/DSCF1228.jpg": { width: 1800, height: 1014 },
+  "/street-vibe/optimized/IDG_20260102_170939_893.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260102_172015_065.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260103_114159_988.jpg": { width: 1800, height: 1350 },
+  "/street-vibe/optimized/IDG_20260103_122437_006.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260103_122941_767.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260103_125128_532.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260108_174548_539.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260513_190259_974.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260513_191107_275.jpg": { width: 1350, height: 1800 },
+  "/street-vibe/optimized/IDG_20260513_191210_421.jpg": { width: 1800, height: 1350 },
+  "/street-vibe/optimized/IDG_20260524_180357_350.jpg": { width: 1800, height: 1350 },
+  "/street-vibe/optimized/IMG_20250708_191226.jpg": { width: 1800, height: 1350 },
+};
+
+function getPhotoSize(src: string): PhotoSize {
+  return photoSizes[src] ?? fallbackPhotoSize;
+}
+
+function ImageWithAspect({
+  src,
+  idx,
+  folderTitle,
+}: {
+  src: string;
+  idx: number;
+  folderTitle: string;
+}) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const size = getPhotoSize(src);
+
+  return (
+    <div
+      className="relative w-full overflow-hidden rounded-sm bg-[#f8fafc]"
+      style={{ aspectRatio: `${size.width} / ${size.height}` }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100" />
+      <img
+        src={src}
+        alt={`Photo ${idx + 1} from ${folderTitle}`}
+        width={size.width}
+        height={size.height}
+        className={cn(
+          "absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]",
+          isLoaded ? "opacity-100" : "opacity-0"
+        )}
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setIsLoaded(true)}
+      />
+    </div>
+  );
+}
+
 export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalProps) {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const shouldReduceMotion = useReducedMotion();
   const selectedPhoto =
     selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : null;
+  const selectedPhotoSize = selectedPhoto ? getPhotoSize(selectedPhoto) : fallbackPhotoSize;
+  const selectedPhotoRatio = selectedPhotoSize.width / selectedPhotoSize.height;
 
   // Prevent scrolling on body when modal is open
   useEffect(() => {
@@ -73,21 +177,6 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
     };
   }, []);
 
-  // Keep each photo at its natural aspect ratio inside the masonry layout.
-  const ImageWithAspect = ({ src, idx }: { src: string, idx: number }) => {
-    return (
-      <div className="w-full overflow-hidden rounded-sm bg-gray-100">
-        <img
-          src={src}
-          alt={`Photo ${idx + 1} from ${folderTitle}`}
-          className="h-auto w-full object-contain"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    );
-  };
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -119,18 +208,31 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
               {photos.map((src, idx) => (
                 <motion.div
                   key={idx}
-                  initial={initialWhenVisible({ opacity: 1, y: 20 })}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.05, duration: 0.4 }}
+                  initial={
+                    shouldReduceMotion
+                      ? { opacity: 1 }
+                      : { opacity: 0, scale: 0.985 }
+                  }
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: shouldReduceMotion ? 0 : Math.min(idx * 0.025, 0.3),
+                    duration: shouldReduceMotion ? 0 : 0.28,
+                    ease: [0.25, 1, 0.5, 1],
+                  }}
+                  whileHover={
+                    shouldReduceMotion
+                      ? undefined
+                      : { scale: 1.012, rotate: idx % 2 === 0 ? -0.25 : 0.25 }
+                  }
                   className="break-inside-avoid relative group mb-6"
                 >
                   <button
                     type="button"
                     onClick={() => setSelectedPhotoIndex(idx)}
-                    className="block w-full cursor-zoom-in bg-white p-2 md:p-3 shadow-md hover:shadow-xl transition-shadow rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-4 focus-visible:ring-offset-white/70"
+                    className="block w-full cursor-zoom-in bg-white p-2 md:p-3 shadow-md transition-shadow hover:shadow-xl rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-4 focus-visible:ring-offset-white/70"
                     aria-label={`Open photo ${idx + 1} from ${folderTitle}`}
                   >
-                    <ImageWithAspect src={src} idx={idx} />
+                    <ImageWithAspect src={src} idx={idx} folderTitle={folderTitle} />
                   </button>
                 </motion.div>
               ))}
@@ -164,31 +266,41 @@ export function PhotoModal({ isOpen, onClose, folderTitle, photos }: PhotoModalP
                   initial={
                     shouldReduceMotion
                       ? { opacity: 0 }
-                      : { opacity: 0, y: 24, scale: 0.94 }
+                      : { opacity: 0, rotate: -0.8, scale: 0.965 }
                   }
                   animate={
                     shouldReduceMotion
                       ? { opacity: 1 }
-                      : { opacity: 1, y: 0, scale: 1 }
+                      : { opacity: 1, rotate: 0, scale: 1 }
                   }
                   exit={
                     shouldReduceMotion
                       ? { opacity: 0 }
-                      : { opacity: 0, y: 16, scale: 0.96 }
+                      : { opacity: 0, rotate: 0.4, scale: 0.985 }
                   }
                   transition={{
-                    duration: shouldReduceMotion ? 0 : 0.26,
-                    ease: [0.22, 1, 0.36, 1],
+                    duration: shouldReduceMotion ? 0 : 0.22,
+                    ease: [0.16, 1, 0.3, 1],
                   }}
                   onClick={(event) => event.stopPropagation()}
                 >
-                  <img
-                    src={selectedPhoto}
-                    alt={`Photo ${selectedPhotoIndex + 1} from ${folderTitle}`}
-                    className="max-h-[78vh] w-auto max-w-full select-none object-contain"
-                    decoding="async"
-                    draggable={false}
-                  />
+                  <div
+                    className="relative overflow-hidden bg-[#f8fafc]"
+                    style={{
+                      aspectRatio: `${selectedPhotoSize.width} / ${selectedPhotoSize.height}`,
+                      width: `min(92vw, 1120px, calc(78vh * ${selectedPhotoRatio}))`,
+                    }}
+                  >
+                    <img
+                      src={selectedPhoto}
+                      alt={`Photo ${selectedPhotoIndex + 1} from ${folderTitle}`}
+                      width={selectedPhotoSize.width}
+                      height={selectedPhotoSize.height}
+                      className="absolute inset-0 h-full w-full select-none object-contain"
+                      decoding="async"
+                      draggable={false}
+                    />
+                  </div>
                   <div className="mt-2 text-center font-['Caveat'] text-xl text-gray-500">
                     {selectedPhotoIndex + 1} / {photos.length}
                   </div>
