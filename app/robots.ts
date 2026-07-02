@@ -1,11 +1,16 @@
 
-export default function robots() {
+import type { MetadataRoute } from 'next'
+
+const siteUrl = 'https://yanchenhao.com'
+
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
+        allow: '/',
       },
     ],
-    sitemap: `https://yanchenhao.com/sitemap.xml`,
+    sitemap: `${siteUrl}/sitemap.xml`,
   }
 }

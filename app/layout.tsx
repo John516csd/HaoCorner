@@ -7,20 +7,63 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 
+const siteUrl = 'https://yanchenhao.com'
+const siteTitle = "Yanchenhao's Corner"
+const siteDescription =
+  'A scrapbook-style personal portfolio for Yanchenhao, a frontend engineer who loves building interactive web experiences, traveling, photography, and music.'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yanchenhao.com'),
+  metadataBase: new URL(siteUrl),
+  applicationName: siteTitle,
   title: {
-    default: 'Yanchenhao\'s Corner',
-    template: '%s | Yanchenhao\'s Corner',
+    default: `${siteTitle} | Frontend Developer`,
+    template: `%s | ${siteTitle}`,
   },
-  description: 'Yanchenhao\'s Corner',
+  description: siteDescription,
+  keywords: [
+    'Yanchenhao',
+    'Chenhao Yan',
+    'frontend engineer',
+    'frontend developer',
+    'personal portfolio',
+    'interactive web experiences',
+  ],
+  authors: [{ name: 'Yanchenhao', url: siteUrl }],
+  creator: 'Yanchenhao',
+  publisher: 'Yanchenhao',
+  alternates: {
+    canonical: '/',
+  },
+  category: 'portfolio',
+  icons: {
+    icon: [
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
-    title: 'Yanchenhao\'s Corner',
-    description: 'Yanchenhao\'s Corner',
-    url: 'https://yanchenhao.com',
-    siteName: 'Yanchenhao\'s Corner',
+    title: `${siteTitle} | Frontend Developer`,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: siteTitle,
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        type: 'image/png',
+        alt: siteTitle,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteTitle} | Frontend Developer`,
+    description: siteDescription,
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

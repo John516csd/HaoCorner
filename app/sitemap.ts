@@ -1,5 +1,16 @@
 
 
-export default async function sitemap() {
-  return []
+import type { MetadataRoute } from 'next'
+
+const siteUrl = 'https://yanchenhao.com'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: siteUrl,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
+  ]
 }

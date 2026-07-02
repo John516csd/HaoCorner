@@ -75,23 +75,41 @@ export function PhotoFolder({
 }: PhotoFolderProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [imageRatios, setImageRatios] = useState<Record<string, number>>({});
+  const isInteractive = Boolean(onClick);
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!onClick) return;
+
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      onClick();
+    }
+  };
 
   return (
     <motion.div
+      {...props}
       initial={initialWhenVisible({ opacity: 1, y: 30 })}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay, type: "spring", stiffness: 200, damping: 20 }}
       onClick={onClick}
+      onKeyDown={handleKeyDown}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
       onTouchEnd={() => setIsHovered(false)}
+      role={isInteractive ? "button" : props.role}
+      tabIndex={isInteractive ? props.tabIndex ?? 0 : props.tabIndex}
+      aria-label={
+        isInteractive
+          ? props["aria-label"] ?? `Open ${title} photo album`
+          : props["aria-label"]
+      }
       className={cn(
         "relative flex flex-col items-center cursor-pointer select-none",
         className
       )}
-      {...props}
     >
       {/* Folder body container - extra top padding for photos to fan out into */}
       <div className="relative w-[140px] h-[132px] sm:w-[190px] sm:h-[170px] mt-2">

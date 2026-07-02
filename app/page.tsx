@@ -151,6 +151,7 @@ export default function Page() {
   const [selectedTimelinePhotoId, setSelectedTimelinePhotoId] = useState<
     string | null
   >(null);
+  const [isHeroPhotoOpen, setIsHeroPhotoOpen] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -180,6 +181,51 @@ export default function Page() {
   }, []);
 
   const heroPhotoUrl = "/images/me.jpg";
+  const siteUrl = "https://yanchenhao.com";
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "Yanchenhao's Corner",
+        description:
+          "A scrapbook-style personal portfolio for Yanchenhao, a frontend engineer who loves building interactive web experiences, traveling, photography, and music.",
+        inLanguage: "en",
+      },
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        name: "Yanchenhao",
+        alternateName: ["Chenhao", "Yan Chenhao"],
+        jobTitle: "Frontend Engineer",
+        url: siteUrl,
+        image: `${siteUrl}${heroPhotoUrl}`,
+        sameAs: ["https://github.com/John516csd"],
+        knowsAbout: [
+          "Frontend development",
+          "React",
+          "Next.js",
+          "Interactive web experiences",
+          "Photography",
+          "Travel",
+          "Music",
+        ],
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": `${siteUrl}/#profile`,
+        url: siteUrl,
+        name: "Yanchenhao's Corner",
+        dateModified: "2026-07-02",
+        mainEntity: {
+          "@id": `${siteUrl}/#person`,
+        },
+      },
+    ],
+  };
 
   const favoriteSongs = [
     {
@@ -302,8 +348,30 @@ export default function Page() {
       }
     : null;
 
+  const heroLightboxPhoto = isHeroPhotoOpen
+    ? {
+        id: "hero",
+        imageUrl: heroPhotoUrl,
+        title: "Kangding, Sichuan, China",
+        caption: "KANGDING, SICHUAN, CHINA",
+        rotation: -4,
+        imageAspectClassName: "aspect-[3/4]",
+      }
+    : null;
+
+  const selectedLightboxPhoto = heroLightboxPhoto || selectedTimelinePhoto;
+
+  const closePhotoLightbox = () => {
+    setIsHeroPhotoOpen(false);
+    setSelectedTimelinePhotoId(null);
+  };
+
   return (
     <div className="min-h-screen bg-[#faf9f6] relative overflow-x-hidden font-sans text-gray-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Notebook Paper Background Grid with subtle dotted lines */}
       <div
         className="fixed inset-0 pointer-events-none z-0"
@@ -442,6 +510,8 @@ export default function Page() {
                 imageSrc={heroPhotoUrl}
                 caption="KANGDING, SICHUAN, CHINA"
                 rotation={-4}
+                ariaLabel="Open Kangding photo"
+                onClick={() => setIsHeroPhotoOpen(true)}
                 className="w-[78vw] max-w-72 sm:w-80"
               />
 
@@ -1046,8 +1116,8 @@ export default function Page() {
       />
 
       <TimelinePhotoLightbox
-        photo={selectedTimelinePhoto}
-        onClose={() => setSelectedTimelinePhotoId(null)}
+        photo={selectedLightboxPhoto}
+        onClose={closePhotoLightbox}
       />
 
       {/* Footer / Connect Section */}
