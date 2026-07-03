@@ -3,7 +3,6 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { X } from "lucide-react";
-import { cn } from "../../lib/utils";
 
 interface TimelinePhoto {
   id: string;
@@ -51,9 +50,7 @@ export function TimelinePhotoLightbox({
   }, [photo, onClose]);
 
   const isWide = photo?.imageAspectClassName?.includes("16/10");
-  const cardWidth = isWide
-    ? "w-[min(88vw,760px)]"
-    : "w-[min(82vw,460px)] sm:w-[min(72vw,520px)]";
+  const imageMaxWidth = isWide ? "min(88vw, 760px)" : "min(82vw, 520px)";
 
   return (
     <AnimatePresence>
@@ -86,10 +83,7 @@ export function TimelinePhotoLightbox({
 
           <motion.div
             key={photo.id}
-            className={cn(
-              "relative z-10 bg-white p-3 pb-12 shadow-[0_18px_44px_rgba(28,33,42,0.22),0_8px_18px_rgba(28,33,42,0.12)] transform-gpu will-change-transform [contain:layout_paint_style] sm:p-4 sm:pb-16",
-              cardWidth
-            )}
+            className="relative z-10 inline-flex max-w-[calc(100vw-2rem)] flex-col items-center bg-white p-3 pb-12 shadow-[0_18px_44px_rgba(28,33,42,0.22),0_8px_18px_rgba(28,33,42,0.12)] transform-gpu will-change-transform [contain:layout_paint_style] sm:p-4 sm:pb-16"
             initial={
               shouldReduceMotion
                 ? { opacity: 0 }
@@ -129,18 +123,14 @@ export function TimelinePhotoLightbox({
             }}
             onClick={(event) => event.stopPropagation()}
           >
-            <div
-              className={cn(
-                "relative max-h-[72vh] overflow-hidden bg-[#f3f1eb]",
-                photo.imageAspectClassName || "aspect-[3/4]"
-              )}
-            >
+            <div className="relative max-w-full overflow-hidden bg-[#f3f1eb]">
               <img
                 src={photo.imageUrl}
                 alt={photo.title}
                 decoding="async"
                 draggable={false}
-                className="h-full w-full select-none object-contain"
+                className="h-auto max-h-[72vh] w-auto select-none object-contain"
+                style={{ maxWidth: imageMaxWidth }}
               />
             </div>
 

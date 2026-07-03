@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   category: 'portfolio',
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
       { url: '/icon.png', sizes: '512x512', type: 'image/png' },
     ],
