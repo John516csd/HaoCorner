@@ -30,7 +30,7 @@ export function NavBar() {
       animate={{ y: 0, x: '-50%', rotate: 1 }}
       transition={{ type: 'spring', stiffness: 200, damping: 20, delay: 0.5 }}
       whileHover={{ rotate: 0, scale: 1.02 }}
-      className="fixed top-4 md:top-6 left-1/2 z-50 w-[calc(100vw-24px)] max-w-sm md:w-[min(calc(100vw-32px),46rem)] md:max-w-none bg-[#fffcf2] px-2.5 sm:px-4 md:px-8 py-2 md:py-3 shadow-[2px_6px_15px_rgba(0,0,0,0.1)] border-2 border-dashed border-gray-300 overflow-visible"
+      className="fixed top-4 md:top-6 left-1/2 z-50 w-fit max-w-[calc(100vw-24px)] md:w-[min(calc(100vw-32px),46rem)] md:max-w-none bg-[#fffcf2] px-2.5 sm:px-4 md:px-8 py-2 md:py-3 shadow-[2px_6px_15px_rgba(0,0,0,0.1)] border-2 border-dashed border-gray-300 overflow-visible"
       style={{ 
         // Generates a slightly imperfect, hand-drawn paper box look
         borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px' 
