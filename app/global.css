@@ -3,6 +3,14 @@
 /* 添加 Noto Sans 字体 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+@font-face {
+  font-family: "Smiley Sans";
+  src: url("/fonts/SmileySans-Oblique.ttf.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* CSS 重置 */
 *,
 *::before,
@@ -131,6 +139,10 @@ body {
 
 .font-handnote-title {
   font-family: "Kalam", "Zhi Mang Xing", "LXGW WenKai", cursive;
+}
+
+.font-story-cn {
+  font-family: "Smiley Sans", "LXGW WenKai", "Noto Sans", sans-serif;
 }
 
 ::selection {

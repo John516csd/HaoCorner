@@ -17,6 +17,13 @@ interface VinylCardProps {
   shouldReset?: boolean;
 }
 
+const cjkTextPattern =
+  /[\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]/;
+
+function hasCjkText(text: string | undefined) {
+  return Boolean(text && cjkTextPattern.test(text));
+}
+
 export function VinylCard({ 
   coverSrc, 
   title, 
@@ -30,6 +37,9 @@ export function VinylCard({
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
   const isMobile = useIsMobile();
+  const hasChineseLyrics = hasCjkText(lyrics);
+  const hasChineseTitle = hasCjkText(title);
+  const hasChineseArtist = hasCjkText(artist);
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -109,15 +119,32 @@ export function VinylCard({
           />
         )}
         {lyrics ? (
-          <p className="font-handnote whitespace-pre-line text-xl md:text-2xl text-gray-800 leading-[2rem] relative z-10 pt-1">
+          <p
+            className={cn(
+              "relative z-10 whitespace-pre-line pt-1 text-gray-800",
+              hasChineseLyrics
+                ? "font-story-cn text-lg leading-[1.8rem] md:text-xl md:leading-[2rem]"
+                : "font-handnote text-xl leading-[2rem] md:text-2xl"
+            )}
+          >
             "{lyrics}"
           </p>
         ) : (
           <>
-            <h3 className="font-['Kalam'] font-bold text-xl md:text-2xl text-gray-800 leading-tight relative z-10">
+            <h3
+              className={cn(
+                "relative z-10 text-xl font-bold leading-tight text-gray-800 md:text-2xl",
+                hasChineseTitle ? "font-story-cn" : "font-['Kalam']"
+              )}
+            >
               {title}
             </h3>
-            <p className="font-['Caveat'] text-lg md:text-xl text-gray-600 relative z-10">
+            <p
+              className={cn(
+                "relative z-10 text-lg text-gray-600 md:text-xl",
+                hasChineseArtist ? "font-story-cn" : "font-['Caveat']"
+              )}
+            >
               {artist}
             </p>
           </>

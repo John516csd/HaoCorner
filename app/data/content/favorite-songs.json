@@ -1,0 +1,37 @@
+[
+  {
+    "title": "今天只做一件事",
+    "artist": "陈奕迅",
+    "coverUrl": "/cover/1.png",
+    "lyrics": "慢慢地迈向听朝\n静静地怀念昨日",
+    "tapeColor": "yellow"
+  },
+  {
+    "title": "我们万岁",
+    "artist": "陈奕迅",
+    "coverUrl": "/cover/2.png",
+    "lyrics": "情人游天地\n日月换行李",
+    "tapeColor": "pink"
+  },
+  {
+    "title": "任意门",
+    "artist": "五月天",
+    "coverUrl": "/cover/5.png",
+    "lyrics": "你问我全世界是哪里最美\n答案是你身边 只要是你身边",
+    "tapeColor": "white"
+  },
+  {
+    "title": "I Love You So",
+    "artist": "The Walters",
+    "coverUrl": "/cover/3.png",
+    "lyrics": "I've got to get away and let you go, I've got to get over \nBut I love you so",
+    "tapeColor": "blue"
+  },
+  {
+    "title": "Home (feat. Hikaru Utada)",
+    "artist": "Charlie Puth & 宇多田光 / Hikaru Utada",
+    "coverUrl": "/cover/2.png",
+    "lyrics": "Ooo, don't you know (Don't you know?)\nThat you're the one\nwho makes this house a home",
+    "tapeColor": "green"
+  }
+]

@@ -2,7 +2,22 @@
 
 这个清单列出了让你的手帐风格作品集更加完整和专业的优化建议。你可以按照这个清单一个个板块来补充。
 
-## 🌟 高优先级（强烈建议优先补充）
+## 已完成
+
+- [x] Move homepage data out of `app/page.tsx`.
+  - Extract timeline data, favorite songs, and photo folder config into `app/data`.
+  - Keep `app/page.tsx` focused on layout and interaction.
+
+- [x] Enhance photo albums.
+  - Add album descriptions, locations, dates, and short travel notes.
+  - Add previous / next controls in the photo preview.
+  - Add keyboard arrow navigation and touch swipe support.
+
+- [x] Add a local-only content manager for photos and songs.
+  - Manage album metadata, photo stories, favorite songs, cover URLs, and tape colors.
+  - Keep the manager unavailable in production.
+
+## 高优先级（强烈建议优先补充）
 
 ### 1. 项目展示板块 (Projects Section)
 作为 Frontend Engineer，这是最重要的展示区域。
@@ -33,7 +48,7 @@
 
 ---
 
-## 📝 中优先级（丰富内容与提升体验）
+## 中优先级（丰富内容与提升体验）
 
 ### 4. 博客入口 (Blog Section)
 README 中提到支持 MDX 博客，可以把它在首页展示出来。
@@ -53,7 +68,7 @@ README 中提到支持 MDX 博客，可以把它在首页展示出来。
 
 ---
 
-## 🛠 低优先级（细节打磨与功能完善）
+## 低优先级（细节打磨与功能完善）
 
 ### 7. 网站交互与功能
 - [ ] **导航栏更新**：补充新增加板块的锚点链接（如 Projects, Skills, Blog）。

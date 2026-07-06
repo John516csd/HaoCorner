@@ -11,84 +11,51 @@ import { Doodle } from "./components/figma-ui/Doodle";
 import { VinylCard } from "./components/figma-ui/VinylCard";
 import { NavBar } from "./components/figma-ui/NavBar";
 import { NotebookPaper } from "./components/figma-ui/NotebookPaper";
-import { VoiceMemo } from "./components/figma-ui/VoiceMemo";
 import { PhotoFolder } from "./components/figma-ui/PhotoFolder";
 import { PhotoModal } from "./components/figma-ui/PhotoModal";
 import { TimelinePhotoLightbox } from "./components/figma-ui/TimelinePhotoLightbox";
+import {
+  favoriteSongs,
+  heroPhotoUrl,
+  photoAlbums,
+  siteUrl,
+  timelineData,
+  type AlbumStickerPreset,
+  type PhotoAlbum,
+} from "./data/home";
 import { useIsMobile } from "./hooks/use-mobile";
 import { initialWhenVisible } from "./lib/motion";
 
-// Photo Folder Mock Data
-const jejuPhotos = [
-  "/jeju/optimized/DSCF1514.jpg",
-  "/jeju/optimized/DSCF1528.jpg",
-  "/jeju/optimized/DSCF1563.jpg",
-  "/jeju/optimized/DSCF1363.jpg",
-  "/jeju/optimized/DSCF1597.jpg",
-  "/jeju/optimized/DSCF1396.jpg",
-  "/jeju/optimized/DSCF1383.jpg",
-  "/jeju/optimized/DSCF1368.jpg",
-  "/jeju/optimized/DSCF1395.jpg",
-  "/jeju/optimized/DSCF1633.jpg",
-  "/jeju/optimized/DSCF1318.jpg",
-  "/jeju/optimized/DSCF1523.jpg",
-  "/jeju/optimized/DSCF1723.jpg",
-  "/jeju/optimized/DSCF1694.jpg",
-  "/jeju/optimized/DSCF1492.jpg",
-  "/jeju/optimized/DSCF1525.jpg",
-];
+const cjkSegmentPattern =
+  /([\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]+)/g;
+const cjkOnlyPattern =
+  /^[\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]+$/;
 
-const xinjiangPhotos = [
-  "/xinjiang/optimized/DSCF1820.jpg",
-  "/xinjiang/optimized/DSCF1829.jpg",
-  "/xinjiang/optimized/DSCF1854.jpg",
-  "/xinjiang/optimized/DSCF1855.jpg",
-  "/xinjiang/optimized/DSCF1856.jpg",
-  "/xinjiang/optimized/DSCF1862.jpg",
-  "/xinjiang/optimized/DSCF1864.jpg",
-  "/xinjiang/optimized/DSCF1895.jpg",
-  "/xinjiang/optimized/DSCF1928.jpg",
-  "/xinjiang/optimized/DSCF1932.jpg",
-  "/xinjiang/optimized/DSCF1957.jpg",
-  "/xinjiang/optimized/DSCF2014.jpg",
-  "/xinjiang/optimized/DSCF2021.jpg",
-  "/xinjiang/optimized/DSCF2047.jpg",
-  "/xinjiang/optimized/DSCF2063.jpg",
-  "/xinjiang/optimized/DSCF2090.jpg",
-  "/xinjiang/optimized/DSCF2097.jpg",
-  "/xinjiang/optimized/DSCF2108.jpg",
-  "/xinjiang/optimized/DSCF2114.jpg",
-  "/xinjiang/optimized/DSCF2123.jpg",
-  "/xinjiang/optimized/IDG_20260617_113120_748.jpg",
-];
+function InlineCjkText({
+  text,
+  className = "font-story-cn",
+}: {
+  text: string;
+  className?: string;
+}) {
+  return (
+    <>
+      {text.split(cjkSegmentPattern).map((segment, index) =>
+        cjkOnlyPattern.test(segment) ? (
+          <span key={`${segment}-${index}`} className={className}>
+            {segment}
+          </span>
+        ) : (
+          segment
+        )
+      )}
+    </>
+  );
+}
 
-const streetVibePhotos = [
-  "/street-vibe/optimized/DSCF0259.jpg",
-  "/street-vibe/optimized/DSCF1198.jpg",
-  "/street-vibe/optimized/DSCF1214.jpg",
-  "/street-vibe/optimized/DSCF1228.jpg",
-  "/street-vibe/optimized/IDG_20260102_170939_893.jpg",
-  "/street-vibe/optimized/IDG_20260102_172015_065.jpg",
-  "/street-vibe/optimized/IDG_20260103_114159_988.jpg",
-  "/street-vibe/optimized/IDG_20260103_122437_006.jpg",
-  "/street-vibe/optimized/IDG_20260103_122941_767.jpg",
-  "/street-vibe/optimized/IDG_20260103_125128_532.jpg",
-  "/street-vibe/optimized/IDG_20260108_174548_539.jpg",
-  "/street-vibe/optimized/IDG_20260513_190259_974.jpg",
-  "/street-vibe/optimized/IDG_20260513_191107_275.jpg",
-  "/street-vibe/optimized/IDG_20260513_191210_421.jpg",
-  "/street-vibe/optimized/IDG_20260524_180357_350.jpg",
-  "/street-vibe/optimized/IMG_20250708_191226.jpg",
-];
-
-const photoFolders = [
-  {
-    id: "jeju",
-    title: "Jeju",
-    date: "2026-04",
-    photoCount: jejuPhotos.length,
-    coverPhotos: jejuPhotos.slice(0, 3),
-    stickers: (
+function renderAlbumStickers(preset: AlbumStickerPreset) {
+  if (preset === "jeju") {
+    return (
       <>
         <div className="absolute top-4 left-4 text-3xl transform -rotate-12 emoji-sticker-outline-text">
           🇰🇷
@@ -97,16 +64,11 @@ const photoFolders = [
           🏖️
         </div>
       </>
-    ),
-    photos: jejuPhotos,
-  },
-  {
-    id: "xinjiang",
-    title: "Xinjiang",
-    date: "2026-06",
-    photoCount: xinjiangPhotos.length,
-    coverPhotos: xinjiangPhotos.slice(0, 3),
-    stickers: (
+    );
+  }
+
+  if (preset === "xinjiang") {
+    return (
       <>
         <div className="absolute top-4 left-5 text-3xl transform -rotate-12 emoji-sticker-outline-text">
           🐑
@@ -118,36 +80,27 @@ const photoFolders = [
           🌿
         </div>
       </>
-    ),
-    photos: xinjiangPhotos,
-  },
-  {
-    id: "street",
-    title: "Street Vibes",
-    photoCount: streetVibePhotos.length,
-    coverPhotos: streetVibePhotos.slice(0, 3),
-    stickers: (
-      <>
-        <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[60%] transform rotate-[-8deg] z-40 emoji-sticker-outline-text">
-          <span className="text-3xl">📷</span>
-        </div>
-        <div className="absolute bottom-4 right-4 transform rotate-[12deg] z-40 emoji-sticker-outline-text">
-          <span className="text-2xl" style={{ filter: "grayscale(0.2)" }}>
-            🎞️
-          </span>
-        </div>
-      </>
-    ),
-    photos: streetVibePhotos,
-  },
-];
+    );
+  }
+
+  return (
+    <>
+      <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[60%] transform rotate-[-8deg] z-40 emoji-sticker-outline-text">
+        <span className="text-3xl">📷</span>
+      </div>
+      <div className="absolute bottom-4 right-4 transform rotate-[12deg] z-40 emoji-sticker-outline-text">
+        <span className="text-2xl" style={{ filter: "grayscale(0.2)" }}>
+          🎞️
+        </span>
+      </div>
+    </>
+  );
+}
 
 export default function Page() {
   const [activeSongIndex, setActiveSongIndex] = useState(0);
   const [currentDate, setCurrentDate] = useState("");
-  const [selectedFolder, setSelectedFolder] = useState<
-    (typeof photoFolders)[0] | null
-  >(null);
+  const [selectedFolder, setSelectedFolder] = useState<PhotoAlbum | null>(null);
   const [selectedTimelinePhotoId, setSelectedTimelinePhotoId] = useState<
     string | null
   >(null);
@@ -179,9 +132,6 @@ export default function Page() {
     const intervalId = setInterval(updateDate, 60000);
     return () => clearInterval(intervalId);
   }, []);
-
-  const heroPhotoUrl = "/images/me.jpg";
-  const siteUrl = "https://yanchenhao.com";
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -226,97 +176,6 @@ export default function Page() {
       },
     ],
   };
-
-  const favoriteSongs = [
-    {
-      title: "今天只做一件事",
-      artist: "陈奕迅",
-      coverUrl: "/cover/1.png",
-      lyrics: "慢慢地迈向听朝\n静静地怀念昨日",
-      tapeColor: "yellow" as const,
-    },
-    {
-      title: "我们万岁",
-      artist: "陈奕迅",
-      coverUrl: "/cover/2.png",
-      lyrics: "情人游天地\n日月换行李",
-      tapeColor: "pink" as const,
-    },
-    {
-      title: "任意门",
-      artist: "五月天",
-      coverUrl: "/cover/5.png",
-      lyrics: "你问我全世界是哪里最美\n答案是你身边 只要是你身边",
-      tapeColor: "white" as const,
-    },
-    {
-      title: "I Love You So",
-      artist: "The Walters",
-      coverUrl: "/cover/3.png",
-      lyrics:
-        "I've got to get away and let you go, I've got to get over \nBut I love you so",
-      tapeColor: "blue" as const,
-    },
-    {
-      title: "Home (feat. Hikaru Utada)",
-      artist: "Charlie Puth & 宇多田光 / Hikaru Utada",
-      coverUrl: "/cover/4.png",
-      lyrics:
-        "Ooo, don't you know (Don't you know?)\nThat you're the one\nwho makes this house a home",
-      tapeColor: "green" as const,
-    },
-  ];
-
-  const timelineData = [
-    {
-      id: "origin",
-      year: "2000",
-      range: "— 2018",
-      title: "Roots in Zhaoqing",
-      description:
-        "Born in Zhaoqing, I spent my first 18 years there, from primary school to high school. Home gave me warmth, patience, and the first spark to look further.",
-      imageUrl: "/images/childhood-zhaoqing.jpg",
-      postItColor: "yellow" as const,
-      polaroidRotation: -3,
-      postItRotation: 2,
-    },
-    {
-      id: "education",
-      year: "2018",
-      range: "— 2022",
-      title: "University in Guangzhou",
-      description:
-        "Studied Software Engineering at Guangdong Polytechnic Normal University in Tianhe, Guangzhou. Earned my bachelor's degree through four years of classes, projects, and debugging.",
-      imageUrl: "/images/university-graduation.jpg",
-      postItColor: "blue" as const,
-      polaroidRotation: 3,
-      postItRotation: -2,
-    },
-    {
-      id: "career",
-      year: "2022",
-      range: "— Now",
-      title: "Frontend Engineer",
-      description:
-        "Started as a frontend intern at Sangfor, then joined Notta as a frontend engineer. Since 2022, I've been building product experiences for real users.",
-      imageUrl: "/images/workstation.webp",
-      postItColor: "pink" as const,
-      polaroidRotation: -2,
-      postItRotation: -3,
-    },
-    {
-      id: "life",
-      year: "Always",
-      range: "",
-      title: "Life Beyond Code",
-      description:
-        "I love making things with code, but I also want to keep moving: across oceans, toward snow mountains, with music in my ears and a camera nearby.",
-      imageUrl: "/images/snow-mountain-journey.webp",
-      postItColor: "green" as const,
-      polaroidRotation: 4,
-      postItRotation: 3,
-    },
-  ];
 
   const getTimelineCaption = (item: (typeof timelineData)[number]) =>
     item.year + (item.range ? ` ${item.range}` : "");
@@ -984,9 +843,17 @@ export default function Page() {
                       className="flex items-start justify-between gap-3 border-b-2 border-dashed border-blue-200/50 pb-2 cursor-pointer group"
                     >
                       <span className="relative z-10 min-w-0 flex-1 leading-tight">
-                        {idx + 1}. {song.title}
+                        {idx + 1}.{" "}
+                        <InlineCjkText
+                          text={song.title}
+                          className="font-story-cn text-[0.92em]"
+                        />
                         <span className="block sm:inline text-gray-500/80 text-base sm:text-lg md:text-xl sm:ml-2">
-                          - {song.artist}
+                          -{" "}
+                          <InlineCjkText
+                            text={song.artist}
+                            className="font-story-cn text-[0.92em]"
+                          />
                         </span>
                         {activeSongIndex === idx && (
                           <motion.svg
@@ -1087,14 +954,14 @@ export default function Page() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 lg:gap-16 justify-items-center">
-          {photoFolders.map((folder, idx) => (
+          {photoAlbums.map((folder, idx) => (
             <PhotoFolder
               key={folder.id}
               title={folder.title}
               date={folder.date}
-              photoCount={folder.photoCount}
-              coverPhotos={folder.coverPhotos}
-              stickers={folder.stickers}
+              photoCount={folder.photos.length}
+              coverPhotos={folder.photos.slice(0, 3).map((photo) => photo.src)}
+              stickers={renderAlbumStickers(folder.stickerPreset)}
               delay={idx * 0.15}
               onClick={() => setSelectedFolder(folder)}
             />
@@ -1103,16 +970,8 @@ export default function Page() {
       </section>
 
       <PhotoModal
-        isOpen={selectedFolder !== null}
+        album={selectedFolder}
         onClose={() => setSelectedFolder(null)}
-        folderTitle={
-          selectedFolder
-            ? selectedFolder.date
-              ? `${selectedFolder.title} · ${selectedFolder.date}`
-              : selectedFolder.title
-            : ""
-        }
-        photos={selectedFolder?.photos || []}
       />
 
       <TimelinePhotoLightbox
