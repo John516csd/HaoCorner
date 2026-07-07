@@ -47,3 +47,6 @@ next-env.d.ts
 /public/street-vibe/*
 !/public/street-vibe/optimized/
 !/public/street-vibe/optimized/**
+/public/sichuan/*
+!/public/sichuan/optimized/
+!/public/sichuan/optimized/**

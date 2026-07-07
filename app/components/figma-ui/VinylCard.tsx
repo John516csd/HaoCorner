@@ -19,9 +19,35 @@ interface VinylCardProps {
 
 const cjkTextPattern =
   /[\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]/;
+const cjkSegmentPattern =
+  /([\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]+)/g;
+const cjkOnlyPattern =
+  /^[\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]+$/;
 
 function hasCjkText(text: string | undefined) {
   return Boolean(text && cjkTextPattern.test(text));
+}
+
+function InlineCjkText({
+  text,
+  cjkClassName = "font-story-cn",
+}: {
+  text: string;
+  cjkClassName?: string;
+}) {
+  return (
+    <>
+      {text.split(cjkSegmentPattern).map((segment, index) =>
+        cjkOnlyPattern.test(segment) ? (
+          <span key={`${segment}-${index}`} className={cjkClassName}>
+            {segment}
+          </span>
+        ) : (
+          segment
+        )
+      )}
+    </>
+  );
 }
 
 export function VinylCard({ 
@@ -38,8 +64,6 @@ export function VinylCard({
   const dragControls = useAnimationControls();
   const isMobile = useIsMobile();
   const hasChineseLyrics = hasCjkText(lyrics);
-  const hasChineseTitle = hasCjkText(title);
-  const hasChineseArtist = hasCjkText(artist);
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -121,31 +145,27 @@ export function VinylCard({
         {lyrics ? (
           <p
             className={cn(
-              "relative z-10 whitespace-pre-line pt-1 text-gray-800",
+              "relative z-10 whitespace-pre-line pt-1 text-gray-800 font-['Caveat']",
               hasChineseLyrics
-                ? "font-story-cn text-lg leading-[1.8rem] md:text-xl md:leading-[2rem]"
-                : "font-handnote text-xl leading-[2rem] md:text-2xl"
+                ? "text-lg leading-[1.8rem] md:text-xl md:leading-[2rem]"
+                : "text-xl leading-[2rem] md:text-2xl"
             )}
           >
-            "{lyrics}"
+            <span aria-hidden="true">"</span>
+            <InlineCjkText text={lyrics} />
+            <span aria-hidden="true">"</span>
           </p>
         ) : (
           <>
             <h3
-              className={cn(
-                "relative z-10 text-xl font-bold leading-tight text-gray-800 md:text-2xl",
-                hasChineseTitle ? "font-story-cn" : "font-['Kalam']"
-              )}
+              className="relative z-10 font-['Kalam'] text-xl font-bold leading-tight text-gray-800 md:text-2xl"
             >
-              {title}
+              <InlineCjkText text={title} />
             </h3>
             <p
-              className={cn(
-                "relative z-10 text-lg text-gray-600 md:text-xl",
-                hasChineseArtist ? "font-story-cn" : "font-['Caveat']"
-              )}
+              className="relative z-10 font-['Caveat'] text-lg text-gray-600 md:text-xl"
             >
-              {artist}
+              <InlineCjkText text={artist} />
             </p>
           </>
         )}

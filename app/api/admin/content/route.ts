@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile } from "fs/promises";
+import { access, mkdir, readdir, readFile, writeFile } from "fs/promises";
 import path from "path";
 import { NextRequest, NextResponse } from "next/server";
 import type {
@@ -27,8 +27,13 @@ const dataDir = path.join(process.cwd(), "app", "data", "content");
 const photoAlbumsPath = path.join(dataDir, "photo-albums.json");
 const favoriteSongsPath = path.join(dataDir, "favorite-songs.json");
 
-const albumIds = ["jeju", "xinjiang", "street"] as const;
-const stickerPresets: AlbumStickerPreset[] = ["jeju", "xinjiang", "street"];
+const albumIds = ["sichuan", "jeju", "xinjiang", "street"] as const;
+const stickerPresets: AlbumStickerPreset[] = [
+  "sichuan",
+  "jeju",
+  "xinjiang",
+  "street",
+];
 const tapeColors: TapeColor[] = [
   "red",
   "blue",
@@ -39,6 +44,7 @@ const tapeColors: TapeColor[] = [
 ];
 
 const photoFolderConfig: Record<AlbumId, string[]> = {
+  sichuan: ["sichuan", "optimized"],
   jeju: ["jeju", "optimized"],
   xinjiang: ["xinjiang", "optimized"],
   street: ["street-vibe", "optimized"],
@@ -52,6 +58,7 @@ const imageExtensions = new Set([
   ".png",
   ".webp",
 ]);
+const maxUploadBytes = 25 * 1024 * 1024;
 
 function isProduction() {
   return process.env.NODE_ENV === "production";
@@ -72,13 +79,74 @@ async function readJsonFile<T>(filePath: string): Promise<T> {
 async function scanPublicFolder(parts: string[]): Promise<string[]> {
   const folderPath = path.join(process.cwd(), "public", ...parts);
   const publicPrefix = `/${parts.join("/")}`;
-  const entries = await readdir(folderPath, { withFileTypes: true });
+  let entries;
+
+  try {
+    entries = await readdir(folderPath, { withFileTypes: true });
+  } catch (error) {
+    if (
+      error &&
+      typeof error === "object" &&
+      "code" in error &&
+      error.code === "ENOENT"
+    ) {
+      return [];
+    }
+
+    throw error;
+  }
 
   return entries
     .filter((entry) => entry.isFile())
     .filter((entry) => imageExtensions.has(path.extname(entry.name).toLowerCase()))
     .map((entry) => `${publicPrefix}/${entry.name}`)
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+}
+
+function isUploadFile(value: FormDataEntryValue): value is File {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "arrayBuffer" in value &&
+    "name" in value &&
+    typeof value.name === "string"
+  );
+}
+
+function sanitizeFileName(fileName: string) {
+  const parsed = path.parse(fileName);
+  const safeBase =
+    parsed.name
+      .normalize("NFKD")
+      .replace(/[^\w.-]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .toLowerCase() || "photo";
+  return `${safeBase}${parsed.ext.toLowerCase()}`;
+}
+
+async function getAvailableFileName(folderPath: string, fileName: string) {
+  const parsed = path.parse(fileName);
+  let candidate = fileName;
+  let suffix = 2;
+
+  while (true) {
+    try {
+      await access(path.join(folderPath, candidate));
+      candidate = `${parsed.name}-${suffix}${parsed.ext}`;
+      suffix += 1;
+    } catch (error) {
+      if (
+        error &&
+        typeof error === "object" &&
+        "code" in error &&
+        error.code === "ENOENT"
+      ) {
+        return candidate;
+      }
+
+      throw error;
+    }
+  }
 }
 
 async function loadContent(): Promise<AdminContentPayload> {
@@ -91,7 +159,8 @@ async function loadContent(): Promise<AdminContentPayload> {
 }
 
 async function scanAssets(): Promise<ScannedAssets> {
-  const [jeju, xinjiang, street, covers] = await Promise.all([
+  const [sichuan, jeju, xinjiang, street, covers] = await Promise.all([
+    scanPublicFolder(photoFolderConfig.sichuan),
     scanPublicFolder(photoFolderConfig.jeju),
     scanPublicFolder(photoFolderConfig.xinjiang),
     scanPublicFolder(photoFolderConfig.street),
@@ -99,7 +168,7 @@ async function scanAssets(): Promise<ScannedAssets> {
   ]);
 
   return {
-    photos: { jeju, xinjiang, street },
+    photos: { sichuan, jeju, xinjiang, street },
     covers,
   };
 }
@@ -194,6 +263,71 @@ export async function GET() {
 
   const [content, assets] = await Promise.all([loadContent(), scanAssets()]);
   return NextResponse.json({ ...content, assets });
+}
+
+export async function POST(request: NextRequest) {
+  if (isProduction()) return localOnlyResponse();
+
+  let formData: FormData;
+
+  try {
+    formData = await request.formData();
+  } catch {
+    return NextResponse.json(
+      { error: "Request body must be multipart form data." },
+      { status: 400 }
+    );
+  }
+
+  const albumId = formData.get("albumId");
+  if (typeof albumId !== "string" || !albumIds.includes(albumId as AlbumId)) {
+    return NextResponse.json({ error: "albumId is invalid." }, { status: 400 });
+  }
+
+  const files = formData.getAll("files").filter(isUploadFile);
+  if (!files.length) {
+    return NextResponse.json({ error: "No image files were selected." }, { status: 400 });
+  }
+
+  const folderParts = photoFolderConfig[albumId as AlbumId];
+  const folderPath = path.join(process.cwd(), "public", ...folderParts);
+  const publicPrefix = `/${folderParts.join("/")}`;
+  const uploaded: string[] = [];
+  const errors: string[] = [];
+
+  await mkdir(folderPath, { recursive: true });
+
+  for (const file of files) {
+    const extension = path.extname(file.name).toLowerCase();
+
+    if (!imageExtensions.has(extension)) {
+      errors.push(`${file.name} is not a supported web image.`);
+      continue;
+    }
+
+    if (file.size > maxUploadBytes) {
+      errors.push(`${file.name} is larger than 25MB.`);
+      continue;
+    }
+
+    const safeFileName = sanitizeFileName(file.name);
+    const availableFileName = await getAvailableFileName(folderPath, safeFileName);
+    const filePath = path.join(folderPath, availableFileName);
+    const buffer = Buffer.from(await file.arrayBuffer());
+
+    await writeFile(filePath, buffer);
+    uploaded.push(`${publicPrefix}/${availableFileName}`);
+  }
+
+  if (!uploaded.length) {
+    return NextResponse.json(
+      { error: "No images were uploaded.", errors },
+      { status: 400 }
+    );
+  }
+
+  const assets = await scanAssets();
+  return NextResponse.json({ uploaded, assets, errors });
 }
 
 export async function PUT(request: NextRequest) {

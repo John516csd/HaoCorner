@@ -1,11 +1,74 @@
 [
   {
+    "id": "sichuan",
+    "title": "Sichuan",
+    "location": "Sichuan, China",
+    "description": "My first time in Sichuan, and my first time experiencing the breathtaking scenery of grasslands and snow-capped mountains. Seeing Mount Gongga, the “King of Sichuan Mountains,” up close was absolutely stunning. The views were unreal—though the altitude sickness was pretty real too haha 🤣\n",
+    "note": "",
+    "stickerPreset": "sichuan",
+    "photos": [
+      {
+        "src": "/sichuan/optimized/img-20250626-163332.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-112523.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-122625.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-172233-2.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-175210.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-181325.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-181427.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-183914.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-20250627-183921.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-2964.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-3180.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-3196.webp",
+        "story": ""
+      },
+      {
+        "src": "/sichuan/optimized/img-3245.webp",
+        "story": ""
+      }
+    ],
+    "date": "2025-06"
+  },
+  {
     "id": "jeju",
     "title": "Jeju",
     "location": "Jeju, South Korea",
     "date": "2026-04",
-    "description": "A soft island album for sea wind, quiet roads, and small moments waiting to be written down.",
-    "note": "Personal notes will be added here later.",
+    "description": "Jeju is such a beautiful little island. The sea is incredibly blue—I’d never seen water this blue before. The Olle Trails are also very walker-friendly, with signs and markers along the whole way.",
+    "note": "My first solo trip overseas — eight days, one backpack, and several Olle trails.",
     "stickerPreset": "jeju",
     "photos": [
       {
@@ -14,15 +77,15 @@
       },
       {
         "src": "/jeju/optimized/DSCF1528.jpg",
-        "story": "Story coming soon."
+        "story": "This is the monument for the Pilgrim’s Path on Jeju Olle Trail Route 1."
       },
       {
         "src": "/jeju/optimized/DSCF1563.jpg",
-        "story": "Story coming soon."
+        "story": "Taken on the boat to Udo Island."
       },
       {
         "src": "/jeju/optimized/DSCF1363.jpg",
-        "story": "Story coming soon."
+        "story": "The first thing I did after landing was go see the cherry blossoms."
       },
       {
         "src": "/jeju/optimized/DSCF1597.jpg",
@@ -58,7 +121,7 @@
       },
       {
         "src": "/jeju/optimized/DSCF1723.jpg",
-        "story": "这张图片上的女生是不认识的，但是拍完照回去的晚上，我在社交媒体上就刷到了她的视角发的图片，然后我在她的评论区下评论了这张照片😂"
+        "story": "The girl in this photo was a complete stranger, but that night after I got back, I somehow came across the photos she posted from her perspective on social media. So I dropped this photo in her comments 😂"
       },
       {
         "src": "/jeju/optimized/DSCF1694.jpg",
@@ -70,7 +133,7 @@
       },
       {
         "src": "/jeju/optimized/DSCF1525.jpg",
-        "story": "Story coming soon."
+        "story": "Seongsan Ilchulbong is truly something special."
       }
     ]
   },
@@ -79,17 +142,17 @@
     "title": "Xinjiang",
     "location": "Xinjiang, China",
     "date": "2026-06",
-    "description": "A wide-open travel album for mountains, grasslands, long roads, and notes still to come.",
+    "description": "My long-awaited trip to Xinjiang: vast, beautiful grasslands, endless snow-capped mountains, and tall spruce trees standing deep in the forests. My favorite part was definitely the lamb in Xinjiang. I’d love to come back in winter and experience a different side of its beauty.\n",
     "note": "Personal notes will be added here later.",
     "stickerPreset": "xinjiang",
     "photos": [
       {
         "src": "/xinjiang/optimized/DSCF1820.jpg",
-        "story": "Story coming soon."
+        "story": "This was the view of the snow-capped mountains when I woke up in the morning at a guesthouse by Sayram Lake."
       },
       {
         "src": "/xinjiang/optimized/DSCF1829.jpg",
-        "story": "Story coming soon."
+        "story": "A café nestled by Sayram Lake."
       },
       {
         "src": "/xinjiang/optimized/DSCF1854.jpg",
@@ -161,7 +224,7 @@
       },
       {
         "src": "/xinjiang/optimized/DSCF2123.jpg",
-        "story": "Story coming soon."
+        "story": "On the road leaving Nalati."
       },
       {
         "src": "/xinjiang/optimized/IDG_20260617_113120_748.jpg",

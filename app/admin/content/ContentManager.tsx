@@ -12,11 +12,13 @@ import {
   RefreshCw,
   Save,
   Trash2,
+  UploadCloud,
 } from "lucide-react";
 import {
   type ReactNode,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import type {
@@ -52,12 +54,25 @@ const buttonClassName =
   "inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900/15 disabled:!border-gray-200 disabled:!bg-gray-100 disabled:!text-gray-400 disabled:!shadow-none disabled:!opacity-100 disabled:cursor-not-allowed";
 
 const albumLabels: Record<AlbumId, string> = {
+  sichuan: "Sichuan",
   jeju: "Jeju",
   xinjiang: "Xinjiang",
   street: "Street Vibes",
 };
 
-const stickerPresets: AlbumStickerPreset[] = ["jeju", "xinjiang", "street"];
+const albumPublicFolders: Record<AlbumId, string> = {
+  sichuan: "public/sichuan/optimized",
+  jeju: "public/jeju/optimized",
+  xinjiang: "public/xinjiang/optimized",
+  street: "public/street-vibe/optimized",
+};
+
+const stickerPresets: AlbumStickerPreset[] = [
+  "sichuan",
+  "jeju",
+  "xinjiang",
+  "street",
+];
 const tapeColors: TapeColor[] = [
   "red",
   "blue",
@@ -165,11 +180,13 @@ function StatusPill({ state }: { state: SaveState }) {
 }
 
 export function ContentManager() {
+  const photoUploadInputRef = useRef<HTMLInputElement | null>(null);
   const [content, setContent] = useState<AdminContent | null>(null);
   const [activeTab, setActiveTab] = useState<TabId>("photos");
   const [selectedAlbumId, setSelectedAlbumId] = useState<AlbumId>("jeju");
   const [selectedSongIndex, setSelectedSongIndex] = useState(0);
   const [saveState, setSaveState] = useState<SaveState>("loading");
+  const [isUploadingPhotos, setIsUploadingPhotos] = useState(false);
   const [message, setMessage] = useState("");
 
   const selectedAlbum = useMemo(
@@ -305,6 +322,80 @@ export function ContentManager() {
       ...album,
       photos: [...album.photos, { src, story: "" }],
     }));
+  }
+
+  async function uploadPhotos(fileList: FileList | null) {
+    if (!content || !selectedAlbum || !fileList?.length || isUploadingPhotos) {
+      return;
+    }
+
+    const files = Array.from(fileList);
+    const formData = new FormData();
+    formData.append("albumId", selectedAlbum.id);
+    files.forEach((file) => formData.append("files", file));
+
+    setIsUploadingPhotos(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/admin/content", {
+        method: "POST",
+        body: formData,
+      });
+      const data = (await response.json()) as {
+        uploaded?: string[];
+        assets?: ScannedAssets;
+        error?: string;
+        errors?: string[];
+      };
+
+      if (!response.ok) {
+        const details = data.errors?.length ? ` ${data.errors.join(" ")}` : "";
+        throw new Error(`${data.error || "Upload failed."}${details}`);
+      }
+
+      const uploaded = data.uploaded || [];
+      const uploadedSet = new Set(uploaded);
+
+      setContent((current) => {
+        if (!current) return current;
+
+        return {
+          ...current,
+          assets: data.assets || current.assets,
+          photoAlbums: current.photoAlbums.map((album) => {
+            if (album.id !== selectedAlbum.id) return album;
+
+            const existingPhotos = new Set(album.photos.map((photo) => photo.src));
+            const nextPhotos = uploaded
+              .filter((src) => !existingPhotos.has(src))
+              .map((src) => ({ src, story: "" }));
+
+            return {
+              ...album,
+              photos: [...album.photos, ...nextPhotos],
+            };
+          }),
+        };
+      });
+
+      setSaveState("unsaved");
+      setMessage(
+        `Uploaded ${uploadedSet.size} photo${uploadedSet.size === 1 ? "" : "s"} to ${albumPublicFolders[selectedAlbum.id]}. Click Save to update JSON.`
+      );
+
+      if (data.errors?.length) {
+        setMessage((current) => `${current} Skipped: ${data.errors?.join(" ")}`);
+      }
+    } catch (error) {
+      setSaveState("error");
+      setMessage(error instanceof Error ? error.message : "Upload failed.");
+    } finally {
+      setIsUploadingPhotos(false);
+      if (photoUploadInputRef.current) {
+        photoUploadInputRef.current.value = "";
+      }
+    }
   }
 
   function updateSong(index: number, patch: Partial<FavoriteSong>) {
@@ -615,6 +706,35 @@ export function ContentManager() {
                     <p className="text-sm text-gray-500">
                       {selectedAlbum.photos.length} in JSON, {missingPhotos.length} new in folder
                     </p>
+                    <p className="mt-1 text-xs text-gray-400">
+                      Upload here or drop files into {albumPublicFolders[selectedAlbum.id]}.
+                    </p>
+                  </div>
+                  <div>
+                    <input
+                      ref={photoUploadInputRef}
+                      type="file"
+                      multiple
+                      accept="image/avif,image/gif,image/jpeg,image/png,image/webp"
+                      className="hidden"
+                      onChange={(event) => uploadPhotos(event.target.files)}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => photoUploadInputRef.current?.click()}
+                      disabled={isUploadingPhotos || saveState === "saving"}
+                      className={cn(
+                        buttonClassName,
+                        "border !border-gray-300 !bg-white !text-gray-800 shadow-sm hover:!border-gray-500 hover:!bg-gray-50"
+                      )}
+                    >
+                      {isUploadingPhotos ? (
+                        <Loader2 size={17} className="animate-spin" />
+                      ) : (
+                        <UploadCloud size={17} />
+                      )}
+                      Upload images
+                    </button>
                   </div>
                 </div>
 
@@ -654,6 +774,13 @@ export function ContentManager() {
                 )}
 
                 <div className="grid gap-3">
+                  {selectedAlbum.photos.length === 0 && missingPhotos.length === 0 && (
+                    <div className="rounded-lg border border-dashed border-gray-300 bg-[#fbfaf6] p-6 text-sm text-gray-500">
+                      No photos yet. Use Upload images, then click Save once they
+                      appear in this album.
+                    </div>
+                  )}
+
                   {selectedAlbum.photos.map((photo, photoIndex) => (
                     <div
                       key={`${photo.src}-${photoIndex}`}

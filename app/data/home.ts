@@ -3,7 +3,7 @@ import photoAlbumsData from "./content/photo-albums.json";
 
 export type TapeColor = "red" | "blue" | "yellow" | "green" | "pink" | "white";
 export type PostItColor = "yellow" | "blue" | "pink" | "green";
-export type AlbumStickerPreset = "jeju" | "xinjiang" | "street";
+export type AlbumStickerPreset = "sichuan" | "jeju" | "xinjiang" | "street";
 
 export type FavoriteSong = {
   title: string;
@@ -31,7 +31,7 @@ export type AlbumPhoto = {
 };
 
 export type PhotoAlbum = {
-  id: "jeju" | "xinjiang" | "street";
+  id: "sichuan" | "jeju" | "xinjiang" | "street";
   title: string;
   location: string;
   date?: string;

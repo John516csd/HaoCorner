@@ -83,6 +83,19 @@ function renderAlbumStickers(preset: AlbumStickerPreset) {
     );
   }
 
+  if (preset === "sichuan") {
+    return (
+      <>
+        <div className="absolute top-4 left-5 text-3xl transform -rotate-12 emoji-sticker-outline-text">
+          🐼
+        </div>
+        <div className="absolute top-5 right-6 text-3xl transform rotate-[10deg] emoji-sticker-outline-text">
+          🏔️
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[60%] transform rotate-[-8deg] z-40 emoji-sticker-outline-text">

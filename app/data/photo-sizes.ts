@@ -6,6 +6,46 @@ export type PhotoSize = {
 export const fallbackPhotoSize: PhotoSize = { width: 4, height: 3 };
 
 export const photoSizes: Record<string, PhotoSize> = {
+  "/sichuan/optimized/img-20250626-163332.webp": {
+    width: 1800,
+    height: 1350,
+  },
+  "/sichuan/optimized/img-20250627-112523.webp": {
+    width: 1350,
+    height: 1800,
+  },
+  "/sichuan/optimized/img-20250627-122625.webp": {
+    width: 1350,
+    height: 1800,
+  },
+  "/sichuan/optimized/img-20250627-172233-2.webp": {
+    width: 1350,
+    height: 1800,
+  },
+  "/sichuan/optimized/img-20250627-175210.webp": {
+    width: 1350,
+    height: 1800,
+  },
+  "/sichuan/optimized/img-20250627-181325.webp": {
+    width: 1800,
+    height: 1350,
+  },
+  "/sichuan/optimized/img-20250627-181427.webp": {
+    width: 1350,
+    height: 1800,
+  },
+  "/sichuan/optimized/img-20250627-183914.webp": {
+    width: 1350,
+    height: 1800,
+  },
+  "/sichuan/optimized/img-20250627-183921.webp": {
+    width: 1350,
+    height: 1800,
+  },
+  "/sichuan/optimized/img-2964.webp": { width: 1800, height: 1200 },
+  "/sichuan/optimized/img-3180.webp": { width: 1350, height: 1800 },
+  "/sichuan/optimized/img-3196.webp": { width: 1350, height: 1800 },
+  "/sichuan/optimized/img-3245.webp": { width: 1350, height: 1800 },
   "/jeju/optimized/DSCF1318.jpg": { width: 1014, height: 1800 },
   "/jeju/optimized/DSCF1363.jpg": { width: 1800, height: 1014 },
   "/jeju/optimized/DSCF1368.jpg": { width: 1800, height: 1014 },

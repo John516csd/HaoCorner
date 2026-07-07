@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
   MapPin,
+  NotebookPen,
   X,
 } from "lucide-react";
 import type { AlbumPhoto, PhotoAlbum } from "../../data/home";
@@ -22,12 +23,42 @@ interface PhotoModalProps {
 
 const legacyPhotoStoryPlaceholder = "Story coming soon.";
 const legacyAlbumNotePlaceholder = "Personal notes will be added here later.";
+const cjkSegmentPattern =
+  /([\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]+)/g;
+const cjkOnlyPattern =
+  /^[\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]+$/;
 
 function getVisibleText(value: string | undefined, hiddenValue?: string) {
   const text = value?.trim() || "";
   if (!text) return "";
   if (hiddenValue && text === hiddenValue) return "";
   return text;
+}
+
+function hasVisiblePhotoStory(photo: AlbumPhoto) {
+  return Boolean(getVisibleText(photo.story, legacyPhotoStoryPlaceholder));
+}
+
+function InlineCjkText({
+  text,
+  cjkClassName = "font-story-cn",
+}: {
+  text: string;
+  cjkClassName?: string;
+}) {
+  return (
+    <>
+      {text.split(cjkSegmentPattern).map((segment, index) =>
+        cjkOnlyPattern.test(segment) ? (
+          <span key={`${segment}-${index}`} className={cjkClassName}>
+            {segment}
+          </span>
+        ) : (
+          segment
+        )
+      )}
+    </>
+  );
 }
 
 function ImageWithAspect({
@@ -63,6 +94,17 @@ function ImageWithAspect({
         onLoad={() => setIsLoaded(true)}
       />
     </div>
+  );
+}
+
+function PhotoStoryBadge() {
+  return (
+    <span
+      className="pointer-events-none absolute right-3 top-3 z-10 flex h-8 w-8 -rotate-2 items-center justify-center rounded-[3px] bg-[#fff3a8] text-gray-700 shadow-[0_4px_10px_rgba(31,41,55,0.16),0_1px_0_rgba(255,255,255,0.8)_inset] ring-1 ring-yellow-500/20 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:rotate-0"
+      aria-hidden="true"
+    >
+      <NotebookPen size={17} strokeWidth={2.15} />
+    </span>
   );
 }
 
@@ -356,8 +398,11 @@ export function PhotoModal({ album, onClose }: PhotoModalProps) {
               {selectedPhotoIndex + 1} / {photos.length}
             </div>
             {selectedPhotoStory && (
-              <p className="font-story-cn mx-auto mt-2 max-w-[34rem] px-3 pb-3 text-center text-sm leading-relaxed text-gray-600 sm:px-6 sm:text-base">
-                {selectedPhotoStory}
+              <p className="mx-auto mt-2 max-w-[34rem] px-3 pb-3 text-center font-['Caveat'] text-sm leading-relaxed text-gray-600 sm:px-6 sm:text-base">
+                <InlineCjkText
+                  text={selectedPhotoStory}
+                  cjkClassName="font-story-cn text-[0.92em]"
+                />
               </p>
             )}
           </motion.div>
@@ -375,63 +420,68 @@ export function PhotoModal({ album, onClose }: PhotoModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[100] flex flex-col overflow-y-scroll overscroll-contain bg-white/70 backdrop-blur-xl"
+            className="fixed inset-0 z-[100] overflow-hidden bg-white/70 backdrop-blur-xl"
           >
             <button
               type="button"
               onClick={onClose}
-              className="fixed right-4 top-4 z-20 rounded-full bg-white/75 p-2 text-gray-800 shadow-[0_6px_18px_rgba(31,41,55,0.12)] backdrop-blur-sm transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 sm:right-8 sm:top-8"
+              className="absolute right-4 top-4 z-30 rounded-full bg-white/75 p-2 text-gray-800 shadow-[0_6px_18px_rgba(31,41,55,0.12)] backdrop-blur-sm transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 sm:right-8 sm:top-8"
               aria-label="Close photo album"
             >
               <X size={28} />
             </button>
 
-            <div className="mx-auto w-full max-w-7xl p-6 pt-20 md:p-12 md:pt-24">
-              <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 xl:columns-4">
-                <div className="mb-6 break-inside-avoid">
-                  <AlbumStoryNote album={album} />
-                </div>
+            <div className="h-full overflow-y-scroll overscroll-contain">
+              <div className="mx-auto w-full max-w-7xl p-6 pt-20 md:p-12 md:pt-24">
+                <div className="columns-1 gap-6 sm:columns-2 lg:columns-3 xl:columns-4">
+                  <div className="mb-6 break-inside-avoid">
+                    <AlbumStoryNote album={album} />
+                  </div>
 
-                {photos.map((photo, idx) => (
-                  <motion.div
-                    key={photo.src}
-                    initial={
-                      shouldReduceMotion
-                        ? { opacity: 1 }
-                        : { opacity: 0, scale: 0.985 }
-                    }
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                      delay: shouldReduceMotion
-                        ? 0
-                        : Math.min(idx * 0.025, 0.3),
-                      duration: shouldReduceMotion ? 0 : 0.28,
-                      ease: [0.25, 1, 0.5, 1],
-                    }}
-                    whileHover={
-                      shouldReduceMotion
-                        ? undefined
-                        : {
-                            scale: 1.012,
-                            rotate: idx % 2 === 0 ? -0.25 : 0.25,
-                          }
-                    }
-                    className="group relative mb-6 break-inside-avoid"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setSelectedPhotoIndex(idx)}
-                      className="block w-full cursor-zoom-in rounded-sm bg-white p-2 shadow-md transition-shadow hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-4 focus-visible:ring-offset-white/70 md:p-3"
-                      aria-label={`Open photo ${idx + 1} from ${album.title}`}
+                  {photos.map((photo, idx) => (
+                    <motion.div
+                      key={photo.src}
+                      initial={
+                        shouldReduceMotion
+                          ? { opacity: 1 }
+                          : { opacity: 0, scale: 0.985 }
+                      }
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        delay: shouldReduceMotion
+                          ? 0
+                          : Math.min(idx * 0.025, 0.3),
+                        duration: shouldReduceMotion ? 0 : 0.28,
+                        ease: [0.25, 1, 0.5, 1],
+                      }}
+                      whileHover={
+                        shouldReduceMotion
+                          ? undefined
+                          : {
+                              scale: 1.012,
+                              rotate: idx % 2 === 0 ? -0.25 : 0.25,
+                            }
+                      }
+                      className="group relative mb-6 break-inside-avoid"
                     >
-                      <ImageWithAspect
-                        photo={photo}
-                        idx={idx}
-                        albumTitle={album.title}
-                      />
-                    </button>
-                  </motion.div>
-                ))}
+                      <button
+                        type="button"
+                        onClick={() => setSelectedPhotoIndex(idx)}
+                        className="relative block w-full cursor-zoom-in rounded-sm bg-white p-2 shadow-md transition-shadow hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-4 focus-visible:ring-offset-white/70 md:p-3"
+                        aria-label={`Open photo ${idx + 1} from ${album.title}${
+                          hasVisiblePhotoStory(photo) ? ", has a story" : ""
+                        }`}
+                      >
+                        {hasVisiblePhotoStory(photo) && <PhotoStoryBadge />}
+                        <ImageWithAspect
+                          photo={photo}
+                          idx={idx}
+                          albumTitle={album.title}
+                        />
+                      </button>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
