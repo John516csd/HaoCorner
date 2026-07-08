@@ -1,9 +1,24 @@
 {
+  "name": "hao-corner",
+  "version": "0.1.0",
+  "description": "A scrapbook-style personal portfolio built with Next.js.",
   "private": true,
+  "author": "Yanchenhao",
+  "license": "MIT",
+  "homepage": "https://yanchenhao.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/John516csd/HaoCorner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/John516csd/HaoCorner/issues"
+  },
+  "packageManager": "pnpm@11.7.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.0.0-alpha.13",
