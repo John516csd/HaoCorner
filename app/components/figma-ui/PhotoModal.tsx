@@ -127,7 +127,7 @@ function AlbumStoryNote({
         className
       )}
     >
-      <div className="absolute left-1/2 top-0 h-7 w-24 -translate-x-1/2 -translate-y-1/2 bg-pink-200/65 shadow-[0_1px_3px_rgba(0,0,0,0.08)] backdrop-blur-sm" />
+      <div className="absolute left-1/2 top-0 h-7 w-24 -translate-x-1/2 -translate-y-1/2 bg-pink-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.08)]" />
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-handnote text-lg leading-tight text-gray-600 sm:text-xl">
         {album.date && (
           <span className="inline-flex items-center gap-1.5">
@@ -420,12 +420,12 @@ export function PhotoModal({ album, onClose }: PhotoModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[100] overflow-hidden bg-white/70 backdrop-blur-xl"
+            className="fixed inset-0 z-[100] overflow-hidden bg-[#faf9f6]/98"
           >
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-4 top-4 z-30 rounded-full bg-white/75 p-2 text-gray-800 shadow-[0_6px_18px_rgba(31,41,55,0.12)] backdrop-blur-sm transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 sm:right-8 sm:top-8"
+              className="absolute right-4 top-4 z-30 rounded-full bg-white/90 p-2 text-gray-800 shadow-[0_6px_18px_rgba(31,41,55,0.12)] transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 sm:right-8 sm:top-8"
               aria-label="Close photo album"
             >
               <X size={28} />

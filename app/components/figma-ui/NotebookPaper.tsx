@@ -4,7 +4,7 @@ import { cn } from '../../lib/utils';
 import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
-import { useIsMobile } from '../../hooks/use-mobile';
+import { useCanDrag } from '../../hooks/use-can-drag';
 
 interface NotebookPaperProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ interface NotebookPaperProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 
 export function NotebookPaper({ children, className, headerText, rotation = -2, tape = true, shouldReset = false, ...props }: NotebookPaperProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
-  const isMobile = useIsMobile();
+  const canDrag = useCanDrag();
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -32,14 +32,15 @@ export function NotebookPaper({ children, className, headerText, rotation = -2, 
       whileInView={{ opacity: 1, x: 0, rotate: rotation }}
       viewport={{ once: true }}
       transition={{ delay: 0.2, type: 'spring' }}
-      whileHover={{ scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 40 }}
-      drag={!isMobile}
+      whileHover={canDrag ? { scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 40 } : undefined}
+      drag={canDrag}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}
       whileDrag={{ scale: 1.1, zIndex: 50 }}
       className={cn(
-        "relative shadow-[2px_6px_15px_rgba(0,0,0,0.12)] font-['Caveat'] text-2xl text-gray-800 cursor-grab active:cursor-grabbing flex flex-col",
+        "relative shadow-[2px_6px_15px_rgba(0,0,0,0.12)] font-['Caveat'] text-2xl text-gray-800 flex flex-col",
+        canDrag ? "cursor-grab active:cursor-grabbing" : "touch-pan-y",
         "rounded-[255px_15px_225px_15px/15px_225px_15px_255px] bg-[#fdfbf7]",
         className
       )}

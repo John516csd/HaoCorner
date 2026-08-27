@@ -4,7 +4,7 @@ import { cn } from '../../lib/utils';
 import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
-import { useIsMobile } from '../../hooks/use-mobile';
+import { useCanDrag } from '../../hooks/use-can-drag';
 
 interface PolaroidProps {
   imageSrc: string;
@@ -15,17 +15,18 @@ interface PolaroidProps {
   ariaLabel?: string;
   onClick?: () => void;
   dragEnabled?: boolean;
+  eager?: boolean;
   rotation?: number;
   tapeColor?: 'red' | 'blue' | 'yellow' | 'green' | 'pink' | 'white';
   shouldReset?: boolean;
 }
 
-export function Polaroid({ imageSrc, caption, className, imageAspectClassName = 'aspect-[3/4]', layoutId, ariaLabel, onClick, dragEnabled = true, rotation = -3, tapeColor = 'white', shouldReset = false }: PolaroidProps) {
+export function Polaroid({ imageSrc, caption, className, imageAspectClassName = 'aspect-[3/4]', layoutId, ariaLabel, onClick, dragEnabled = true, eager = false, rotation = -3, tapeColor = 'white', shouldReset = false }: PolaroidProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
-  const isMobile = useIsMobile();
+  const supportsDrag = useCanDrag();
   const isClickable = Boolean(onClick);
-  const canDrag = dragEnabled && !isMobile && !isClickable;
+  const canDrag = dragEnabled && supportsDrag && !isClickable;
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -50,7 +51,7 @@ export function Polaroid({ imageSrc, caption, className, imageAspectClassName = 
       whileInView={{ opacity: 1, scale: 1, rotate: rotation }}
       viewport={{ once: true }}
       transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-      whileHover={{ scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 50 }}
+      whileHover={supportsDrag ? { scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 50 } : undefined}
       whileTap={isClickable ? { scale: 0.98 } : undefined}
       drag={canDrag}
       dragMomentum={false}
@@ -66,7 +67,9 @@ export function Polaroid({ imageSrc, caption, className, imageAspectClassName = 
         "relative bg-white p-3 pb-10 shadow-[2px_4px_16px_rgba(0,0,0,0.15)] max-w-sm rounded-sm focus-visible:outline-none",
         isClickable
           ? "cursor-zoom-in focus-visible:ring-2 focus-visible:ring-yellow-300 focus-visible:ring-offset-4 focus-visible:ring-offset-[#faf9f6]"
-          : "cursor-grab active:cursor-grabbing",
+          : canDrag
+            ? "cursor-grab active:cursor-grabbing"
+            : "touch-pan-y",
         className
       )}
     >
@@ -81,6 +84,8 @@ export function Polaroid({ imageSrc, caption, className, imageAspectClassName = 
           src={imageSrc}
           alt={caption || 'Polaroid photo'}
           className="w-full h-full object-cover"
+          loading={eager ? "eager" : "lazy"}
+          decoding="async"
         />
       </div>
       {caption && (

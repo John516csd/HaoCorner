@@ -97,8 +97,6 @@ export function PhotoFolder({
       onKeyDown={handleKeyDown}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={() => setIsHovered(true)}
-      onTouchEnd={() => setIsHovered(false)}
       role={isInteractive ? "button" : props.role}
       tabIndex={isInteractive ? props.tabIndex ?? 0 : props.tabIndex}
       aria-label={
@@ -133,7 +131,7 @@ export function PhotoFolder({
                 open:   { rotate: v.open.rotate,   x: v.open.x,   y: v.open.y   },
               }}
               transition={springTransition}
-              className="absolute bg-[#f8fafc] p-[4px] shadow-[0_3px_10px_rgba(0,0,0,0.18)] border border-gray-200/60 rounded-[12px] will-change-transform"
+              className="absolute bg-[#f8fafc] p-[4px] shadow-[0_3px_10px_rgba(0,0,0,0.18)] border border-gray-200/60 rounded-[12px]"
               style={{
                 width: previewSize.width,
                 height: previewSize.height,
@@ -188,7 +186,7 @@ export function PhotoFolder({
             }}
             transition={springTransition}
             style={{ transformOrigin: "bottom", width: "100%", height: "100%" }}
-            className="bg-[#edf2f9]/75 backdrop-blur-md border-[1.5px] border-white/70 rounded-[16px] shadow-[0_8px_32px_rgba(0,10,30,0.07)] relative overflow-hidden"
+            className="bg-[#edf2f9]/90 border-[1.5px] border-white/70 rounded-[16px] shadow-[0_8px_32px_rgba(0,10,30,0.07)] relative overflow-hidden"
           >
             {/* Stickers slot */}
             {stickers && (

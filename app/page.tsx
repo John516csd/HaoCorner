@@ -24,6 +24,7 @@ import {
   type PhotoAlbum,
 } from "./data/home";
 import { useIsMobile } from "./hooks/use-mobile";
+import { useCanDrag } from "./hooks/use-can-drag";
 import { initialWhenVisible } from "./lib/motion";
 
 const cjkSegmentPattern =
@@ -119,6 +120,7 @@ export default function Page() {
   >(null);
   const [isHeroPhotoOpen, setIsHeroPhotoOpen] = useState(false);
   const isMobile = useIsMobile();
+  const canDrag = useCanDrag();
 
   useEffect(() => {
     const updateDate = () => {
@@ -246,28 +248,17 @@ export default function Page() {
       />
       {/* Notebook Paper Background Grid with subtle dotted lines */}
       <div
-        className="fixed inset-0 pointer-events-none z-0"
+        className="fixed inset-0 pointer-events-none z-0 [contain:strict]"
         style={{
           backgroundColor: "#f8f7f2", // Base paper color slightly warmer
           backgroundImage: `
+            linear-gradient(90deg, rgba(248, 247, 242, 0.9) 50%, transparent 50%),
+            linear-gradient(0deg, rgba(248, 247, 242, 0.9) 50%, transparent 50%),
             linear-gradient(90deg, transparent 95%, rgba(0, 0, 0, 0.08) 95%),
             linear-gradient(0deg, transparent 95%, rgba(0, 0, 0, 0.08) 95%)
           `,
-          backgroundSize: "24px 24px, 24px 24px",
-          backgroundPosition: "0 0, 0 0",
-        }}
-      />
-      {/* Secondary overlay to create the dashed/dotted line effect on the grid */}
-      <div
-        className="fixed inset-0 pointer-events-none z-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(90deg, #f8f7f2 50%, transparent 50%),
-            linear-gradient(0deg, #f8f7f2 50%, transparent 50%)
-          `,
-          backgroundSize: "4px 4px, 4px 4px",
-          backgroundPosition: "0 0, 0 0",
-          opacity: 0.9,
+          backgroundSize: "4px 4px, 4px 4px, 24px 24px, 24px 24px",
+          backgroundPosition: "0 0, 0 0, 0 0, 0 0",
         }}
       />
       {/* Notebook ring binder holes */}
@@ -382,6 +373,7 @@ export default function Page() {
                 imageSrc={heroPhotoUrl}
                 caption="KANGDING, SICHUAN, CHINA"
                 rotation={-4}
+                eager
                 ariaLabel="Open Kangding photo"
                 onClick={() => setIsHeroPhotoOpen(true)}
                 className="w-[78vw] max-w-72 sm:w-80"
@@ -397,8 +389,12 @@ export default function Page() {
                   stiffness: 200,
                   damping: 20,
                 }}
-                className="absolute -top-6 -right-2 text-[#9ca3af] z-20 cursor-grab active:cursor-grabbing hover:text-[#6b7280] transition-colors"
-                drag={!isMobile}
+                className={`absolute -top-6 -right-2 text-[#9ca3af] z-20 hover:text-[#6b7280] transition-colors ${
+                  canDrag
+                    ? "cursor-grab active:cursor-grabbing"
+                    : "touch-pan-y"
+                }`}
+                drag={canDrag}
                 dragMomentum={false}
               >
                 <svg
@@ -577,7 +573,7 @@ export default function Page() {
           <Tape color="pink" className="top-0" rotation={-2} />
 
           <div className="relative">
-            <h2 className="text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 mt-4 bg-white/50 backdrop-blur-sm px-6 py-2 rounded-lg border-2 border-dashed border-gray-300 shadow-sm relative z-10">
+            <h2 className="text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 mt-4 bg-white/85 px-6 py-2 rounded-lg border-2 border-dashed border-gray-300 shadow-sm relative z-10">
               My Journey
             </h2>
             {/* Outline highlight behind text */}
@@ -773,7 +769,7 @@ export default function Page() {
           <Tape color="blue" className="top-0 w-32" rotation={3} />
 
           <div className="relative">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 mt-4 bg-white/50 backdrop-blur-sm px-6 sm:px-8 py-2 rounded-lg border-2 border-dashed border-gray-300 shadow-sm relative z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-['Kalam'] font-bold text-gray-800 mt-4 bg-white/85 px-6 sm:px-8 py-2 rounded-lg border-2 border-dashed border-gray-300 shadow-sm relative z-10">
               On Repeat 🎧
             </h2>
             <Doodle
@@ -1027,7 +1023,7 @@ export default function Page() {
                 href="mailto:yanchenhao57@gmail.com"
                 whileHover={{ scale: 1.05, rotate: [0, -3, 3, 0] }}
                 transition={{ duration: 0.3 }}
-                className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[255px_15px_225px_15px/15px_225px_15px_255px] cursor-grab active:cursor-grabbing"
+                className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-white/35 shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[255px_15px_225px_15px/15px_225px_15px_255px] cursor-pointer"
               >
                 <Mail className="w-5 h-5" />
                 Email Me
@@ -1038,7 +1034,7 @@ export default function Page() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.05, rotate: [0, 3, -3, 0] }}
                 transition={{ duration: 0.3 }}
-                className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-transparent/10 backdrop-blur-sm shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[15px_225px_15px_255px/255px_15px_225px_15px] cursor-grab active:cursor-grabbing"
+                className="flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 border-2 border-gray-800 text-gray-800 font-['Kalam'] font-bold text-xl bg-white/35 shadow-[2px_4px_0px_rgba(0,0,0,0.1)] hover:shadow-[4px_6px_0px_rgba(0,0,0,0.15)] transition-shadow rounded-[15px_225px_15px_255px/255px_15px_225px_15px] cursor-pointer"
               >
                 <svg
                   viewBox="0 0 24 24"

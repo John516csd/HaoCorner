@@ -4,7 +4,7 @@ import { cn } from '../../lib/utils';
 import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
-import { useIsMobile } from '../../hooks/use-mobile';
+import { useCanDrag } from '../../hooks/use-can-drag';
 
 interface VoiceMemoProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   title?: string;
@@ -17,7 +17,7 @@ interface VoiceMemoProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onD
 export function VoiceMemo({ className, title = "Voice", rotation = 4, tape = true, shouldReset = false, children, ...props }: VoiceMemoProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
-  const isMobile = useIsMobile();
+  const canDrag = useCanDrag();
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -32,14 +32,15 @@ export function VoiceMemo({ className, title = "Voice", rotation = 4, tape = tru
       whileInView={{ opacity: 1, scale: 1, rotate: rotation }}
       viewport={{ once: true }}
       transition={{ delay: 0.3, type: 'spring' }}
-      whileHover={{ scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 40 }}
-      drag={!isMobile}
+      whileHover={canDrag ? { scale: 1.05, rotate: rotation > 0 ? rotation + 2 : rotation - 2, zIndex: 40 } : undefined}
+      drag={canDrag}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}
       whileDrag={{ scale: 1.1, zIndex: 50 }}
       className={cn(
-        "relative w-56 sm:w-64 bg-white shadow-[2px_6px_15px_rgba(0,0,0,0.1)] cursor-grab active:cursor-grabbing flex flex-col",
+        "relative w-56 sm:w-64 bg-white shadow-[2px_6px_15px_rgba(0,0,0,0.1)] flex flex-col",
+        canDrag ? "cursor-grab active:cursor-grabbing" : "touch-pan-y",
         "rounded-[12px_12px_24px_16px/12px_12px_16px_24px]", // slightly imperfect card shape
         className
       )}

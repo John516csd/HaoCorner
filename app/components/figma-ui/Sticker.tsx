@@ -4,7 +4,7 @@ import { cn } from '../../lib/utils';
 import { initialWhenVisible } from '../../lib/motion';
 import { motion, useAnimationControls } from 'motion/react';
 import { Tape } from './Tape';
-import { useIsMobile } from '../../hooks/use-mobile';
+import { useCanDrag } from '../../hooks/use-can-drag';
 
 interface StickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragStart' | 'onDragEnd' | 'onDrag' | 'onAnimationStart'> {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ interface StickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDra
 export function Sticker({ children, className, rotation = 5, delay = 0, tape = false, shouldReset = false, ...props }: StickerProps) {
   const [isDragging, setIsDragging] = useState(false);
   const dragControls = useAnimationControls();
-  const isMobile = useIsMobile();
+  const canDrag = useCanDrag();
 
   React.useEffect(() => {
     if (shouldReset) {
@@ -32,14 +32,15 @@ export function Sticker({ children, className, rotation = 5, delay = 0, tape = f
       whileInView={{ opacity: 1, scale: 1, rotate: rotation }}
       viewport={{ once: true }}
       transition={{ delay, type: 'spring', stiffness: 260, damping: 20 }}
-      whileHover={{ scale: 1.15, rotate: rotation > 0 ? rotation + 5 : rotation - 5 }}
-      drag={!isMobile}
+      whileHover={canDrag ? { scale: 1.15, rotate: rotation > 0 ? rotation + 5 : rotation - 5 } : undefined}
+      drag={canDrag}
       dragMomentum={false}
       onDragStart={() => setIsDragging(true)}
       onDragEnd={() => setIsDragging(false)}
       whileDrag={{ scale: 1.2, zIndex: 50 }}
       className={cn(
-        "relative inline-flex items-center justify-center bg-white border-4 border-white rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.15)] cursor-grab active:cursor-grabbing",
+        "relative inline-flex items-center justify-center bg-white border-4 border-white rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.15)]",
+        canDrag ? "cursor-grab active:cursor-grabbing" : "touch-pan-y",
         className
       )}
       {...props}
