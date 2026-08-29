@@ -148,7 +148,7 @@ export function VinylCard({
       {/* Hand-written text underneath */}
       <div className={cn(
         "absolute -bottom-6 left-1/2 -translate-x-1/2 text-center z-20 shadow-[2px_4px_10px_rgba(0,0,0,0.1)] border border-gray-200/50 min-w-[200px] overflow-hidden",
-        lyrics ? "w-max max-w-[280px] px-6 py-4 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] bg-[#fff7b0]" : "w-max px-6 py-2 rounded-full bg-white/95"
+        lyrics ? "w-max max-w-[280px] px-6 py-4 rounded-[255px_15px_225px_15px/15px_225px_15px_255px] bg-[#fff7b0]" : "w-max px-6 py-2 rounded-full bg-white/90 backdrop-blur-sm"
       )}>
         {lyrics && (
           <div 

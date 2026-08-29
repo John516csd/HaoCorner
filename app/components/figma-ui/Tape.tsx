@@ -11,12 +11,12 @@ interface TapeProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDragSt
 }
 
 const colorMap = {
-  red: 'bg-red-200/75',
-  blue: 'bg-blue-200/75',
-  yellow: 'bg-yellow-200/75',
-  green: 'bg-green-200/75',
-  pink: 'bg-pink-200/75',
-  white: 'bg-white/80 border border-white/50',
+  red: 'bg-red-200/60 backdrop-blur-sm',
+  blue: 'bg-blue-200/60 backdrop-blur-sm',
+  yellow: 'bg-yellow-200/60 backdrop-blur-sm',
+  green: 'bg-green-200/60 backdrop-blur-sm',
+  pink: 'bg-pink-200/60 backdrop-blur-sm',
+  white: 'bg-white/60 backdrop-blur-md border border-white/40',
 };
 
 export function Tape({ className, color = 'white', rotation = -4, isDragging = false, ...props }: TapeProps) {
