@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { loopIndex, nearestPosition, durationLabel } from '../app/modules/eason-page/vinyl-room/record-math.ts';
+import { loopIndex, nearestPosition, durationLabel } from '../app/components/vinyl-room/record-math.ts';
 
-const albums = JSON.parse(readFileSync(new URL('../app/modules/eason-page/vinyl-room/albums.json', import.meta.url)));
+const albums = JSON.parse(readFileSync(new URL('../app/modules/eason-page/albums.json', import.meta.url)));
 assert.equal(albums.length, 12);
 assert.equal(new Set(albums.map(album => album.id)).size, 12);
 for (const album of albums) {

@@ -13,13 +13,15 @@
 - 本地开发用内容管理页面：`/admin/content`
 - Vercel Analytics 和 Speed Insights 集成
 
-## Eason 黑胶室
+## 黑胶室
 
-- 页面：`/eason`，目前只展示全屏黑胶室；首页 Music 区提供入口，点击黑胶室左上角可返回。
-- 模块：`app/modules/eason-page/vinyl-room`，使用 CSS Modules 隔离样式，Three.js 渲染 3D 唱片。
+- 页面：`/eason`，目前只展示全屏黑胶室；首页 Music 区提供入口，专辑详情点击空白处或按 Esc 返回唱片架。
+- 共用组件：`app/components/vinyl-room`，使用 CSS Modules 隔离样式，Three.js 渲染 3D 唱片；各艺人页面只传入专辑数据与名称。
 - 素材：`public/eason/covers`，12 张高清封面与预模糊背景；滚动/拖动翻阅、专辑旋转展开、背景缓冲渐变均保留。
 - 曲目：119 首，118 条经过核对的 Apple Music 中国区直链；《六月飛霜》暂未找到直链。地区发行版本说明见模块的 `SOURCES.md`。
 - 数据与交互计算检查：Node.js 22.18+ 运行 `node --experimental-strip-types scripts/check-eason.mjs`。另运行 `pnpm exec tsc --noEmit` 和 `pnpm build`。
+- 五月天页面：`/mayday`，首页 Music 区提供入口；九张录音室专辑、116 条已核对的 Apple Music 中国区歌曲直链。数据在 `app/modules/mayday-page`，素材在 `public/mayday/covers`，来源和原图分辨率见该模块的 `SOURCES.md`。
+- 五月天数据检查：`node --experimental-strip-types scripts/check-mayday.mjs`；更改共用组件时同时运行两个检查脚本并回归两个页面。
 
 ## 技术栈
 

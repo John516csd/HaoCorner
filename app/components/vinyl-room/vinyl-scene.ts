@@ -1,9 +1,10 @@
 import * as THREE from 'three';
-import albums from './albums.json';
+import type { VinylAlbum } from './types';
 import { loopIndex, nearestPosition } from './record-math';
 
 export function createVinylScene(
   canvas: HTMLCanvasElement,
+  albums: VinylAlbum[],
   onSelect: (index: number) => void,
   onOpen: (index: number | null) => void,
   onReady: () => void,
@@ -23,9 +24,10 @@ export function createVinylScene(
   const loader = new THREE.TextureLoader();
   let disposed = false;
   let frame = 0, lastTime = 0;
-  let position = 4, target = 4, active = 4;
+  const initialIndex = Math.min(4, albums.length - 1);
+  let position = initialIndex, target = initialIndex, active = initialIndex;
   let width = 1, height = 1, size = 500, gap = 90;
-  let opened: number | null = null, opening = 0, featured = 4;
+  let opened: number | null = null, opening = 0, featured = initialIndex;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let snapTimer: ReturnType<typeof setTimeout>;
   const pointer = new THREE.Vector2();
@@ -64,7 +66,7 @@ export function createVinylScene(
     ctx.textAlign = 'center'; ctx.font = '600 43px "Helvetica Neue", "PingFang SC", sans-serif';
     ctx.fillText(album.title, 1010, 33, 1390);
     ctx.textAlign = 'right'; ctx.font = '30px "PingFang SC", sans-serif';
-    ctx.fillText('陈奕迅', 2000, 33);
+    ctx.fillText(album.artist, 2000, 33);
     const labelMaterial = new THREE.MeshBasicMaterial({ map: textureSetup(new THREE.CanvasTexture(label)) });
     materials.push(labelMaterial);
     const spine = new THREE.Mesh(edge, labelMaterial);
@@ -80,7 +82,7 @@ export function createVinylScene(
       coverMaterial.map = texture;
       coverMaterial.needsUpdate = true;
       start();
-      if (index === 4) onReady();
+      if (index === initialIndex) onReady();
     }, undefined, () => { if (!disposed) { start(); onReady(); } });
     textureSetup(cover);
     return group;

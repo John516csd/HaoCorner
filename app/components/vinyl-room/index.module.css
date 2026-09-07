@@ -17,7 +17,7 @@
 .wordmark small { display: block; font-size: 9px; font-weight: 400; letter-spacing: .17em; margin-top: 5px; opacity: .65; }
 .artist-heading { position: absolute; left: 50%; transform: translateX(-50%); margin: 0; font-size: 12px; letter-spacing: .18em; white-space: nowrap; }
 .artist-heading span { margin-left: 12px; opacity: .6; letter-spacing: .1em; }
-.edition { font-size: 10px; letter-spacing: .16em; opacity: .65; }
+.edition { margin-left: auto; font-size: 10px; letter-spacing: .16em; opacity: .65; }
 .edition span { padding: 0 7px; }
 .close-detail { display: inline-flex; align-items: center; gap: 17px; padding: 8px 0 8px 12px; font-size: 13px; pointer-events: auto; }
 .close-detail:hover { opacity: .75; }
@@ -107,3 +107,16 @@
 /* Fade the outer sleeves so the full-screen controls keep a clear reading area. */
 .vinyl-canvas { mask-image: linear-gradient(to bottom, transparent, #000 13%, #000 82%, transparent 99%); }
 .detail-open .vinyl-canvas { mask-image: none; }
+
+/* Eason's detail view closes from the empty backdrop; content stays interactive. */
+.minimal-detail .masthead { min-height: 51px; }
+.detail-dismiss { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; }
+.vinyl-room .detail-dismiss:focus-visible { outline-offset: -8px; }
+.detail-cover { position: absolute; z-index: 4; left: 26.5%; top: calc(50% - 15px); transform: translate(-50%, -50%); width: min(35vw, 62dvh, 620px); aspect-ratio: 1; object-fit: cover; }
+.minimal-detail .detail-caption, .minimal-detail .track-panel { pointer-events: none; }
+.minimal-detail .track-panel { outline: none; }
+.minimal-detail .album-heading, .minimal-detail .track-scroll { pointer-events: auto; }
+.minimal-detail .track-scroll { flex: 0 1 auto; }
+@media (max-width: 759px) {
+  .detail-cover { top: 106px; left: 50%; width: min(66vw, 32dvh); transform: translateX(-50%); }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import VinylRoom from '../modules/eason-page/vinyl-room'
+import VinylRoom from '../components/vinyl-room'
+import albums from '../modules/eason-page/albums.json'
 
 const title = '黑胶室 · Eason on record'
 const description = '滚动翻阅陈奕迅的十二张专辑，点击唱片查看歌曲，在 Apple Music 打开收藏的声音。'
@@ -20,5 +21,5 @@ export const metadata: Metadata = {
 }
 
 export default function EasonPage() {
-  return <VinylRoom />
+  return <VinylRoom key="eason" albums={albums} artist="陈奕迅" artistEnglish="EASON CHAN" edition="001" minimalDetail />
 }
