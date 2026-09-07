@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { Camera, Heart, Music, Mail } from "lucide-react";
 import { Polaroid } from "./components/figma-ui/Polaroid";
@@ -799,6 +800,16 @@ export default function Page() {
           >
             <Music className="text-gray-800" />
           </Sticker>
+        </div>
+
+        <div className="flex justify-center -mt-8 mb-12">
+          <Link
+            href="/eason"
+            prefetch={false}
+            className="font-handnote text-xl text-gray-700 underline decoration-dashed underline-offset-8 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-8"
+          >
+            Explore Eason’s vinyl room ↗
+          </Link>
         </div>
 
         {/* New Scrapbook Collage Layout */}
