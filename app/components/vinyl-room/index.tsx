@@ -17,7 +17,6 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, mini
 }) {
   const initialIndex = Math.min(4, albums.length - 1);
   const [current, setCurrent] = useState(initialIndex);
-  const [backgroundIndex, setBackgroundIndex] = useState(initialIndex);
   const [opened, setOpened] = useState<number | null>(null);
   const [ready, setReady] = useState(false);
   const [graphicsError, setGraphicsError] = useState(false);
@@ -27,15 +26,8 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, mini
   const closeButton = useRef<HTMLButtonElement>(null);
   const openButton = useRef<HTMLButtonElement>(null);
   const hadDetails = useRef(false);
-  const backgroundTarget = opened ?? current;
-  const album = albums[backgroundTarget];
+  const album = albums[opened ?? current];
   const detail = opened !== null;
-
-  useEffect(() => {
-    // Let fast browsing settle; persistent image layers can reverse a fade without flashing.
-    const timer = setTimeout(() => setBackgroundIndex(backgroundTarget), 240);
-    return () => clearTimeout(timer);
-  }, [backgroundTarget]);
 
   useEffect(() => {
     if (!canvas.current) return;
@@ -69,10 +61,6 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, mini
   return (
     <section lang="zh-CN" aria-label={`${artist}黑胶室`} aria-busy={!ready && !graphicsError} className={[styles['vinyl-room'], detail ? styles['detail-open'] : '', detail && minimalDetail ? styles['minimal-detail'] : ''].join(' ')} onKeyDown={event => { if (detail && event.key === 'Escape') { event.stopPropagation(); close(); } }}>
       <h1 className={styles['visually-hidden']}>{artist}黑胶室</h1>
-      <div className={styles['room-background']} aria-hidden="true">
-        {albums.map((record, index) => <img key={record.id} className={index === backgroundIndex ? styles['background-active'] : undefined} src={record.background} alt="" />)}
-      </div>
-      <div className={styles['room-shade']} aria-hidden="true" />
       <header className={styles['masthead']}>
         {!minimalDetail && <Link href="/#music" className={styles['wordmark']} aria-label="返回 HaoCorner 首页音乐区"><Disc3 size={29} strokeWidth={1.2} /><span>黑胶室<small>THE VINYL ROOM</small></span></Link>}
         <p className={styles['artist-heading']}>{artistEnglish} <span>{artist}</span></p>
@@ -96,11 +84,13 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, mini
       </>}
 
       {detail && <>
-        {minimalDetail && <>
-          <button className={styles['detail-dismiss']} onClick={close} aria-label="关闭专辑详情，返回唱片架" />
-          {/* Match the canvas cover bounds so only the surrounding blank space dismisses it. */}
-          <div className={styles['detail-cover']} />
-        </>}
+        {minimalDetail && <button className={styles['detail-dismiss']} onClick={close} aria-label="关闭专辑详情，返回唱片架" />}
+        {/* Keep the hit area still while the CD tilts, including its transparent rim. */}
+        <div className={styles['detail-cover']} onPointerMove={event => {
+          if (event.pointerType !== 'mouse') return;
+          const rect = event.currentTarget.getBoundingClientRect();
+          controls.current?.tilt((event.clientX - rect.left) / rect.width * 2 - 1, (event.clientY - rect.top) / rect.height * 2 - 1);
+        }} onPointerLeave={() => controls.current?.tilt(0, 0)} />
         {graphicsError && <img className={minimalDetail ? styles['detail-cover'] : styles['fallback-detail-cover']} src={album.artwork} alt={`${album.title} 封面`} />}
         <div className={styles['detail-caption']}><span>{String(opened + 1).padStart(2, '0')} / {albums.length}</span>{!minimalDetail && <a href={album.sourceUrl} target="_blank" rel="noreferrer">CoverBox <ArrowUpRight size={13} /></a>}</div>
         <section ref={detailPanel} tabIndex={-1} className={styles['track-panel']} aria-label={`${album.title} 的歌曲`}>
