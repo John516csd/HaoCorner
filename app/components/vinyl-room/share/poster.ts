@@ -98,7 +98,7 @@ export async function renderPoster(album: VinylAlbum, track: VinylTrack, draft: 
     ctx.globalAlpha = 1;
     ctx.drawImage(qr, 875, 844, 146, 146);
     ctx.globalAlpha = .5;
-    block(ctx, 'HaoCorner', 875, 1003, 146, 22, 16);
+    block(ctx, 'yanchenhao.com', 875, 1003, 146, 22, 16);
     ctx.globalAlpha = 1;
   } else {
     const ambient = draft.style === 'ambient';
@@ -117,7 +117,7 @@ export async function renderPoster(album: VinylAlbum, track: VinylTrack, draft: 
     block(ctx, draft.quote, x, 265, width, draft.note ? 390 : 550, 98, 750);
     if (draft.note) { ctx.globalAlpha = .75; block(ctx, draft.note, x, 688, width - 15, 158, 28, 400); ctx.globalAlpha = 1; }
     block(ctx, draft.signature ? `— ${draft.signature}` : 'THE VINYL ROOM', x, 909, width - 175, 40, 21, 500);
-    ctx.globalAlpha = .55; block(ctx, 'HaoCorner · 黑胶室', x, 949, width - 175, 28, 18); ctx.globalAlpha = 1;
+    ctx.globalAlpha = .55; block(ctx, 'yanchenhao.com', x, 949, width - 175, 28, 18); ctx.globalAlpha = 1;
     ctx.drawImage(qr, 1080 - x - 127, 866, 127, 127);
   }
   return canvas;
