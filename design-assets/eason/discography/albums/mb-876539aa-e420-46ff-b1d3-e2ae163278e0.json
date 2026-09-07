@@ -1,0 +1,65 @@
+{
+  "id": "mb-876539aa-e420-46ff-b1d3-e2ae163278e0",
+  "appleCollectionId": null,
+  "musicbrainzReleaseId": "876539aa-e420-46ff-b1d3-e2ae163278e0",
+  "title": "路…一直都在",
+  "artist": "Eason Chan",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2008-04-23",
+  "releaseDateMeaning": "MusicBrainz 指定发行版本的日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2008-04-23",
+      "sourceUrl": "https://musicbrainz.org/release-group/c71a7075-c1a8-400d-bf5d-ee16652cca62"
+    }
+  ],
+  "storefronts": [],
+  "preferredStorefront": null,
+  "genre": null,
+  "copyright": null,
+  "declaredTrackCount": 1,
+  "cover": null,
+  "tracks": [
+    {
+      "id": "mb-5c4986ba-8206-303f-aa95-e7bd68da83f2",
+      "albumId": "mb-876539aa-e420-46ff-b1d3-e2ae163278e0",
+      "title": "Lu... Yi Zhi Du Zai",
+      "artist": "Eason Chan",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "mediumFormat": "Digital Media",
+      "durationMs": 278000,
+      "duration": "4:38",
+      "appleTrackId": null,
+      "musicbrainzRecordingId": "af5ecada-d260-4fbb-a18a-52d05c3ea998",
+      "url": "https://musicbrainz.org/recording/af5ecada-d260-4fbb-a18a-52d05c3ea998",
+      "previewUrl": null,
+      "composer": null,
+      "isStreamable": null,
+      "explicitness": null,
+      "source": "MusicBrainz digital release metadata",
+      "sourceUrl": "https://musicbrainz.org/release/876539aa-e420-46ff-b1d3-e2ae163278e0",
+      "supplemented": false
+    }
+  ],
+  "notes": [
+    "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+    "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+  ],
+  "metadataStatus": "physical-reference",
+  "sourceUrls": [
+    "https://musicbrainz.org/release/876539aa-e420-46ff-b1d3-e2ae163278e0",
+    "https://musicbrainz.org/release-group/c71a7075-c1a8-400d-bf5d-ee16652cca62"
+  ],
+  "releaseGroupIds": [
+    "c71a7075-c1a8-400d-bf5d-ee16652cca62"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 278000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

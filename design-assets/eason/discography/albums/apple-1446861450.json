@@ -1,0 +1,76 @@
+{
+  "id": "apple-1446861450",
+  "appleCollectionId": "1446861450",
+  "musicbrainzReleaseId": null,
+  "title": "在這個世界相遇 (動畫電影《大魚海棠》主題曲) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2017-03-21",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2016-06-16",
+      "sourceUrl": "https://musicbrainz.org/release-group/daa59df8-ee41-442c-91af-179914588b23"
+    }
+  ],
+  "storefronts": [
+    "hk",
+    "tw"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2017 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1446861450",
+    "path": "covers/1446861450-在這個世界相遇 (動畫電影《大魚海棠》主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/87/bc/d3/87bcd324-0a32-ffaa-7a23-ce2d5fa86d48/00602488602259.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/87/bc/d3/87bcd324-0a32-ffaa-7a23-ce2d5fa86d48/00602488602259.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1324856,
+    "sha256": "052ff03e4d40be65270735a1d9717e39c1d8612197cbf13d54c7b09b395cfc56",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1446861710",
+      "albumId": "apple-1446861450",
+      "title": "在這個世界相遇 (動畫電影《大魚海棠》主題曲)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 309390,
+      "duration": "5:09",
+      "appleTrackId": "1446861710",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%9C%A8%E9%80%99%E5%80%8B%E4%B8%96%E7%95%8C%E7%9B%B8%E9%81%87-%E5%8B%95%E7%95%AB%E9%9B%BB%E5%BD%B1-%E5%A4%A7%E9%AD%9A%E6%B5%B7%E6%A3%A0-%E4%B8%BB%E9%A1%8C%E6%9B%B2/1446861450?i=1446861710&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/61/ec/03/61ec034b-6d96-e044-9290-3d75cacfc8fc/mzaf_13345593004330309435.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1446861450&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%9C%A8%E9%80%99%E5%80%8B%E4%B8%96%E7%95%8C%E7%9B%B8%E9%81%87-%E5%8B%95%E7%95%AB%E9%9B%BB%E5%BD%B1-%E5%A4%A7%E9%AD%9A%E6%B5%B7%E6%A3%A0-%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1446861450?uo=4",
+    "https://musicbrainz.org/release-group/daa59df8-ee41-442c-91af-179914588b23"
+  ],
+  "releaseGroupIds": [
+    "daa59df8-ee41-442c-91af-179914588b23"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 309390,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

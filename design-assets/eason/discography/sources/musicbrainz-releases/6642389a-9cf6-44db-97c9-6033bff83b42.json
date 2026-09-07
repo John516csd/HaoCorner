@@ -1,0 +1,1236 @@
+{
+  "release-count": 1,
+  "release-offset": 0,
+  "releases": [
+    {
+      "status-id": null,
+      "quality": "normal",
+      "media": [
+        {
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "position": 1,
+          "title": "",
+          "tracks": [
+            {
+              "recording": {
+                "video": false,
+                "id": "b5086bad-ef1a-4799-ba9c-f2e8dcab21c5",
+                "disambiguation": "",
+                "title": "伤信(Edmond)",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person"
+                    },
+                    "joinphrase": ", "
+                  },
+                  {
+                    "name": "楊千嬅",
+                    "joinphrase": " & ",
+                    "artist": {
+                      "disambiguation": "",
+                      "sort-name": "Yeung, Miriam",
+                      "name": "楊千嬅",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person"
+                    }
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "",
+                      "sort-name": "Leung, Edmond",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "name": "梁漢文",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person"
+                    },
+                    "name": "梁漢文"
+                  }
+                ],
+                "length": 268053
+              },
+              "id": "f9c127d5-7ff9-4f76-8498-7ceff063af6c",
+              "length": 268053,
+              "number": "1",
+              "position": 1,
+              "title": "伤信(Edmond)",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK"
+                  },
+                  "joinphrase": ", "
+                },
+                {
+                  "artist": {
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  },
+                  "joinphrase": " & ",
+                  "name": "楊千嬅"
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "",
+                    "sort-name": "Leung, Edmond",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  },
+                  "name": "梁漢文"
+                }
+              ]
+            },
+            {
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  },
+                  "joinphrase": ", "
+                },
+                {
+                  "artist": {
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "name": "楊千嬅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  },
+                  "joinphrase": " & ",
+                  "name": "楊千嬅"
+                },
+                {
+                  "name": "梁漢文",
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文",
+                    "disambiguation": "",
+                    "sort-name": "Leung, Edmond"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "title": "洋葱(Miriam)",
+              "number": "2",
+              "position": 2,
+              "length": 229026,
+              "id": "41c881d3-396c-49cb-b4e2-cea3963ef78b",
+              "recording": {
+                "length": 229026,
+                "artist-credit": [
+                  {
+                    "joinphrase": ", ",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  },
+                  {
+                    "artist": {
+                      "name": "楊千嬅",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": "",
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": " & ",
+                    "name": "楊千嬅"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Leung, Edmond",
+                      "disambiguation": "",
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person"
+                    },
+                    "name": "梁漢文"
+                  }
+                ],
+                "disambiguation": "",
+                "title": "洋葱(Miriam)",
+                "id": "cb0ecd43-6c02-49b7-8646-38c0c44d5d9e",
+                "video": false
+              }
+            },
+            {
+              "id": "a3bc7408-e602-480d-b04b-edc31851e40a",
+              "recording": {
+                "title": "贝多芬与我(Eason)",
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": ", ",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person"
+                    }
+                  },
+                  {
+                    "name": "楊千嬅",
+                    "joinphrase": " & ",
+                    "artist": {
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "name": "楊千嬅",
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": "",
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    }
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Leung, Edmond",
+                      "disambiguation": "",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "name": "梁漢文"
+                    },
+                    "name": "梁漢文"
+                  }
+                ],
+                "length": 240880,
+                "video": false,
+                "id": "299363a9-602a-42e3-9aad-ae9df5654e00"
+              },
+              "position": 3,
+              "number": "3",
+              "length": 240880,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": ", ",
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  }
+                },
+                {
+                  "name": "楊千嬅",
+                  "joinphrase": " & ",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "name": "楊千嬅"
+                  }
+                },
+                {
+                  "artist": {
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文",
+                    "disambiguation": "",
+                    "sort-name": "Leung, Edmond",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK"
+                  },
+                  "joinphrase": "",
+                  "name": "梁漢文"
+                }
+              ],
+              "title": "贝多芬与我(Eason)"
+            },
+            {
+              "artist-credit": [
+                {
+                  "joinphrase": ", ",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK"
+                  },
+                  "name": "陳奕迅"
+                },
+                {
+                  "joinphrase": " & ",
+                  "artist": {
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  },
+                  "name": "楊千嬅"
+                },
+                {
+                  "artist": {
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "sort-name": "Leung, Edmond",
+                    "disambiguation": "",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文"
+                  },
+                  "joinphrase": "",
+                  "name": "梁漢文"
+                }
+              ],
+              "title": "飞女正传(Edmond)",
+              "number": "4",
+              "position": 4,
+              "length": 176426,
+              "id": "d8f4bffd-5652-4e2f-8eb4-82f7757b24bc",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": ", ",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    }
+                  },
+                  {
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": "",
+                      "name": "楊千嬅",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614"
+                    },
+                    "joinphrase": " & ",
+                    "name": "楊千嬅"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "",
+                      "sort-name": "Leung, Edmond",
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person"
+                    },
+                    "name": "梁漢文"
+                  }
+                ],
+                "disambiguation": "",
+                "title": "飞女正传(Edmond)",
+                "length": 176426,
+                "id": "06ad9754-bffe-4eab-852d-ebf4682fdf80",
+                "video": false
+              }
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "db02cdbe-c12f-4483-934b-d975426ca15b",
+                "length": 205600,
+                "disambiguation": "",
+                "title": "最后的歌(Miriam)",
+                "artist-credit": [
+                  {
+                    "joinphrase": ", ",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person"
+                    },
+                    "name": "陳奕迅"
+                  },
+                  {
+                    "artist": {
+                      "name": "楊千嬅",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "disambiguation": "",
+                      "sort-name": "Yeung, Miriam",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    },
+                    "joinphrase": " & ",
+                    "name": "楊千嬅"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Leung, Edmond",
+                      "disambiguation": "",
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f"
+                    },
+                    "name": "梁漢文"
+                  }
+                ]
+              },
+              "id": "47430493-322f-45d9-85b7-c0d5d509d7d7",
+              "title": "最后的歌(Miriam)",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": ", "
+                },
+                {
+                  "name": "楊千嬅",
+                  "joinphrase": " & ",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614"
+                  }
+                },
+                {
+                  "name": "梁漢文",
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "",
+                    "sort-name": "Leung, Edmond",
+                    "name": "梁漢文",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  }
+                }
+              ],
+              "length": 205600,
+              "number": "5",
+              "position": 5
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "0de884bd-b036-475d-a507-596c5f7b12bf",
+                "title": "明年今日(Miriam)",
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ", "
+                  },
+                  {
+                    "joinphrase": " & ",
+                    "artist": {
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "楊千嬅",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": ""
+                    },
+                    "name": "楊千嬅"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "name": "梁漢文",
+                      "disambiguation": "",
+                      "sort-name": "Leung, Edmond"
+                    },
+                    "name": "梁漢文"
+                  }
+                ],
+                "length": 217200
+              },
+              "id": "9c8075b2-b411-41ae-a715-ea431983c225",
+              "title": "明年今日(Miriam)",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  },
+                  "joinphrase": ", "
+                },
+                {
+                  "name": "楊千嬅",
+                  "joinphrase": " & ",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614"
+                  }
+                },
+                {
+                  "name": "梁漢文",
+                  "artist": {
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文",
+                    "sort-name": "Leung, Edmond",
+                    "disambiguation": "",
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "length": 217200,
+              "position": 6,
+              "number": "6"
+            },
+            {
+              "length": 316493,
+              "number": "7",
+              "position": 7,
+              "title": "狼来了(Eason)",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK"
+                  },
+                  "joinphrase": ", ",
+                  "name": "陳奕迅"
+                },
+                {
+                  "name": "楊千嬅",
+                  "joinphrase": " & ",
+                  "artist": {
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "sort-name": "Yeung, Miriam",
+                    "disambiguation": "",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "name": "楊千嬅"
+                  }
+                },
+                {
+                  "artist": {
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "sort-name": "Leung, Edmond",
+                    "disambiguation": "",
+                    "name": "梁漢文",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f"
+                  },
+                  "joinphrase": "",
+                  "name": "梁漢文"
+                }
+              ],
+              "recording": {
+                "id": "a6ea6256-096d-4fbc-a13c-4bd5d132e826",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason"
+                    },
+                    "joinphrase": ", ",
+                    "name": "陳奕迅"
+                  },
+                  {
+                    "joinphrase": " & ",
+                    "artist": {
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": "",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "name": "楊千嬅",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person"
+                    },
+                    "name": "楊千嬅"
+                  },
+                  {
+                    "name": "梁漢文",
+                    "artist": {
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "disambiguation": "",
+                      "sort-name": "Leung, Edmond"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "disambiguation": "",
+                "title": "狼来了(Eason)",
+                "length": 316493
+              },
+              "id": "4dd5a6c2-d739-4417-8ace-083706d749be"
+            },
+            {
+              "title": "我的理想short version(Eason)",
+              "artist-credit": [
+                {
+                  "joinphrase": ", ",
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅"
+                },
+                {
+                  "artist": {
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK"
+                  },
+                  "joinphrase": " & ",
+                  "name": "楊千嬅"
+                },
+                {
+                  "name": "梁漢文",
+                  "joinphrase": "",
+                  "artist": {
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "sort-name": "Leung, Edmond",
+                    "disambiguation": "",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文"
+                  }
+                }
+              ],
+              "length": 210266,
+              "position": 8,
+              "number": "8",
+              "recording": {
+                "id": "95fc1d76-2ccd-42c0-a439-66176a24b0e9",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason"
+                    },
+                    "joinphrase": ", ",
+                    "name": "陳奕迅"
+                  },
+                  {
+                    "name": "楊千嬅",
+                    "artist": {
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "name": "楊千嬅",
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": "",
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": " & "
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "sort-name": "Leung, Edmond",
+                      "disambiguation": "",
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "梁漢文"
+                  }
+                ],
+                "disambiguation": "",
+                "title": "我的理想short version(Eason)",
+                "length": 210266
+              },
+              "id": "62de9520-4f82-4c7f-b743-9a35e8e898b1"
+            },
+            {
+              "position": 9,
+              "number": "9",
+              "length": 266760,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ", ",
+                  "name": "陳奕迅"
+                },
+                {
+                  "joinphrase": " & ",
+                  "artist": {
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  },
+                  "name": "楊千嬅"
+                },
+                {
+                  "name": "梁漢文",
+                  "joinphrase": "",
+                  "artist": {
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "sort-name": "Leung, Edmond",
+                    "disambiguation": "",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文"
+                  }
+                }
+              ],
+              "title": "其实我记得(Eason+Miriam)&我需要的只是爱(Eason+Miriam)",
+              "id": "d506c3b4-33b7-4228-a283-56d644b78c1f",
+              "recording": {
+                "id": "04d0387e-88a9-4381-ab84-2acee73bfcb3",
+                "video": false,
+                "length": 266760,
+                "artist-credit": [
+                  {
+                    "joinphrase": ", ",
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  },
+                  {
+                    "name": "楊千嬅",
+                    "artist": {
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "name": "楊千嬅",
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": ""
+                    },
+                    "joinphrase": " & "
+                  },
+                  {
+                    "name": "梁漢文",
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Leung, Edmond",
+                      "disambiguation": "",
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f"
+                    }
+                  }
+                ],
+                "title": "其实我记得(Eason+Miriam)&我需要的只是爱(Eason+Miriam)",
+                "disambiguation": ""
+              }
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "da05ce09-1845-41bf-8b32-d08099451e46",
+                "length": 267160,
+                "title": "拔河(国)(Eason+Edmond)",
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    },
+                    "joinphrase": ", "
+                  },
+                  {
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Yeung, Miriam",
+                      "disambiguation": "",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "name": "楊千嬅"
+                    },
+                    "joinphrase": " & ",
+                    "name": "楊千嬅"
+                  },
+                  {
+                    "name": "梁漢文",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person",
+                      "disambiguation": "",
+                      "sort-name": "Leung, Edmond",
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f"
+                    },
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "id": "599d8c69-6c13-4aad-a236-53f2da9c51e7",
+              "title": "拔河(国)(Eason+Edmond)",
+              "artist-credit": [
+                {
+                  "joinphrase": ", ",
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅"
+                },
+                {
+                  "name": "楊千嬅",
+                  "joinphrase": " & ",
+                  "artist": {
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK"
+                  }
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文",
+                    "sort-name": "Leung, Edmond",
+                    "disambiguation": "",
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "name": "梁漢文"
+                }
+              ],
+              "length": 267160,
+              "position": 10,
+              "number": "10"
+            },
+            {
+              "length": 258373,
+              "position": 11,
+              "number": "11",
+              "title": "滚(Edmond+Miriam)",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "joinphrase": ", "
+                },
+                {
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam"
+                  },
+                  "joinphrase": " & ",
+                  "name": "楊千嬅"
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "sort-name": "Leung, Edmond",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "name": "梁漢文"
+                  },
+                  "name": "梁漢文"
+                }
+              ],
+              "recording": {
+                "length": 258373,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": ", ",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person"
+                    }
+                  },
+                  {
+                    "artist": {
+                      "name": "楊千嬅",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "disambiguation": "",
+                      "sort-name": "Yeung, Miriam",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    },
+                    "joinphrase": " & ",
+                    "name": "楊千嬅"
+                  },
+                  {
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Leung, Edmond",
+                      "disambiguation": "",
+                      "name": "梁漢文",
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f"
+                    },
+                    "joinphrase": "",
+                    "name": "梁漢文"
+                  }
+                ],
+                "disambiguation": "",
+                "title": "滚(Edmond+Miriam)",
+                "id": "1b2ee2af-bf1f-4358-9164-45b79bca454e",
+                "video": false
+              },
+              "id": "29dc2d10-5c67-4e05-ace0-d64bca0fea5e"
+            },
+            {
+              "position": 12,
+              "number": "12",
+              "length": 242453,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ", ",
+                  "name": "陳奕迅"
+                },
+                {
+                  "name": "楊千嬅",
+                  "joinphrase": " & ",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "sort-name": "Yeung, Miriam",
+                    "name": "楊千嬅",
+                    "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614"
+                  }
+                },
+                {
+                  "artist": {
+                    "sort-name": "Leung, Edmond",
+                    "disambiguation": "",
+                    "name": "梁漢文",
+                    "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person"
+                  },
+                  "joinphrase": "",
+                  "name": "梁漢文"
+                }
+              ],
+              "title": "大激想(Eason+Miriam+Edmond)",
+              "id": "86b1a546-34a2-47ca-a3b6-45b656d2977c",
+              "recording": {
+                "title": "大激想(Eason+Miriam+Edmond)",
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "joinphrase": ", ",
+                    "name": "陳奕迅"
+                  },
+                  {
+                    "name": "楊千嬅",
+                    "artist": {
+                      "name": "楊千嬅",
+                      "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+                      "disambiguation": "",
+                      "sort-name": "Yeung, Miriam",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    },
+                    "joinphrase": " & "
+                  },
+                  {
+                    "name": "梁漢文",
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+                      "name": "梁漢文",
+                      "disambiguation": "",
+                      "sort-name": "Leung, Edmond",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    }
+                  }
+                ],
+                "length": 242453,
+                "video": false,
+                "id": "f234b8e4-494e-4417-8b86-70e69e485060"
+              }
+            }
+          ],
+          "track-count": 12,
+          "track-offset": 0,
+          "id": "a935fa95-2c02-3e63-83aa-7957b143120c",
+          "format": "CD"
+        }
+      ],
+      "packaging-id": null,
+      "status": null,
+      "artist-credit": [
+        {
+          "joinphrase": ", ",
+          "artist": {
+            "name": "陳奕迅",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "disambiguation": "Hong Kong singer",
+            "sort-name": "Chan, Eason",
+            "type": "Person",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "country": "HK"
+          },
+          "name": "陳奕迅"
+        },
+        {
+          "artist": {
+            "type": "Person",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "country": "HK",
+            "id": "b6073d5f-172a-41ee-8a0e-743d3bd0a614",
+            "name": "楊千嬅",
+            "disambiguation": "",
+            "sort-name": "Yeung, Miriam"
+          },
+          "joinphrase": " & ",
+          "name": "楊千嬅"
+        },
+        {
+          "artist": {
+            "sort-name": "Leung, Edmond",
+            "disambiguation": "",
+            "name": "梁漢文",
+            "id": "056c5d14-7d26-4b96-a512-380ad5eee02f",
+            "country": "HK",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "type": "Person"
+          },
+          "joinphrase": "",
+          "name": "梁漢文"
+        }
+      ],
+      "text-representation": {
+        "script": null,
+        "language": null
+      },
+      "title": "903id Club 拉阔音乐会",
+      "barcode": null,
+      "label-info": [],
+      "cover-art-archive": {
+        "artwork": true,
+        "front": true,
+        "back": false,
+        "count": 3,
+        "darkened": false
+      },
+      "disambiguation": "",
+      "id": "4093cc15-8db0-4607-a79b-e689d022cd0d",
+      "packaging": null,
+      "asin": null
+    }
+  ]
+}

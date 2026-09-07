@@ -1,0 +1,244 @@
+{
+  "release-count": 1,
+  "release-offset": 0,
+  "releases": [
+    {
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "country": "XW",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "media": [
+        {
+          "title": "",
+          "track-offset": 0,
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "track-count": 2,
+          "id": "9a13c4d3-66b5-4ca4-a33a-f199bf808da1",
+          "tracks": [
+            {
+              "number": "1",
+              "title": "There are many people in this world who love you",
+              "length": 171012,
+              "recording": {
+                "length": 171012,
+                "title": "There are many people in this world who love you",
+                "first-release-date": "2024-06-14",
+                "disambiguation": "",
+                "id": "2d817d27-0d23-4784-9805-3dc6b96213f9",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "Superboy",
+                    "artist": {
+                      "sort-name": "Superboy",
+                      "id": "36bfb746-2ea5-4dad-b520-1d425007bd79",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "name": "超星男孩",
+                      "disambiguation": "",
+                      "country": null
+                    },
+                    "joinphrase": " & "
+                  },
+                  {
+                    "name": "Connie Chen",
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK"
+                    }
+                  }
+                ]
+              },
+              "id": "543aeca2-61d0-4ac2-82ba-05a23a32a32e",
+              "artist-credit": [
+                {
+                  "name": "Superboy",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "36bfb746-2ea5-4dad-b520-1d425007bd79",
+                    "sort-name": "Superboy",
+                    "disambiguation": "",
+                    "country": null,
+                    "name": "超星男孩"
+                  },
+                  "joinphrase": " & "
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person"
+                  },
+                  "name": "Connie Chen"
+                }
+              ],
+              "position": 1
+            },
+            {
+              "position": 2,
+              "id": "a6cef35f-ee12-4b49-8666-8b6b018c61b3",
+              "recording": {
+                "title": "There are many people in this world who love you (instrumental)",
+                "length": 171012,
+                "artist-credit": [
+                  {
+                    "joinphrase": " & ",
+                    "artist": {
+                      "name": "超星男孩",
+                      "disambiguation": "",
+                      "country": null,
+                      "id": "36bfb746-2ea5-4dad-b520-1d425007bd79",
+                      "sort-name": "Superboy",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "Superboy"
+                  },
+                  {
+                    "name": "Connie Chen",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "id": "ff7405bd-5021-4ce9-a0f7-15a4374c7c54",
+                "video": false,
+                "disambiguation": "",
+                "first-release-date": "2024-06-14"
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": " & ",
+                  "artist": {
+                    "disambiguation": "",
+                    "country": null,
+                    "name": "超星男孩",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "36bfb746-2ea5-4dad-b520-1d425007bd79",
+                    "sort-name": "Superboy"
+                  },
+                  "name": "Superboy"
+                },
+                {
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "陳奕迅",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "Connie Chen"
+                }
+              ],
+              "length": 171012,
+              "title": "There are many people in this world who love you (instrumental)",
+              "number": "2"
+            }
+          ],
+          "format": "Digital Media",
+          "position": 1
+        }
+      ],
+      "packaging": "None",
+      "quality": "normal",
+      "title": "There are many people in this world who love you",
+      "release-events": [
+        {
+          "date": "2024-06-14",
+          "area": {
+            "disambiguation": "",
+            "name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ],
+            "type-id": null,
+            "type": null,
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "sort-name": "[Worldwide]"
+          }
+        }
+      ],
+      "artist-credit": [
+        {
+          "artist": {
+            "name": "超星男孩",
+            "disambiguation": "",
+            "country": null,
+            "sort-name": "Superboy",
+            "id": "36bfb746-2ea5-4dad-b520-1d425007bd79",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "type": "Person"
+          },
+          "joinphrase": " & ",
+          "name": "Superboy"
+        },
+        {
+          "artist": {
+            "name": "陳奕迅",
+            "disambiguation": "Hong Kong singer",
+            "country": "HK",
+            "sort-name": "Chan, Eason",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "type": "Person"
+          },
+          "joinphrase": "",
+          "name": "Connie Chen"
+        }
+      ],
+      "barcode": "196872195231",
+      "id": "d4137e27-b626-46fa-bfec-331b01fefe78",
+      "cover-art-archive": {
+        "front": true,
+        "artwork": true,
+        "count": 1,
+        "back": false,
+        "darkened": false
+      },
+      "disambiguation": "",
+      "status": "Official",
+      "asin": null,
+      "date": "2024-06-14",
+      "text-representation": {
+        "script": "Latn",
+        "language": "eng"
+      },
+      "label-info": [
+        {
+          "label": {
+            "label-code": 10746,
+            "id": "9e6b4d7f-4958-4db7-8504-d89e315836af",
+            "sort-name": "Sony Music",
+            "type-id": "b6285b2a-3514-3d43-80df-fcf528824ded",
+            "type": "Imprint",
+            "name": "Sony Music",
+            "disambiguation": "global brand, excluding JP, owned by Sony Music Entertainment"
+          },
+          "catalog-number": null
+        }
+      ]
+    }
+  ]
+}

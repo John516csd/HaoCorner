@@ -1,0 +1,70 @@
+{
+  "id": "apple-1431690016",
+  "appleCollectionId": "1431690016",
+  "musicbrainzReleaseId": null,
+  "title": "可一可再 - Single",
+  "artist": "陳奕迅 & eason and the duo band",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2018-08-24",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2018 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1431690016",
+    "path": "covers/1431690016-可一可再 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/82/6c/e6/826ce663-3b5e-ee78-8efe-e32114ca73e7/00602567976387.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/82/6c/e6/826ce663-3b5e-ee78-8efe-e32114ca73e7/00602567976387.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1177423,
+    "sha256": "fea4da8be6b9481f37b26dd5638775bbd13bdf959e539beb09e12239e40e94e4",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1431690032",
+      "albumId": "apple-1431690016",
+      "title": "可一可再",
+      "artist": "陳奕迅 & eason and the duo band",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 284618,
+      "duration": "4:45",
+      "appleTrackId": "1431690032",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%8F%AF%E4%B8%80%E5%8F%AF%E5%86%8D/1431690016?i=1431690032&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a9/d1/68/a9d1682a-40da-c798-3be7-ed92ba144511/mzaf_16637527892398503105.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1431690016&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%8F%AF%E4%B8%80%E5%8F%AF%E5%86%8D-single/1431690016?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 284618,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

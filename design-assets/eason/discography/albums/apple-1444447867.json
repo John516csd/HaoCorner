@@ -1,0 +1,69 @@
+{
+  "id": "apple-1444447867",
+  "appleCollectionId": "1444447867",
+  "musicbrainzReleaseId": null,
+  "title": "City of Hope - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2010-01-01",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "流行樂",
+  "copyright": "This Compilation ℗ 2010 Universal Music Ltd.",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444447867",
+    "path": "covers/1444447867-City of Hope - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/6c/3f/a8/6c3fa875-ba96-1983-bafb-a24afe276178/00602488992053.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/6c/3f/a8/6c3fa875-ba96-1983-bafb-a24afe276178/00602488992053.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 2247,
+    "height": 3000,
+    "bytes": 1714979,
+    "sha256": "75ab058ac815e3d0efeecd6061c38f71b12a137c97ee7bf4363cfe6cd5a41c7e",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444447869",
+      "albumId": "apple-1444447867",
+      "title": "City of Hope",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 185400,
+      "duration": "3:05",
+      "appleTrackId": "1444447869",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/city-of-hope/1444447867?i=1444447869&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a4/a2/ed/a4a2ed9b-d5f5-00d2-9477-6f8497621b29/mzaf_5834414690110531590.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444447867&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/city-of-hope-single/1444447867?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 185400,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

@@ -1,0 +1,26 @@
+{
+  "size": [
+    1200,
+    1200
+  ],
+  "mode": "RGBA",
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "fully_transparent_pixels": 760826,
+  "soft_edge_pixels": 13787,
+  "face_check_xyxy": [
+    430,
+    60,
+    830,
+    622
+  ],
+  "face_rgb_changed_pixels": 0,
+  "opaque_face_check_xyxy": [
+    600,
+    330,
+    725,
+    470
+  ],
+  "face_alpha_min": 255,
+  "restored_area": "Left clothing, y=623..1169; neighboring source fabric used as donor. Occluded left sleeve outline inferred."
+}

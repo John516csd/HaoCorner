@@ -1,0 +1,70 @@
+{
+  "id": "apple-6788750822",
+  "appleCollectionId": "6788750822",
+  "musicbrainzReleaseId": null,
+  "title": "時代曲 (Remastered 2026) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2026-07-13",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 1996, 2026 Capital Artists Limited",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "6788750822",
+    "path": "covers/6788750822-時代曲 (Remastered 2026) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/42/19/12/4219122e-ec6b-b407-8033-4239e06159af/1200214508500.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/42/19/12/4219122e-ec6b-b407-8033-4239e06159af/1200214508500.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 2214173,
+    "sha256": "a8ea0092a7402dea7d8088bf56625f7cc00de3876a1e6a11f8a0dd950e031298",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-6788750824",
+      "albumId": "apple-6788750822",
+      "title": "時代曲 (Remastered 2026)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 263266,
+      "duration": "4:23",
+      "appleTrackId": "6788750824",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E6%99%82%E4%BB%A3%E6%9B%B2-remastered-2026/6788750822?i=6788750824&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c5/e6/37/c5e63773-9f75-b614-7a6c-e46cd3de36ea/mzaf_7513306218738325016.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=6788750822&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E6%99%82%E4%BB%A3%E6%9B%B2-remastered-2026-single/6788750822?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 263266,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

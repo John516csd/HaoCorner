@@ -1,0 +1,69 @@
+{
+  "id": "apple-1720351241",
+  "appleCollectionId": "1720351241",
+  "musicbrainzReleaseId": null,
+  "title": "北京祝福你 - Single",
+  "artist": "譚晶, 陳奕迅, 成龍, 容祖兒, 莫文蔚, 李玟, 郭富城, 劉德華, 劉亦菲, 王力宏, 周華健, 庾澄慶, 梁詠琪, 徐若瑄, 任賢齊, 章子怡, 薩頂頂, 胡彥斌, 何潤東 & 韓庚",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2023-07-10",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2023 北京能量悦动文化传媒有限公司",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1720351241",
+    "path": "covers/1720351241-北京祝福你 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/99/27/1c/99271c2c-a12d-c752-9d48-54c333a1b8d4/4711280061273.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/99/27/1c/99271c2c-a12d-c752-9d48-54c333a1b8d4/4711280061273.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 475094,
+    "sha256": "6fde38165630ac742053646963729373a91f325d1fb21104079aceebb4d19cf0",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1720351242",
+      "albumId": "apple-1720351241",
+      "title": "北京祝福你",
+      "artist": "譚晶, 陳奕迅, 成龍, 容祖兒, 莫文蔚, 李玟, 郭富城, 劉德華, 劉亦菲, 王力宏, 周華健, 庾澄慶, 梁詠琪, 徐若瑄, 任賢齊, 章子怡, 薩頂頂, 胡彥斌, 何潤東 & 韓庚",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 480078,
+      "duration": "8:00",
+      "appleTrackId": "1720351242",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%8C%97%E4%BA%AC%E7%A5%9D%E7%A6%8F%E4%BD%A0/1720351241?i=1720351242&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/4a/9e/c0/4a9ec071-927c-7b31-9502-f800ca906db0/mzaf_1299732633016917689.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1720351241&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%8C%97%E4%BA%AC%E7%A5%9D%E7%A6%8F%E4%BD%A0-single/1720351241?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 480078,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

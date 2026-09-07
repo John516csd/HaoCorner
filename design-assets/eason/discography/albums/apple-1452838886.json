@@ -1,0 +1,69 @@
+{
+  "id": "apple-1452838886",
+  "appleCollectionId": "1452838886",
+  "musicbrainzReleaseId": null,
+  "title": "I Do - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2016-09-26",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2016 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1452838886",
+    "path": "covers/1452838886-I Do - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/98/df/e2/98dfe258-a1fe-8134-003a-fccdc353e7fc/00602488602143.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/98/df/e2/98dfe258-a1fe-8134-003a-fccdc353e7fc/00602488602143.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1131105,
+    "sha256": "1288c17b3db7e1f615e2d688f4dfbe4edfd781f3c11597797c81afdb3e9a77c4",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1452838887",
+      "albumId": "apple-1452838886",
+      "title": "I Do",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 249237,
+      "duration": "4:09",
+      "appleTrackId": "1452838887",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/i-do/1452838886?i=1452838887&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f7/73/e0/f773e046-2b38-c7ae-788e-6d6aaac5b11c/mzaf_11935376165124733580.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1452838886&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/i-do-single/1452838886?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 249237,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

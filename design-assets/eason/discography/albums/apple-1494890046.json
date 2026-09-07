@@ -1,0 +1,77 @@
+{
+  "id": "apple-1494890046",
+  "appleCollectionId": "1494890046",
+  "musicbrainzReleaseId": null,
+  "title": "光輝歲月 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2013-05-09",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2020-01-14",
+      "sourceUrl": "https://musicbrainz.org/release-group/99407bc6-df78-4f08-adb4-6589112a2783"
+    }
+  ],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2020 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1494890046",
+    "path": "covers/1494890046-光輝歲月 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/b0/f7/0d/b0f70d0a-682f-46f1-54f3-4474ffd66e25/20UMGIM01061.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/b0/f7/0d/b0f70d0a-682f-46f1-54f3-4474ffd66e25/20UMGIM01061.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1675275,
+    "sha256": "652c535e3dd9070d9cd00872d7739357561e3b1b6084fcd86cea6f4b015041f1",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1494890055",
+      "albumId": "apple-1494890046",
+      "title": "光輝歲月",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 241667,
+      "duration": "4:02",
+      "appleTrackId": "1494890055",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%85%89%E8%BC%9D%E6%AD%B2%E6%9C%88/1494890046?i=1494890055&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1b/46/26/1b4626e9-21d8-50b6-96be-60e61b49f199/mzaf_10196443137547833963.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1494890046&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%85%89%E8%BC%9D%E6%AD%B2%E6%9C%88-single/1494890046?uo=4",
+    "https://musicbrainz.org/release-group/99407bc6-df78-4f08-adb4-6589112a2783"
+  ],
+  "releaseGroupIds": [
+    "99407bc6-df78-4f08-adb4-6589112a2783"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 241667,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

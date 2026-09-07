@@ -1,0 +1,77 @@
+{
+  "id": "apple-1675204502",
+  "appleCollectionId": "1675204502",
+  "musicbrainzReleaseId": null,
+  "title": "塵大師 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2023-03-10",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2023-03-10",
+      "sourceUrl": "https://musicbrainz.org/release-group/8919fb50-5007-4fe6-8032-2e8f2bb5cda6"
+    }
+  ],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2023 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1675204502",
+    "path": "covers/1675204502-塵大師 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c5/9e/be/c59ebeb0-cbeb-eb8d-de20-4ee9a53872e0/21UMGIM62552.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c5/9e/be/c59ebeb0-cbeb-eb8d-de20-4ee9a53872e0/21UMGIM62552.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 2162448,
+    "sha256": "935048039bc2f8b9ec993c6d3ea018989a1fa9e82dec3043d7a0a2b2f11d0608",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1675204703",
+      "albumId": "apple-1675204502",
+      "title": "塵大師",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 267500,
+      "duration": "4:28",
+      "appleTrackId": "1675204703",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%A1%B5%E5%A4%A7%E5%B8%AB/1675204502?i=1675204703&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/cf/66/67/cf666757-8fc8-e1c9-ed65-aa087e854952/mzaf_18188607515704561791.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1675204502&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%A1%B5%E5%A4%A7%E5%B8%AB-single/1675204502?uo=4",
+    "https://musicbrainz.org/release-group/8919fb50-5007-4fe6-8032-2e8f2bb5cda6"
+  ],
+  "releaseGroupIds": [
+    "8919fb50-5007-4fe6-8032-2e8f2bb5cda6"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 267500,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

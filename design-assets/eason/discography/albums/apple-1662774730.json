@@ -1,0 +1,75 @@
+{
+  "id": "apple-1662774730",
+  "appleCollectionId": "1662774730",
+  "musicbrainzReleaseId": null,
+  "title": "盲婚啞嫁 - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2023-01-09",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2023-01-09",
+      "sourceUrl": "https://musicbrainz.org/release-group/2c6f5c6e-1300-4106-aa7e-3f4d51c713ad"
+    }
+  ],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "粤语流行",
+  "copyright": "℗ 2023 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1662774730",
+    "path": "covers/1662774730-盲婚啞嫁 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/79/f0/40/79f040f1-e15b-613d-68b4-dc1a8e367280/23UMGIM00166.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/79/f0/40/79f040f1-e15b-613d-68b4-dc1a8e367280/23UMGIM00166.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 3134060,
+    "sha256": "4f78d302014e7e0e08b1b6e3ccea0f38fcd48090567888cf5b67c2361eac022d",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1662774732",
+      "albumId": "apple-1662774730",
+      "title": "盲婚哑嫁",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 223500,
+      "duration": "3:44",
+      "appleTrackId": "1662774732",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E7%9B%B2%E5%A9%9A%E5%93%91%E5%AB%81/1662774730?i=1662774732",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/68/2f/a7/682fa752-5236-fe4c-7a34-bcd764695144/mzaf_8007172679457933008.plus.aac.p.m4a",
+      "composer": "陈奕迅 & 林家谦",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E7%9B%B2%E5%A9%9A%E5%95%9E%E5%AB%81-single/1662774730?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E7%9B%B2%E5%A9%9A%E5%95%9E%E5%AB%81-single/1662774730?uo=4",
+    "https://musicbrainz.org/release-group/2c6f5c6e-1300-4106-aa7e-3f4d51c713ad"
+  ],
+  "releaseGroupIds": [
+    "2c6f5c6e-1300-4106-aa7e-3f4d51c713ad"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 223500,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

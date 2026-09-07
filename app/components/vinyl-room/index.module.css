@@ -4,7 +4,8 @@
 .vinyl-room a { color: inherit; text-decoration: none; }
 .vinyl-room button:focus-visible, .vinyl-room a:focus-visible { outline: 2px solid #edeedf; outline-offset: 5px; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.vinyl-room { position: relative; width: 100%; height: 100dvh; min-height: 400px; isolation: isolate; overflow: hidden; background: #1c2b27; }
+.vinyl-room { --room-base: #17181e; --room-panel: #17181ef5; --room-share-top: #191c29a8; --room-share-bottom: #11131edd; position: relative; width: 100%; height: 100dvh; min-height: 400px; isolation: isolate; overflow: hidden; background: var(--room-base); }
+.vinyl-room[data-room-theme='mayday'] { --room-base: #2d271e; --room-panel: #2d271ef5; --room-share-top: #3b3324a8; --room-share-bottom: #191713dd; }
 .masthead { position: absolute; z-index: 5; top: 28px; left: 38px; right: 38px; display: flex; justify-content: space-between; align-items: center; gap: 20px; pointer-events: none; }
 .wordmark { pointer-events: auto; display: inline-flex; align-items: center; gap: 11px; }
 .wordmark > span { font-size: 16px; font-weight: 500; letter-spacing: .18em; }
@@ -37,11 +38,14 @@
 .browse-hint { position: absolute; left: 50%; bottom: 4px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; white-space: nowrap; margin: 0; font-size: 12px; letter-spacing: .04em; color: #f0ede2aa; }
 .touch-hint { display: none; }
 .arrow-controls { display: flex; gap: 10px; pointer-events: auto; }
-.arrow-controls button { width: 42px; height: 42px; border: 1px solid #f4f0e53d; border-radius: 50%; display: grid; place-items: center; background: #14222018; transition: background .2s; }
+.arrow-controls button { width: 42px; height: 42px; border: 1px solid #f4f0e53d; border-radius: 50%; display: grid; place-items: center; background: #11152218; transition: background .2s; }
 .arrow-controls button:hover { background: #f3f0e525; }
 .detail-caption { position: absolute; left: 8%; right: 55%; top: calc(50% + min(17.5vw, 31dvh, 310px) + 22px); z-index: 4; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: .08em; color: #eeeddf80; animation: details-in .6s .15s both; }
 .detail-caption a { display: flex; align-items: center; gap: 5px; }
-.track-panel { position: absolute; z-index: 4; left: 54%; right: 7%; top: max(130px, 15%); bottom: max(66px, 8%); display: flex; flex-direction: column; animation: details-in .65s .16s both; }
+.track-panel { position: absolute; z-index: 4; left: 54%; right: 7%; top: max(130px, 15%); bottom: max(66px, 8%); display: flex; flex-direction: column; }
+.album-back { position: absolute; top: -48px; left: 0; display: inline-flex; align-items: center; gap: 9px; min-height: 40px; padding: 10px 0; font-size: 12px; pointer-events: auto; transition: transform 120ms cubic-bezier(.23, 1, .32, 1), opacity 160ms ease; }
+.album-back:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .album-back:hover { opacity: .8; } }
 .eyebrow { display: flex; gap: 11px; margin: 0 0 16px; font-size: 12px; letter-spacing: .08em; color: #eeeddf91; }
 .eyebrow span { opacity: .5; }
 .album-heading h2 { font-family: 'Baskerville', 'Iowan Old Style', 'PingFang SC', serif; font-weight: 400; font-size: clamp(32px, 4.8vw, 64px); letter-spacing: -.045em; line-height: 1.05; margin: 0 0 16px; overflow-wrap: anywhere; }
@@ -85,6 +89,7 @@
   .arrow-controls { gap: 6px; } .arrow-controls button { width: 32px; height: 32px; }
   .close-detail { font-size: 11px; gap: 9px; }
   .track-panel { top: calc(126px + min(66vw, 32dvh)); left: 24px; right: 24px; bottom: 24px; }
+  .album-back { position: static; align-self: flex-start; flex-shrink: 0; min-height: 44px; margin-bottom: 8px; }
   .eyebrow { font-size: 10px; margin-bottom: 7px; }
   .album-heading h2 { font-size: 29px; margin-bottom: 8px; }
   .album-artist { font-size: 12px; margin-bottom: 17px; }
@@ -116,3 +121,22 @@ div.detail-cover { transform: translate(-50%, -50%) scale(1.07); }
   .detail-cover { top: 106px; left: 50%; width: min(66vw, 32dvh); transform: translateX(-50%); }
   div.detail-cover { transform: translateX(-50%) scale(1.06); }
 }
+
+.share-backdrop { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 240ms cubic-bezier(.23, 1, .32, 1); }
+.vinyl-canvas { transition: opacity 240ms cubic-bezier(.23, 1, .32, 1); }
+.composing .share-backdrop { opacity: 1; }
+.composing .vinyl-canvas, .composing .detail-cover, .sharing .detail-caption { opacity: 0; pointer-events: none; }
+.vinyl-room:focus { outline: none; }
+.track-panel { opacity: 1; transform: translateY(0); transition: opacity 220ms cubic-bezier(.23, 1, .32, 1), transform 220ms cubic-bezier(.23, 1, .32, 1), visibility 0s; }
+.sharing .track-panel { opacity: 0; transform: translateY(-6px); visibility: hidden; pointer-events: none; transition-duration: 160ms, 160ms, 0s; transition-delay: 0s, 0s, 160ms; }
+.sharing .track-panel * { pointer-events: none; }
+@starting-style { .track-panel { opacity: 0; transform: translateY(14px); } }
+.song-row { display: flex; align-items: stretch; }
+.vinyl-room .song-select { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; gap: 13px; flex: 1; min-width: 0; text-align: left; min-height: 49px; padding: 15px 2px; }
+.track-list .song-listen { display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; padding: 0; margin-left: 10px; opacity: .6; }
+.share-hint { font-size: 11px; color: #eeeddf70; margin: 0 0 15px; }
+.vinyl-room[data-instant='true'] .track-panel { animation: none; transition: none; }
+.vinyl-room[data-instant='true'] .album-back { transition: none; }
+.vinyl-room[data-instant='true'] .vinyl-canvas, .vinyl-room[data-instant='true'] .share-backdrop { transition: none; }
+@media (hover: hover) and (pointer: fine) { .song-select:hover { background: #e8e9df09; } .track-list .song-listen:hover { opacity: 1; } }
+@media (max-width: 759px) { .vinyl-room .song-select { padding: 10px 2px; gap: 9px; min-height: 44px; } .sharing .masthead { visibility: hidden; } .share-hint { font-size: 10px; margin-bottom: 12px; } }

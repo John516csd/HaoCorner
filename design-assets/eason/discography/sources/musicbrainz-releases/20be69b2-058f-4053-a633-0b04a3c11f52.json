@@ -1,0 +1,506 @@
+{
+  "release-count": 1,
+  "release-offset": 0,
+  "releases": [
+    {
+      "date": "2004",
+      "media": [
+        {
+          "title": "",
+          "position": 1,
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "track-count": 10,
+          "track-offset": 0,
+          "tracks": [
+            {
+              "length": 298400,
+              "number": "1",
+              "position": 1,
+              "title": "一切還好",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "recording": {
+                "video": false,
+                "id": "d765b7cd-c5a2-4176-ab8f-1b2c225da55c",
+                "title": "一切還好",
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": 298400
+              },
+              "id": "f7f8f9e2-fe99-4d95-857e-f6391d9d5e05"
+            },
+            {
+              "title": "萬佛朝宗",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "length": 292960,
+              "number": "2",
+              "position": 2,
+              "recording": {
+                "id": "f6e1be17-e426-4ccf-9634-0089f5649214",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "title": "萬佛朝宗",
+                "disambiguation": "",
+                "length": 292960
+              },
+              "id": "b752c46e-0a04-4be6-93d5-289e497e23eb"
+            },
+            {
+              "title": "怨氣",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "length": 264213,
+              "position": 3,
+              "number": "3",
+              "recording": {
+                "id": "57fdc5fc-5e65-4932-8f15-5a6a366a9465",
+                "video": false,
+                "length": 264213,
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "disambiguation": "",
+                "title": "怨氣"
+              },
+              "id": "a42efbf1-9882-416d-9b8e-f67c6c57d459"
+            },
+            {
+              "recording": {
+                "id": "109e4bce-7a92-4b8c-9e68-0e7c926650f0",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ],
+                "disambiguation": "",
+                "title": "八里公路",
+                "length": 290453
+              },
+              "id": "3234e9e5-fe22-4b77-a250-22f4d230238c",
+              "title": "八里公路",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "length": 290453,
+              "number": "4",
+              "position": 4
+            },
+            {
+              "title": "放下來",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  }
+                }
+              ],
+              "length": 193813,
+              "number": "5",
+              "position": 5,
+              "recording": {
+                "title": "放下來",
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "length": 193813,
+                "video": false,
+                "id": "4f05ed19-8d68-4ea1-ae55-0f991261d753"
+              },
+              "id": "b461d661-3223-40b2-9a62-913aabf706c6"
+            },
+            {
+              "position": 6,
+              "number": "6",
+              "length": 279413,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "title": "開不了心",
+              "id": "053e1e95-f75b-4bf3-a347-af2f3f561cde",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "disambiguation": "",
+                "title": "開不了心",
+                "length": 279413,
+                "id": "b0c87df4-db58-4da0-9dc6-119f999634d1",
+                "video": false
+              }
+            },
+            {
+              "title": "24",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "length": 254133,
+              "number": "7",
+              "position": 7,
+              "recording": {
+                "length": 254133,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    }
+                  }
+                ],
+                "title": "24",
+                "disambiguation": "",
+                "id": "8c9028da-787a-4d27-9e41-3407d6ab95d4",
+                "video": false
+              },
+              "id": "fbb06474-6b72-4eaf-8880-43e371da6bc1"
+            },
+            {
+              "number": "8",
+              "position": 8,
+              "length": 215093,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "type": "Person"
+                  }
+                }
+              ],
+              "title": "不求人",
+              "id": "34985681-8de0-4969-9f4f-3af09928bf3c",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "title": "不求人",
+                "disambiguation": "",
+                "length": 215093,
+                "id": "82e80aac-a094-4c2a-ba40-d2dc75d87d96",
+                "video": false
+              }
+            },
+            {
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "title": "最後今晚",
+              "position": 9,
+              "number": "9",
+              "length": 230400,
+              "id": "d25b21f2-b5c1-4660-bbe4-5c0bcaf77339",
+              "recording": {
+                "id": "89c3f351-22a3-41ec-8097-a78c83fa3681",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "title": "最後今晚",
+                "disambiguation": "",
+                "length": 230400
+              }
+            },
+            {
+              "id": "1b0c03a9-67a4-45d9-a9ff-5bebf8696273",
+              "recording": {
+                "id": "fdd926e3-5461-4a2b-9b98-a59a03666cbd",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "disambiguation": "",
+                "title": "愛你入骨",
+                "length": 245373
+              },
+              "artist-credit": [
+                {
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "title": "愛你入骨",
+              "number": "10",
+              "position": 10,
+              "length": 245373
+            }
+          ],
+          "id": "10ff7bc0-3018-3501-a7fe-1e94eaaf8595",
+          "format": "CD"
+        }
+      ],
+      "quality": "normal",
+      "packaging-id": null,
+      "status-id": "55005350-bc3f-441a-b0c7-27c565eae341",
+      "artist-credit": [
+        {
+          "name": "陳奕迅",
+          "joinphrase": "",
+          "artist": {
+            "disambiguation": "Hong Kong singer",
+            "sort-name": "Chan, Eason",
+            "name": "陳奕迅",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "country": "HK",
+            "type": "Person"
+          }
+        }
+      ],
+      "status": "Cancelled",
+      "text-representation": {
+        "language": "zho",
+        "script": "Hant"
+      },
+      "title": "I Had a Great Time",
+      "country": null,
+      "release-events": [
+        {
+          "area": null,
+          "date": "2004"
+        }
+      ],
+      "barcode": null,
+      "disambiguation": "",
+      "cover-art-archive": {
+        "darkened": false,
+        "back": false,
+        "front": false,
+        "count": 0,
+        "artwork": false
+      },
+      "label-info": [],
+      "asin": null,
+      "id": "88da1878-acba-4ef5-a5a7-f7a0e5d71f44",
+      "packaging": null
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "mb-d9538398-826f-4c7f-96a8-0434a3d5f741",
+  "appleCollectionId": null,
+  "musicbrainzReleaseId": "d9538398-826f-4c7f-96a8-0434a3d5f741",
+  "title": "Crying in the Party",
+  "artist": "Eason Chan",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2007-08-23",
+  "releaseDateMeaning": "MusicBrainz 指定发行版本的日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2007-08-23",
+      "sourceUrl": "https://musicbrainz.org/release-group/ed09675b-7cf6-45f1-906d-0ec10135ef9b"
+    }
+  ],
+  "storefronts": [],
+  "preferredStorefront": null,
+  "genre": null,
+  "copyright": null,
+  "declaredTrackCount": 1,
+  "cover": null,
+  "tracks": [
+    {
+      "id": "mb-e6660418-149d-3c66-9ce3-d6e7108c9855",
+      "albumId": "mb-d9538398-826f-4c7f-96a8-0434a3d5f741",
+      "title": "Crying in the Party",
+      "artist": "Eason Chan",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "mediumFormat": "Digital Media",
+      "durationMs": 255000,
+      "duration": "4:15",
+      "appleTrackId": null,
+      "musicbrainzRecordingId": "26271a48-0165-4aa8-81cb-348dec2d0459",
+      "url": "https://musicbrainz.org/recording/26271a48-0165-4aa8-81cb-348dec2d0459",
+      "previewUrl": null,
+      "composer": null,
+      "isStreamable": null,
+      "explicitness": null,
+      "source": "MusicBrainz digital release metadata",
+      "sourceUrl": "https://musicbrainz.org/release/d9538398-826f-4c7f-96a8-0434a3d5f741",
+      "supplemented": false
+    }
+  ],
+  "notes": [
+    "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+    "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+  ],
+  "metadataStatus": "physical-reference",
+  "sourceUrls": [
+    "https://musicbrainz.org/release/d9538398-826f-4c7f-96a8-0434a3d5f741",
+    "https://musicbrainz.org/release-group/ed09675b-7cf6-45f1-906d-0ec10135ef9b"
+  ],
+  "releaseGroupIds": [
+    "ed09675b-7cf6-45f1-906d-0ec10135ef9b"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 255000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

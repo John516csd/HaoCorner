@@ -1,0 +1,121 @@
+{
+  "release-offset": 0,
+  "release-count": 1,
+  "releases": [
+    {
+      "status": "Official",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "id": "d9538398-826f-4c7f-96a8-0434a3d5f741",
+      "media": [
+        {
+          "track-offset": 0,
+          "title": "",
+          "tracks": [
+            {
+              "number": "1",
+              "title": "Crying in the Party",
+              "recording": {
+                "title": "Crying in the Party",
+                "disambiguation": "",
+                "video": false,
+                "first-release-date": "2007-08-23",
+                "id": "26271a48-0165-4aa8-81cb-348dec2d0459",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "length": 253440
+              },
+              "length": 255000,
+              "id": "e6660418-149d-3c66-9ce3-d6e7108c9855",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "name": "Eason Chan"
+                }
+              ],
+              "position": 1
+            }
+          ],
+          "position": 1,
+          "track-count": 1,
+          "id": "c7a081ed-4a32-34a1-854d-8523ff38a7ee",
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "format": "Digital Media"
+        }
+      ],
+      "text-representation": {
+        "script": "Latn",
+        "language": "eng"
+      },
+      "label-info": [],
+      "quality": "normal",
+      "date": "2007-08-23",
+      "packaging": "None",
+      "barcode": null,
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "disambiguation": "",
+      "artist-credit": [
+        {
+          "name": "Eason Chan",
+          "joinphrase": "",
+          "artist": {
+            "disambiguation": "Hong Kong singer",
+            "type": "Person",
+            "name": "陳奕迅",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "sort-name": "Chan, Eason",
+            "country": "HK",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+          }
+        }
+      ],
+      "asin": null,
+      "country": "FR",
+      "release-events": [
+        {
+          "area": {
+            "sort-name": "France",
+            "iso-3166-1-codes": [
+              "FR"
+            ],
+            "type-id": null,
+            "id": "08310658-51eb-3801-80de-5a0739207115",
+            "type": null,
+            "name": "France",
+            "disambiguation": ""
+          },
+          "date": "2007-08-23"
+        }
+      ],
+      "cover-art-archive": {
+        "artwork": false,
+        "back": false,
+        "darkened": false,
+        "count": 0,
+        "front": false
+      },
+      "title": "Crying in the Party"
+    }
+  ]
+}

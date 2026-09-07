@@ -1,0 +1,67 @@
+{
+  "id": "apple-1470593031",
+  "appleCollectionId": "1470593031",
+  "musicbrainzReleaseId": null,
+  "title": "相信你的人 (電影《銀河補習班》推廣曲) - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2019-07-05",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2019 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1470593031",
+    "path": "covers/1470593031-相信你的人 (電影《銀河補習班》推廣曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/6b/be/e7/6bbee7a6-1459-4e51-2f54-10ed66cec42b/19UMGIM60082.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/6b/be/e7/6bbee7a6-1459-4e51-2f54-10ed66cec42b/19UMGIM60082.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 692579,
+    "sha256": "67a3614fcf7d588a429446f73cb7830d0aba25f1f0fb80ef5f24a0ecfd4f21e1",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1470593032",
+      "albumId": "apple-1470593031",
+      "title": "相信你的人 (电影《银河补习班》推广曲)",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 274219,
+      "duration": "4:34",
+      "appleTrackId": "1470593032",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E7%9B%B8%E4%BF%A1%E4%BD%A0%E7%9A%84%E4%BA%BA-%E7%94%B5%E5%BD%B1-%E9%93%B6%E6%B2%B3%E8%A1%A5%E4%B9%A0%E7%8F%AD-%E6%8E%A8%E5%B9%BF%E6%9B%B2/1470593031?i=1470593032",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a4/86/3b/a4863b94-b1ab-af7d-8f95-54aa9c99520f/mzaf_13127649043000347052.plus.aac.p.m4a",
+      "composer": "陈小霞",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E7%9B%B8%E4%BF%A1%E4%BD%A0%E7%9A%84%E4%BA%BA-%E9%9B%BB%E5%BD%B1-%E9%8A%80%E6%B2%B3%E8%A3%9C%E7%BF%92%E7%8F%AD-%E6%8E%A8%E5%BB%A3%E6%9B%B2-single/1470593031?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E7%9B%B8%E4%BF%A1%E4%BD%A0%E7%9A%84%E4%BA%BA-%E9%9B%BB%E5%BD%B1-%E9%8A%80%E6%B2%B3%E8%A3%9C%E7%BF%92%E7%8F%AD-%E6%8E%A8%E5%BB%A3%E6%9B%B2-single/1470593031?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 274219,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

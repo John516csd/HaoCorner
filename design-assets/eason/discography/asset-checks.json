@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-06T16:01:55.092450+00:00",
+  "passed": true,
+  "releaseVersions": 163,
+  "validatedCoverFiles": 148,
+  "coverBytes": 144359382,
+  "coverMiB": 137.67,
+  "studioSelectionsWithCoverAndCompleteCount": 32,
+  "maxCoverWidth": 3000,
+  "errors": [],
+  "knownDataGaps": [
+    {
+      "id": "apple-1444164011",
+      "title": "Eason's Life 陳奕迅2013演唱會 (Deluxe Version)",
+      "declared": 23,
+      "collected": 22,
+      "notes": [
+        "Apple 声明 23 项，公开接口和专辑页返回 22 项；剩余 1 项类型及名称未获确认，未猜填。实体 2CD 普通版为 21 曲，不能用它替代 Deluxe 的目录。"
+      ]
+    }
+  ]
+}

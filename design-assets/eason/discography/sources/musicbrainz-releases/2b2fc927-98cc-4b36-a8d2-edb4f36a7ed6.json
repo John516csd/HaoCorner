@@ -1,0 +1,111 @@
+{
+  "release-offset": 0,
+  "releases": [
+    {
+      "status": "Official",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "disambiguation": "",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "text-representation": {
+        "script": "Hani",
+        "language": "zho"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": "",
+          "name": "陳奕迅",
+          "artist": {
+            "sort-name": "Chan, Eason",
+            "type": "Person",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "disambiguation": "Hong Kong singer",
+            "country": "HK",
+            "name": "陳奕迅"
+          }
+        }
+      ],
+      "label-info": [],
+      "packaging": "None",
+      "release-events": [
+        {
+          "date": "2013-06-14",
+          "area": null
+        }
+      ],
+      "id": "6cdf6e53-a493-4001-839a-74acc148576f",
+      "media": [
+        {
+          "tracks": [
+            {
+              "recording": {
+                "disambiguation": "",
+                "first-release-date": "2013-06-14",
+                "id": "2754cab8-c1f7-4f4b-8e75-b9b9d0a6c6ea",
+                "length": 293000,
+                "video": false,
+                "title": "主旋律",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "type": "Person",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ]
+              },
+              "title": "主旋律",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "country": "HK"
+                  }
+                }
+              ],
+              "number": "1",
+              "id": "92ebc866-553f-41b2-900f-c1929d1c935a",
+              "length": 293000,
+              "position": 1
+            }
+          ],
+          "track-offset": 0,
+          "format": "Digital Media",
+          "id": "44b24285-04fa-3cb8-af38-8ee2d8ddfd4e",
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "position": 1,
+          "track-count": 1,
+          "title": ""
+        }
+      ],
+      "title": "主旋律",
+      "country": null,
+      "quality": "normal",
+      "asin": null,
+      "cover-art-archive": {
+        "count": 0,
+        "darkened": false,
+        "artwork": false,
+        "back": false,
+        "front": false
+      },
+      "date": "2013-06-14",
+      "barcode": null
+    }
+  ],
+  "release-count": 1
+}

@@ -1,0 +1,25 @@
+{
+  "id": "1365354095",
+  "sourceUrl": "https://music.apple.com/cn/album/%E6%88%91%E5%80%91-%E5%BE%8C%E4%BE%86%E7%9A%84%E6%88%91%E5%80%91-%E9%9B%BB%E5%BD%B1%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1365354095?uo=4",
+  "storefront": "cn",
+  "tracks": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "collectionId": 1365354095,
+      "trackId": 1365354096,
+      "trackName": "我们 (《后来的我们》电影主题曲)",
+      "artistName": "陈奕迅",
+      "collectionName": "我們 (《後來的我們》電影主題曲) - Single",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "trackTimeMillis": 260878,
+      "trackViewUrl": "https://music.apple.com/cn/album/%E6%88%91%E4%BB%AC-%E5%90%8E%E6%9D%A5%E7%9A%84%E6%88%91%E4%BB%AC-%E7%94%B5%E5%BD%B1%E4%B8%BB%E9%A2%98%E6%9B%B2/1365354095?i=1365354096",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0a/88/91/0a8891ec-8de2-189a-d426-39b8a636b00b/mzaf_3096907558571744218.plus.aac.p.m4a",
+      "composer": "陈建骐",
+      "isStreamable": true,
+      "metadataSource": "Apple Music public album page",
+      "metadataSourceUrl": "https://music.apple.com/cn/album/%E6%88%91%E5%80%91-%E5%BE%8C%E4%BE%86%E7%9A%84%E6%88%91%E5%80%91-%E9%9B%BB%E5%BD%B1%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1365354095?uo=4"
+    }
+  ]
+}

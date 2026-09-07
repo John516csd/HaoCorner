@@ -1,0 +1,65 @@
+{
+  "id": "mb-2c62288c-961f-43eb-9513-95168bdb7711",
+  "appleCollectionId": null,
+  "musicbrainzReleaseId": "2c62288c-961f-43eb-9513-95168bdb7711",
+  "title": "Allegro, Opus 3.3 a.m.",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2009-01-21",
+  "releaseDateMeaning": "MusicBrainz 指定发行版本的日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2009-01-21",
+      "sourceUrl": "https://musicbrainz.org/release-group/b204d030-dd68-4ac4-8036-23182f8a5ca6"
+    }
+  ],
+  "storefronts": [],
+  "preferredStorefront": null,
+  "genre": null,
+  "copyright": null,
+  "declaredTrackCount": 1,
+  "cover": null,
+  "tracks": [
+    {
+      "id": "mb-0215e731-b856-324d-9a2a-e577b7e945f0",
+      "albumId": "mb-2c62288c-961f-43eb-9513-95168bdb7711",
+      "title": "Allegro Opus 3.3am",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "mediumFormat": "Digital Media",
+      "durationMs": 187000,
+      "duration": "3:07",
+      "appleTrackId": null,
+      "musicbrainzRecordingId": "36e60201-61b4-4411-a3ff-b6752a80cdda",
+      "url": "https://musicbrainz.org/recording/36e60201-61b4-4411-a3ff-b6752a80cdda",
+      "previewUrl": null,
+      "composer": null,
+      "isStreamable": null,
+      "explicitness": null,
+      "source": "MusicBrainz digital release metadata",
+      "sourceUrl": "https://musicbrainz.org/release/2c62288c-961f-43eb-9513-95168bdb7711",
+      "supplemented": false
+    }
+  ],
+  "notes": [
+    "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+    "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+  ],
+  "metadataStatus": "physical-reference",
+  "sourceUrls": [
+    "https://musicbrainz.org/release/2c62288c-961f-43eb-9513-95168bdb7711",
+    "https://musicbrainz.org/release-group/b204d030-dd68-4ac4-8036-23182f8a5ca6"
+  ],
+  "releaseGroupIds": [
+    "b204d030-dd68-4ac4-8036-23182f8a5ca6"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 187000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

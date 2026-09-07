@@ -1,0 +1,100 @@
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  contain: strict;
+  background:
+    radial-gradient(ellipse at 8% 35%, #642c3630, transparent 48%),
+    radial-gradient(ellipse at 94% 22%, #21447638, transparent 49%),
+    radial-gradient(ellipse at 50% 42%, #242730 0%, #191b23 50%, #101116 100%);
+}
+
+.atmosphere[data-theme='mayday'] {
+  background:
+    radial-gradient(ellipse at 7% 22%, #b8933e38, transparent 45%),
+    radial-gradient(ellipse at 94% 76%, #9b6f2829, transparent 42%),
+    radial-gradient(ellipse at 49% 39%, #3b3324 0%, #2d271e 54%, #191713 100%);
+}
+
+/* Black-matted photographs blend into either room without a visible image rectangle. */
+.objects { position: absolute; inset: 0; opacity: 1; mix-blend-mode: screen; transition: opacity 400ms ease; }
+.object { position: absolute; }
+.keepsake { display: block; width: 100%; height: auto; transform-origin: 50% 25%; }
+
+/* Keep the concert's red-and-blue pair together, outside the record column. */
+.balloonPair {
+  width: clamp(210px, 25vw, 570px);
+  top: 12%;
+  left: -1%;
+  opacity: .34;
+  transform: rotate(-7deg);
+  filter: brightness(.8) blur(.3px);
+}
+.balloonPair .keepsake { animation: balloon-drift 25s ease-in-out -8s infinite; }
+
+.far {
+  width: clamp(135px, 15vw, 360px);
+  top: 7%;
+  left: 3%;
+  opacity: .27;
+  transform: rotate(-27deg);
+  filter: saturate(.7) brightness(.72) blur(.4px);
+}
+.near {
+  width: clamp(220px, 23vw, 560px);
+  top: 47%;
+  right: -6%;
+  opacity: .2;
+  transform: rotate(24deg);
+  filter: saturate(.65) brightness(.75) blur(1.5px);
+}
+[data-theme='mayday'] .keepsake { transform-origin: 50% 15%; animation: carrot-sway 21s ease-in-out -6s infinite; }
+[data-theme='mayday'] .near .keepsake { animation-duration: 27s; animation-delay: -17s; animation-direction: reverse; }
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #10111666, transparent 19%, transparent 74%, #101116b3),
+    linear-gradient(90deg, transparent 10%, #191a2073 34%, #191a2026 50%, #191a2073 66%, transparent 91%);
+}
+[data-theme='mayday'] .vignette {
+  background:
+    linear-gradient(180deg, #19171355, transparent 20%, transparent 73%, #191713b3),
+    linear-gradient(90deg, transparent 12%, #2d271e66 35%, #2d271e26 50%, #2d271e66 66%, transparent 90%);
+}
+.grain { position: absolute; inset: 0; opacity: .045; mix-blend-mode: soft-light; }
+
+/* Reading and lyric selection take precedence over the ambient motion. */
+[data-subdued='true'] .objects { opacity: .16; }
+[data-subdued='true'] .keepsake { animation-play-state: paused; }
+
+@keyframes balloon-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+  50% { transform: translate3d(6px, -14px, 0) rotate(2deg); }
+}
+@keyframes carrot-sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@media (max-width: 1050px) and (min-width: 760px) {
+  .balloonPair { left: -8%; opacity: .27; }
+  .far { left: -3%; opacity: .25; }
+  .near { right: -10%; opacity: .18; }
+}
+
+@media (max-width: 759px) {
+  .far { display: none; }
+  .balloonPair { width: 205px; top: 25px; left: -68px; opacity: .24; }
+  .near { width: 200px; top: 22px; right: -93px; opacity: .2; transform: rotate(-24deg); }
+  [data-subdued='true'] .objects { opacity: 0; }
+  .grain { opacity: .035; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .objects { transition: none; }
+  .keepsake { animation: none !important; }
+}

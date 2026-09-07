@@ -1,0 +1,77 @@
+{
+  "id": "apple-1662768448",
+  "appleCollectionId": "1662768448",
+  "musicbrainzReleaseId": null,
+  "title": "盲婚啞嫁 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2023-01-09",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2023-01-09",
+      "sourceUrl": "https://musicbrainz.org/release-group/2c6f5c6e-1300-4106-aa7e-3f4d51c713ad"
+    }
+  ],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2023 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1662768448",
+    "path": "covers/1662768448-盲婚啞嫁 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5b/a6/0e/5ba60e85-c12a-638b-6de8-a6330e78fe06/23UMGIM00165.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5b/a6/0e/5ba60e85-c12a-638b-6de8-a6330e78fe06/23UMGIM00165.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 3134287,
+    "sha256": "69c0381b5d2e37448e5b788f7de9faf04b29471dfb87c661ec565485e522aa1f",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1662768449",
+      "albumId": "apple-1662768448",
+      "title": "盲婚啞嫁",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 223500,
+      "duration": "3:44",
+      "appleTrackId": "1662768449",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E7%9B%B2%E5%A9%9A%E5%95%9E%E5%AB%81/1662768448?i=1662768449&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/ad/ec/bc/adecbc21-8b17-73b0-e787-e58723aaf485/mzaf_13339913069989251134.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1662768448&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E7%9B%B2%E5%A9%9A%E5%95%9E%E5%AB%81-single/1662768448?uo=4",
+    "https://musicbrainz.org/release-group/2c6f5c6e-1300-4106-aa7e-3f4d51c713ad"
+  ],
+  "releaseGroupIds": [
+    "2c6f5c6e-1300-4106-aa7e-3f4d51c713ad"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 223500,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

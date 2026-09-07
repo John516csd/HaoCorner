@@ -1,0 +1,70 @@
+{
+  "id": "apple-1444408564",
+  "appleCollectionId": "1444408564",
+  "musicbrainzReleaseId": null,
+  "title": "放 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2017-05-18",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2017 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444408564",
+    "path": "covers/1444408564-放 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d1/31/f5/d131f578-866a-5389-cee9-d4b7b3fe7d12/17UMGIM96814.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d1/31/f5/d131f578-866a-5389-cee9-d4b7b3fe7d12/17UMGIM96814.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 2053532,
+    "sha256": "af9701de9a662288694daaa00d707cabce2f17ba8ef42a06bdfd4ad018f2c17e",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444408569",
+      "albumId": "apple-1444408564",
+      "title": "放",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 206000,
+      "duration": "3:26",
+      "appleTrackId": "1444408569",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E6%94%BE/1444408564?i=1444408569&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/b9/71/94/b97194f1-ff7c-9bf3-d5ec-c2334aa8c0e4/mzaf_1315984219452487259.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444408564&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E6%94%BE-single/1444408564?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 206000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

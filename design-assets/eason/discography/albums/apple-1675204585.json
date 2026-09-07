@@ -1,0 +1,67 @@
+{
+  "id": "apple-1675204585",
+  "appleCollectionId": "1675204585",
+  "musicbrainzReleaseId": null,
+  "title": "尘大师 - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2023-03-10",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "粤语流行",
+  "copyright": "℗ 2023 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1675204585",
+    "path": "covers/1675204585-尘大师 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/92/9e/25/929e251e-0745-7065-4022-a6e698b85016/21UMGIM63079.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/92/9e/25/929e251e-0745-7065-4022-a6e698b85016/21UMGIM63079.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 2169846,
+    "sha256": "5157e2ce2f66cc55a554cc2fc7e3ee99bd524392de6eced7b8f40f82b3878db3",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1675204602",
+      "albumId": "apple-1675204585",
+      "title": "尘大师",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 267500,
+      "duration": "4:28",
+      "appleTrackId": "1675204602",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E5%B0%98%E5%A4%A7%E5%B8%88/1675204585?i=1675204602",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/d2/92/d4/d292d437-b9db-26ce-7490-1d034e9014c1/mzaf_7136936851880389295.plus.aac.p.m4a",
+      "composer": "林家谦",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E5%B0%98%E5%A4%A7%E5%B8%88-single/1675204585?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E5%B0%98%E5%A4%A7%E5%B8%88-single/1675204585?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 267500,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

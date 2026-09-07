@@ -1,0 +1,69 @@
+{
+  "id": "apple-1444407972",
+  "appleCollectionId": "1444407972",
+  "musicbrainzReleaseId": null,
+  "title": "無限之城 (國) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2010-01-01",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "This Compilation ℗ 2010 Universal Music Ltd.",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444407972",
+    "path": "covers/1444407972-無限之城 (國) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/44/d9/d6/44d9d6bc-0ac9-e5ec-0fbe-1e8a4f580431/00602488992367.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/44/d9/d6/44d9d6bc-0ac9-e5ec-0fbe-1e8a4f580431/00602488992367.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 2247,
+    "height": 3000,
+    "bytes": 1714979,
+    "sha256": "58ed0e02e8f49673d61ede782a468c82941ba0732ce70c6c0ec14083d1aeeeba",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444407980",
+      "albumId": "apple-1444407972",
+      "title": "無限之城 (國)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 185400,
+      "duration": "3:05",
+      "appleTrackId": "1444407980",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E7%84%A1%E9%99%90%E4%B9%8B%E5%9F%8E-%E5%9C%8B/1444407972?i=1444407980&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/05/fd/6d/05fd6d47-d643-ebe8-a414-d401f74d8c5c/mzaf_3688945501759595894.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444407972&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E7%84%A1%E9%99%90%E4%B9%8B%E5%9F%8E-%E5%9C%8B-single/1444407972?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 185400,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

@@ -1,0 +1,78 @@
+{
+  "id": "apple-1445302735",
+  "appleCollectionId": "1445302735",
+  "musicbrainzReleaseId": null,
+  "title": "四季 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2016-09-29",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2016-09-21",
+      "sourceUrl": "https://musicbrainz.org/release-group/9fc0f546-067e-401f-9a56-fd9eb76b0d62"
+    }
+  ],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2016 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1445302735",
+    "path": "covers/1445302735-四季 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/a4/ee/f1/a4eef1d7-a350-8aa1-f394-d8d6813fb026/00602488602068.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/a4/ee/f1/a4eef1d7-a350-8aa1-f394-d8d6813fb026/00602488602068.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 579386,
+    "sha256": "c3ff07c8fbc21186fbebfb1c11975fccbdb2fd98d0074c7e2be38fa31b1f1f56",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1445302741",
+      "albumId": "apple-1445302735",
+      "title": "四季",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 244829,
+      "duration": "4:05",
+      "appleTrackId": "1445302741",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%9B%9B%E5%AD%A3/1445302735?i=1445302741&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/93/6b/de936b27-0d71-051e-a270-ad7a70488a25/mzaf_453530084219367409.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1445302735&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%9B%9B%E5%AD%A3-single/1445302735?uo=4",
+    "https://musicbrainz.org/release-group/9fc0f546-067e-401f-9a56-fd9eb76b0d62"
+  ],
+  "releaseGroupIds": [
+    "9fc0f546-067e-401f-9a56-fd9eb76b0d62"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 244829,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

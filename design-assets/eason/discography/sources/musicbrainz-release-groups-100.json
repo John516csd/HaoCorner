@@ -1,0 +1,30 @@
+{
+  "release-groups": [
+    {
+      "primary-type": "Album",
+      "disambiguation": "",
+      "first-release-date": "",
+      "title": "I Had a Great Time",
+      "secondary-type-ids": [],
+      "id": "20be69b2-058f-4053-a633-0b04a3c11f52",
+      "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+      "secondary-types": []
+    },
+    {
+      "id": "7c9c6095-67f5-4668-a5ec-5315ee0358cb",
+      "secondary-type-ids": [
+        "22a628ad-c082-3c4f-b1b6-d41665107b88"
+      ],
+      "secondary-types": [
+        "Soundtrack"
+      ],
+      "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+      "first-release-date": "2016-12-01",
+      "primary-type": "Single",
+      "disambiguation": "",
+      "title": "讓我留在你身邊"
+    }
+  ],
+  "release-group-offset": 100,
+  "release-group-count": 102
+}

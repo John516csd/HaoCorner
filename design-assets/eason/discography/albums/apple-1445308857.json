@@ -1,0 +1,75 @@
+{
+  "id": "apple-1445308857",
+  "appleCollectionId": "1445308857",
+  "musicbrainzReleaseId": null,
+  "title": "陪你度过漫长岁月 (\"陪安东​​尼度过漫长岁月\"电影主题曲) - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2015-10-22",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2015-10-14",
+      "sourceUrl": "https://musicbrainz.org/release-group/5b2b1dba-d8cc-441c-95a7-0c3c48fd7607"
+    }
+  ],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2015 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1445308857",
+    "path": "covers/1445308857-陪你度过漫长岁月 (_陪安东​​尼度过漫长岁月_电影主题曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8a/00/d7/8a00d71f-0138-d198-3c24-a05c0065b34a/00602488890953.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8a/00/d7/8a00d71f-0138-d198-3c24-a05c0065b34a/00602488890953.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1422879,
+    "sha256": "5a6c0f19ca4775cdb834ea84b220a5092c24e5df6f9f2c8cfe6855bdbe626d04",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1445308862",
+      "albumId": "apple-1445308857",
+      "title": "陪你度过漫长岁月 (\"陪安东​​尼度过漫长岁月\"电影主题曲)",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 242400,
+      "duration": "4:02",
+      "appleTrackId": "1445308862",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E9%99%AA%E4%BD%A0%E5%BA%A6%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88-%E9%99%AA%E5%AE%89%E4%B8%9C-%E5%B0%BC%E5%BA%A6%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88-%E7%94%B5%E5%BD%B1%E4%B8%BB%E9%A2%98%E6%9B%B2/1445308857?i=1445308862",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/a9/16/06a916df-0383-e3d7-14f8-82e4e7938390/mzaf_6325637529855103579.plus.aac.p.m4a",
+      "composer": "黎晓阳 & 谢国维",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E9%99%AA%E4%BD%A0%E5%BA%A6%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88-%E9%99%AA%E5%AE%89%E4%B8%9C-%E5%B0%BC%E5%BA%A6%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88-%E7%94%B5%E5%BD%B1%E4%B8%BB%E9%A2%98%E6%9B%B2-single/1445308857?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E9%99%AA%E4%BD%A0%E5%BA%A6%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88-%E9%99%AA%E5%AE%89%E4%B8%9C-%E5%B0%BC%E5%BA%A6%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88-%E7%94%B5%E5%BD%B1%E4%B8%BB%E9%A2%98%E6%9B%B2-single/1445308857?uo=4",
+    "https://musicbrainz.org/release-group/5b2b1dba-d8cc-441c-95a7-0c3c48fd7607"
+  ],
+  "releaseGroupIds": [
+    "5b2b1dba-d8cc-441c-95a7-0c3c48fd7607"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 242400,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

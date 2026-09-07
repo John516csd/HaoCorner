@@ -1,0 +1,25 @@
+{
+  "id": "1662774730",
+  "sourceUrl": "https://music.apple.com/cn/album/%E7%9B%B2%E5%A9%9A%E5%95%9E%E5%AB%81-single/1662774730?uo=4",
+  "storefront": "cn",
+  "tracks": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "collectionId": 1662774730,
+      "trackId": 1662774732,
+      "trackName": "盲婚哑嫁",
+      "artistName": "陈奕迅",
+      "collectionName": "盲婚啞嫁 - Single",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "trackTimeMillis": 223500,
+      "trackViewUrl": "https://music.apple.com/cn/album/%E7%9B%B2%E5%A9%9A%E5%93%91%E5%AB%81/1662774730?i=1662774732",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/68/2f/a7/682fa752-5236-fe4c-7a34-bcd764695144/mzaf_8007172679457933008.plus.aac.p.m4a",
+      "composer": "陈奕迅 & 林家谦",
+      "isStreamable": true,
+      "metadataSource": "Apple Music public album page",
+      "metadataSourceUrl": "https://music.apple.com/cn/album/%E7%9B%B2%E5%A9%9A%E5%95%9E%E5%AB%81-single/1662774730?uo=4"
+    }
+  ]
+}

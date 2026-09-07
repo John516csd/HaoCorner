@@ -1,0 +1,210 @@
+{
+  "builtAt": "2026-09-06T16:01:53.019293+00:00",
+  "collectionStartedOn": "2026-09-06",
+  "releaseVersionCount": 163,
+  "appleReleaseVersionCount": 144,
+  "supplementalReleaseRecordCount": 19,
+  "studioAlbumSelectionCount": 32,
+  "downloadedCoverCount": 148,
+  "audioTrackEntryCount": 1597,
+  "musicVideoEntryCount": 60,
+  "countingNote": "按发行版本计算曲目条目；同一歌曲在原版、精选、现场、重制和地区版中重复出现，音轨含 intro / interlude / 纯音乐。",
+  "types": {
+    "studio": 43,
+    "ep": 12,
+    "live": 17,
+    "compilation": 21,
+    "remix": 1,
+    "instrumental": 2,
+    "single": 67
+  },
+  "incompleteTrackLists": [
+    {
+      "id": "apple-1444164011",
+      "title": "Eason's Life 陳奕迅2013演唱會 (Deluxe Version)",
+      "declared": 23,
+      "collected": 22,
+      "notes": [
+        "Apple 声明 23 项，公开接口和专辑页返回 22 项；剩余 1 项类型及名称未获确认，未猜填。实体 2CD 普通版为 21 曲，不能用它替代 Deluxe 的目录。"
+      ]
+    }
+  ],
+  "missingCovers": [
+    {
+      "id": "mb-753015ea-05eb-4b32-a02e-84c10cb8116f",
+      "title": "Eason 18首選",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/753015ea-05eb-4b32-a02e-84c10cb8116f",
+        "https://musicbrainz.org/release-group/3585395b-708e-4b2f-89f9-5499b8312591"
+      ]
+    },
+    {
+      "id": "mb-797e7833-e52e-4c21-a4f3-7d37bb2b5333",
+      "title": "拉闊壓軸：林子祥 / 陳奕迅",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/797e7833-e52e-4c21-a4f3-7d37bb2b5333",
+        "https://musicbrainz.org/release-group/f91397d4-00f3-4726-8a27-f31439c7ed23"
+      ]
+    },
+    {
+      "id": "mb-3763f14e-d9bf-4805-9b1e-9fc0e9f7ebce",
+      "title": "陳奕迅&葉蒨文 903 id club 拉闊音樂會",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/3763f14e-d9bf-4805-9b1e-9fc0e9f7ebce",
+        "https://musicbrainz.org/release-group/e1954216-cd68-4fc1-8c76-62412f62667f"
+      ]
+    },
+    {
+      "id": "mb-d9538398-826f-4c7f-96a8-0434a3d5f741",
+      "title": "Crying in the Party",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/d9538398-826f-4c7f-96a8-0434a3d5f741",
+        "https://musicbrainz.org/release-group/ed09675b-7cf6-45f1-906d-0ec10135ef9b"
+      ]
+    },
+    {
+      "id": "mb-876539aa-e420-46ff-b1d3-e2ae163278e0",
+      "title": "路…一直都在",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/876539aa-e420-46ff-b1d3-e2ae163278e0",
+        "https://musicbrainz.org/release-group/c71a7075-c1a8-400d-bf5d-ee16652cca62"
+      ]
+    },
+    {
+      "id": "mb-222597bb-5615-40a0-8ec1-6b62e53a2c1e",
+      "title": "陳奕迅 Eason",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/222597bb-5615-40a0-8ec1-6b62e53a2c1e",
+        "https://musicbrainz.org/release-group/5778c157-8224-49b0-b058-a65598ca8335"
+      ]
+    },
+    {
+      "id": "mb-2c62288c-961f-43eb-9513-95168bdb7711",
+      "title": "Allegro, Opus 3.3 a.m.",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/2c62288c-961f-43eb-9513-95168bdb7711",
+        "https://musicbrainz.org/release-group/b204d030-dd68-4ac4-8036-23182f8a5ca6"
+      ]
+    },
+    {
+      "id": "mb-2039c348-f3c0-435d-95b4-496aeef114ba",
+      "title": "Super Master Series: Eason Chan 陳奕迅",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/2039c348-f3c0-435d-95b4-496aeef114ba",
+        "https://musicbrainz.org/release-group/713896c9-ae66-4171-8d12-2230a259b23f"
+      ]
+    },
+    {
+      "id": "mb-7d544874-4d31-4079-adb4-59ef254c6dee",
+      "title": "My Private Christmas Song",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/7d544874-4d31-4079-adb4-59ef254c6dee",
+        "https://musicbrainz.org/release-group/2bc72e45-4d29-4a72-80c2-a7c1a5094f42"
+      ]
+    },
+    {
+      "id": "mb-0fbcdfa2-32af-4828-9675-e051417997da",
+      "title": "等你愛我",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/0fbcdfa2-32af-4828-9675-e051417997da",
+        "https://musicbrainz.org/release-group/e0aeceab-317a-4ca2-896e-0e758af1c0e5"
+      ]
+    },
+    {
+      "id": "mb-d143252b-da65-4ce6-9b5f-37fb322b79b9",
+      "title": "Music Is Live 2011 903 id club 陳奕迅 x 楊千嬅 x 梁漢文",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/d143252b-da65-4ce6-9b5f-37fb322b79b9",
+        "https://musicbrainz.org/release-group/a1566495-a496-4c59-b4c3-0e60e2af915b"
+      ]
+    },
+    {
+      "id": "mb-6cdf6e53-a493-4001-839a-74acc148576f",
+      "title": "主旋律",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/6cdf6e53-a493-4001-839a-74acc148576f",
+        "https://musicbrainz.org/release-group/2b2fc927-98cc-4b36-a8d2-edb4f36a7ed6"
+      ]
+    },
+    {
+      "id": "mb-12cd8314-0bde-4987-80a7-3a70cb11525a",
+      "title": "十年經典",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/12cd8314-0bde-4987-80a7-3a70cb11525a",
+        "https://musicbrainz.org/release-group/bf503b69-4e5e-4f90-9c78-e1a2bf535522"
+      ]
+    },
+    {
+      "id": "mb-8c99dea6-6631-4fe8-9ebc-8eda672893fb",
+      "title": "十面埋伏",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/8c99dea6-6631-4fe8-9ebc-8eda672893fb",
+        "https://musicbrainz.org/release-group/83d9a24f-83b2-4e03-b763-5fe574911a57"
+      ]
+    },
+    {
+      "id": "mb-4093cc15-8db0-4607-a79b-e689d022cd0d",
+      "title": "903id Club 拉阔音乐会",
+      "sourceUrls": [
+        "https://musicbrainz.org/release/4093cc15-8db0-4607-a79b-e689d022cd0d",
+        "https://musicbrainz.org/release-group/6642389a-9cf6-44db-97c9-6033bff83b42"
+      ]
+    }
+  ],
+  "reviewRequired": [
+    {
+      "id": "mb-d143252b-da65-4ce6-9b5f-37fb322b79b9",
+      "title": "Music Is Live 2011 903 id club 陳奕迅 x 楊千嬅 x 梁漢文",
+      "notes": [
+        "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+        "发行信息仍需复核；暂不进入录音室专辑展示清单。",
+        "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+      ]
+    },
+    {
+      "id": "mb-8c99dea6-6631-4fe8-9ebc-8eda672893fb",
+      "title": "十面埋伏",
+      "notes": [
+        "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+        "发行信息仍需复核；暂不进入录音室专辑展示清单。",
+        "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+      ]
+    },
+    {
+      "id": "mb-4093cc15-8db0-4607-a79b-e689d022cd0d",
+      "title": "903id Club 拉阔音乐会",
+      "notes": [
+        "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+        "发行信息仍需复核；暂不进入录音室专辑展示清单。",
+        "可能是 2011 合作现场发行的部分曲目版本；两份源记录分别保留，勿按独立新专辑计数。",
+        "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+      ]
+    }
+  ],
+  "knownUncollectedFormats": [
+    {
+      "title": "超人迪加",
+      "note": "历史目录中的 EP 发行形态及曲序待核实；相关歌曲已收录于现有专辑。",
+      "url": "https://en.wikipedia.org/wiki/Eason_Chan_discography"
+    },
+    {
+      "title": "Big Live 陳奕迅大個唱 99",
+      "note": "独立演唱会 VCD/DVD 发行，未采集视频载体的完整章节与包装。",
+      "url": "https://www.yesasia.com/us/big-live-easons-dvd-karaoke-99/1000001689-0-0-0-en/info.html"
+    },
+    {
+      "title": "加州紅紅人館 903 狂熱份子音樂會",
+      "note": "早期演唱会影碟发行，未获得可核对的完整曲序与封面。",
+      "url": "https://en.wikipedia.org/wiki/Eason_Chan_discography"
+    }
+  ],
+  "excludedReleaseGroups": {
+    "20be69b2-058f-4053-a633-0b04a3c11f52": "Cancelled release: I Had a Great Time was not independently released.",
+    "2173430c-b478-4ee8-8120-18d8ca845132": "Conflicting artist credit: Superboy & Connie Chen. Do not include as a verified Eason Chan release."
+  },
+  "limitations": [
+    "这是四个 Apple 地区目录及 MusicBrainz 交叉核对后的素材快照，不是全球所有压片、再版及影音发行的完整权威全集。",
+    "不同来源的首发日期存在差异，保留来源原值；32 张录音室清单的 originalYear 单独用于时间顺序展示。",
+    "补充记录中的独立单曲和实体版本封面无法获取时保留空值，未合成或挪用其他专辑封面。"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "apple-1539122228",
+  "appleCollectionId": "1539122228",
+  "musicbrainzReleaseId": null,
+  "title": "是但求其愛 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2020-11-20",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2020-11-20",
+      "sourceUrl": "https://musicbrainz.org/release-group/e5af222c-ad78-4174-9460-2d98e21e00aa"
+    }
+  ],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2020 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1539122228",
+    "path": "covers/1539122228-是但求其愛 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/85/f2/3e/85f23ece-35fa-9af7-90dc-10d25cc18b5f/20UMGIM98821.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/85/f2/3e/85f23ece-35fa-9af7-90dc-10d25cc18b5f/20UMGIM98821.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1745873,
+    "sha256": "a98931e4baa539e79847bdbacf0ad97092f0579ee9aba92581527d93fe1ecf9d",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1539122249",
+      "albumId": "apple-1539122228",
+      "title": "是但求其愛",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 269000,
+      "duration": "4:29",
+      "appleTrackId": "1539122249",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E6%98%AF%E4%BD%86%E6%B1%82%E5%85%B6%E6%84%9B/1539122228?i=1539122249&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/35/8e/60/358e600f-dfa6-c9f0-f0ea-fba399e9577f/mzaf_11696033282507032127.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1539122228&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E6%98%AF%E4%BD%86%E6%B1%82%E5%85%B6%E6%84%9B-single/1539122228?uo=4",
+    "https://musicbrainz.org/release-group/e5af222c-ad78-4174-9460-2d98e21e00aa"
+  ],
+  "releaseGroupIds": [
+    "e5af222c-ad78-4174-9460-2d98e21e00aa"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 269000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

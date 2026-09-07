@@ -1,0 +1,70 @@
+{
+  "id": "apple-1536075322",
+  "appleCollectionId": "1536075322",
+  "musicbrainzReleaseId": null,
+  "title": "致明日的舞 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2020-10-21",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2020 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1536075322",
+    "path": "covers/1536075322-致明日的舞 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/22/e3/c4/22e3c419-2e4b-5755-6f06-e3b4683564a6/20UMGIM92977.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/22/e3/c4/22e3c419-2e4b-5755-6f06-e3b4683564a6/20UMGIM92977.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 3619519,
+    "sha256": "33d4a2f442fe6454c79d776eb04f4a162f3ccf25d4083af4cf3564775c532e7f",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1536075331",
+      "albumId": "apple-1536075322",
+      "title": "致明日的舞",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 210725,
+      "duration": "3:31",
+      "appleTrackId": "1536075331",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E8%87%B4%E6%98%8E%E6%97%A5%E7%9A%84%E8%88%9E/1536075322?i=1536075331&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/da/62/b4/da62b400-fe8b-6668-34fe-7339e769988c/mzaf_6218906419543223809.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1536075322&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E8%87%B4%E6%98%8E%E6%97%A5%E7%9A%84%E8%88%9E-single/1536075322?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 210725,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

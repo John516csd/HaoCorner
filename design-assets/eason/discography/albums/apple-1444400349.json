@@ -1,0 +1,70 @@
+{
+  "id": "apple-1444400349",
+  "appleCollectionId": "1444400349",
+  "musicbrainzReleaseId": null,
+  "title": "披風 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2017-05-18",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2017 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444400349",
+    "path": "covers/1444400349-披風 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/3d/7d/67/3d7d6746-9f09-e746-12b9-c15bc4e6b2f3/17UMGIM96815.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/3d/7d/67/3d7d6746-9f09-e746-12b9-c15bc4e6b2f3/17UMGIM96815.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1046071,
+    "sha256": "78c43bba3869accd2148bf877caa7805aa628b5d439a236a8733c4e4703b1e4e",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444400353",
+      "albumId": "apple-1444400349",
+      "title": "披風",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 236000,
+      "duration": "3:56",
+      "appleTrackId": "1444400353",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E6%8A%AB%E9%A2%A8/1444400349?i=1444400353&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/88/07/d5/8807d592-9d85-bc06-d3af-ad71ffbb4e02/mzaf_8975952742776277444.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444400349&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E6%8A%AB%E9%A2%A8-single/1444400349?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 236000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

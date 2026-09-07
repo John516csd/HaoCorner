@@ -1,0 +1,75 @@
+{
+  "id": "apple-1580332948",
+  "appleCollectionId": "1580332948",
+  "musicbrainzReleaseId": null,
+  "title": "不期而遇的夏天 (電影《不期而遇的夏天》主題曲) - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2021-08-17",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2021-09-15",
+      "sourceUrl": "https://musicbrainz.org/release-group/067bd0bf-a596-430a-9c79-ed86f28e4259"
+    }
+  ],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2021 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1580332948",
+    "path": "covers/1580332948-不期而遇的夏天 (電影《不期而遇的夏天》主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ac/a5/76/aca576d7-3de6-1975-20be-66ae6b4f10c7/21UMGIM77714.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ac/a5/76/aca576d7-3de6-1975-20be-66ae6b4f10c7/21UMGIM77714.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1074318,
+    "sha256": "64e53e3b097813c6c59c1c62b69a560d5f8d63fdba3472939868aae76ca0af5e",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1580332949",
+      "albumId": "apple-1580332948",
+      "title": "不期而遇的夏天 (电影《不期而遇的夏天》主题曲)",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 210000,
+      "duration": "3:30",
+      "appleTrackId": "1580332949",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E7%94%B5%E5%BD%B1-%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E4%B8%BB%E9%A2%98%E6%9B%B2/1580332948?i=1580332949",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/58/1c/ba/581cba0f-c076-bf69-7cfe-8e2fcaafff02/mzaf_15556374915908372598.plus.aac.p.m4a",
+      "composer": "梁翘柏",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E9%9B%BB%E5%BD%B1-%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1580332948?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E9%9B%BB%E5%BD%B1-%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1580332948?uo=4",
+    "https://musicbrainz.org/release-group/067bd0bf-a596-430a-9c79-ed86f28e4259"
+  ],
+  "releaseGroupIds": [
+    "067bd0bf-a596-430a-9c79-ed86f28e4259"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 210000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

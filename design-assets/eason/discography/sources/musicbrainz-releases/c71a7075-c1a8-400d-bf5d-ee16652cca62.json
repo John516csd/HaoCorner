@@ -1,0 +1,121 @@
+{
+  "release-count": 1,
+  "releases": [
+    {
+      "title": "Lu... Yi Zhi Du Zai",
+      "artist-credit": [
+        {
+          "name": "Eason Chan",
+          "artist": {
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Chan, Eason",
+            "country": "HK",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "name": "陳奕迅",
+            "type": "Person",
+            "disambiguation": "Hong Kong singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "asin": null,
+      "country": "FR",
+      "release-events": [
+        {
+          "date": "2008-04-23",
+          "area": {
+            "id": "08310658-51eb-3801-80de-5a0739207115",
+            "sort-name": "France",
+            "iso-3166-1-codes": [
+              "FR"
+            ],
+            "type-id": null,
+            "disambiguation": "",
+            "type": null,
+            "name": "France"
+          }
+        }
+      ],
+      "cover-art-archive": {
+        "front": false,
+        "count": 0,
+        "darkened": false,
+        "artwork": false,
+        "back": false
+      },
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "disambiguation": "",
+      "status": "Official",
+      "id": "876539aa-e420-46ff-b1d3-e2ae163278e0",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "media": [
+        {
+          "track-offset": 0,
+          "title": "",
+          "tracks": [
+            {
+              "title": "Lu... Yi Zhi Du Zai",
+              "recording": {
+                "title": "路…一直都在",
+                "disambiguation": "",
+                "video": false,
+                "first-release-date": "2008-04-23",
+                "id": "af5ecada-d260-4fbb-a18a-52d05c3ea998",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": 278000
+              },
+              "number": "1",
+              "id": "5c4986ba-8206-303f-aa95-e7bd68da83f2",
+              "artist-credit": [
+                {
+                  "name": "Eason Chan",
+                  "artist": {
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 1,
+              "length": 278000
+            }
+          ],
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "format": "Digital Media",
+          "position": 1,
+          "track-count": 1,
+          "id": "25556429-6cc9-326c-b3e8-f792fe57d8fd"
+        }
+      ],
+      "label-info": [],
+      "quality": "normal",
+      "text-representation": {
+        "language": "zho",
+        "script": "Latn"
+      },
+      "date": "2008-04-23",
+      "packaging": "None",
+      "barcode": null
+    }
+  ],
+  "release-offset": 0
+}

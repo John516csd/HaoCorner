@@ -1,0 +1,69 @@
+{
+  "id": "apple-1719930482",
+  "appleCollectionId": "1719930482",
+  "musicbrainzReleaseId": null,
+  "title": "Every One - Single",
+  "artist": "譚晶, 陳奕迅, 容祖兒, 王光良, 莫文蔚, 古巨基, 李宇春, 蔡卓妍, 張杰, 韓磊, 陳明, 宋雪萊 & 江若琳",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2023-07-10",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2023 北京能量悦动文化传媒有限公司",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1719930482",
+    "path": "covers/1719930482-Every One - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/77/f4/03/77f403ca-d23a-f32b-3786-2df63a1646ea/4711280060917.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/77/f4/03/77f403ca-d23a-f32b-3786-2df63a1646ea/4711280060917.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 461617,
+    "sha256": "49f15507826d943cb6df18b83f92b3f4be538dd8f4ce56617c1e5b2f692cb28e",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1719930483",
+      "albumId": "apple-1719930482",
+      "title": "Every One",
+      "artist": "譚晶, 陳奕迅, 容祖兒, 王光良, 莫文蔚, 古巨基, 李宇春, 蔡卓妍, 張杰, 韓磊, 陳明, 宋雪萊 & 江若琳",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 323560,
+      "duration": "5:24",
+      "appleTrackId": "1719930483",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/every-one/1719930482?i=1719930483&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/06/ab/1d/06ab1d38-ea01-31e2-a7f3-f328bb83acab/mzaf_2103597912449865890.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1719930482&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/every-one-single/1719930482?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 323560,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

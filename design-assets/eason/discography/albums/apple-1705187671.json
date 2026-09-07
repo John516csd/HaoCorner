@@ -1,0 +1,70 @@
+{
+  "id": "apple-1705187671",
+  "appleCollectionId": "1705187671",
+  "musicbrainzReleaseId": null,
+  "title": "Special One (feat. Eason Chan) - Single",
+  "artist": "AGA",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2023-09-08",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2023 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1705187671",
+    "path": "covers/1705187671-Special One (feat. Eason Chan) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f8/1c/e4/f81ce4e0-ac7d-94b9-08b8-1b31e170242b/23UM1IM01686.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f8/1c/e4/f81ce4e0-ac7d-94b9-08b8-1b31e170242b/23UM1IM01686.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 636133,
+    "sha256": "084c912b294ad5ae5b0871fef3518644d53913e2c8e18be09ef8099a9706ab29",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1705187987",
+      "albumId": "apple-1705187671",
+      "title": "Special One (feat. 陳奕迅)",
+      "artist": "AGA",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 283269,
+      "duration": "4:43",
+      "appleTrackId": "1705187987",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/special-one-feat-%E9%99%B3%E5%A5%95%E8%BF%85/1705187671?i=1705187987&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c2/d0/78/c2d07872-f64c-c841-a3a6-348cf59463b0/mzaf_17636427818385784603.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1705187671&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/special-one-feat-eason-chan-single/1705187671?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 283269,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

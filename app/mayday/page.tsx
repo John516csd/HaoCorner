@@ -21,5 +21,5 @@ export const metadata: Metadata = {
 }
 
 export default function MaydayPage() {
-  return <VinylRoom key="mayday" albums={albums} artist="五月天" artistEnglish="MAYDAY" edition="002" minimalDetail />
+  return <VinylRoom key="mayday" theme="mayday" albums={albums} artist="五月天" artistEnglish="MAYDAY" edition="002" minimalDetail />
 }

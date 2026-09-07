@@ -1,0 +1,75 @@
+{
+  "id": "apple-1446857587",
+  "appleCollectionId": "1446857587",
+  "musicbrainzReleaseId": null,
+  "title": "在這個世界相遇 (動畫電影《大魚海棠》主題曲) - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2016-06-16",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2016-06-16",
+      "sourceUrl": "https://musicbrainz.org/release-group/daa59df8-ee41-442c-91af-179914588b23"
+    }
+  ],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2016 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1446857587",
+    "path": "covers/1446857587-在這個世界相遇 (動畫電影《大魚海棠》主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/69/34/7f/69347fd1-f7b3-83ae-c9e9-a1456a9274f1/00602488898126.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/69/34/7f/69347fd1-f7b3-83ae-c9e9-a1456a9274f1/00602488898126.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1324856,
+    "sha256": "67306ec23b6b49d424a90ce4f957344682d96351f177d543f1bbf33852e454b9",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1446857832",
+      "albumId": "apple-1446857587",
+      "title": "在这个世界相遇 (动画电影《大鱼海棠》主题曲)",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 309390,
+      "duration": "5:09",
+      "appleTrackId": "1446857832",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E5%9C%A8%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E7%9B%B8%E9%81%87-%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1-%E5%A4%A7%E9%B1%BC%E6%B5%B7%E6%A3%A0-%E4%B8%BB%E9%A2%98%E6%9B%B2/1446857587?i=1446857832",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a8/1e/73/a81e73d0-03a9-ee2d-9b7b-5694c55cb34a/mzaf_15331794695266196915.plus.aac.p.m4a",
+      "composer": "窦鹏",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E5%9C%A8%E9%80%99%E5%80%8B%E4%B8%96%E7%95%8C%E7%9B%B8%E9%81%87-%E5%8B%95%E7%95%AB%E9%9B%BB%E5%BD%B1-%E5%A4%A7%E9%AD%9A%E6%B5%B7%E6%A3%A0-%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1446857587?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E5%9C%A8%E9%80%99%E5%80%8B%E4%B8%96%E7%95%8C%E7%9B%B8%E9%81%87-%E5%8B%95%E7%95%AB%E9%9B%BB%E5%BD%B1-%E5%A4%A7%E9%AD%9A%E6%B5%B7%E6%A3%A0-%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1446857587?uo=4",
+    "https://musicbrainz.org/release-group/daa59df8-ee41-442c-91af-179914588b23"
+  ],
+  "releaseGroupIds": [
+    "daa59df8-ee41-442c-91af-179914588b23"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 309390,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

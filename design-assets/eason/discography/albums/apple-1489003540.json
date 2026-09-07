@@ -1,0 +1,69 @@
+{
+  "id": "apple-1489003540",
+  "appleCollectionId": "1489003540",
+  "musicbrainzReleaseId": null,
+  "title": "Shall We Talk (Tre Lune MMXIX) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2020-07-15",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2020 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1489003540",
+    "path": "covers/1489003540-Shall We Talk (Tre Lune MMXIX) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/2d/3c/cc/2d3ccc52-636a-3daf-60ca-9a480ba1ae5b/19UM1IM03246.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/2d/3c/cc/2d3ccc52-636a-3daf-60ca-9a480ba1ae5b/19UM1IM03246.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1091445,
+    "sha256": "436879305c3849982e2c6a47f41abf1d8c12ddf88f46795da62ecdd127cacdd9",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1489003542",
+      "albumId": "apple-1489003540",
+      "title": "Shall We Talk (Tre Lune MMXIX)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 263980,
+      "duration": "4:24",
+      "appleTrackId": "1489003542",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/shall-we-talk-tre-lune-mmxix/1489003540?i=1489003542&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d7/31/41/d7314168-98ca-1f2f-a277-af7fa100a61e/mzaf_8392904453218621588.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1489003540&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/shall-we-talk-tre-lune-mmxix-single/1489003540?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 263980,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

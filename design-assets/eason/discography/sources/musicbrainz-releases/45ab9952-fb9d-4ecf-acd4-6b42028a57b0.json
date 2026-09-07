@@ -1,0 +1,2274 @@
+{
+  "releases": [
+    {
+      "barcode": "4895087605431",
+      "packaging": "Jewel Case",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "id": "69ab0add-aaab-4be4-af1f-e67e946e1f8e",
+      "media": [
+        {
+          "tracks": [
+            {
+              "recording": {
+                "title": "每一個明天",
+                "disambiguation": "",
+                "video": false,
+                "first-release-date": "2008-12-23",
+                "id": "96d47569-3e3d-463b-b0ad-e90df69ed5ba",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": null
+              },
+              "title": "每一個明天",
+              "number": "1",
+              "position": 1,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "id": "0e24ae8f-fedd-4e0a-8636-877da3ad5ffa",
+              "length": null
+            },
+            {
+              "number": "2",
+              "title": "K歌之王",
+              "recording": {
+                "disambiguation": "Cantonese",
+                "title": "K歌之王",
+                "video": false,
+                "id": "fcf2e1c6-8587-4b94-80d8-121f12b84d87",
+                "first-release-date": "2000-09-22",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    }
+                  }
+                ],
+                "length": 223000
+              },
+              "length": null,
+              "id": "90679690-8a8c-4a33-b465-e4186e1fd816",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 2
+            },
+            {
+              "number": "3",
+              "recording": {
+                "id": "253f0458-b633-4e10-a5c4-f46653b68761",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "length": null,
+                "disambiguation": "",
+                "title": "與我常在",
+                "video": false
+              },
+              "title": "與我常在",
+              "length": null,
+              "position": 3,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "id": "779ed005-b854-4954-ad9d-f3024b6d5da6"
+            },
+            {
+              "id": "34bd9550-f720-40b7-baae-88ced5224de3",
+              "position": 4,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "length": null,
+              "title": "歲月如歌",
+              "recording": {
+                "disambiguation": "",
+                "title": "歲月如歌",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    }
+                  }
+                ],
+                "id": "6826cc9e-7c34-44ed-9086-7185e7e75e8a",
+                "first-release-date": "2008-12-23",
+                "length": null
+              },
+              "number": "4"
+            },
+            {
+              "number": "5",
+              "recording": {
+                "video": false,
+                "title": "幸福摩天輪",
+                "disambiguation": "",
+                "length": null,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    }
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "51654b98-83d1-4dfc-ab07-1618c9d9df03"
+              },
+              "title": "幸福摩天輪",
+              "length": null,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 5,
+              "id": "a2c4e393-0082-4093-9f5d-59ccdc5af0bf"
+            },
+            {
+              "length": null,
+              "id": "1735784d-a373-48aa-b231-596ab871d228",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "position": 6,
+              "number": "6",
+              "title": "明年今日",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "title": "明年今日",
+                "length": null,
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "id": "28527633-2172-446d-8f73-65be307a01d5",
+                "first-release-date": "2008-12-23"
+              }
+            },
+            {
+              "length": null,
+              "id": "c455ca0f-2df5-409b-9ad0-b210949a7894",
+              "position": 7,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "number": "7",
+              "title": "時代曲",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ],
+                "id": "6de51a38-f5de-431f-8bf1-80d8e22c8501",
+                "first-release-date": "2008-12-23",
+                "length": null,
+                "disambiguation": "",
+                "title": "時代曲",
+                "video": false
+              }
+            },
+            {
+              "id": "e19f0448-9f7f-453c-a185-ffe5664b6c89",
+              "position": 8,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  }
+                }
+              ],
+              "length": null,
+              "title": "十面埋伏",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "title": "十面埋伏",
+                "length": null,
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "id": "a3d822dd-8751-485f-b4e1-5026393a56b7",
+                "first-release-date": "2008-12-23"
+              },
+              "number": "8"
+            },
+            {
+              "number": "9",
+              "recording": {
+                "first-release-date": "2008-12-23",
+                "id": "27e4fe2f-a82f-4d34-ad1c-308899fd2fa0",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": null,
+                "title": "天下無雙",
+                "disambiguation": "",
+                "video": false
+              },
+              "title": "天下無雙",
+              "length": null,
+              "position": 9,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "id": "6020d716-100c-4fb1-b42f-6b1138ab16ff"
+            },
+            {
+              "position": 10,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "id": "e4c23122-7a08-476a-9fd8-167e19a13ffa",
+              "length": null,
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "c1c6c522-b54a-4fc7-a4cc-16a64555e0b8",
+                "length": null,
+                "title": "傷信",
+                "disambiguation": "",
+                "video": false
+              },
+              "title": "傷信",
+              "number": "10"
+            },
+            {
+              "number": "11",
+              "recording": {
+                "title": "我甚麼都沒有",
+                "disambiguation": "",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "67856253-6748-4fe3-a080-bf3e31d0126c",
+                "length": null
+              },
+              "title": "我甚麼都沒有",
+              "length": null,
+              "position": 11,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "id": "3eda3cab-3b3f-4764-9693-a3d94b642208"
+            },
+            {
+              "title": "Shall We Talk",
+              "recording": {
+                "length": null,
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "ea62a84b-fb55-43ac-a1cb-6dd14f9153cc",
+                "video": false,
+                "title": "Shall We Talk",
+                "disambiguation": ""
+              },
+              "number": "12",
+              "id": "1f81cd5b-23f8-4fc9-a05a-21b28f4f8c5c",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 12,
+              "length": null
+            },
+            {
+              "length": null,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 13,
+              "id": "495b4ef8-18ed-4057-ae23-48f21d957b4b",
+              "number": "13",
+              "recording": {
+                "first-release-date": "2006-02-09",
+                "id": "51aa0ba1-4fb2-4bfa-a10b-490430d1193e",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "length": 251786,
+                "title": "打回原形",
+                "disambiguation": "",
+                "video": false
+              },
+              "title": "打回原形"
+            },
+            {
+              "length": null,
+              "id": "64d296d1-d96b-4e64-8463-b9ea1ce73f68",
+              "position": 14,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "number": "14",
+              "title": "單車",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "title": "單車",
+                "length": null,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK"
+                    }
+                  }
+                ],
+                "id": "33ecd329-4010-4baa-b0bb-7c84699a7684",
+                "first-release-date": "2008-12-23"
+              }
+            },
+            {
+              "id": "102643ca-0869-4acb-a1e0-9a9df11afb8c",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  }
+                }
+              ],
+              "position": 15,
+              "length": null,
+              "title": "美滿人生",
+              "recording": {
+                "first-release-date": "2008-12-23",
+                "id": "b8a9d5da-9643-4692-84e7-c360e9fd9d6d",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": null,
+                "title": "美滿人生",
+                "disambiguation": "",
+                "video": false
+              },
+              "number": "15"
+            },
+            {
+              "length": null,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 16,
+              "id": "d29d92f9-650e-45d0-b8bd-eb6ecca6c5e7",
+              "number": "16",
+              "recording": {
+                "length": null,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ],
+                "id": "9f9f5a1b-b9d9-4402-8a30-5f5282e252b6",
+                "first-release-date": "2008-12-23",
+                "video": false,
+                "disambiguation": "",
+                "title": "新曲加精選"
+              },
+              "title": "新曲加精選"
+            }
+          ],
+          "title": "",
+          "track-offset": 0,
+          "id": "e92adef1-0472-31dc-aed4-5ac2ce80cd34",
+          "track-count": 16,
+          "position": 1,
+          "format": "CD",
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31"
+        },
+        {
+          "track-offset": 0,
+          "tracks": [
+            {
+              "id": "4c3deef2-91e0-4dcf-90a9-0169a0492d10",
+              "position": 1,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "length": null,
+              "title": "我的快樂時代",
+              "recording": {
+                "video": false,
+                "title": "我的快樂時代",
+                "disambiguation": "",
+                "length": null,
+                "first-release-date": "2008-12-23",
+                "id": "b32f934a-dcda-46de-81cf-27a14ae02e8e",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    }
+                  }
+                ]
+              },
+              "number": "1"
+            },
+            {
+              "number": "2",
+              "title": "你的背包",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "92001048-657c-40e4-925e-aba319a4bcc7",
+                "length": null,
+                "title": "你的背包",
+                "disambiguation": "",
+                "video": false
+              },
+              "length": null,
+              "id": "7cef5b72-82fe-429d-a2ab-d0c7403c525b",
+              "position": 2,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ""
+                }
+              ]
+            },
+            {
+              "title": "時光倒流20年",
+              "recording": {
+                "video": false,
+                "title": "時光倒流20年",
+                "disambiguation": "",
+                "length": null,
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "e1dd58e9-3975-41d1-8cd5-3773ad8a5dac"
+              },
+              "number": "3",
+              "id": "c35d892e-dc5e-49d8-9f9f-23271052cc94",
+              "position": 3,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "type": "Person"
+                  }
+                }
+              ],
+              "length": null
+            },
+            {
+              "position": 4,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "type": "Person"
+                  }
+                }
+              ],
+              "id": "0c10f371-e645-4ac0-8c0a-05ce6326ac30",
+              "length": null,
+              "recording": {
+                "length": null,
+                "id": "6b970b7a-bdc3-45b9-898e-60c7597fe2a2",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    }
+                  }
+                ],
+                "video": false,
+                "disambiguation": "",
+                "title": "謝謝儂"
+              },
+              "title": "謝謝儂",
+              "number": "4"
+            },
+            {
+              "id": "938840fb-69ae-4412-acd1-4327633bb482",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  }
+                }
+              ],
+              "position": 5,
+              "length": null,
+              "title": "新生活",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "id": "cfb7913e-9975-4e22-a7f0-fc720a2b32de",
+                "first-release-date": "2008-12-23",
+                "length": null,
+                "disambiguation": "",
+                "title": "新生活",
+                "video": false
+              },
+              "number": "5"
+            },
+            {
+              "id": "f1619eb9-2652-4f3f-b6b9-8e5ccaef452c",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 6,
+              "length": null,
+              "title": "1874",
+              "recording": {
+                "length": null,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    }
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "7019aa4d-01f6-4c59-a6c3-c7090bad6e28",
+                "video": false,
+                "title": "1874",
+                "disambiguation": ""
+              },
+              "number": "6"
+            },
+            {
+              "recording": {
+                "title": "貝多芬與我",
+                "disambiguation": "",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    }
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "dabf41a4-eac8-4457-9a80-815de5a5abee",
+                "length": null
+              },
+              "title": "貝多芬與我",
+              "number": "7",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "type": "Person"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 7,
+              "id": "53634350-e5e6-4faf-afa1-e29d29786cda",
+              "length": null
+            },
+            {
+              "length": null,
+              "id": "8e354aa1-ff94-4064-a061-e731d63b2066",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 8,
+              "number": "8",
+              "title": "人來人住",
+              "recording": {
+                "length": null,
+                "first-release-date": "2008-12-23",
+                "id": "95f6b2a1-1b81-4095-8498-34b13aded74c",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "video": false,
+                "title": "人來人住",
+                "disambiguation": ""
+              }
+            },
+            {
+              "title": "今日",
+              "recording": {
+                "video": false,
+                "title": "今日",
+                "disambiguation": "",
+                "length": null,
+                "first-release-date": "2008-12-23",
+                "id": "ab2c09b6-6fca-4207-9860-93119309d1ed",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "number": "9",
+              "id": "1fd7c120-72e3-47c9-96fd-1b77a9b88906",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "position": 9,
+              "length": null
+            },
+            {
+              "title": "綿綿",
+              "recording": {
+                "length": null,
+                "id": "25d18035-c265-4c1c-bc25-6d201eb0b738",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "video": false,
+                "disambiguation": "",
+                "title": "綿綿"
+              },
+              "number": "10",
+              "id": "9b603e0a-9c6b-4823-b575-531b23ac8603",
+              "position": 10,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "length": null
+            },
+            {
+              "length": null,
+              "id": "f9a4333f-0bfb-4a21-b388-061343102ab7",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 11,
+              "number": "11",
+              "title": "黃金時代",
+              "recording": {
+                "id": "268566d7-1c0b-4aa5-81b3-1112b0c38b26",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "length": null,
+                "disambiguation": "",
+                "title": "黃金時代",
+                "video": false
+              }
+            },
+            {
+              "length": null,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 12,
+              "id": "fefad72e-264e-4d1d-9e59-4d6860cf47b1",
+              "number": "12",
+              "recording": {
+                "disambiguation": "",
+                "title": "低等動物",
+                "video": false,
+                "id": "3a6a2d99-32d8-4f60-9047-c37ab6ceef1c",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": null
+              },
+              "title": "低等動物"
+            },
+            {
+              "id": "ac57cc33-8efd-4fa0-ac21-2e8dbaa4493d",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 13,
+              "length": null,
+              "title": "阿士匹靈",
+              "recording": {
+                "title": "阿士匹靈",
+                "disambiguation": "",
+                "video": false,
+                "first-release-date": "2008-12-23",
+                "id": "a30251c2-1384-452f-815f-c02d0543fb0a",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": null
+              },
+              "number": "13"
+            },
+            {
+              "length": null,
+              "id": "3fb2a4f3-f57d-494a-a469-076d43cd16ec",
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 14,
+              "number": "14",
+              "title": "活著多好",
+              "recording": {
+                "first-release-date": "2008-12-23",
+                "id": "feb87804-1bd1-4d36-8a90-b8af97042651",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "length": null,
+                "title": "活著多好",
+                "disambiguation": "",
+                "video": false
+              }
+            },
+            {
+              "length": null,
+              "position": 15,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  }
+                }
+              ],
+              "id": "549e0817-f8eb-4381-ad0a-11392dde4074",
+              "number": "15",
+              "recording": {
+                "title": "Lonely Christmas",
+                "disambiguation": "",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "3a7389d4-aa76-43c5-9406-01b86536291f",
+                "length": null
+              },
+              "title": "Lonely Christmas"
+            },
+            {
+              "number": "16",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "id": "79dc8326-e152-4bc7-9b76-4f1341b918c6",
+                "first-release-date": "2008-12-23",
+                "length": null,
+                "disambiguation": "",
+                "title": "昨日",
+                "video": false
+              },
+              "title": "昨日",
+              "length": null,
+              "position": 16,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  }
+                }
+              ],
+              "id": "32c32a4d-d906-4473-aed8-511c8bd747d1"
+            }
+          ],
+          "title": "",
+          "format": "CD",
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "position": 2,
+          "id": "da7a3b74-5099-32ac-978c-75450279ad33",
+          "track-count": 16
+        },
+        {
+          "track-offset": 0,
+          "title": "",
+          "tracks": [
+            {
+              "position": 1,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "id": "9791c11d-bd4b-4b19-a196-612c8414a435",
+              "length": null,
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "e715d5e2-38f9-4a81-a20a-97e693b193ca",
+                "length": null,
+                "title": "第五個現代化",
+                "disambiguation": "",
+                "video": false
+              },
+              "title": "第五個現代化",
+              "number": "1"
+            },
+            {
+              "artist-credit": [
+                {
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 2,
+              "id": "c65c00b6-3ff0-4634-9567-ee34b7a88b59",
+              "length": null,
+              "recording": {
+                "title": "2001太空漫遊",
+                "disambiguation": "",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "6f460453-8457-46e0-8849-b75073ac48cc",
+                "length": null
+              },
+              "title": "2001太空漫遊",
+              "number": "2"
+            },
+            {
+              "length": null,
+              "id": "1900446f-b9f5-442e-aad0-2ced81513af5",
+              "position": 3,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  }
+                }
+              ],
+              "number": "3",
+              "title": "第一類接觸",
+              "recording": {
+                "length": null,
+                "id": "a1c38f3a-c011-43da-9246-6cf58eb98210",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "video": false,
+                "disambiguation": "",
+                "title": "第一類接觸"
+              }
+            },
+            {
+              "position": 4,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "id": "e6a73262-7d59-4ed2-b296-2d4d35d373e3",
+              "length": null,
+              "recording": {
+                "length": null,
+                "id": "2ee28014-067e-4d82-a462-eace37e7ce23",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "video": false,
+                "disambiguation": "",
+                "title": "愛是懷疑"
+              },
+              "title": "愛是懷疑",
+              "number": "4"
+            },
+            {
+              "length": null,
+              "position": 5,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "id": "be362311-5eaf-4bfb-bef7-fe7c85c15c74",
+              "number": "5",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "title": "隨意門",
+                "length": null,
+                "id": "03b23f4a-c0ae-4318-85d0-33975df99901",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason"
+                    }
+                  }
+                ]
+              },
+              "title": "隨意門"
+            },
+            {
+              "number": "6",
+              "title": "壞情人",
+              "recording": {
+                "title": "壞情人",
+                "disambiguation": "",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "bc0060c5-9a4c-4332-81f6-28d663761bc5",
+                "length": null
+              },
+              "length": null,
+              "id": "f91cc0a0-d4f7-440c-8362-9b01a0f11c44",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 6
+            },
+            {
+              "id": "5261d0f8-3908-45e5-9b43-0e673afa60d1",
+              "position": 7,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "length": null,
+              "title": "給愛麗斯",
+              "recording": {
+                "length": null,
+                "id": "0f5eae36-30e4-4fbf-8384-3045a5102a5c",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "video": false,
+                "disambiguation": "",
+                "title": "給愛麗斯"
+              },
+              "number": "7"
+            },
+            {
+              "position": 8,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "id": "40001992-262e-460c-b569-63f3fae48c48",
+              "length": null,
+              "recording": {
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "2183d822-d916-482a-ad29-0351c41d0043",
+                "length": null,
+                "title": "打得火熱",
+                "disambiguation": "",
+                "video": false
+              },
+              "title": "打得火熱",
+              "number": "8"
+            },
+            {
+              "title": "King Kong",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "title": "King Kong",
+                "length": null,
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "id": "7c836665-34b8-4c5a-8346-d4100cab4a79",
+                "first-release-date": "2008-12-23"
+              },
+              "number": "9",
+              "id": "863de977-21d9-44bc-bd5b-b6032d496e32",
+              "position": 9,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  }
+                }
+              ],
+              "length": null
+            },
+            {
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 10,
+              "id": "9ebe9000-14c3-4b0a-b6e7-c3576d0bc3b1",
+              "length": null,
+              "recording": {
+                "title": "孤獨探戈",
+                "disambiguation": "",
+                "video": false,
+                "first-release-date": "2008-12-23",
+                "id": "c35bedc3-fed0-4e0a-8153-3f056109ae1c",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "type": "Person"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": null
+              },
+              "title": "孤獨探戈",
+              "number": "10"
+            },
+            {
+              "length": null,
+              "id": "2bf0a372-ac52-44de-8f15-ee7c7854c2f3",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "type": "Person"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 11,
+              "number": "11",
+              "title": "猜情尋",
+              "recording": {
+                "length": null,
+                "id": "2fb5c2d2-4f95-4e2a-9288-c47b426a677d",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "video": false,
+                "disambiguation": "",
+                "title": "猜情尋"
+              }
+            },
+            {
+              "title": "忘記歌詞",
+              "recording": {
+                "video": false,
+                "disambiguation": "",
+                "title": "忘記歌詞",
+                "length": null,
+                "id": "468f22bd-df8d-4e12-bdd7-5f82c8e2c16f",
+                "first-release-date": "2008-12-23",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer"
+                    }
+                  }
+                ]
+              },
+              "number": "12",
+              "id": "6f12e36a-4a75-46d9-ba87-7cd274c60221",
+              "position": 12,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "length": null
+            },
+            {
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "385c5545-030c-4641-a1e6-3ff7961442d0",
+                "length": null,
+                "title": "幸災樂禍",
+                "disambiguation": "",
+                "video": false
+              },
+              "title": "幸災樂禍",
+              "number": "13",
+              "position": 13,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "id": "fdcd245f-22de-424d-aa89-859a14097859",
+              "length": null
+            },
+            {
+              "length": null,
+              "id": "75be4dfa-f5b4-41cd-a5e8-506d40c12584",
+              "position": 14,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "陳奕迅"
+                }
+              ],
+              "number": "14",
+              "title": "衝口而出",
+              "recording": {
+                "first-release-date": "2008-12-23",
+                "id": "7f1ba4a4-9943-406d-9ba1-f27e1692bd9b",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type": "Person",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "length": null,
+                "title": "衝口而出",
+                "disambiguation": "",
+                "video": false
+              }
+            },
+            {
+              "position": 15,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer"
+                  }
+                }
+              ],
+              "id": "1b28f4c6-1960-4291-996e-55d694cc0bf5",
+              "length": null,
+              "recording": {
+                "title": "Katrina",
+                "disambiguation": "",
+                "video": false,
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "f4bfebc8-7b3a-45a6-a2e6-ce06b515a038",
+                "length": null
+              },
+              "title": "Katrina",
+              "number": "15"
+            },
+            {
+              "id": "e04b68e8-6840-412e-b573-69ff9c2d3e46",
+              "position": 16,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "length": null,
+              "title": "反高潮",
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    }
+                  }
+                ],
+                "first-release-date": "2008-12-23",
+                "id": "a95bb29e-cad8-4af2-bc32-a49282ca7cc1",
+                "length": null,
+                "title": "反高潮",
+                "disambiguation": "",
+                "video": false
+              },
+              "number": "16"
+            }
+          ],
+          "position": 3,
+          "track-count": 16,
+          "id": "decc37a5-0af6-3ac8-854f-5edb89909b5a",
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "format": "CD"
+        }
+      ],
+      "status": "Official",
+      "date": "2008-12-23",
+      "label-info": [
+        {
+          "label": {
+            "type-id": "b6285b2a-3514-3d43-80df-fcf528824ded",
+            "sort-name": "MUSICPLUS",
+            "id": "392adeb5-6a12-4bbd-bd48-42ffb240e4fd",
+            "name": "MUSICPLUS",
+            "type": "Imprint",
+            "disambiguation": "Hong Kong label",
+            "label-code": null
+          },
+          "catalog-number": "EEG 1245V1"
+        }
+      ],
+      "quality": "normal",
+      "text-representation": {
+        "language": "zho",
+        "script": "Hant"
+      },
+      "disambiguation": "",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "country": "HK",
+      "cover-art-archive": {
+        "back": false,
+        "artwork": true,
+        "darkened": false,
+        "count": 1,
+        "front": true
+      },
+      "release-events": [
+        {
+          "date": "2008-12-23",
+          "area": {
+            "disambiguation": "",
+            "name": "Hong Kong",
+            "iso-3166-2-codes": [
+              "CN-91"
+            ],
+            "type": null,
+            "id": "0373cdff-eac8-3fbc-92dc-36a607da06d1",
+            "type-id": null,
+            "iso-3166-1-codes": [
+              "HK"
+            ],
+            "sort-name": "Hong Kong"
+          }
+        }
+      ],
+      "asin": null,
+      "artist-credit": [
+        {
+          "name": "陳奕迅",
+          "joinphrase": "",
+          "artist": {
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "country": "HK",
+            "sort-name": "Chan, Eason",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "disambiguation": "Hong Kong singer",
+            "type": "Person",
+            "name": "陳奕迅"
+          }
+        }
+      ],
+      "title": "陳奕迅48首選"
+    }
+  ],
+  "release-count": 1,
+  "release-offset": 0
+}

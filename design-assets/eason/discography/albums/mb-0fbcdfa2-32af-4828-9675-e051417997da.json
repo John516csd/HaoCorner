@@ -1,0 +1,65 @@
+{
+  "id": "mb-0fbcdfa2-32af-4828-9675-e051417997da",
+  "appleCollectionId": null,
+  "musicbrainzReleaseId": "0fbcdfa2-32af-4828-9675-e051417997da",
+  "title": "等你愛我",
+  "artist": "Eason Chan",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2010-12-22",
+  "releaseDateMeaning": "MusicBrainz 指定发行版本的日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2010-12-22",
+      "sourceUrl": "https://musicbrainz.org/release-group/e0aeceab-317a-4ca2-896e-0e758af1c0e5"
+    }
+  ],
+  "storefronts": [],
+  "preferredStorefront": null,
+  "genre": null,
+  "copyright": null,
+  "declaredTrackCount": 1,
+  "cover": null,
+  "tracks": [
+    {
+      "id": "mb-37173113-1ea7-30de-8feb-247397f72040",
+      "albumId": "mb-0fbcdfa2-32af-4828-9675-e051417997da",
+      "title": "Deng Ni Ai Wo",
+      "artist": "Eason Chan",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "mediumFormat": "Digital Media",
+      "durationMs": 284000,
+      "duration": "4:44",
+      "appleTrackId": null,
+      "musicbrainzRecordingId": "06dab777-d8d4-433c-b6c3-10325cdb042f",
+      "url": "https://musicbrainz.org/recording/06dab777-d8d4-433c-b6c3-10325cdb042f",
+      "previewUrl": null,
+      "composer": null,
+      "isStreamable": null,
+      "explicitness": null,
+      "source": "MusicBrainz digital release metadata",
+      "sourceUrl": "https://musicbrainz.org/release/0fbcdfa2-32af-4828-9675-e051417997da",
+      "supplemented": false
+    }
+  ],
+  "notes": [
+    "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+    "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+  ],
+  "metadataStatus": "physical-reference",
+  "sourceUrls": [
+    "https://musicbrainz.org/release/0fbcdfa2-32af-4828-9675-e051417997da",
+    "https://musicbrainz.org/release-group/e0aeceab-317a-4ca2-896e-0e758af1c0e5"
+  ],
+  "releaseGroupIds": [
+    "e0aeceab-317a-4ca2-896e-0e758af1c0e5"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 284000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

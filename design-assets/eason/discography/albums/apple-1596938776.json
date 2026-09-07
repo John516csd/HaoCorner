@@ -1,0 +1,77 @@
+{
+  "id": "apple-1596938776",
+  "appleCollectionId": "1596938776",
+  "musicbrainzReleaseId": null,
+  "title": "孤勇者 (《英雄聯盟:雙城之戰》動畫劇集中文主題曲) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2021-12-08",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2021-12-08",
+      "sourceUrl": "https://musicbrainz.org/release-group/da57e6ff-b7b9-484e-83ab-f7813d95c2d7"
+    }
+  ],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2021 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1596938776",
+    "path": "covers/1596938776-孤勇者 (《英雄聯盟_雙城之戰》動畫劇集中文主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/fd/80/2ffd80da-797f-2a9f-f7c1-9c7f34c802f0/21UM1IM38495.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/fd/80/2ffd80da-797f-2a9f-f7c1-9c7f34c802f0/21UM1IM38495.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1692078,
+    "sha256": "09b3f38c66fb456b2a9b02f52247d7a85064b2224d50bd4f86e922d63a67bf89",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1596938779",
+      "albumId": "apple-1596938776",
+      "title": "孤勇者 (《英雄聯盟:雙城之戰》動畫劇集中文主題曲)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 256000,
+      "duration": "4:16",
+      "appleTrackId": "1596938779",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%AD%A4%E5%8B%87%E8%80%85-%E8%8B%B1%E9%9B%84%E8%81%AF%E7%9B%9F-%E9%9B%99%E5%9F%8E%E4%B9%8B%E6%88%B0-%E5%8B%95%E7%95%AB%E5%8A%87%E9%9B%86%E4%B8%AD%E6%96%87%E4%B8%BB%E9%A1%8C%E6%9B%B2/1596938776?i=1596938779&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/21/95/fc/2195fc03-7b97-ecf2-d94c-565953fbeaf6/mzaf_13364580786128200519.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1596938776&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%AD%A4%E5%8B%87%E8%80%85-%E8%8B%B1%E9%9B%84%E8%81%AF%E7%9B%9F-%E9%9B%99%E5%9F%8E%E4%B9%8B%E6%88%B0-%E5%8B%95%E7%95%AB%E5%8A%87%E9%9B%86%E4%B8%AD%E6%96%87%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1596938776?uo=4",
+    "https://musicbrainz.org/release-group/da57e6ff-b7b9-484e-83ab-f7813d95c2d7"
+  ],
+  "releaseGroupIds": [
+    "da57e6ff-b7b9-484e-83ab-f7813d95c2d7"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 256000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

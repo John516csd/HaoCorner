@@ -1,0 +1,236 @@
+{
+  "releases": [
+    {
+      "release-events": [
+        {
+          "date": "2010-12-22",
+          "area": {
+            "type": null,
+            "type-id": null,
+            "id": "c6500277-9a3d-349b-bf30-41afdbf42add",
+            "name": "Italy",
+            "iso-3166-1-codes": [
+              "IT"
+            ],
+            "sort-name": "Italy",
+            "disambiguation": ""
+          }
+        }
+      ],
+      "country": "IT",
+      "title": "Deng Ni Ai Wo",
+      "barcode": null,
+      "label-info": [],
+      "disambiguation": "",
+      "cover-art-archive": {
+        "back": false,
+        "count": 0,
+        "front": false,
+        "darkened": false,
+        "artwork": false
+      },
+      "packaging": "None",
+      "id": "0fbcdfa2-32af-4828-9675-e051417997da",
+      "asin": null,
+      "date": "2010-12-22",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "quality": "normal",
+      "media": [
+        {
+          "title": "",
+          "position": 1,
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "id": "4a1f496e-b658-343e-bd01-6e86d565cc40",
+          "format": "Digital Media",
+          "track-offset": 0,
+          "track-count": 1,
+          "tracks": [
+            {
+              "recording": {
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "length": 284000,
+                "video": false,
+                "id": "06dab777-d8d4-433c-b6c3-10325cdb042f",
+                "title": "等你愛我",
+                "first-release-date": "2010-12-22"
+              },
+              "id": "37173113-1ea7-30de-8feb-247397f72040",
+              "title": "Deng Ni Ai Wo",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": "",
+                  "name": "Eason Chan"
+                }
+              ],
+              "length": 284000,
+              "position": 1,
+              "number": "1"
+            }
+          ]
+        }
+      ],
+      "status": "Official",
+      "artist-credit": [
+        {
+          "name": "Eason Chan",
+          "joinphrase": "",
+          "artist": {
+            "name": "陳奕迅",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "sort-name": "Chan, Eason",
+            "disambiguation": "Hong Kong singer",
+            "type": "Person",
+            "country": "HK",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+          }
+        }
+      ],
+      "text-representation": {
+        "script": "Latn",
+        "language": "zho"
+      }
+    },
+    {
+      "date": "2010-12-22",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "quality": "normal",
+      "media": [
+        {
+          "position": 1,
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "title": "",
+          "id": "5bb48c09-176d-3155-89a8-7377200f1f12",
+          "format": "Digital Media",
+          "track-count": 1,
+          "track-offset": 0,
+          "tracks": [
+            {
+              "length": 284000,
+              "position": 1,
+              "number": "1",
+              "title": "Awaits Your Love",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person"
+                  },
+                  "name": "Eason Chan"
+                }
+              ],
+              "recording": {
+                "length": 284000,
+                "disambiguation": "",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK"
+                    },
+                    "joinphrase": "",
+                    "name": "陳奕迅"
+                  }
+                ],
+                "video": false,
+                "id": "06dab777-d8d4-433c-b6c3-10325cdb042f",
+                "title": "等你愛我",
+                "first-release-date": "2010-12-22"
+              },
+              "id": "873c35af-6913-3bba-b78a-485964529110"
+            }
+          ]
+        }
+      ],
+      "status": "Official",
+      "artist-credit": [
+        {
+          "name": "Eason Chan",
+          "joinphrase": "",
+          "artist": {
+            "type": "Person",
+            "country": "HK",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "name": "陳奕迅",
+            "sort-name": "Chan, Eason",
+            "disambiguation": "Hong Kong singer"
+          }
+        }
+      ],
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "release-events": [
+        {
+          "date": "2010-12-22",
+          "area": {
+            "type-id": null,
+            "type": null,
+            "disambiguation": "",
+            "sort-name": "United States",
+            "iso-3166-1-codes": [
+              "US"
+            ],
+            "id": "489ce91b-6658-3307-9877-795b68554c98",
+            "name": "United States"
+          }
+        }
+      ],
+      "country": "US",
+      "title": "Awaits Your Love",
+      "barcode": null,
+      "label-info": [],
+      "cover-art-archive": {
+        "darkened": false,
+        "count": 0,
+        "back": false,
+        "front": false,
+        "artwork": false
+      },
+      "disambiguation": "",
+      "packaging": "None",
+      "id": "a289bb6c-02e0-4e07-909b-0c33afb0bf10",
+      "asin": null
+    }
+  ],
+  "release-count": 2,
+  "release-offset": 0
+}

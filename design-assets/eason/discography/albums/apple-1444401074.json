@@ -1,0 +1,69 @@
+{
+  "id": "apple-1444401074",
+  "appleCollectionId": "1444401074",
+  "musicbrainzReleaseId": null,
+  "title": "對不起 謝謝 (國) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2005-01-01",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "流行樂",
+  "copyright": "℗ 2005 Cinepoly Records Co. Ltd.",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444401074",
+    "path": "covers/1444401074-對不起 謝謝 (國) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/b6/c2/78/b6c278a8-c44d-b30a-5dcb-e0f965fdcdab/00602498360279.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/b6/c2/78/b6c278a8-c44d-b30a-5dcb-e0f965fdcdab/00602498360279.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 1500,
+    "height": 1500,
+    "bytes": 604189,
+    "sha256": "1434258851c8551c5ee24308ee60e8f7de70c6a4f70d5f1700e2868e8f4ba301",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444401075",
+      "albumId": "apple-1444401074",
+      "title": "對不起 謝謝 (國)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 261840,
+      "duration": "4:22",
+      "appleTrackId": "1444401075",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%B0%8D%E4%B8%8D%E8%B5%B7-%E8%AC%9D%E8%AC%9D-%E5%9C%8B/1444401074?i=1444401075&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/fc/a8/c8/fca8c860-3d9c-ba67-57b1-e77996154cdc/mzaf_396309988307389051.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444401074&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%B0%8D%E4%B8%8D%E8%B5%B7-%E8%AC%9D%E8%AC%9D-%E5%9C%8B-single/1444401074?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 261840,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

@@ -1,0 +1,70 @@
+{
+  "id": "apple-1398139541",
+  "appleCollectionId": "1398139541",
+  "musicbrainzReleaseId": null,
+  "title": "漸漸 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2018-06-22",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2018 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1398139541",
+    "path": "covers/1398139541-漸漸 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/87/66/41/876641b6-d210-fb1f-72d7-2f32c394f17a/00602567771555.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/87/66/41/876641b6-d210-fb1f-72d7-2f32c394f17a/00602567771555.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1254612,
+    "sha256": "4ea984a86160953007d473f9abc84cbdde6daf3f894964901a3eec3b2500e559",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1398139551",
+      "albumId": "apple-1398139541",
+      "title": "漸漸",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 281744,
+      "duration": "4:42",
+      "appleTrackId": "1398139551",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E6%BC%B8%E6%BC%B8/1398139541?i=1398139551&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e3/9c/72/e39c72ba-6da2-97f3-bd5a-91f2fb9ba505/mzaf_8390477061174649016.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1398139541&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E6%BC%B8%E6%BC%B8-single/1398139541?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 281744,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

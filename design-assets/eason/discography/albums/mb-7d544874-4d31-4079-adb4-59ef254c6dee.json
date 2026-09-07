@@ -1,0 +1,65 @@
+{
+  "id": "mb-7d544874-4d31-4079-adb4-59ef254c6dee",
+  "appleCollectionId": null,
+  "musicbrainzReleaseId": "7d544874-4d31-4079-adb4-59ef254c6dee",
+  "title": "My Private Christmas Song",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2010-12-08",
+  "releaseDateMeaning": "MusicBrainz 指定发行版本的日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2010-12-08",
+      "sourceUrl": "https://musicbrainz.org/release-group/2bc72e45-4d29-4a72-80c2-a7c1a5094f42"
+    }
+  ],
+  "storefronts": [],
+  "preferredStorefront": null,
+  "genre": null,
+  "copyright": null,
+  "declaredTrackCount": 1,
+  "cover": null,
+  "tracks": [
+    {
+      "id": "mb-2c7de9fe-08ec-3302-ba1b-9c00ed28287a",
+      "albumId": "mb-7d544874-4d31-4079-adb4-59ef254c6dee",
+      "title": "My Private Christmas Song",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "mediumFormat": "Digital Media",
+      "durationMs": 140000,
+      "duration": "2:20",
+      "appleTrackId": null,
+      "musicbrainzRecordingId": "ce2adbf5-f679-47be-b829-14fb780c9975",
+      "url": "https://musicbrainz.org/recording/ce2adbf5-f679-47be-b829-14fb780c9975",
+      "previewUrl": null,
+      "composer": null,
+      "isStreamable": null,
+      "explicitness": null,
+      "source": "MusicBrainz digital release metadata",
+      "sourceUrl": "https://musicbrainz.org/release/7d544874-4d31-4079-adb4-59ef254c6dee",
+      "supplemented": false
+    }
+  ],
+  "notes": [
+    "Apple 四区目录未找到该发行 ID；依据 MusicBrainz 指定版本保存，未与相似标题版本合并。",
+    "曲目已保存，独立封面尚未下载成功；不使用其他专辑图片代替。"
+  ],
+  "metadataStatus": "physical-reference",
+  "sourceUrls": [
+    "https://musicbrainz.org/release/7d544874-4d31-4079-adb4-59ef254c6dee",
+    "https://musicbrainz.org/release-group/2bc72e45-4d29-4a72-80c2-a7c1a5094f42"
+  ],
+  "releaseGroupIds": [
+    "2bc72e45-4d29-4a72-80c2-a7c1a5094f42"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 140000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

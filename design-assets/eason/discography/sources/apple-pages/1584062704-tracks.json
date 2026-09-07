@@ -1,0 +1,25 @@
+{
+  "id": "1584062704",
+  "sourceUrl": "https://music.apple.com/cn/album/%E4%B8%96%E7%95%8C%E4%B8%8A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C-2020-%E9%87%8D%E5%94%B1%E7%89%88-single/1584062704?uo=4",
+  "storefront": "cn",
+  "tracks": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "collectionId": 1584062704,
+      "trackId": 1584062886,
+      "trackName": "世界上不存在的歌 (2020 重唱版)",
+      "artistName": "陈奕迅",
+      "collectionName": "世界上不存在的歌 (2020 重唱版) - Single",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "trackTimeMillis": 233000,
+      "trackViewUrl": "https://music.apple.com/cn/album/%E4%B8%96%E7%95%8C%E4%B8%8A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C-2020-%E9%87%8D%E5%94%B1%E7%89%88/1584062704?i=1584062886",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8a/97/bf/8a97bf9f-4021-64d4-b6e0-6d6b76e05a01/mzaf_3733654486579386442.plus.aac.p.m4a",
+      "composer": "赵英俊",
+      "isStreamable": true,
+      "metadataSource": "Apple Music public album page",
+      "metadataSourceUrl": "https://music.apple.com/cn/album/%E4%B8%96%E7%95%8C%E4%B8%8A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C-2020-%E9%87%8D%E5%94%B1%E7%89%88-single/1584062704?uo=4"
+    }
+  ]
+}

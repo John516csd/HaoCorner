@@ -1,0 +1,70 @@
+{
+  "id": "apple-1438828644",
+  "appleCollectionId": "1438828644",
+  "musicbrainzReleaseId": null,
+  "title": "破壞王 - Single",
+  "artist": "陳奕迅 & eason and the duo band",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2018-10-18",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2018 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1438828644",
+    "path": "covers/1438828644-破壞王 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e1/f8/a6/e1f8a63b-058b-58db-ff07-d28b372800b3/00602567962830.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e1/f8/a6/e1f8a63b-058b-58db-ff07-d28b372800b3/00602567962830.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1167459,
+    "sha256": "b201a233cf25f0d0864bf7ea6744b58b68ed06bf6a2fcb34e80438a1c082249d",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1438828650",
+      "albumId": "apple-1438828644",
+      "title": "破壞王",
+      "artist": "陳奕迅 & eason and the duo band",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 259126,
+      "duration": "4:19",
+      "appleTrackId": "1438828650",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E7%A0%B4%E5%A3%9E%E7%8E%8B/1438828644?i=1438828650&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fa/40/11/fa40113a-d406-236c-7bc9-3c278fc9f25d/mzaf_9566424294284713602.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1438828644&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E7%A0%B4%E5%A3%9E%E7%8E%8B-single/1438828644?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 259126,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

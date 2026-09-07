@@ -1,0 +1,77 @@
+{
+  "id": "apple-1584062266",
+  "appleCollectionId": "1584062266",
+  "musicbrainzReleaseId": null,
+  "title": "不期而遇的夏天 (電影《不期而遇的夏天》主題曲) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2021-09-16",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2021-09-15",
+      "sourceUrl": "https://musicbrainz.org/release-group/067bd0bf-a596-430a-9c79-ed86f28e4259"
+    }
+  ],
+  "storefronts": [
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2021 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1584062266",
+    "path": "covers/1584062266-不期而遇的夏天 (電影《不期而遇的夏天》主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7d/fd/c8/7dfdc87e-0d25-5cc5-5312-c0a5107125f8/21UMGIM79273.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7d/fd/c8/7dfdc87e-0d25-5cc5-5312-c0a5107125f8/21UMGIM79273.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1074813,
+    "sha256": "057e701763d247f1191999ccda118f9b9029c9cb0ae3f69953e0151130b78913",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1584062437",
+      "albumId": "apple-1584062266",
+      "title": "不期而遇的夏天 (電影《不期而遇的夏天》主題曲)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 210000,
+      "duration": "3:30",
+      "appleTrackId": "1584062437",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E9%9B%BB%E5%BD%B1-%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E4%B8%BB%E9%A1%8C%E6%9B%B2/1584062266?i=1584062437&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/67/16/ce/6716cef4-c317-7d27-d3d6-351c0d615d89/mzaf_4570212416158225409.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1584062266&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E9%9B%BB%E5%BD%B1-%E4%B8%8D%E6%9C%9F%E8%80%8C%E9%81%87%E7%9A%84%E5%A4%8F%E5%A4%A9-%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1584062266?uo=4",
+    "https://musicbrainz.org/release-group/067bd0bf-a596-430a-9c79-ed86f28e4259"
+  ],
+  "releaseGroupIds": [
+    "067bd0bf-a596-430a-9c79-ed86f28e4259"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 210000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

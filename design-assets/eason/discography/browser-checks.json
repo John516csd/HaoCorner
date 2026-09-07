@@ -1,0 +1,11 @@
+{
+  "browser": "Google Chrome, headless Playwright",
+  "offlineFileOpened": true,
+  "initialStudioCards": 32,
+  "allReleaseCards": 163,
+  "buXiangFangShouTrackRows": 11,
+  "songSearchFuShiShanXiaResultCount": 6,
+  "javascriptErrors": [],
+  "mobileViewportWidth": 390,
+  "mobileHorizontalOverflow": false
+}

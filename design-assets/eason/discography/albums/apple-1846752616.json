@@ -1,0 +1,99 @@
+{
+  "id": "apple-1846752616",
+  "appleCollectionId": "1846752616",
+  "musicbrainzReleaseId": null,
+  "title": "K歌之王 AIR - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2025-10-23",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2025-10-23",
+      "sourceUrl": "https://musicbrainz.org/release-group/c77686fa-fafc-47f2-a565-e3646e7ebcd1"
+    }
+  ],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2025 Eas Music Ltd",
+  "declaredTrackCount": 2,
+  "cover": {
+    "id": "1846752616",
+    "path": "covers/1846752616-K歌之王 AIR - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b5/83/a3/b583a3ef-531c-3d40-7bae-e1fbecd57b83/25UM1IM67326.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b5/83/a3/b583a3ef-531c-3d40-7bae-e1fbecd57b83/25UM1IM67326.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1567335,
+    "sha256": "4f511d18c029fdcc1b952aae0ff8222c09bd5a936bb0f0bf26385ca1a96ba304",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1846752619",
+      "albumId": "apple-1846752616",
+      "title": "K歌之王 AIR (Day Version)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 221372,
+      "duration": "3:41",
+      "appleTrackId": "1846752619",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/k%E6%AD%8C%E4%B9%8B%E7%8E%8B-air-day-version/1846752616?i=1846752619&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/65/3a/20653a1c-2839-489a-0d88-100609546549/mzaf_14889113772397867530.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1846752616&entity=song&limit=200&country=hk",
+      "supplemented": false
+    },
+    {
+      "id": "apple-1846752636",
+      "albumId": "apple-1846752616",
+      "title": "K歌之王 AIR (Night Version)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 2,
+      "kind": "song",
+      "durationMs": 219784,
+      "duration": "3:40",
+      "appleTrackId": "1846752636",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/k%E6%AD%8C%E4%B9%8B%E7%8E%8B-air-night-version/1846752616?i=1846752636&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/e2/d9/13e2d976-496c-0832-e551-9bbadece8083/mzaf_1660706506116382753.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1846752616&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/k%E6%AD%8C%E4%B9%8B%E7%8E%8B-air-single/1846752616?uo=4",
+    "https://musicbrainz.org/release-group/c77686fa-fafc-47f2-a565-e3646e7ebcd1"
+  ],
+  "releaseGroupIds": [
+    "c77686fa-fafc-47f2-a565-e3646e7ebcd1"
+  ],
+  "trackCount": 2,
+  "songCount": 2,
+  "videoCount": 0,
+  "durationMs": 441156,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

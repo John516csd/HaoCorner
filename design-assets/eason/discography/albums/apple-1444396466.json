@@ -1,0 +1,70 @@
+{
+  "id": "apple-1444396466",
+  "appleCollectionId": "1444396466",
+  "musicbrainzReleaseId": null,
+  "title": "海膽 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2017-08-04",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2017 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444396466",
+    "path": "covers/1444396466-海膽 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/72/3c/4f/723c4f7b-88fe-a238-4430-dac8e307a3e0/17UM1IM15071.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/72/3c/4f/723c4f7b-88fe-a238-4430-dac8e307a3e0/17UM1IM15071.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1659094,
+    "sha256": "09336c6b41d3d9bfd6e22bcdde22fcdba0d03ebc9b09be312b189baf8143e42e",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444396469",
+      "albumId": "apple-1444396466",
+      "title": "海膽",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 197000,
+      "duration": "3:17",
+      "appleTrackId": "1444396469",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E6%B5%B7%E8%86%BD/1444396466?i=1444396469&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/6f/38/28/6f3828ad-94bb-0630-bff6-86214dcffa48/mzaf_8654124003285462172.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444396466&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E6%B5%B7%E8%86%BD-single/1444396466?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 197000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

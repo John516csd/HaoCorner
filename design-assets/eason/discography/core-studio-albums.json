@@ -1,0 +1,399 @@
+{
+  "note": "32 张录音室专辑各选一个展示版本；国语/粤语为专辑主要语言，不排除加收其他语言歌曲。",
+  "albums": [
+    {
+      "index": 1,
+      "albumId": "apple-892603736",
+      "title": "陳奕迅",
+      "originalYear": 1996,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/892603736-華星DSD復刻經典_ 陳奕迅.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-892603736.json",
+      "notes": []
+    },
+    {
+      "index": 2,
+      "albumId": "apple-1694525409",
+      "title": "一滴眼淚",
+      "originalYear": 1997,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1694525409-一滴眼淚.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1694525409.json",
+      "notes": []
+    },
+    {
+      "index": 3,
+      "albumId": "apple-892735096",
+      "title": "與我常在",
+      "originalYear": 1997,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/892735096-與我常在.jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-892735096.json",
+      "notes": []
+    },
+    {
+      "index": 4,
+      "albumId": "apple-1694525250",
+      "title": "醞釀",
+      "originalYear": 1997,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1694525250-醞釀.jpg",
+      "songCount": 12,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1694525250.json",
+      "notes": []
+    },
+    {
+      "index": 5,
+      "albumId": "apple-1575742728",
+      "title": "我的快樂時代",
+      "originalYear": 1998,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1575742728-我的快樂時代.jpg",
+      "songCount": 14,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1575742728.json",
+      "notes": [
+        "本版含 14 曲；另保留 Apple 892745229 的 10 曲版本。"
+      ]
+    },
+    {
+      "index": 6,
+      "albumId": "apple-892819866",
+      "title": "天佑愛人",
+      "originalYear": 1999,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/892819866-天佑愛人.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-892819866.json",
+      "notes": []
+    },
+    {
+      "index": 7,
+      "albumId": "apple-1694525826",
+      "title": "婚禮的祝福",
+      "originalYear": 1999,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1694525826-婚禮的祝福.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1694525826.json",
+      "notes": []
+    },
+    {
+      "index": 8,
+      "albumId": "apple-892669236",
+      "title": "Nothing Really Matters",
+      "originalYear": 2000,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/892669236-Nothing Really Matters.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-892669236.json",
+      "notes": []
+    },
+    {
+      "index": 9,
+      "albumId": "apple-542594340",
+      "title": "打得火熱",
+      "originalYear": 2000,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/542594340-打得火熱.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542594340.json",
+      "notes": []
+    },
+    {
+      "index": 10,
+      "albumId": "apple-542593700",
+      "title": "Shall We Dance? Shall We Talk!",
+      "originalYear": 2001,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/542593700-Shall We Dance_ Shall We Talk!.jpg",
+      "songCount": 13,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542593700.json",
+      "notes": []
+    },
+    {
+      "index": 11,
+      "albumId": "apple-542592136",
+      "title": "反正是我",
+      "originalYear": 2001,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/542592136-反正是我 (國).jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542592136.json",
+      "notes": []
+    },
+    {
+      "index": 12,
+      "albumId": "apple-542634698",
+      "title": "The Easy Ride",
+      "originalYear": 2001,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/542634698-The Easy Ride.jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542634698.json",
+      "notes": []
+    },
+    {
+      "index": 13,
+      "albumId": "apple-542612232",
+      "title": "Special Thanks To..",
+      "originalYear": 2002,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/542612232-Special Thanks To.. (香港版).jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542612232.json",
+      "notes": []
+    },
+    {
+      "index": 14,
+      "albumId": "apple-542611601",
+      "title": "The Line-Up",
+      "originalYear": 2002,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/542611601-The Line-Up.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542611601.json",
+      "notes": []
+    },
+    {
+      "index": 15,
+      "albumId": "apple-542923554",
+      "title": "黑.白.灰",
+      "originalYear": 2003,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/542923554-黑.白.灰.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542923554.json",
+      "notes": []
+    },
+    {
+      "index": 16,
+      "albumId": "apple-542676848",
+      "title": "Live for Today",
+      "originalYear": 2003,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/542676848-Live for Today.jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-542676848.json",
+      "notes": []
+    },
+    {
+      "index": 17,
+      "albumId": "apple-1443374875",
+      "title": "U87",
+      "originalYear": 2005,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1443374875-U 87.jpg",
+      "songCount": 12,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1443374875.json",
+      "notes": []
+    },
+    {
+      "index": 18,
+      "albumId": "apple-1443938740",
+      "title": "怎麼樣",
+      "originalYear": 2005,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1443938740-怎麼樣.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1443938740.json",
+      "notes": [
+        "按官方 10 曲 CD 发行补入第 3 首 Hippie。"
+      ]
+    },
+    {
+      "index": 19,
+      "albumId": "apple-1443345687",
+      "title": "What's Going On...?",
+      "originalYear": 2006,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1443345687-What's Going On..._.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1443345687.json",
+      "notes": []
+    },
+    {
+      "index": 20,
+      "albumId": "apple-1443816775",
+      "title": "認了吧",
+      "originalYear": 2007,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1443816775-認了吧 (Hong Kong Version).jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1443816775.json",
+      "notes": []
+    },
+    {
+      "index": 21,
+      "albumId": "apple-1462039068",
+      "title": "Listen to Eason Chan",
+      "originalYear": 2007,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1462039068-Listen to Eason Chan.jpg",
+      "songCount": 20,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1462039068.json",
+      "notes": []
+    },
+    {
+      "index": 22,
+      "albumId": "apple-1443493887",
+      "title": "不想放手",
+      "originalYear": 2008,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1443493887-不想放手.jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1443493887.json",
+      "notes": [
+        "按官方 11 曲 CD 发行补入曲序 2、3、6、9。"
+      ]
+    },
+    {
+      "index": 23,
+      "albumId": "apple-1443774258",
+      "title": "H3M",
+      "originalYear": 2009,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1443774258-H3M.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1443774258.json",
+      "notes": []
+    },
+    {
+      "index": 24,
+      "albumId": "apple-1442260565",
+      "title": "上五樓的快活",
+      "originalYear": 2009,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1442260565-上五樓的快活.jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1442260565.json",
+      "notes": []
+    },
+    {
+      "index": 25,
+      "albumId": "apple-1443783500",
+      "title": "?",
+      "originalYear": 2011,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1443783500-_.jpg",
+      "songCount": 12,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1443783500.json",
+      "notes": []
+    },
+    {
+      "index": 26,
+      "albumId": "apple-1445753233",
+      "title": "...3mm",
+      "originalYear": 2012,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1445753233-3mm.jpg",
+      "songCount": 10,
+      "videoCount": 1,
+      "albumDataPath": "albums/apple-1445753233.json",
+      "notes": []
+    },
+    {
+      "index": 27,
+      "albumId": "apple-1386714588",
+      "title": "The Key",
+      "originalYear": 2013,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1386714588-The Key.jpg",
+      "songCount": 8,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1386714588.json",
+      "notes": []
+    },
+    {
+      "index": 28,
+      "albumId": "apple-1422694136",
+      "title": "rice & shine",
+      "originalYear": 2014,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1422694136-rice & shine.jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1422694136.json",
+      "notes": []
+    },
+    {
+      "index": 29,
+      "albumId": "apple-1422674966",
+      "title": "準備中",
+      "originalYear": 2015,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1422674966-準備中.jpg",
+      "songCount": 11,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1422674966.json",
+      "notes": [
+        "按官方 11 曲 CD 发行补入加收曲「異夢」；另有 10 曲版本。"
+      ]
+    },
+    {
+      "index": 30,
+      "albumId": "apple-1440909180",
+      "title": "C'mon in~",
+      "originalYear": 2017,
+      "primaryLanguage": "国语",
+      "coverPath": "covers/1440909180-C'mon in~.jpg",
+      "songCount": 10,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1440909180.json",
+      "notes": []
+    },
+    {
+      "index": 31,
+      "albumId": "apple-1441543918",
+      "title": "L.O.V.E.",
+      "originalYear": 2018,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1441543918-L.O.V.E.jpg",
+      "songCount": 15,
+      "videoCount": 4,
+      "albumDataPath": "albums/apple-1441543918.json",
+      "notes": [
+        "包含 15 个音频条目（含 interlude）和 4 个 MV；音频条目数不等于 15 首独立创作。"
+      ]
+    },
+    {
+      "index": 32,
+      "albumId": "apple-1712647195",
+      "title": "CHIN UP!",
+      "originalYear": 2023,
+      "primaryLanguage": "粤语",
+      "coverPath": "covers/1712647195-CHIN UP!.jpg",
+      "songCount": 8,
+      "videoCount": 0,
+      "albumDataPath": "albums/apple-1712647195.json",
+      "notes": []
+    }
+  ]
+}

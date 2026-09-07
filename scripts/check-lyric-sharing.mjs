@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import { matchLyrics } from '../app/components/vinyl-room/share/lyrics-match.mjs';
+import { readDraft, draftKey, emptyDraft } from '../app/components/vinyl-room/share/types.ts';
+
+const album = { title: '测试专辑', artist: '陈奕迅' };
+const track = { trackName: '测试歌曲', trackTimeMillis: 240000 };
+const record = { id: 1, trackName: '測試歌曲', artistName: '陳奕迅', albumName: '測試專輯', duration: 240, plainLyrics: '测试用文字' };
+assert.equal(matchLyrics([record], album, track)[0].exact, true, 'Simplified and traditional metadata should match');
+assert.equal(matchLyrics([{ ...record, artistName: 'Eason Chan' }], album, track)[0].exact, true);
+assert.equal(matchLyrics([{ ...record, artistName: '另一位歌手' }], album, track).length, 0, 'Reject another artist');
+assert.equal(matchLyrics([{ ...record, trackName: '测试歌曲 (Live)' }], album, track).length, 0, 'Do not substitute a live version');
+assert.equal(matchLyrics([{ ...record, duration: 300 }], album, track)[0].exact, false, 'Duration mismatch requires confirmation');
+assert.equal(matchLyrics([{ ...record, albumName: '另一张专辑' }], album, track)[0].exact, false, 'Album mismatch requires confirmation');
+assert.equal(matchLyrics([null, {}, { ...record, plainLyrics: '' }], album, track).length, 0);
+assert.equal(matchLyrics([record, record], album, track).length, 1, 'Deduplicate providers returned by both language queries');
+const values = new Map();
+globalThis.localStorage = { getItem: key => values.get(key) ?? null };
+values.set(draftKey(123), JSON.stringify({ quote: '测试歌词', note: '我的感悟', signature: '小浩', format: 'grid', style: 'ambient', emphasis: '测试' }));
+assert.equal(readDraft(123).note, '我的感悟');
+assert.equal(readDraft(456).quote, '', 'Drafts must stay scoped to a song');
+values.set(draftKey(123), '{broken');
+assert.deepEqual(readDraft(123), emptyDraft, 'Recover from corrupt storage');
+values.set(draftKey(123), JSON.stringify({ quote: 'a'.repeat(500), note: 123, format: 'malformed' }));
+assert.deepEqual(readDraft(123), emptyDraft, 'Do not trust obsolete or invalid draft values');
+globalThis.localStorage = { getItem: () => { throw new Error('Storage blocked'); } };
+assert.deepEqual(readDraft(123), emptyDraft, 'Sharing remains available if storage is blocked');
+console.log('PASS: lyric metadata/version matching, provider validation, per-song drafts, corrupt and unavailable storage.');

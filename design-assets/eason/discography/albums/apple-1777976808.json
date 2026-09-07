@@ -1,0 +1,67 @@
+{
+  "id": "apple-1777976808",
+  "appleCollectionId": "1777976808",
+  "musicbrainzReleaseId": null,
+  "title": "这样很好 (《英雄联盟:双城之战》动画第二季原声) - Single",
+  "artist": "陈奕迅, Arcane & League of Legends Music",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2024-11-07",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2024 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1777976808",
+    "path": "covers/1777976808-这样很好 (《英雄联盟_双城之战》动画第二季原声) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/ac/b4/70acb4b8-14a2-f673-96b0-b5d09aba5d5d/24UM1IM23970.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/70/ac/b4/70acb4b8-14a2-f673-96b0-b5d09aba5d5d/24UM1IM23970.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 2218135,
+    "sha256": "0e74f164706098082a0ab649810dc86419febfee9e941727adb850999fc12c36",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1777976938",
+      "albumId": "apple-1777976808",
+      "title": "这样很好 (《英雄联盟:双城之战》动画第二季原声)",
+      "artist": "陈奕迅, Arcane & League of Legends Music",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 264680,
+      "duration": "4:25",
+      "appleTrackId": "1777976938",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E8%BF%99%E6%A0%B7%E5%BE%88%E5%A5%BD-%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F-%E5%8F%8C%E5%9F%8E%E4%B9%8B%E6%88%98-%E5%8A%A8%E7%94%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3%E5%8E%9F%E5%A3%B0/1777976808?i=1777976938",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/ea/50/f0ea5091-6b32-8327-bb0b-b05ce91d14e9/mzaf_9063523897912877769.plus.aac.p.m4a",
+      "composer": "郑楠",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E8%BF%99%E6%A0%B7%E5%BE%88%E5%A5%BD-%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F-%E5%8F%8C%E5%9F%8E%E4%B9%8B%E6%88%98-%E5%8A%A8%E7%94%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3%E5%8E%9F%E5%A3%B0-single/1777976808?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E8%BF%99%E6%A0%B7%E5%BE%88%E5%A5%BD-%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F-%E5%8F%8C%E5%9F%8E%E4%B9%8B%E6%88%98-%E5%8A%A8%E7%94%BB%E7%AC%AC%E4%BA%8C%E5%AD%A3%E5%8E%9F%E5%A3%B0-single/1777976808?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 264680,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

@@ -1,0 +1,134 @@
+{
+  "release-count": 1,
+  "release-offset": 0,
+  "releases": [
+    {
+      "media": [
+        {
+          "title": "",
+          "track-count": 1,
+          "position": 1,
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "id": "3cfc019d-3d56-3dc5-afa1-bff77aa4f403",
+          "format": "Digital Media",
+          "track-offset": 0,
+          "tracks": [
+            {
+              "length": 187000,
+              "position": 1,
+              "number": "1",
+              "id": "0215e731-b856-324d-9a2a-e577b7e945f0",
+              "recording": {
+                "video": false,
+                "length": 185000,
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "sort-name": "Chan, Eason",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "陳奕迅",
+                    "joinphrase": ""
+                  }
+                ],
+                "title": "Allegro, Opus 3.3 a.m.",
+                "disambiguation": "",
+                "id": "36e60201-61b4-4411-a3ff-b6752a80cdda",
+                "first-release-date": "2009-01-21"
+              },
+              "title": "Allegro Opus 3.3am",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "type": "Person",
+                    "name": "陳奕迅",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Allegro Opus 3.3am",
+      "country": "XW",
+      "quality": "normal",
+      "cover-art-archive": {
+        "count": 1,
+        "darkened": false,
+        "back": false,
+        "artwork": true,
+        "front": true
+      },
+      "date": "2009-01-21",
+      "barcode": null,
+      "asin": null,
+      "status": "Official",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "disambiguation": "",
+      "artist-credit": [
+        {
+          "joinphrase": "",
+          "name": "陳奕迅",
+          "artist": {
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Chan, Eason",
+            "type": "Person",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "country": "HK",
+            "name": "陳奕迅",
+            "disambiguation": "Hong Kong singer"
+          }
+        }
+      ],
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "text-representation": {
+        "script": "Latn",
+        "language": "ita"
+      },
+      "label-info": [
+        {
+          "label": {
+            "disambiguation": "",
+            "name": "Cinepoly Records",
+            "type": "Original Production",
+            "sort-name": "Cinepoly Records",
+            "id": "b549d692-6aab-49d3-b9a8-03ceeb4470bc",
+            "label-code": null,
+            "type-id": "7aaa37fe-2def-3476-b359-80245850062d"
+          },
+          "catalog-number": null
+        }
+      ],
+      "packaging": "None",
+      "id": "2c62288c-961f-43eb-9513-95168bdb7711",
+      "release-events": [
+        {
+          "area": {
+            "disambiguation": "",
+            "name": "[Worldwide]",
+            "type": null,
+            "sort-name": "[Worldwide]",
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "iso-3166-1-codes": [
+              "XW"
+            ],
+            "type-id": null
+          },
+          "date": "2009-01-21"
+        }
+      ]
+    }
+  ]
+}

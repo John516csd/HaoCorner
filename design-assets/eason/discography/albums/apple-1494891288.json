@@ -1,0 +1,75 @@
+{
+  "id": "apple-1494891288",
+  "appleCollectionId": "1494891288",
+  "musicbrainzReleaseId": null,
+  "title": "光輝歲月 - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2020-01-14",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2020-01-14",
+      "sourceUrl": "https://musicbrainz.org/release-group/99407bc6-df78-4f08-adb4-6589112a2783"
+    }
+  ],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "粤语流行",
+  "copyright": "℗ 2020 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1494891288",
+    "path": "covers/1494891288-光輝歲月 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/02/90/fb/0290fb08-8654-d14f-4881-ec85fad323c6/20UMGIM01062.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/02/90/fb/0290fb08-8654-d14f-4881-ec85fad323c6/20UMGIM01062.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1674717,
+    "sha256": "abb1fb9c522830c76f8b90910e64b11cbe1d5503c876e5aefebcc355298072f8",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1494891289",
+      "albumId": "apple-1494891288",
+      "title": "光辉岁月",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 241667,
+      "duration": "4:02",
+      "appleTrackId": "1494891289",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E5%85%89%E8%BE%89%E5%B2%81%E6%9C%88/1494891288?i=1494891289",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/68/c8/ba/68c8bae3-c3af-f7a9-5e5f-903ece5c4aa0/mzaf_11446262351517961530.plus.aac.p.m4a",
+      "composer": "黄家驹",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E5%85%89%E8%BC%9D%E6%AD%B2%E6%9C%88-single/1494891288?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E5%85%89%E8%BC%9D%E6%AD%B2%E6%9C%88-single/1494891288?uo=4",
+    "https://musicbrainz.org/release-group/99407bc6-df78-4f08-adb4-6589112a2783"
+  ],
+  "releaseGroupIds": [
+    "99407bc6-df78-4f08-adb4-6589112a2783"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 241667,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

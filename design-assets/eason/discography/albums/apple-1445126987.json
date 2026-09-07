@@ -1,0 +1,80 @@
+{
+  "id": "apple-1445126987",
+  "appleCollectionId": "1445126987",
+  "musicbrainzReleaseId": null,
+  "title": "同舟之情 (\"家是香港\"運動主題曲) - Single",
+  "artist": "張學友 & 陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2013-01-01",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2013-05-02",
+      "sourceUrl": "https://musicbrainz.org/release-group/b223b2ca-d3e2-460f-afee-03be12e45a82"
+    }
+  ],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "This Compilation ℗ 2013 Ioi Limited  / EAS Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1445126987",
+    "path": "covers/1445126987-同舟之情 (_家是香港_運動主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/75/70/8f/75708ff1-3c73-8e4e-624f-68155e4cf508/00602488962803.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/75/70/8f/75708ff1-3c73-8e4e-624f-68155e4cf508/00602488962803.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 1500,
+    "height": 1500,
+    "bytes": 381425,
+    "sha256": "09276d727288a361959e5d48b070119e4fea7e575300b44eb934579bde9cace8",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1445126991",
+      "albumId": "apple-1445126987",
+      "title": "同舟之情 (\"家是香港\"運動主題曲)",
+      "artist": "張學友 & 陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 264000,
+      "duration": "4:24",
+      "appleTrackId": "1445126991",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E5%90%8C%E8%88%9F%E4%B9%8B%E6%83%85-%E5%AE%B6%E6%98%AF%E9%A6%99%E6%B8%AF-%E9%81%8B%E5%8B%95%E4%B8%BB%E9%A1%8C%E6%9B%B2/1445126987?i=1445126991&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9e/e1/5c/9ee15c3c-3bb7-9ec3-cc60-484de3958618/mzaf_7498031981939486714.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1445126987&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E5%90%8C%E8%88%9F%E4%B9%8B%E6%83%85-%E5%AE%B6%E6%98%AF%E9%A6%99%E6%B8%AF-%E9%81%8B%E5%8B%95%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1445126987?uo=4",
+    "https://musicbrainz.org/release-group/adcab760-1c05-4ac2-90e9-ab291e50bdcc",
+    "https://musicbrainz.org/release-group/b223b2ca-d3e2-460f-afee-03be12e45a82"
+  ],
+  "releaseGroupIds": [
+    "adcab760-1c05-4ac2-90e9-ab291e50bdcc",
+    "b223b2ca-d3e2-460f-afee-03be12e45a82"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 264000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

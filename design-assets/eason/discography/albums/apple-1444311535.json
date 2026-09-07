@@ -1,0 +1,70 @@
+{
+  "id": "apple-1444311535",
+  "appleCollectionId": "1444311535",
+  "musicbrainzReleaseId": null,
+  "title": "青春無晦 - Single",
+  "artist": "陳奕迅 & 謝安琪",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2009-01-01",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2009 Universal Music Ltd.",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444311535",
+    "path": "covers/1444311535-青春無晦 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d9/95/03/d9950327-c7f3-aae1-685b-4a2ad82394e3/00602527242958.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d9/95/03/d9950327-c7f3-aae1-685b-4a2ad82394e3/00602527242958.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 1500,
+    "height": 1500,
+    "bytes": 549830,
+    "sha256": "efcd7478345a70879353f06919d94a7d7a613deeb92426027e1f464c8f40508d",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444311537",
+      "albumId": "apple-1444311535",
+      "title": "青春無晦",
+      "artist": "謝安琪 & 陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 170467,
+      "duration": "2:50",
+      "appleTrackId": "1444311537",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E9%9D%92%E6%98%A5%E7%84%A1%E6%99%A6/1444311535?i=1444311537&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ea/8c/92/ea8c92ee-878d-6eba-f148-4124f4733ac4/mzaf_15671561116230744630.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444311535&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E9%9D%92%E6%98%A5%E7%84%A1%E6%99%A6-single/1444311535?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 170467,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

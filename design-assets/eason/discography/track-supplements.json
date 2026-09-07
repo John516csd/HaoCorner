@@ -1,0 +1,199 @@
+[
+  {
+    "albumId": "apple-1422674966",
+    "title": "準備中",
+    "note": "按官方 11 曲 CD 发行补入加收曲「異夢」；另有 10 曲版本。",
+    "sourceUrl": "https://musicbrainz.org/release/708e75f6-3fea-4cba-ba05-e27695d71e1e",
+    "addedTracks": [
+      {
+        "disc": 1,
+        "track": 11,
+        "title": "異夢"
+      }
+    ]
+  },
+  {
+    "albumId": "apple-1442943933",
+    "title": "Solidays",
+    "note": "Apple 曲目接口未返回内容；按 2008 年官方 2CD 发行补入 27 首歌曲，附赠 DVD 不混入该数字版本。",
+    "sourceUrl": "https://musicbrainz.org/release/4f7452e3-b3c4-4abc-bc73-950686cdc847",
+    "addedTracks": [
+      {
+        "disc": 1,
+        "track": 1,
+        "title": "歌·頌"
+      },
+      {
+        "disc": 1,
+        "track": 2,
+        "title": "阿牛"
+      },
+      {
+        "disc": 1,
+        "track": 3,
+        "title": "浮誇"
+      },
+      {
+        "disc": 1,
+        "track": 4,
+        "title": "葡萄成熟時"
+      },
+      {
+        "disc": 1,
+        "track": 5,
+        "title": "聽聽"
+      },
+      {
+        "disc": 1,
+        "track": 6,
+        "title": "人神鬥"
+      },
+      {
+        "disc": 1,
+        "track": 7,
+        "title": "低調"
+      },
+      {
+        "disc": 1,
+        "track": 8,
+        "title": "最佳損友"
+      },
+      {
+        "disc": 1,
+        "track": 9,
+        "title": "暴殄天物"
+      },
+      {
+        "disc": 1,
+        "track": 10,
+        "title": "落花流水"
+      },
+      {
+        "disc": 1,
+        "track": 11,
+        "title": "想聽"
+      },
+      {
+        "disc": 1,
+        "track": 12,
+        "title": "天下太平"
+      },
+      {
+        "disc": 1,
+        "track": 13,
+        "title": "裙下之臣"
+      },
+      {
+        "disc": 1,
+        "track": 14,
+        "title": "不如不見"
+      },
+      {
+        "disc": 2,
+        "track": 1,
+        "title": "黑擇明"
+      },
+      {
+        "disc": 2,
+        "track": 2,
+        "title": "天公地道"
+      },
+      {
+        "disc": 2,
+        "track": 3,
+        "title": "富士山下"
+      },
+      {
+        "disc": 2,
+        "track": 4,
+        "title": "粵語殘片"
+      },
+      {
+        "disc": 2,
+        "track": 5,
+        "title": "月球上的人"
+      },
+      {
+        "disc": 2,
+        "track": 6,
+        "title": "親近"
+      },
+      {
+        "disc": 2,
+        "track": 7,
+        "title": "熱島小夜曲"
+      },
+      {
+        "disc": 2,
+        "track": 8,
+        "title": "演唱會"
+      },
+      {
+        "disc": 2,
+        "track": 9,
+        "title": "變色龍"
+      },
+      {
+        "disc": 2,
+        "track": 10,
+        "title": "時代巨輪"
+      },
+      {
+        "disc": 2,
+        "track": 11,
+        "title": "Crying in the Party (Big Band version)"
+      },
+      {
+        "disc": 2,
+        "track": 12,
+        "title": "只是近黃昏"
+      },
+      {
+        "disc": 2,
+        "track": 13,
+        "title": "後台"
+      }
+    ]
+  },
+  {
+    "albumId": "apple-1443493887",
+    "title": "不想放手",
+    "note": "按官方 11 曲 CD 发行补入曲序 2、3、6、9。",
+    "sourceUrl": "https://musicbrainz.org/release/94d3809d-d594-4742-a15f-2297c46f107f",
+    "addedTracks": [
+      {
+        "disc": 1,
+        "track": 2,
+        "title": "路…一直都在"
+      },
+      {
+        "disc": 1,
+        "track": 3,
+        "title": "獨居動物"
+      },
+      {
+        "disc": 1,
+        "track": 6,
+        "title": "7"
+      },
+      {
+        "disc": 1,
+        "track": 9,
+        "title": "臭美"
+      }
+    ]
+  },
+  {
+    "albumId": "apple-1443938740",
+    "title": "怎麼樣",
+    "note": "按官方 10 曲 CD 发行补入第 3 首 Hippie。",
+    "sourceUrl": "https://musicbrainz.org/release/00dd1112-1ebc-4553-9e8c-2a17cf745e18",
+    "addedTracks": [
+      {
+        "disc": 1,
+        "track": 3,
+        "title": "Hippie"
+      }
+    ]
+  }
+]

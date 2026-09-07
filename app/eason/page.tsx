@@ -21,5 +21,5 @@ export const metadata: Metadata = {
 }
 
 export default function EasonPage() {
-  return <VinylRoom key="eason" albums={albums} artist="陈奕迅" artistEnglish="EASON CHAN" edition="001" minimalDetail />
+  return <VinylRoom key="eason" theme="eason" albums={albums} artist="陈奕迅" artistEnglish="EASON CHAN" edition="001" minimalDetail />
 }

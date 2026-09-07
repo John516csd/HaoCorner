@@ -1,0 +1,70 @@
+{
+  "id": "apple-1444411811",
+  "appleCollectionId": "1444411811",
+  "musicbrainzReleaseId": null,
+  "title": "恐龍進化論 (\"死開啲啦\"電影主題曲) - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2015-09-10",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2015 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1444411811",
+    "path": "covers/1444411811-恐龍進化論 (_死開啲啦_電影主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/69/e6/d2/69e6d20c-ecad-8aaf-c554-8ff836fc9f06/00602488889599.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/69/e6/d2/69e6d20c-ecad-8aaf-c554-8ff836fc9f06/00602488889599.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 1500,
+    "height": 1500,
+    "bytes": 235961,
+    "sha256": "7a17f1b3f1c5037e559c74a353c254c1288deabb1afbce869ae6d111266f14b7",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1444411814",
+      "albumId": "apple-1444411811",
+      "title": "恐龍進化論 (\"死開啲啦\"電影主題曲)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 192000,
+      "duration": "3:12",
+      "appleTrackId": "1444411814",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E6%81%90%E9%BE%8D%E9%80%B2%E5%8C%96%E8%AB%96-%E6%AD%BB%E9%96%8B%E5%95%B2%E5%95%A6-%E9%9B%BB%E5%BD%B1%E4%B8%BB%E9%A1%8C%E6%9B%B2/1444411811?i=1444411814&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b1/0a/31/b10a3165-a91b-4e72-227a-cfb6d473e70d/mzaf_12927446353501264348.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1444411811&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E6%81%90%E9%BE%8D%E9%80%B2%E5%8C%96%E8%AB%96-%E6%AD%BB%E9%96%8B%E5%95%B2%E5%95%A6-%E9%9B%BB%E5%BD%B1%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1444411811?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 192000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

@@ -1,0 +1,76 @@
+{
+  "id": "apple-1445291082",
+  "appleCollectionId": "1445291082",
+  "musicbrainzReleaseId": null,
+  "title": "讓我留在你身邊 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2016-12-01",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2016-12-01",
+      "sourceUrl": "https://musicbrainz.org/release-group/7c9c6095-67f5-4668-a5ec-5315ee0358cb"
+    }
+  ],
+  "storefronts": [
+    "hk",
+    "tw"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2016 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1445291082",
+    "path": "covers/1445291082-讓我留在你身邊 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/75/1a/ac/751aac48-1486-3001-3630-ece382309adc/00602488602952.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/75/1a/ac/751aac48-1486-3001-3630-ece382309adc/00602488602952.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1889862,
+    "sha256": "6278c61c907355cf8b3681f5f6ea59bf879985880b1d691f644009233f491ccd",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1445291088",
+      "albumId": "apple-1445291082",
+      "title": "讓我留在你身邊",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 185384,
+      "duration": "3:05",
+      "appleTrackId": "1445291088",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E8%AE%93%E6%88%91%E7%95%99%E5%9C%A8%E4%BD%A0%E8%BA%AB%E9%82%8A/1445291082?i=1445291088&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/8f/03/a18f038f-023c-e3e7-52c3-8a18a00d588a/mzaf_3077187729608991573.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1445291082&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E8%AE%93%E6%88%91%E7%95%99%E5%9C%A8%E4%BD%A0%E8%BA%AB%E9%82%8A-single/1445291082?uo=4",
+    "https://musicbrainz.org/release-group/7c9c6095-67f5-4668-a5ec-5315ee0358cb"
+  ],
+  "releaseGroupIds": [
+    "7c9c6095-67f5-4668-a5ec-5315ee0358cb"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 185384,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

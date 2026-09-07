@@ -1,0 +1,282 @@
+{
+  "release-count": 2,
+  "release-offset": 0,
+  "releases": [
+    {
+      "label-info": [
+        {
+          "catalog-number": null,
+          "label": {
+            "name": "EAS Music",
+            "id": "5bdf3c48-b5ad-4a4b-bc68-8f12adc4f041",
+            "sort-name": "EAS Music",
+            "label-code": null,
+            "type-id": null,
+            "type": null,
+            "disambiguation": ""
+          }
+        }
+      ],
+      "disambiguation": "",
+      "country": "CN",
+      "release-events": [
+        {
+          "area": {
+            "type-id": null,
+            "type": null,
+            "disambiguation": "",
+            "name": "China",
+            "iso-3166-1-codes": [
+              "CN"
+            ],
+            "id": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+            "sort-name": "China"
+          },
+          "date": "2016-06-16"
+        }
+      ],
+      "title": "在这个世界相遇",
+      "asin": null,
+      "date": "2016-06-16",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "media": [
+        {
+          "title": "",
+          "position": 1,
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "track-count": 1,
+          "format": "Digital Media",
+          "tracks": [
+            {
+              "number": "1",
+              "title": "在这个世界相遇 (动画电影《大鱼海棠》主题曲)",
+              "position": 1,
+              "recording": {
+                "first-release-date": "2016-06-16",
+                "id": "12d715e2-d69b-4abe-8c61-7fa8407869a1",
+                "length": 309000,
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "陈奕迅",
+                    "joinphrase": ""
+                  }
+                ],
+                "title": "在这个世界相遇",
+                "disambiguation": "动画电影《大鱼海棠》主题曲",
+                "video": false
+              },
+              "artist-credit": [
+                {
+                  "name": "陈奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "type": "Person",
+                    "country": "HK",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "length": 309000,
+              "id": "ade20b73-48a9-4168-8cfb-d2287d3da7bc"
+            }
+          ],
+          "track-offset": 0,
+          "id": "d17d0937-2e7c-31ff-b11a-2b2522c58f92"
+        }
+      ],
+      "text-representation": {
+        "script": "Hans",
+        "language": "zho"
+      },
+      "status": "Official",
+      "quality": "normal",
+      "packaging": "None",
+      "barcode": "602488898126",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "id": "04a0996d-7bbc-49d0-a7b0-a685471c6e85",
+      "artist-credit": [
+        {
+          "name": "陈奕迅",
+          "artist": {
+            "sort-name": "Chan, Eason",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "name": "陳奕迅",
+            "type": "Person",
+            "disambiguation": "Hong Kong singer",
+            "country": "HK",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "cover-art-archive": {
+        "count": 1,
+        "front": true,
+        "artwork": true,
+        "back": false,
+        "darkened": false
+      }
+    },
+    {
+      "cover-art-archive": {
+        "count": 0,
+        "front": false,
+        "artwork": false,
+        "back": false,
+        "darkened": false
+      },
+      "artist-credit": [
+        {
+          "joinphrase": "",
+          "artist": {
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "type": "Person",
+            "disambiguation": "Hong Kong singer",
+            "country": "HK",
+            "name": "陳奕迅",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "sort-name": "Chan, Eason"
+          },
+          "name": "陈奕迅"
+        }
+      ],
+      "id": "69068753-9a2c-410e-9792-a8a8e0fdb58c",
+      "packaging-id": null,
+      "barcode": "",
+      "packaging": null,
+      "quality": "normal",
+      "status": "Official",
+      "text-representation": {
+        "script": "Hant",
+        "language": "zho"
+      },
+      "media": [
+        {
+          "id": "0b6be416-0690-3720-857e-213a3af6b3a2",
+          "track-offset": 0,
+          "tracks": [
+            {
+              "recording": {
+                "first-release-date": "2016-06-16",
+                "length": 309000,
+                "id": "12d715e2-d69b-4abe-8c61-7fa8407869a1",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "country": "HK",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "sort-name": "Chan, Eason"
+                    },
+                    "name": "陈奕迅"
+                  }
+                ],
+                "title": "在这个世界相遇",
+                "disambiguation": "动画电影《大鱼海棠》主题曲",
+                "video": false
+              },
+              "title": "在這個世界相遇 (動畫電影《大魚海棠》主題曲)",
+              "number": "1",
+              "position": 1,
+              "id": "79f83e47-daab-45a8-b050-9cc495beddd6",
+              "length": 309000,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK"
+                  },
+                  "name": "陳奕迅"
+                }
+              ]
+            }
+          ],
+          "format": "Digital Media",
+          "track-count": 1,
+          "format-id": "907a28d9-b3b2-3ef6-89a8-7b18d91d4794",
+          "position": 1,
+          "title": ""
+        }
+      ],
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "date": "2017-03-21",
+      "asin": null,
+      "release-events": [
+        {
+          "area": {
+            "id": "0373cdff-eac8-3fbc-92dc-36a607da06d1",
+            "sort-name": "Hong Kong",
+            "name": "Hong Kong",
+            "iso-3166-1-codes": [
+              "HK"
+            ],
+            "type-id": null,
+            "type": null,
+            "iso-3166-2-codes": [
+              "CN-91"
+            ],
+            "disambiguation": ""
+          },
+          "date": "2017-03-21"
+        },
+        {
+          "date": "2017-03-21",
+          "area": {
+            "type-id": null,
+            "disambiguation": "",
+            "type": null,
+            "iso-3166-2-codes": [
+              "CN-71"
+            ],
+            "id": "41637cec-9a4f-389c-86d2-fc6abf3357b5",
+            "sort-name": "Taiwan",
+            "name": "Taiwan",
+            "iso-3166-1-codes": [
+              "TW"
+            ]
+          }
+        }
+      ],
+      "title": "在這個世界相遇",
+      "disambiguation": "",
+      "country": "HK",
+      "label-info": [
+        {
+          "catalog-number": null,
+          "label": {
+            "name": "EAS Music",
+            "id": "5bdf3c48-b5ad-4a4b-bc68-8f12adc4f041",
+            "label-code": null,
+            "sort-name": "EAS Music",
+            "type-id": null,
+            "disambiguation": "",
+            "type": null
+          }
+        }
+      ]
+    }
+  ]
+}

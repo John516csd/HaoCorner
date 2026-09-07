@@ -1,0 +1,75 @@
+{
+  "id": "apple-1494891188",
+  "appleCollectionId": "1494891188",
+  "musicbrainzReleaseId": null,
+  "title": "穩穩的幸福 - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2013-01-31",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2013-01-31",
+      "sourceUrl": "https://musicbrainz.org/release-group/8bdcb0f7-df37-4927-8ecb-9d421b33b9fb"
+    }
+  ],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2020 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1494891188",
+    "path": "covers/1494891188-穩穩的幸福 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/98/40/76/9840762d-bc25-5716-d975-cd57233594bb/20UMGIM01060.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/98/40/76/9840762d-bc25-5716-d975-cd57233594bb/20UMGIM01060.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1114676,
+    "sha256": "7e535441eb1fb7fc6563d9af8314a45f75b0d33726a41d5dcd36fd9fe95c8bf8",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1494891191",
+      "albumId": "apple-1494891188",
+      "title": "稳稳的幸福",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 223149,
+      "duration": "3:43",
+      "appleTrackId": "1494891191",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E7%A8%B3%E7%A8%B3%E7%9A%84%E5%B9%B8%E7%A6%8F/1494891188?i=1494891191",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/97/a4/df/97a4dfba-0bc0-1ffe-f175-d8a57ca732e7/mzaf_16816127988744019840.plus.aac.p.m4a",
+      "composer": "小柯",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E7%A9%A9%E7%A9%A9%E7%9A%84%E5%B9%B8%E7%A6%8F-single/1494891188?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E7%A9%A9%E7%A9%A9%E7%9A%84%E5%B9%B8%E7%A6%8F-single/1494891188?uo=4",
+    "https://musicbrainz.org/release-group/8bdcb0f7-df37-4927-8ecb-9d421b33b9fb"
+  ],
+  "releaseGroupIds": [
+    "8bdcb0f7-df37-4927-8ecb-9d421b33b9fb"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 223149,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

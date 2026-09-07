@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Eason · 专辑素材目录</title>
+<style>
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#252624;background:#f1f1ee}*{box-sizing:border-box}body{margin:0}main{max-width:1500px;margin:auto;padding:48px 36px 80px}header{border-bottom:1px solid #cccec7;padding-bottom:30px}.eyebrow{font-size:12px;letter-spacing:.16em;color:#70726a}h1{font-size:clamp(32px,5vw,58px);font-weight:550;letter-spacing:-.045em;margin:14px 0}p{line-height:1.7;color:#686b61;font-size:14px}a{color:inherit;text-underline-offset:4px}.links{display:flex;gap:24px;flex-wrap:wrap}.tools{position:sticky;top:0;background:#f1f1eef5;padding:20px 0 16px;z-index:2;backdrop-filter:blur(10px)}input,select,button{font:inherit}input{width:min(100%,460px);padding:12px 16px;border:1px solid #c6c8bf;border-radius:6px;background:#fff}nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}nav button{background:none;border:1px solid #c8cac2;padding:8px 14px;border-radius:50px;cursor:pointer;font-size:13px}nav button[aria-pressed=true]{background:#30332c;color:white;border-color:#30332c}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #767e68;outline-offset:4px}#result-count{font-size:12px;color:#777a70;margin:18px 0}#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:28px 22px}.album{border:0;text-align:left;padding:0;cursor:pointer;background:transparent;color:inherit;min-width:0}.art{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:#e0e2da;overflow:hidden;border-radius:2px}.art img{width:100%;height:100%;object-fit:contain;transition:transform .2s}.album:hover img{transform:scale(1.025)}.no-cover{font-size:13px;color:#6f7367}.album h2{font-size:14px;line-height:1.4;font-weight:550;margin:12px 0 5px;overflow-wrap:anywhere}.album p{font-size:12px;line-height:1.5;margin:0}.status{color:#986338!important}dialog{border:0;border-radius:10px;width:min(1100px,94vw);max-height:90vh;padding:0;background:#fafaf7;color:inherit}dialog::backdrop{background:#151711a6}.dialog-top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid #dddfd6;position:sticky;top:0;background:#fafaf7;z-index:1}#close{font-size:22px;background:none;border:0;cursor:pointer;width:36px;height:36px}.detail{display:grid;grid-template-columns:300px 1fr;gap:32px;padding:28px}.detail h2{font-size:25px;margin-top:20px;overflow-wrap:anywhere}.detail h3{font-size:14px;font-weight:550;margin-top:26px}.detail p{font-size:12px;overflow-wrap:anywhere}.source-list{font-size:12px;display:flex;gap:12px;flex-wrap:wrap}ol{list-style:none;padding:0;margin:0}.track{display:grid;grid-template-columns:35px 1fr 44px;gap:12px;padding:13px 0;border-bottom:1px solid #e3e5dc;align-items:start;font-size:13px}.track small{display:block;font-size:11px;color:#7f8277;margin-top:5px}.track .num,.track .time{color:#8a8c82;font-variant-numeric:tabular-nums}.track .time{text-align:right;font-size:12px}.track a{text-decoration:none}.track a:hover{text-decoration:underline}.note{background:#f0ede4;padding:12px 14px;border-radius:4px}#empty{padding:80px 0;text-align:center}.hint{font-size:12px}footer{padding-top:48px;font-size:12px;color:#7c7e73}@media(max-width:700px){main{padding:28px 18px 60px}.detail{grid-template-columns:1fr;padding:20px;gap:12px}.detail aside .art{max-width:280px;margin:auto}#grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}.links{gap:16px}.dialog-top{padding:10px 18px}}
+@media(prefers-reduced-motion:reduce){.art img{transition:none}}
+</style></head><body><main>
+<header><div class="eyebrow">HAOCORNER · MATERIAL ARCHIVE</div><h1>陈奕迅的唱片架</h1><p id="summary"></p><div class="links"><a href="README.md">素材说明</a><a href="albums.csv" download>专辑表 CSV</a><a href="tracks.csv" download>曲目表 CSV</a><a href="catalog.json" download>完整 JSON</a><a href="completeness-report.json">缺口与核对记录</a></div></header>
+<div class="tools"><label for="search" class="eyebrow">查找专辑或歌曲（保留来源原名及繁简写法）</label><br><input id="search" type="search" placeholder="例如：我的快樂時代 / 富士山下 / CHIN UP" autocomplete="off"><nav id="filters" aria-label="专辑分类"></nav></div>
+<p id="result-count" aria-live="polite"></p><section id="grid" aria-label="专辑素材"></section><p id="empty" hidden>当前筛选没有匹配的专辑。</p>
+<footer>离线素材目录 · 点击封面查看该发行版本的曲目。音频、MV 保存资料与平台链接，未下载媒体文件。不同版本的歌曲条目可能重复。</footer>
+</main><dialog id="dialog" aria-labelledby="detail-title"><div class="dialog-top"><span class="eyebrow">ALBUM DETAILS</span><button id="close" aria-label="关闭专辑详情">×</button></div><div id="detail" class="detail"></div></dialog>
+<script id="catalog-data" type="application/json">__CATALOG_DATA__</script>
+<script>
+'use strict';
+const {catalog,studio}=JSON.parse(document.querySelector('#catalog-data').textContent);
+const albums=catalog.albums, summary=catalog.summary, selected=new Map(studio.map(a=>[a.albumId,a]));
+const labels={studio:'录音室',album:'专辑',compilation:'精选',live:'现场',ep:'EP',single:'单曲',remix:'混音',instrumental:'纯音乐'};
+const statuses={'incomplete':'曲目待补','review-required':'发行待核对','physical-reference':'实体参考','supplemented-from-physical':'已补齐目录'};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normalize=s=>String(s).normalize('NFKC').toLowerCase().replace(/[\s\p{P}]+/gu,'');
+let filter='core';
+document.querySelector('#summary').textContent=`${summary.releaseVersionCount} 份发行记录 · ${summary.downloadedCoverCount} 张本地封面 · ${summary.audioTrackEntryCount} 条音频曲目资料。默认展示 32 张录音室专辑；重制、地区版和早期补充资料保留在全部目录中。`;
+const filters=[['core','录音室 · 32 张'],['all','全部发行'],['live','现场'],['compilation','精选'],['ep','EP'],['single','单曲'],['other','混音 / 纯音乐'],['gaps','待补 / 待核对']];
+document.querySelector('#filters').innerHTML=filters.map(([key,label])=>`<button data-filter="${key}" aria-pressed="${key===filter}">${label}</button>`).join('');
+document.querySelector('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render()});
+document.querySelector('#search').addEventListener('input',render);
+function art(a){return a.cover?`<div class="art"><img src="${esc(a.cover.path)}" alt="${esc(a.title)}专辑封面" loading="lazy"></div>`:'<div class="art"><span class="no-cover">封面待补</span></div>'}
+function render(){
+ const query=normalize(document.querySelector('#search').value);
+ let rows=albums.filter(a=>filter==='all'||filter==='core'&&selected.has(a.id)||filter===a.type||filter==='other'&&['remix','instrumental'].includes(a.type)||filter==='gaps'&&(!a.cover||a.missingTrackCount||a.metadataStatus==='review-required'));
+ if(filter==='core')rows.sort((a,b)=>selected.get(a.id).index-selected.get(b.id).index);
+ if(query)rows=rows.filter(a=>normalize([a.title,selected.get(a.id)?.title,a.artist,...a.tracks.map(t=>t.title)].join(' ')).includes(query));
+ document.querySelector('#result-count').textContent=`显示 ${rows.length} 份发行记录`;
+ document.querySelector('#empty').hidden=rows.length>0;
+ document.querySelector('#grid').innerHTML=rows.map(a=>`<button class="album" data-id="${a.id}" aria-label="查看 ${esc(a.title)} 曲目">${art(a)}<h2>${esc(filter==='core'?selected.get(a.id).title:a.title)}</h2><p>${filter==='core'?selected.get(a.id).originalYear:esc(a.releaseDate?.slice(0,4)||'年份待核对')} · ${labels[a.type]||'发行'} · ${a.songCount} 音轨${a.videoCount?' / '+a.videoCount+' MV':''}</p>${!a.cover||a.missingTrackCount||a.metadataStatus==='review-required'?`<p class="status">${!a.cover?'封面待补 ':''}${statuses[a.metadataStatus]||''}</p>`:''}</button>`).join('');
+}
+document.querySelector('#grid').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)openAlbum(b.dataset.id)});
+const dialog=document.querySelector('#dialog');
+document.querySelector('#close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
+function openAlbum(id){
+ const a=albums.find(x=>x.id===id);const groups=new Map();
+ for(const t of a.tracks){const key=`${t.discNumber}-${t.kind}`;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(t)}
+ const tracks=[...groups.values()].map(ts=>`<h3>DISC ${ts[0].discNumber} · ${ts[0].kind==='song'?'歌曲 / 音轨':'MV / 影像'}</h3><ol>${ts.map(t=>`<li class="track"><span class="num">${String(t.trackNumber).padStart(2,'0')}</span><span>${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noreferrer">${esc(t.title)}</a>`:esc(t.title)}<small>${esc(t.artist)}${t.supplemented?' · 补充来源':''}</small></span><span class="time">${t.duration||'—'}</span></li>`).join('')}</ol>`).join('');
+ document.querySelector('#detail').innerHTML=`<aside>${art(a)}<h2 id="detail-title">${esc(a.title)}</h2><p>${esc(a.artist)}<br>${esc(a.releaseDate||'日期待核对')} · ${labels[a.type]||'发行'}<br>${a.songCount} 个音频条目 · ${a.videoCount} 个影像条目${a.cover?`<br>封面 ${a.cover.width} × ${a.cover.height} px`:''}</p><div class="source-list">${a.cover?`<a href="${esc(a.cover.path)}" download>下载封面</a>`:''}<a href="albums/${a.id}.json" download>专辑 JSON</a>${a.sourceUrls.map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noreferrer">来源 ${i+1}</a>`).join('')}</div><p class="hint">${esc(a.releaseDateMeaning)}</p>${a.notes.map(n=>`<p class="note">${esc(n)}</p>`).join('')}</aside><section>${tracks}</section>`;
+ dialog.showModal();dialog.scrollTop=0;
+}
+render();
+</script></body></html>

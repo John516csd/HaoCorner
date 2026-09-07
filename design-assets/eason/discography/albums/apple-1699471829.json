@@ -1,0 +1,70 @@
+{
+  "id": "apple-1699471829",
+  "appleCollectionId": "1699471829",
+  "musicbrainzReleaseId": null,
+  "title": "K歌之王 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2022-02-11",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2022 制作家",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1699471829",
+    "path": "covers/1699471829-K歌之王 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ef/55/88/ef558878-ad43-33b4-4f1d-f433e17483c4/4894894538970.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ef/55/88/ef558878-ad43-33b4-4f1d-f433e17483c4/4894894538970.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 4524416,
+    "sha256": "a09bebecaadacbd7a913921f792bdfb8362c3080f9bc2b572b6d942cb1c07a90",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1699471830",
+      "albumId": "apple-1699471829",
+      "title": "K歌之王 (Remix)",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 212763,
+      "duration": "3:33",
+      "appleTrackId": "1699471830",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/k%E6%AD%8C%E4%B9%8B%E7%8E%8B-remix/1699471829?i=1699471830&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/7d/4a/85/7d4a85f9-03ef-a46b-741b-2691fdd564da/mzaf_14925469756862828830.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1699471829&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/k%E6%AD%8C%E4%B9%8B%E7%8E%8B-single/1699471829?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 212763,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

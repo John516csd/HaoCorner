@@ -1,0 +1,26 @@
+{
+  "corrections": [
+    {
+      "title": "新生活音樂會現場",
+      "albumIds": [
+        "1484716666"
+      ],
+      "reason": "Keep the live edition separate from the compilation."
+    },
+    {
+      "title": "新生活：新曲＋精選",
+      "albumIds": [
+        "892692130"
+      ],
+      "reason": "Keep the compilation separate from the live album."
+    },
+    {
+      "title": "陳奕迅",
+      "albumIds": [
+        "892603736",
+        "892852443"
+      ],
+      "reason": "Exclude the 2026 remastered standalone single 時代曲 from the album group."
+    }
+  ]
+}

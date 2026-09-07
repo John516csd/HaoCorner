@@ -1,0 +1,75 @@
+{
+  "id": "apple-1365354095",
+  "appleCollectionId": "1365354095",
+  "musicbrainzReleaseId": null,
+  "title": "我們 (《後來的我們》電影主題曲) - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2018-04-10",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [
+    {
+      "date": "2018-04-10",
+      "sourceUrl": "https://musicbrainz.org/release-group/bf4e7b13-f376-49be-8fe0-35a9d0094b74"
+    }
+  ],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2018 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1365354095",
+    "path": "covers/1365354095-我們 (《後來的我們》電影主題曲) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/75/6c/ac/756cacfc-7e9c-d378-d324-85b8d40681c2/00602567588665.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/75/6c/ac/756cacfc-7e9c-d378-d324-85b8d40681c2/00602567588665.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1297214,
+    "sha256": "3ca253b0b959341fb557590109e930265b6468cf6cf070c39af3eeee7b67bed3",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1365354096",
+      "albumId": "apple-1365354095",
+      "title": "我们 (《后来的我们》电影主题曲)",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 260878,
+      "duration": "4:21",
+      "appleTrackId": "1365354096",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E6%88%91%E4%BB%AC-%E5%90%8E%E6%9D%A5%E7%9A%84%E6%88%91%E4%BB%AC-%E7%94%B5%E5%BD%B1%E4%B8%BB%E9%A2%98%E6%9B%B2/1365354095?i=1365354096",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0a/88/91/0a8891ec-8de2-189a-d426-39b8a636b00b/mzaf_3096907558571744218.plus.aac.p.m4a",
+      "composer": "陈建骐",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E6%88%91%E5%80%91-%E5%BE%8C%E4%BE%86%E7%9A%84%E6%88%91%E5%80%91-%E9%9B%BB%E5%BD%B1%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1365354095?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E6%88%91%E5%80%91-%E5%BE%8C%E4%BE%86%E7%9A%84%E6%88%91%E5%80%91-%E9%9B%BB%E5%BD%B1%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1365354095?uo=4",
+    "https://musicbrainz.org/release-group/bf4e7b13-f376-49be-8fe0-35a9d0094b74"
+  ],
+  "releaseGroupIds": [
+    "bf4e7b13-f376-49be-8fe0-35a9d0094b74"
+  ],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 260878,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

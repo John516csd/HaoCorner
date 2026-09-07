@@ -1,0 +1,1181 @@
+[
+  {
+    "id": "20be69b2-058f-4053-a633-0b04a3c11f52",
+    "title": "I Had a Great Time",
+    "firstReleaseDate": "",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/20be69b2-058f-4053-a633-0b04a3c11f52"
+  },
+  {
+    "id": "7c9c6095-67f5-4668-a5ec-5315ee0358cb",
+    "title": "讓我留在你身邊",
+    "firstReleaseDate": "2016-12-01",
+    "type": "Single",
+    "secondaryTypes": [
+      "Soundtrack"
+    ],
+    "albumIds": [
+      "1445291082"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/7c9c6095-67f5-4668-a5ec-5315ee0358cb"
+  },
+  {
+    "id": "02ab15ca-c804-3615-a187-07adbbe02e38",
+    "title": "Live for Today",
+    "firstReleaseDate": "2003-07-22",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542676848"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/02ab15ca-c804-3615-a187-07adbbe02e38"
+  },
+  {
+    "id": "03fac712-87f5-4a57-a083-e9c40382964a",
+    "title": "rice & shine",
+    "firstReleaseDate": "2014-05-15",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1422694136",
+      "1443211952"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/03fac712-87f5-4a57-a083-e9c40382964a"
+  },
+  {
+    "id": "067bd0bf-a596-430a-9c79-ed86f28e4259",
+    "title": "不期而遇的夏天",
+    "firstReleaseDate": "2021-09-15",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1580332856",
+      "1580332948",
+      "1584062266"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/067bd0bf-a596-430a-9c79-ed86f28e4259"
+  },
+  {
+    "id": "08107436-e26c-4221-b078-a25d001f94a6",
+    "title": "Eason's Life 陳奕迅2013演唱會 (2CD)",
+    "firstReleaseDate": "2014-01-02",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "1443270803",
+      "1444164011"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/08107436-e26c-4221-b078-a25d001f94a6"
+  },
+  {
+    "id": "0b608794-0a63-4f13-987e-4a6878b51b89",
+    "title": "Stranger Under My Skin",
+    "firstReleaseDate": "2011-02-22",
+    "type": "EP",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443711302",
+      "1821210438"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/0b608794-0a63-4f13-987e-4a6878b51b89"
+  },
+  {
+    "id": "0d69a75d-8238-4c7d-aafa-d9f41f20a52b",
+    "title": "陳奕迅",
+    "firstReleaseDate": "1996-12-11",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "892603736",
+      "892852443"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/0d69a75d-8238-4c7d-aafa-d9f41f20a52b"
+  },
+  {
+    "id": "0e20d9c7-2896-44d0-b209-434b2cf5b2b8",
+    "title": "七",
+    "firstReleaseDate": "2003-11-18",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/0e20d9c7-2896-44d0-b209-434b2cf5b2b8"
+  },
+  {
+    "id": "0e5c2584-2206-4358-a835-ed2e0e519ab5",
+    "title": "C’mon in~",
+    "firstReleaseDate": "2017-10-09",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1440909180"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/0e5c2584-2206-4358-a835-ed2e0e519ab5"
+  },
+  {
+    "id": "10478872-39e1-3e3d-b997-b0aed2428bed",
+    "title": "Solidays",
+    "firstReleaseDate": "2008-08-26",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "1442943933"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/10478872-39e1-3e3d-b997-b0aed2428bed"
+  },
+  {
+    "id": "1366d7bd-27bc-3493-96dd-c812f962f7dc",
+    "title": "Great 5000 Secs, Volume 2",
+    "firstReleaseDate": "2005-06",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "542698905"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/1366d7bd-27bc-3493-96dd-c812f962f7dc"
+  },
+  {
+    "id": "163b0870-9485-4f2f-825e-c26c79acb8d4",
+    "title": "陳奕迅2011 \"?\" 國語專輯",
+    "firstReleaseDate": "2011-11-04",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443783500"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/163b0870-9485-4f2f-825e-c26c79acb8d4"
+  },
+  {
+    "id": "1b789564-fb81-4f5d-9162-22fecd9f481d",
+    "title": "…3mm Remix",
+    "firstReleaseDate": "2011-11-08",
+    "type": "Album",
+    "secondaryTypes": [
+      "Remix"
+    ],
+    "albumIds": [
+      "1443067287"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/1b789564-fb81-4f5d-9162-22fecd9f481d"
+  },
+  {
+    "id": "1f7f516f-1935-3b7d-a4fa-ec290ce1b43d",
+    "title": "黑白灰",
+    "firstReleaseDate": "2003-04-15",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542923554"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/1f7f516f-1935-3b7d-a4fa-ec290ce1b43d"
+  },
+  {
+    "id": "208d3080-1ebf-35a4-8a0c-f04fe589d88e",
+    "title": "不想放手",
+    "firstReleaseDate": "2008-06-30",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443493887"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/208d3080-1ebf-35a4-8a0c-f04fe589d88e"
+  },
+  {
+    "id": "2173430c-b478-4ee8-8120-18d8ca845132",
+    "title": "There are many people in this world who love you",
+    "firstReleaseDate": "2024-06-14",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/2173430c-b478-4ee8-8120-18d8ca845132"
+  },
+  {
+    "id": "27d848cf-f7bc-3284-aead-19c08a76c6e9",
+    "title": "H³M",
+    "firstReleaseDate": "2009-03-23",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443774258",
+      "1490822198"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/27d848cf-f7bc-3284-aead-19c08a76c6e9"
+  },
+  {
+    "id": "28e0e88e-dd20-3b49-8b87-39cc6597865f",
+    "title": "Shall We Dance? Shall We Talk!",
+    "firstReleaseDate": "2001",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542593700"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/28e0e88e-dd20-3b49-8b87-39cc6597865f"
+  },
+  {
+    "id": "2b2fc927-98cc-4b36-a8d2-edb4f36a7ed6",
+    "title": "主旋律",
+    "firstReleaseDate": "2013-06-14",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/2b2fc927-98cc-4b36-a8d2-edb4f36a7ed6"
+  },
+  {
+    "id": "2bc72e45-4d29-4a72-80c2-a7c1a5094f42",
+    "title": "My Private Christmas Song",
+    "firstReleaseDate": "2010-12-08",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/2bc72e45-4d29-4a72-80c2-a7c1a5094f42"
+  },
+  {
+    "id": "2beef91f-d1ba-3226-8315-c054178c0772",
+    "title": "Mixed Up",
+    "firstReleaseDate": "2001-07-17",
+    "type": "Album",
+    "secondaryTypes": [
+      "Remix"
+    ],
+    "albumIds": [
+      "892390524"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/2beef91f-d1ba-3226-8315-c054178c0772"
+  },
+  {
+    "id": "2c6f5c6e-1300-4106-aa7e-3f4d51c713ad",
+    "title": "盲婚啞嫁",
+    "firstReleaseDate": "2023-01-09",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1662768448",
+      "1662774730"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/2c6f5c6e-1300-4106-aa7e-3f4d51c713ad"
+  },
+  {
+    "id": "2ea52ed2-cbf2-484b-9d2a-5ea553eff221",
+    "title": "一滴眼淚",
+    "firstReleaseDate": "1996-12",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1694525409"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/2ea52ed2-cbf2-484b-9d2a-5ea553eff221"
+  },
+  {
+    "id": "322ca657-11a6-48ad-bab6-d8666bfa6589",
+    "title": "純音樂世界",
+    "firstReleaseDate": "2001",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "545058478"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/322ca657-11a6-48ad-bab6-d8666bfa6589"
+  },
+  {
+    "id": "355e2e29-3f71-4049-9c57-8dbf78acf17d",
+    "title": "The Easy Ride 演唱會",
+    "firstReleaseDate": "2002-01",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "542611053"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/355e2e29-3f71-4049-9c57-8dbf78acf17d"
+  },
+  {
+    "id": "3585395b-708e-4b2f-89f9-5499b8312591",
+    "title": "Eason 18首選",
+    "firstReleaseDate": "2001-04-03",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/3585395b-708e-4b2f-89f9-5499b8312591"
+  },
+  {
+    "id": "366ed7c7-2acb-4a1b-a80b-5cf41fa521d2",
+    "title": "EasON AIR",
+    "firstReleaseDate": "2022-09-12",
+    "type": null,
+    "secondaryTypes": [],
+    "albumIds": [
+      "1642253501"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/366ed7c7-2acb-4a1b-a80b-5cf41fa521d2"
+  },
+  {
+    "id": "37ef8e29-9479-3e7c-b197-c70623427eda",
+    "title": "What’s Going On…?",
+    "firstReleaseDate": "2006-11-24",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443345687",
+      "1490822079",
+      "1720091272"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/37ef8e29-9479-3e7c-b197-c70623427eda"
+  },
+  {
+    "id": "3be9d6ed-6a5f-49f0-b220-dd2b47b088c0",
+    "title": "人啊人",
+    "firstReleaseDate": "2022-11-16",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1653358910"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/3be9d6ed-6a5f-49f0-b220-dd2b47b088c0"
+  },
+  {
+    "id": "428578e1-711a-3502-a2c7-43d87e0aa390",
+    "title": "反正是我",
+    "firstReleaseDate": "2001-07-17",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542592136"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/428578e1-711a-3502-a2c7-43d87e0aa390"
+  },
+  {
+    "id": "45ab9952-fb9d-4ecf-acd4-6b42028a57b0",
+    "title": "陳奕迅48首選",
+    "firstReleaseDate": "2008-12-23",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/45ab9952-fb9d-4ecf-acd4-6b42028a57b0"
+  },
+  {
+    "id": "4e6d5f32-8025-4ae2-a29a-3a24e42db6de",
+    "title": "Eason's Moving On Stage 1",
+    "firstReleaseDate": "2007-12-21",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "1462045568"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/4e6d5f32-8025-4ae2-a29a-3a24e42db6de"
+  },
+  {
+    "id": "50432e49-6503-426c-9a6a-7be6be807459",
+    "title": "Eason & Friends 903 id club 拉闊音樂會",
+    "firstReleaseDate": "2000-06-23",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "892458133"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/50432e49-6503-426c-9a6a-7be6be807459"
+  },
+  {
+    "id": "52f8288e-9934-45d0-9e13-0010b1fd669f",
+    "title": "L.O.V.E.",
+    "firstReleaseDate": "2018-12-11",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1441520069",
+      "1441543918"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/52f8288e-9934-45d0-9e13-0010b1fd669f"
+  },
+  {
+    "id": "5778c157-8224-49b0-b058-a65598ca8335",
+    "title": "陳奕迅 Eason",
+    "firstReleaseDate": "2008-07-11",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/5778c157-8224-49b0-b058-a65598ca8335"
+  },
+  {
+    "id": "5a56168a-d22f-305f-9f52-9d8b509734fc",
+    "title": "Great 5000 Secs",
+    "firstReleaseDate": "2005-02-04",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "542693388"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/5a56168a-d22f-305f-9f52-9d8b509734fc"
+  },
+  {
+    "id": "5b2b1dba-d8cc-441c-95a7-0c3c48fd7607",
+    "title": "陪你度过漫长岁月",
+    "firstReleaseDate": "2015-10-14",
+    "type": "Single",
+    "secondaryTypes": [
+      "Soundtrack"
+    ],
+    "albumIds": [
+      "1445308857"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/5b2b1dba-d8cc-441c-95a7-0c3c48fd7607"
+  },
+  {
+    "id": "6642389a-9cf6-44db-97c9-6033bff83b42",
+    "title": "903id Club 拉阔音乐会",
+    "firstReleaseDate": "",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/6642389a-9cf6-44db-97c9-6033bff83b42"
+  },
+  {
+    "id": "69dbbe65-13f4-3cb8-9f7a-91acc75e4459",
+    "title": "Eason 4 A Change & Hits",
+    "firstReleaseDate": "2002",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "542613324"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/69dbbe65-13f4-3cb8-9f7a-91acc75e4459"
+  },
+  {
+    "id": "6ad0a5aa-820b-4ce7-a79c-3161728ffa02",
+    "title": "Sleep Alone",
+    "firstReleaseDate": "2015-11-10",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1444408224"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/6ad0a5aa-820b-4ce7-a79c-3161728ffa02"
+  },
+  {
+    "id": "713896c9-ae66-4171-8d12-2230a259b23f",
+    "title": "Super Master Series: Eason Chan 陳奕迅",
+    "firstReleaseDate": "2009-06",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/713896c9-ae66-4171-8d12-2230a259b23f"
+  },
+  {
+    "id": "824c09b2-a340-4731-99c9-e5cb9fa50b4b",
+    "title": "大激想",
+    "firstReleaseDate": "1998-08",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "6785387038"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/824c09b2-a340-4731-99c9-e5cb9fa50b4b"
+  },
+  {
+    "id": "828d4fcd-99f2-3d42-b7b8-4e97a4e51981",
+    "title": "認了吧",
+    "firstReleaseDate": "2007-04-24",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443352354",
+      "1443816775"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/828d4fcd-99f2-3d42-b7b8-4e97a4e51981"
+  },
+  {
+    "id": "83d9a24f-83b2-4e03-b763-5fe574911a57",
+    "title": "十面埋伏",
+    "firstReleaseDate": "2017",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/83d9a24f-83b2-4e03-b763-5fe574911a57"
+  },
+  {
+    "id": "8905581d-9785-39d6-8470-e4888b102f1f",
+    "title": "U87",
+    "firstReleaseDate": "2005-06-07",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443368631",
+      "1443374875"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8905581d-9785-39d6-8470-e4888b102f1f"
+  },
+  {
+    "id": "8919fb50-5007-4fe6-8032-2e8f2bb5cda6",
+    "title": "塵大師",
+    "firstReleaseDate": "2023-03-10",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1675204502"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8919fb50-5007-4fe6-8032-2e8f2bb5cda6"
+  },
+  {
+    "id": "8983dfb8-006b-4155-b8d0-f9d444c0e915",
+    "title": "…3mm",
+    "firstReleaseDate": "2012-08-10",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1445753233"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8983dfb8-006b-4155-b8d0-f9d444c0e915"
+  },
+  {
+    "id": "8b6f0baa-026b-3a3d-b180-8d1deb85a50e",
+    "title": "Life Continues…",
+    "firstReleaseDate": "2006-02-17",
+    "type": "EP",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1442912707"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8b6f0baa-026b-3a3d-b180-8d1deb85a50e"
+  },
+  {
+    "id": "8bdcb0f7-df37-4927-8ecb-9d421b33b9fb",
+    "title": "穩穩的幸福",
+    "firstReleaseDate": "2013-01-31",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1494882271",
+      "1494891188"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8bdcb0f7-df37-4927-8ecb-9d421b33b9fb"
+  },
+  {
+    "id": "8c2492f2-e3e1-358b-99a1-608279ab27b6",
+    "title": "The Line-Up",
+    "firstReleaseDate": "2002-07-24",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542611601"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8c2492f2-e3e1-358b-99a1-608279ab27b6"
+  },
+  {
+    "id": "8cf8a45c-fc02-3e4b-90a7-86c9c80344d1",
+    "title": "The 1st Eleven Years 然後呢? 1997-2007 跨世紀國語精選",
+    "firstReleaseDate": "2008-03-25",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "1443826314"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8cf8a45c-fc02-3e4b-90a7-86c9c80344d1"
+  },
+  {
+    "id": "8e951f06-a35b-4fda-9d19-51f743e31452",
+    "title": "婚禮的祝福",
+    "firstReleaseDate": "1999-09",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1694525826"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/8e951f06-a35b-4fda-9d19-51f743e31452"
+  },
+  {
+    "id": "91ac7c10-3e8f-4790-a162-bc7523c41855",
+    "title": "新生活音樂會現場",
+    "firstReleaseDate": "1999-02",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "1484716666"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/91ac7c10-3e8f-4790-a162-bc7523c41855"
+  },
+  {
+    "id": "97d66923-78dc-4d15-aa27-4c570c544b24",
+    "title": "醞釀",
+    "firstReleaseDate": "1997-11-12",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1694525250"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/97d66923-78dc-4d15-aa27-4c570c544b24"
+  },
+  {
+    "id": "99407bc6-df78-4f08-adb4-6589112a2783",
+    "title": "光輝歲月",
+    "firstReleaseDate": "2020-01-14",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1494890046",
+      "1494891288"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/99407bc6-df78-4f08-adb4-6589112a2783"
+  },
+  {
+    "id": "9c6c0b7e-dc04-4c83-bbea-eae6719100fc",
+    "title": "FEAR and DREAMS",
+    "firstReleaseDate": "2025-08-25",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "1831490372"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/9c6c0b7e-dc04-4c83-bbea-eae6719100fc"
+  },
+  {
+    "id": "9fc0f546-067e-401f-9a56-fd9eb76b0d62",
+    "title": "四季",
+    "firstReleaseDate": "2016-09-21",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1445302735"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/9fc0f546-067e-401f-9a56-fd9eb76b0d62"
+  },
+  {
+    "id": "a00fb7b3-299c-4015-88fb-6dc21b463aa5",
+    "title": "The Best Moment",
+    "firstReleaseDate": "2008-09-06",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/a00fb7b3-299c-4015-88fb-6dc21b463aa5"
+  },
+  {
+    "id": "a13d7c00-1a6f-42af-a2e7-a046225b0e27",
+    "title": "Third Encounter",
+    "firstReleaseDate": "2003-03",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "542681657"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/a13d7c00-1a6f-42af-a2e7-a046225b0e27"
+  },
+  {
+    "id": "a1566495-a496-4c59-b4c3-0e60e2af915b",
+    "title": "Music Is Live 2011 903 id club 陳奕迅 x 楊千嬅 x 梁漢文",
+    "firstReleaseDate": "2011-10-14",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/a1566495-a496-4c59-b4c3-0e60e2af915b"
+  },
+  {
+    "id": "a52bc0a6-105a-355a-ac65-73093155cc68",
+    "title": "Listen to Eason Chan",
+    "firstReleaseDate": "2007-10-18",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1462039068",
+      "1490821997"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/a52bc0a6-105a-355a-ac65-73093155cc68"
+  },
+  {
+    "id": "a60b069d-7618-421f-895f-20f9bd80f2d1",
+    "title": "我的最好時代",
+    "firstReleaseDate": "2006-02-09",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "542910172"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/a60b069d-7618-421f-895f-20f9bd80f2d1"
+  },
+  {
+    "id": "a6d79b50-2bdd-493e-b50f-1e70d9a22d01",
+    "title": "The Key",
+    "firstReleaseDate": "2013-07-22",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1386714588"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/a6d79b50-2bdd-493e-b50f-1e70d9a22d01"
+  },
+  {
+    "id": "aac50bfa-86ad-44ee-9cbd-31af85d13da2",
+    "title": "DUO 陳奕迅2010演唱會",
+    "firstReleaseDate": "2010-07-02",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "1442966677"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/aac50bfa-86ad-44ee-9cbd-31af85d13da2"
+  },
+  {
+    "id": "ac652fe6-b0c9-4d5b-b872-e4811c0b05bb",
+    "title": "新生活：新曲＋精選",
+    "firstReleaseDate": "1998-12-10",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "892692130"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/ac652fe6-b0c9-4d5b-b872-e4811c0b05bb"
+  },
+  {
+    "id": "adcab760-1c05-4ac2-90e9-ab291e50bdcc",
+    "title": "同舟之情",
+    "firstReleaseDate": "",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1445126987"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/adcab760-1c05-4ac2-90e9-ab291e50bdcc"
+  },
+  {
+    "id": "af146917-9503-4ce6-9b7d-fdf8ffbb9bf0",
+    "title": "天佑愛人",
+    "firstReleaseDate": "1999-05-26",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "892819866"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/af146917-9503-4ce6-9b7d-fdf8ffbb9bf0"
+  },
+  {
+    "id": "b204d030-dd68-4ac4-8036-23182f8a5ca6",
+    "title": "Allegro, Opus 3.3 a.m.",
+    "firstReleaseDate": "2009-01-21",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/b204d030-dd68-4ac4-8036-23182f8a5ca6"
+  },
+  {
+    "id": "b223b2ca-d3e2-460f-afee-03be12e45a82",
+    "title": "同舟之情",
+    "firstReleaseDate": "2013-05-02",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1445126987"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/b223b2ca-d3e2-460f-afee-03be12e45a82"
+  },
+  {
+    "id": "b5d0a12c-06ac-32a0-941f-b62c940bfbde",
+    "title": "Get a Life: Eason Chan Live in Hong Kong",
+    "firstReleaseDate": "2006-04-20",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [
+      "1462045698"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/b5d0a12c-06ac-32a0-941f-b62c940bfbde"
+  },
+  {
+    "id": "ba853ec0-bcf3-409a-86b6-4371e76534af",
+    "title": "打得火熱",
+    "firstReleaseDate": "2000-09-22",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542594340"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/ba853ec0-bcf3-409a-86b6-4371e76534af"
+  },
+  {
+    "id": "bb6ad570-3c0d-48df-b248-c5fd1dea371b",
+    "title": "Sound & Sight",
+    "firstReleaseDate": "2006-12",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/bb6ad570-3c0d-48df-b248-c5fd1dea371b"
+  },
+  {
+    "id": "bcd57558-523c-4364-8b1b-08e0ebd49e09",
+    "title": "The Easy Ride",
+    "firstReleaseDate": "2001-11-08",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542634698"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/bcd57558-523c-4364-8b1b-08e0ebd49e09"
+  },
+  {
+    "id": "bdf1de35-e295-43ae-acc5-3bbe54370156",
+    "title": "Special Thanks To…",
+    "firstReleaseDate": "2002-04",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "542612232"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/bdf1de35-e295-43ae-acc5-3bbe54370156"
+  },
+  {
+    "id": "bf4e7b13-f376-49be-8fe0-35a9d0094b74",
+    "title": "我們",
+    "firstReleaseDate": "2018-04-10",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1365353242",
+      "1365354095"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/bf4e7b13-f376-49be-8fe0-35a9d0094b74"
+  },
+  {
+    "id": "bf503b69-4e5e-4f90-9c78-e1a2bf535522",
+    "title": "十年經典",
+    "firstReleaseDate": "2015-01",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/bf503b69-4e5e-4f90-9c78-e1a2bf535522"
+  },
+  {
+    "id": "c71a7075-c1a8-400d-bf5d-ee16652cca62",
+    "title": "路…一直都在",
+    "firstReleaseDate": "2008-04-23",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/c71a7075-c1a8-400d-bf5d-ee16652cca62"
+  },
+  {
+    "id": "c77686fa-fafc-47f2-a565-e3646e7ebcd1",
+    "title": "K歌之王 AIR",
+    "firstReleaseDate": "2025-10-23",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1846752616"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/c77686fa-fafc-47f2-a565-e3646e7ebcd1"
+  },
+  {
+    "id": "ca844c28-9221-4bd7-aa73-558afc612802",
+    "title": "幸福",
+    "firstReleaseDate": "1999-11",
+    "type": "EP",
+    "secondaryTypes": [],
+    "albumIds": [
+      "892514705"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/ca844c28-9221-4bd7-aa73-558afc612802"
+  },
+  {
+    "id": "ca854b0a-464e-364f-81d6-7064973872a9",
+    "title": "Nothing Really Matters",
+    "firstReleaseDate": "2000-07-21",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "892669236"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/ca854b0a-464e-364f-81d6-7064973872a9"
+  },
+  {
+    "id": "cc207d86-ebe1-4697-b938-bf4c9e53a86e",
+    "title": "上五樓的快活",
+    "firstReleaseDate": "2009-09-23",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1442260565",
+      "1442429995"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/cc207d86-ebe1-4697-b938-bf4c9e53a86e"
+  },
+  {
+    "id": "d977a6fd-de6a-4341-a726-318837187b9f",
+    "title": "Music Life",
+    "firstReleaseDate": "2013",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "667921627"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/d977a6fd-de6a-4341-a726-318837187b9f"
+  },
+  {
+    "id": "d97d4013-d637-49d4-aa84-4bc28ba9cea1",
+    "title": "英皇钢琴热恋系列",
+    "firstReleaseDate": "2005",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "548143960"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/d97d4013-d637-49d4-aa84-4bc28ba9cea1"
+  },
+  {
+    "id": "da57e6ff-b7b9-484e-83ab-f7813d95c2d7",
+    "title": "孤勇者",
+    "firstReleaseDate": "2021-12-08",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1596938776",
+      "1596944315",
+      "1646940804",
+      "1646940930"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/da57e6ff-b7b9-484e-83ab-f7813d95c2d7"
+  },
+  {
+    "id": "daa59df8-ee41-442c-91af-179914588b23",
+    "title": "在这个世界相遇",
+    "firstReleaseDate": "2016-06-16",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1446857587",
+      "1446861450"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/daa59df8-ee41-442c-91af-179914588b23"
+  },
+  {
+    "id": "e0aeceab-317a-4ca2-896e-0e758af1c0e5",
+    "title": "等你愛我",
+    "firstReleaseDate": "2010-12-22",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/e0aeceab-317a-4ca2-896e-0e758af1c0e5"
+  },
+  {
+    "id": "e1954216-cd68-4fc1-8c76-62412f62667f",
+    "title": "陳奕迅&葉蒨文 903 id club 拉闊音樂會",
+    "firstReleaseDate": "2004-01-16",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/e1954216-cd68-4fc1-8c76-62412f62667f"
+  },
+  {
+    "id": "e5af222c-ad78-4174-9460-2d98e21e00aa",
+    "title": "是但求其愛",
+    "firstReleaseDate": "2020-11-20",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1539122228"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/e5af222c-ad78-4174-9460-2d98e21e00aa"
+  },
+  {
+    "id": "e610e53f-52ca-483d-9918-5b66f9546622",
+    "title": "Chin Up!",
+    "firstReleaseDate": "2023-10-27",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1712647195"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/e610e53f-52ca-483d-9918-5b66f9546622"
+  },
+  {
+    "id": "e9024bcc-845b-3549-b0bd-0770822e6cf0",
+    "title": "怎麼樣",
+    "firstReleaseDate": "2005-11-21",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443938740"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/e9024bcc-845b-3549-b0bd-0770822e6cf0"
+  },
+  {
+    "id": "eb1f99cd-c1c6-4b1c-bb19-a339a9154e64",
+    "title": "廣東精選",
+    "firstReleaseDate": "2014-07-18",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "651449675"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/eb1f99cd-c1c6-4b1c-bb19-a339a9154e64"
+  },
+  {
+    "id": "ed09675b-7cf6-45f1-906d-0ec10135ef9b",
+    "title": "Crying in the Party",
+    "firstReleaseDate": "2007-08-23",
+    "type": "Single",
+    "secondaryTypes": [],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/ed09675b-7cf6-45f1-906d-0ec10135ef9b"
+  },
+  {
+    "id": "f02cd365-5ccb-481e-866a-2ae119894f3b",
+    "title": "68′29″",
+    "firstReleaseDate": "2000-09-27",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "1550844443"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/f02cd365-5ccb-481e-866a-2ae119894f3b"
+  },
+  {
+    "id": "f91397d4-00f3-4726-8a27-f31439c7ed23",
+    "title": "拉闊壓軸：林子祥 / 陳奕迅",
+    "firstReleaseDate": "2002-02",
+    "type": "Album",
+    "secondaryTypes": [
+      "Live"
+    ],
+    "albumIds": [],
+    "sourceUrl": "https://musicbrainz.org/release-group/f91397d4-00f3-4726-8a27-f31439c7ed23"
+  },
+  {
+    "id": "f93309d1-69fe-3240-b95c-57613621ece5",
+    "title": "我的快樂時代",
+    "firstReleaseDate": "1998-05-26",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1575742728",
+      "892745229"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/f93309d1-69fe-3240-b95c-57613621ece5"
+  },
+  {
+    "id": "f99ad43d-a0d4-44d8-b8ac-502129019e4a",
+    "title": "與我常在",
+    "firstReleaseDate": "1997-04-12",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "892735096"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/f99ad43d-a0d4-44d8-b8ac-502129019e4a"
+  },
+  {
+    "id": "f9a5860a-dd8d-4d9e-9f74-f8a29a2f250f",
+    "title": "?",
+    "firstReleaseDate": "2011-11-09",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443783500"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/f9a5860a-dd8d-4d9e-9f74-f8a29a2f250f"
+  },
+  {
+    "id": "fa13d7bf-8a08-394b-9e92-4879c324932a",
+    "title": "你的陳奕迅國語精選",
+    "firstReleaseDate": "2007-10-23",
+    "type": "Album",
+    "secondaryTypes": [
+      "Compilation"
+    ],
+    "albumIds": [
+      "542922079"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/fa13d7bf-8a08-394b-9e92-4879c324932a"
+  },
+  {
+    "id": "fb610a48-c1ae-4e6c-847b-2e81ef54de0e",
+    "title": "Taste the Atmosphere",
+    "firstReleaseDate": "2010-10-15",
+    "type": "EP",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1604745788",
+      "1829423915"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/fb610a48-c1ae-4e6c-847b-2e81ef54de0e"
+  },
+  {
+    "id": "fca67ca4-b1b2-4b83-bf2a-33d0163097e9",
+    "title": "Time Flies",
+    "firstReleaseDate": "2010-03-12",
+    "type": "EP",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1443717418",
+      "1446016948"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/fca67ca4-b1b2-4b83-bf2a-33d0163097e9"
+  },
+  {
+    "id": "fcae667c-725e-4801-9e38-c21f69a80103",
+    "title": "準備中",
+    "firstReleaseDate": "2015-07-10",
+    "type": "Album",
+    "secondaryTypes": [],
+    "albumIds": [
+      "1422674966"
+    ],
+    "sourceUrl": "https://musicbrainz.org/release-group/fcae667c-725e-4801-9e38-c21f69a80103"
+  }
+]

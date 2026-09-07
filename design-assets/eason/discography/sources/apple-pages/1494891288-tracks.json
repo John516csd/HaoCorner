@@ -1,0 +1,25 @@
+{
+  "id": "1494891288",
+  "sourceUrl": "https://music.apple.com/cn/album/%E5%85%89%E8%BC%9D%E6%AD%B2%E6%9C%88-single/1494891288?uo=4",
+  "storefront": "cn",
+  "tracks": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "collectionId": 1494891288,
+      "trackId": 1494891289,
+      "trackName": "光辉岁月",
+      "artistName": "陈奕迅",
+      "collectionName": "光輝歲月 - Single",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "trackTimeMillis": 241667,
+      "trackViewUrl": "https://music.apple.com/cn/album/%E5%85%89%E8%BE%89%E5%B2%81%E6%9C%88/1494891288?i=1494891289",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/68/c8/ba/68c8bae3-c3af-f7a9-5e5f-903ece5c4aa0/mzaf_11446262351517961530.plus.aac.p.m4a",
+      "composer": "黄家驹",
+      "isStreamable": true,
+      "metadataSource": "Apple Music public album page",
+      "metadataSourceUrl": "https://music.apple.com/cn/album/%E5%85%89%E8%BC%9D%E6%AD%B2%E6%9C%88-single/1494891288?uo=4"
+    }
+  ]
+}

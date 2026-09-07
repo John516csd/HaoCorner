@@ -1,0 +1,70 @@
+{
+  "id": "apple-1386599280",
+  "appleCollectionId": "1386599280",
+  "musicbrainzReleaseId": null,
+  "title": "與你常在 - Single",
+  "artist": "陳奕迅 & eason and the duo band",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2018-05-25",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "廣東歌/香港流行樂",
+  "copyright": "℗ 2018 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1386599280",
+    "path": "covers/1386599280-與你常在 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e0/33/0a/e0330a1d-8407-b280-7657-5fefcfe78582/00602567738831.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e0/33/0a/e0330a1d-8407-b280-7657-5fefcfe78582/00602567738831.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 2569995,
+    "sha256": "de9333b3f1e59ffa9e032fdda31f98f2f9d2af5af3f729a1d1e3b889f0b806b1",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1386599285",
+      "albumId": "apple-1386599280",
+      "title": "與你常在",
+      "artist": "eason and the duo band",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 299706,
+      "duration": "5:00",
+      "appleTrackId": "1386599285",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E8%88%87%E4%BD%A0%E5%B8%B8%E5%9C%A8/1386599280?i=1386599285&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/52/ae/a0/52aea00d-40f0-cc1c-8c6e-85858ed3cdd2/mzaf_18121190862043993066.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1386599280&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E8%88%87%E4%BD%A0%E5%B8%B8%E5%9C%A8-single/1386599280?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 299706,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

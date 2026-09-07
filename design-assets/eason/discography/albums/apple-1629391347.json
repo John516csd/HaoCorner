@@ -1,0 +1,70 @@
+{
+  "id": "apple-1629391347",
+  "appleCollectionId": "1629391347",
+  "musicbrainzReleaseId": null,
+  "title": "相信自己无限极 - Single",
+  "artist": "陳奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2012-06-29",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn",
+    "hk",
+    "tw",
+    "us"
+  ],
+  "preferredStorefront": "hk",
+  "genre": "國語流行樂",
+  "copyright": "℗ 2012 北京YuGe音乐",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1629391347",
+    "path": "covers/1629391347-相信自己无限极 - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/98/83/4d/98834db8-f513-2e13-30e9-ae326b7019c0/4894894499332.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/98/83/4d/98834db8-f513-2e13-30e9-ae326b7019c0/4894894499332.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 441333,
+    "sha256": "6124509379eaa0e87e604acc6250675d5398c487a5404a1d72f33a02ccd6a4fc",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1629391348",
+      "albumId": "apple-1629391347",
+      "title": "相信自己無限極",
+      "artist": "陳奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 182761,
+      "duration": "3:03",
+      "appleTrackId": "1629391348",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/hk/album/%E7%9B%B8%E4%BF%A1%E8%87%AA%E5%B7%B1%E7%84%A1%E9%99%90%E6%A5%B5/1629391347?i=1629391348&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/62/26/10/62261069-6aba-c4ab-e464-f87f78c3fb2d/mzaf_5005787074908981359.plus.aac.p.m4a",
+      "composer": null,
+      "isStreamable": true,
+      "explicitness": "notExplicit",
+      "source": "Apple iTunes Search API",
+      "sourceUrl": "https://itunes.apple.com/lookup?id=1629391347&entity=song&limit=200&country=hk",
+      "supplemented": false
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/hk/album/%E7%9B%B8%E4%BF%A1%E8%87%AA%E5%B7%B1%E6%97%A0%E9%99%90%E6%9E%81-single/1629391347?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 182761,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

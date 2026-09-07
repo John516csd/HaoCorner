@@ -1,0 +1,3323 @@
+{
+  "release-offset": 0,
+  "release-count": 2,
+  "releases": [
+    {
+      "title": "拉闊壓軸：林子祥 / 陳奕迅",
+      "disambiguation": "",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "status": "Official",
+      "packaging-id": "8f931351-d2e2-310f-afc6-37b89ddba246",
+      "asin": "B0080ROC72",
+      "artist-credit": [
+        {
+          "artist": {
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "type": "Person",
+            "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+            "disambiguation": "",
+            "country": "HK",
+            "sort-name": "Lam, George",
+            "name": "林子祥"
+          },
+          "name": "林子祥",
+          "joinphrase": " & "
+        },
+        {
+          "name": "陳奕迅",
+          "artist": {
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "type": "Person",
+            "country": "HK",
+            "disambiguation": "Hong Kong singer",
+            "sort-name": "Chan, Eason",
+            "name": "陳奕迅"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "barcode": "4895087600757",
+      "media": [
+        {
+          "title": "",
+          "id": "04fca9d7-eb75-3a23-8c39-16a1e78cb3dc",
+          "format": "HDCD",
+          "position": 1,
+          "format-id": "8759db4e-8451-33c0-8a8f-05e5f95f192e",
+          "track-count": 13,
+          "track-offset": 0,
+          "tracks": [
+            {
+              "position": 1,
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "/",
+                    "artist": {
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥"
+                  },
+                  {
+                    "joinphrase": "",
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person"
+                    }
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "YMCA好知己",
+                "id": "b371ff31-5205-424e-bd8f-5460a7657c9b",
+                "video": false,
+                "length": 201000
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07"
+                  },
+                  "joinphrase": "/"
+                },
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "title": "YMCA好知己",
+              "number": "1",
+              "id": "95adb48d-7750-4bf7-ad57-b6e6142e9a2c",
+              "length": 201000
+            },
+            {
+              "recording": {
+                "title": "海市蜃樓",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "video": false,
+                "id": "ecc4a28e-51bf-4a85-a1a8-530f37d51ea4",
+                "length": 201000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "林子祥",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 2,
+              "length": 201000,
+              "id": "c414d11b-0638-4554-abe7-18792da26d4c",
+              "number": "2",
+              "title": "海市蜃樓"
+            },
+            {
+              "recording": {
+                "id": "2fc6fbb0-138b-431a-a672-3e5201f7ebb0",
+                "video": false,
+                "length": 204000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "衝口而出",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "position": 3,
+              "length": 204000,
+              "id": "08f2f79b-e5ff-4a45-b02c-5e51af942867",
+              "number": "3",
+              "title": "衝口而出"
+            },
+            {
+              "recording": {
+                "length": 228000,
+                "id": "cf5912f0-cec8-46f4-8c04-c5beedd49fb2",
+                "video": false,
+                "title": "花街70號",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 4,
+              "id": "da019f4e-d9de-4a64-a229-c89680e44e91",
+              "length": 228000,
+              "title": "花街70號",
+              "number": "4"
+            },
+            {
+              "position": 5,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "陳奕迅",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ],
+                "title": "愛是懷疑",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "length": 315000,
+                "video": false,
+                "id": "ac1b070a-dddd-4917-b02d-bb776b9fb912"
+              },
+              "number": "5",
+              "title": "愛是懷疑",
+              "length": 315000,
+              "id": "1fab4e5b-d0e7-4cbc-867c-84a83635aab1"
+            },
+            {
+              "title": "活色生香",
+              "number": "6",
+              "id": "525e838a-e743-4d7c-bcab-a7782859e8f8",
+              "length": 190000,
+              "position": 6,
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": ""
+                    }
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "活色生香",
+                "length": 190000,
+                "id": "76da6d01-c688-4dea-9d1f-ff9b310ca8b7",
+                "video": false
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "6151dddd-0163-4a05-b529-77f297bf83a7",
+              "length": 225000,
+              "title": "孤獨探戈",
+              "number": "7",
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "title": "孤獨探戈",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "id": "0612159f-1707-4708-8db1-7ce25b95ba24",
+                "video": false,
+                "length": 225000
+              },
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 7
+            },
+            {
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "length": 204000,
+                "video": false,
+                "id": "b22f9e54-962d-47ce-9b33-07d1a23a0287",
+                "title": "單車",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre"
+              },
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 8,
+              "id": "b30b63fb-bb04-4c15-b8d5-42a69637a7e3",
+              "length": 204000,
+              "title": "單車",
+              "number": "8"
+            },
+            {
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "name": "林子祥"
+                  },
+                  "name": "林子祥"
+                }
+              ],
+              "recording": {
+                "title": "追憶",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "length": 209000,
+                "id": "9815508e-093b-4595-9a6c-883732f7efc0",
+                "video": false,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": ""
+                    },
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "position": 9,
+              "length": 209000,
+              "id": "f8caa353-3adf-4cc2-abf1-63afb748a9b9",
+              "number": "9",
+              "title": "追憶"
+            },
+            {
+              "position": 10,
+              "recording": {
+                "title": "天使的禮物",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "length": 268000,
+                "id": "df5ed8ef-21cf-4e91-8ad3-1c081770c177",
+                "video": false,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "number": "10",
+              "title": "天使的禮物",
+              "length": 268000,
+              "id": "c81921d3-b4ad-4883-b42f-2e66a7409c55"
+            },
+            {
+              "position": 11,
+              "recording": {
+                "title": "我不好愛",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "id": "c9aeb606-05d4-4a4b-845a-2af545fe18e8",
+                "video": false,
+                "length": 231000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason"
+                    },
+                    "name": "陳奕迅",
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ],
+              "number": "11",
+              "title": "我不好愛",
+              "length": 231000,
+              "id": "194408cf-8c88-4253-946e-4009f05f8cda"
+            },
+            {
+              "position": 12,
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "活著多好",
+                "length": 270000,
+                "id": "a081a77e-e125-4b2c-9cd0-6d2c608b0366",
+                "video": false,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅",
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "title": "活著多好",
+              "number": "12",
+              "id": "e6930ecd-072e-4e44-ace6-8616c090e1eb",
+              "length": 270000
+            },
+            {
+              "position": 13,
+              "recording": {
+                "title": "大開眼戒",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "length": 241000,
+                "video": false,
+                "id": "94e58fc8-a2a5-4021-be7f-0b03bb238eb2",
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "number": "13",
+              "title": "大開眼戒",
+              "length": 241000,
+              "id": "4e50e1a0-d9c2-424b-9098-ca3f64b0b03f"
+            }
+          ]
+        },
+        {
+          "format-id": "9712d52a-4509-3d4b-a1a2-67c88c643e31",
+          "position": 2,
+          "tracks": [
+            {
+              "title": "最愛是誰",
+              "number": "14",
+              "id": "91b4ec94-40fa-4167-855c-e06d39ea51b0",
+              "length": 197000,
+              "position": 1,
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "林子祥",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK"
+                    },
+                    "name": "林子祥"
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "最愛是誰",
+                "length": 197000,
+                "id": "3e98bf2d-82d3-4627-9bd8-5d87d34e3db3",
+                "video": false
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK"
+                  },
+                  "joinphrase": ""
+                }
+              ]
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "c5763147-3cd5-487b-9d09-f1eb7342d1c6",
+                "length": 283000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "友愛長存",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "林子祥"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "country": "HK",
+                    "disambiguation": ""
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 2,
+              "length": 283000,
+              "id": "c87a8c06-6dd1-49ca-9cf7-0cdf46330038",
+              "number": "15",
+              "title": "友愛長存"
+            },
+            {
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "千億個夜晚",
+                "id": "95d71891-ac4e-425c-bbd7-9ebb05d8c962",
+                "video": false,
+                "length": 278000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "林子祥",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George"
+                    },
+                    "name": "林子祥"
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "林子祥",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": ""
+                }
+              ],
+              "position": 3,
+              "id": "4245f9ec-332d-4000-9746-3d0c9d361db5",
+              "length": 278000,
+              "title": "千億個夜晚",
+              "number": "16"
+            },
+            {
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "林子祥",
+                  "artist": {
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "林子祥"
+                  }
+                }
+              ],
+              "recording": {
+                "title": "敢愛敢做",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "length": 241000,
+                "id": "377dfe1c-e2bf-48d0-9898-e1630dadbc65",
+                "video": false,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "林子祥",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person"
+                    },
+                    "name": "林子祥"
+                  }
+                ]
+              },
+              "position": 4,
+              "length": 241000,
+              "id": "8a31fc06-d69c-4f30-9f52-c82888b1224b",
+              "number": "17",
+              "title": "敢愛敢做"
+            },
+            {
+              "position": 5,
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "/",
+                    "artist": {
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "id": "d6867512-d1f7-4223-a380-df68a17323b3",
+                "video": false,
+                "length": 260000,
+                "title": "Smooth",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre"
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "name": "林子祥"
+                  },
+                  "joinphrase": "/"
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "title": "Smooth",
+              "number": "18",
+              "id": "02eeca1f-e508-4c29-97d9-1c9afef89c91",
+              "length": 260000
+            },
+            {
+              "position": 6,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "林子祥",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": "/"
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "recording": {
+                "length": 256000,
+                "id": "f4a2527c-c023-4c12-970d-35a6ca62496b",
+                "video": false,
+                "title": "Uptown Girl",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "number": "19",
+              "title": "Uptown Girl",
+              "length": 256000,
+              "id": "aad8d637-7650-4f46-8f57-bfbc9c9ab82e"
+            },
+            {
+              "title": "Somethin’ Stupid",
+              "number": "20",
+              "id": "083debd0-96b2-4e12-9cbe-68c839138707",
+              "length": 205000,
+              "position": 7,
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person"
+                  },
+                  "joinphrase": "/"
+                },
+                {
+                  "joinphrase": "/",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  }
+                },
+                {
+                  "joinphrase": "/",
+                  "artist": {
+                    "name": "韋綺姍",
+                    "sort-name": "Carpio, Rita",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "id": "833c5e7a-d443-4029-aeaf-371faf19b981",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "name": "Rita Maria Carpio"
+                },
+                {
+                  "joinphrase": "",
+                  "name": "Angelita Li",
+                  "artist": {
+                    "sort-name": "Li, Angelita",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "type": "Person",
+                    "id": "9f96ad53-93d9-4b31-80cb-349ad34cc709",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "李安琪"
+                  }
+                }
+              ],
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": "/"
+                  },
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason"
+                    },
+                    "joinphrase": "/"
+                  },
+                  {
+                    "name": "Rita Maria Carpio",
+                    "artist": {
+                      "id": "833c5e7a-d443-4029-aeaf-371faf19b981",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Carpio, Rita",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "name": "韋綺姍"
+                    },
+                    "joinphrase": "/"
+                  },
+                  {
+                    "name": "Angelita Li",
+                    "artist": {
+                      "name": "李安琪",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "9f96ad53-93d9-4b31-80cb-349ad34cc709",
+                      "type": "Person",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Li, Angelita"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "Somethin’ Stupid",
+                "length": 205000,
+                "id": "de280561-8af0-4b5d-bc78-ce44103a85fe",
+                "video": false
+              }
+            },
+            {
+              "id": "cdaad0a6-9341-4088-bfb8-b24ab70f8509",
+              "length": 213000,
+              "title": "When a Man Loves a Woman",
+              "number": "21",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "林子祥",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": "/"
+                },
+                {
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "/",
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07"
+                    }
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "length": 213000,
+                "video": false,
+                "id": "bf17a81a-8a1b-41e9-9d90-02af5e827fe5",
+                "title": "When a Man Loves a Woman",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre"
+              },
+              "position": 8
+            },
+            {
+              "id": "8428d98c-990b-4928-b105-38a4f879a2fa",
+              "length": 273000,
+              "title": "在水中央",
+              "number": "22",
+              "recording": {
+                "video": false,
+                "id": "28663d93-2d9a-4fc4-be21-b3d4433f0439",
+                "length": 273000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "在水中央",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "林子祥",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "artist": {
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "name": "林子祥"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": "/"
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "position": 9
+            },
+            {
+              "position": 10,
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person"
+                    },
+                    "joinphrase": "/"
+                  },
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "length": 350000,
+                "video": false,
+                "id": "e00dc9bc-f314-46ff-aaa3-7e742a819e84",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "這一個夜"
+              },
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "林子祥",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": "/"
+                },
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "number": "23",
+              "title": "這一個夜",
+              "length": 350000,
+              "id": "6de8921b-e4f2-40c0-bcda-212a6e95fa5b"
+            },
+            {
+              "id": "b0f63c1f-b827-42d8-83c4-d1fe06881f38",
+              "length": 249000,
+              "title": "Shall We Talk",
+              "number": "24",
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "林子祥",
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "title": "Shall We Talk",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "length": 249000,
+                "id": "c0c91fdb-b9a4-4733-8763-1e87a30e8b7a",
+                "video": false
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "/",
+                  "artist": {
+                    "name": "林子祥",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "country": "HK",
+                    "disambiguation": ""
+                  },
+                  "name": "林子祥"
+                },
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "position": 11
+            },
+            {
+              "position": 12,
+              "artist-credit": [
+                {
+                  "joinphrase": "/",
+                  "artist": {
+                    "name": "林子祥",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person"
+                  },
+                  "name": "林子祥"
+                },
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK"
+                  }
+                }
+              ],
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "林子祥",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "十分十二吋",
+                "id": "e95e2596-93a6-4726-a886-e28a8abe475d",
+                "video": false,
+                "length": 601000
+              },
+              "number": "25",
+              "title": "十分十二吋",
+              "length": 601000,
+              "id": "d2202e43-f5db-4fd9-b6de-b1fb587e6b5e"
+            }
+          ],
+          "track-offset": 0,
+          "track-count": 12,
+          "title": "",
+          "format": "CD",
+          "id": "7758178f-bd97-3c7b-9bfd-5db6f8090d03"
+        }
+      ],
+      "text-representation": {
+        "script": "Hant",
+        "language": "zho"
+      },
+      "release-events": [
+        {
+          "date": "2002-02",
+          "area": {
+            "disambiguation": "",
+            "sort-name": "Hong Kong",
+            "iso-3166-2-codes": [
+              "CN-91"
+            ],
+            "type-id": null,
+            "type": null,
+            "id": "0373cdff-eac8-3fbc-92dc-36a607da06d1",
+            "iso-3166-1-codes": [
+              "HK"
+            ],
+            "name": "Hong Kong"
+          }
+        }
+      ],
+      "country": "HK",
+      "quality": "normal",
+      "id": "797e7833-e52e-4c21-a4f3-7d37bb2b5333",
+      "cover-art-archive": {
+        "darkened": false,
+        "back": false,
+        "front": true,
+        "artwork": true,
+        "count": 2
+      },
+      "label-info": [
+        {
+          "catalog-number": "EEG 1056",
+          "label": {
+            "name": "MUSICPLUS",
+            "label-code": null,
+            "type-id": "b6285b2a-3514-3d43-80df-fcf528824ded",
+            "type": "Imprint",
+            "id": "392adeb5-6a12-4bbd-bd48-42ffb240e4fd",
+            "disambiguation": "Hong Kong label",
+            "sort-name": "MUSICPLUS"
+          }
+        }
+      ],
+      "date": "2002-02",
+      "packaging": "Digipak"
+    },
+    {
+      "asin": null,
+      "artist-credit": [
+        {
+          "joinphrase": "、",
+          "name": "陳奕迅",
+          "artist": {
+            "name": "陳奕迅",
+            "type": "Person",
+            "id": "86119d30-d930-4e65-a97a-e31e22388166",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Chan, Eason",
+            "country": "HK",
+            "disambiguation": "Hong Kong singer"
+          }
+        },
+        {
+          "joinphrase": "",
+          "name": "林子祥",
+          "artist": {
+            "sort-name": "Lam, George",
+            "disambiguation": "",
+            "country": "HK",
+            "type": "Person",
+            "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "name": "林子祥"
+          }
+        }
+      ],
+      "packaging-id": "dfb7da53-866f-4dfd-a016-80bafaeff3db",
+      "media": [
+        {
+          "title": "",
+          "format": "Hybrid SACD (CD layer)",
+          "id": "e87a65d3-cfc4-3884-8756-ee209814a792",
+          "format-id": "1a168dbd-d7ce-381d-a38a-3948de2cb4d6",
+          "position": 1,
+          "tracks": [
+            {
+              "title": "YMCA好知己",
+              "number": "1",
+              "id": "dd36493e-096c-4e11-976d-578c9448c0e7",
+              "length": 201000,
+              "position": 1,
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "name": "林子祥"
+                  },
+                  "joinphrase": "/"
+                },
+                {
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "YMCA好知己",
+                "id": "b371ff31-5205-424e-bd8f-5460a7657c9b",
+                "video": false,
+                "length": 201000
+              }
+            },
+            {
+              "id": "57be139e-ae43-4e86-9aab-ff4dd23df624",
+              "length": 201000,
+              "title": "海市蜃樓",
+              "number": "2",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "林子祥",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "id": "ecc4a28e-51bf-4a85-a1a8-530f37d51ea4",
+                "video": false,
+                "length": 201000,
+                "title": "海市蜃樓",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre"
+              },
+              "position": 2
+            },
+            {
+              "position": 3,
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "衝口而出",
+                "length": 204000,
+                "id": "2fc6fbb0-138b-431a-a672-3e5201f7ebb0",
+                "video": false,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅",
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "number": "3",
+              "title": "衝口而出",
+              "length": 204000,
+              "id": "afec542a-0cb8-4aa4-9b11-261e0578f91f"
+            },
+            {
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "name": "林子祥"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "length": 228000,
+                "id": "cf5912f0-cec8-46f4-8c04-c5beedd49fb2",
+                "video": false,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "花街70號",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "position": 4,
+              "id": "81858f81-ad22-467a-b664-2606191acb2c",
+              "length": 228000,
+              "title": "花街70號",
+              "number": "4"
+            },
+            {
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅",
+                    "joinphrase": ""
+                  }
+                ],
+                "title": "愛是懷疑",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "video": false,
+                "id": "ac1b070a-dddd-4917-b02d-bb776b9fb912",
+                "length": 315000
+              },
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 5,
+              "length": 315000,
+              "id": "f5f1feff-db57-46fc-80a9-67a4b2790a09",
+              "number": "5",
+              "title": "愛是懷疑"
+            },
+            {
+              "recording": {
+                "length": 190000,
+                "video": false,
+                "id": "76da6d01-c688-4dea-9d1f-ff9b310ca8b7",
+                "title": "活色生香",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George",
+                    "name": "林子祥"
+                  },
+                  "name": "林子祥"
+                }
+              ],
+              "position": 6,
+              "length": 190000,
+              "id": "88384cf5-c64d-471f-965d-a4bd73575f0e",
+              "number": "6",
+              "title": "活色生香"
+            },
+            {
+              "position": 7,
+              "recording": {
+                "video": false,
+                "id": "b22f9e54-962d-47ce-9b33-07d1a23a0287",
+                "length": 204000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "單車",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅",
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "title": "單車",
+              "number": "7",
+              "id": "5fe75142-4d1c-49b9-8475-debba42082ab",
+              "length": 204000
+            },
+            {
+              "id": "2ba202c1-fc7b-4dec-b614-068b68cac5fa",
+              "length": 209000,
+              "title": "追憶",
+              "number": "8",
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "林子祥",
+                  "artist": {
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "name": "林子祥"
+                  }
+                }
+              ],
+              "recording": {
+                "id": "9815508e-093b-4595-9a6c-883732f7efc0",
+                "video": false,
+                "length": 209000,
+                "title": "追憶",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "position": 8
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "df5ed8ef-21cf-4e91-8ad3-1c081770c177",
+                "length": 268000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "天使的禮物",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 9,
+              "length": 268000,
+              "id": "119becbd-0267-4021-8ada-1eda1c4627f3",
+              "number": "9",
+              "title": "天使的禮物"
+            },
+            {
+              "length": 231000,
+              "id": "e9b1d06f-bbf0-4314-bb2c-1e76ed3e029a",
+              "number": "10",
+              "title": "我不好愛",
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "我不好愛",
+                "id": "c9aeb606-05d4-4a4b-845a-2af545fe18e8",
+                "video": false,
+                "length": 231000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅",
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 10
+            },
+            {
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "recording": {
+                "title": "大開眼戒",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "id": "94e58fc8-a2a5-4021-be7f-0b03bb238eb2",
+                "video": false,
+                "length": 241000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "position": 11,
+              "length": 241000,
+              "id": "82d2ceed-70bc-4b77-bf22-6aeff31d1364",
+              "number": "11",
+              "title": "大開眼戒"
+            },
+            {
+              "number": "12",
+              "title": "最愛是誰",
+              "length": 197000,
+              "id": "67a3995a-b5f6-4dcf-a3e5-c60cca06616b",
+              "position": 12,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "name": "林子祥",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George"
+                  },
+                  "name": "林子祥"
+                }
+              ],
+              "recording": {
+                "video": false,
+                "id": "3e98bf2d-82d3-4627-9bd8-5d87d34e3db3",
+                "length": 197000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "最愛是誰",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              }
+            },
+            {
+              "position": 13,
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "name": "林子祥"
+                    }
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "友愛長存",
+                "video": false,
+                "id": "c5763147-3cd5-487b-9d09-f1eb7342d1c6",
+                "length": 283000
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "number": "13",
+              "title": "友愛長存",
+              "length": 283000,
+              "id": "602198ad-531b-4f2e-b646-65b17cc14527"
+            },
+            {
+              "position": 14,
+              "recording": {
+                "artist-credit": [
+                  {
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": ""
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "length": 278000,
+                "video": false,
+                "id": "95d71891-ac4e-425c-bbd7-9ebb05d8c962",
+                "title": "千億個夜晚",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre"
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "name": "林子祥"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "title": "千億個夜晚",
+              "number": "14",
+              "id": "d0016b54-b53a-4a49-9076-21ffa4454520",
+              "length": 278000
+            },
+            {
+              "id": "3a0dcf9e-4608-4ee3-91e4-83a9b2fad0f8",
+              "length": 241000,
+              "title": "敢愛敢做",
+              "number": "15",
+              "recording": {
+                "length": 241000,
+                "video": false,
+                "id": "377dfe1c-e2bf-48d0-9898-e1630dadbc65",
+                "title": "敢愛敢做",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "country": "HK",
+                    "disambiguation": ""
+                  }
+                }
+              ],
+              "position": 15
+            },
+            {
+              "id": "9053f31e-fe05-4328-9366-0693247ae98a",
+              "length": 273000,
+              "title": "在水中央",
+              "number": "16",
+              "artist-credit": [
+                {
+                  "joinphrase": "/",
+                  "artist": {
+                    "name": "林子祥",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "sort-name": "Lam, George"
+                  },
+                  "name": "林子祥"
+                },
+                {
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "在水中央",
+                "video": false,
+                "id": "28663d93-2d9a-4fc4-be21-b3d4433f0439",
+                "length": 273000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "/",
+                    "name": "林子祥",
+                    "artist": {
+                      "name": "林子祥",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    }
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ]
+              },
+              "position": 16
+            },
+            {
+              "position": 17,
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "林子祥",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": "/"
+                },
+                {
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "title": "Shall We Talk",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "length": 249000,
+                "video": false,
+                "id": "c0c91fdb-b9a4-4733-8763-1e87a30e8b7a",
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "林子祥",
+                    "artist": {
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "name": "林子祥"
+                    },
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "name": "陳奕迅",
+                    "artist": {
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ]
+              },
+              "number": "17",
+              "title": "Shall We Talk",
+              "length": 249000,
+              "id": "7e5b0c77-e9c0-477b-826d-4a3a7bca090b"
+            }
+          ],
+          "track-offset": 0,
+          "track-count": 17
+        },
+        {
+          "id": "93a5e2d8-6411-3521-b80c-a6c083d15ef9",
+          "format": "Hybrid SACD (SACD layer, 2 channels)",
+          "title": "",
+          "track-count": 17,
+          "tracks": [
+            {
+              "length": 201000,
+              "id": "bbcf0936-02da-4b11-84c4-5d0c6d2acf4a",
+              "number": "1",
+              "title": "YMCA好知己",
+              "artist-credit": [
+                {
+                  "joinphrase": "/",
+                  "artist": {
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "name": "林子祥"
+                  },
+                  "name": "林子祥"
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "recording": {
+                "length": 201000,
+                "video": false,
+                "id": "b371ff31-5205-424e-bd8f-5460a7657c9b",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "YMCA好知己",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "林子祥",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": ""
+                    },
+                    "name": "林子祥",
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "position": 1
+            },
+            {
+              "position": 2,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "林子祥",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George",
+                    "name": "林子祥"
+                  }
+                }
+              ],
+              "recording": {
+                "video": false,
+                "id": "ecc4a28e-51bf-4a85-a1a8-530f37d51ea4",
+                "length": 201000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "海市蜃樓",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "name": "林子祥"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "title": "海市蜃樓",
+              "number": "2",
+              "id": "e87fa351-bc3e-4f0b-a2b2-2e88939324a4",
+              "length": 201000
+            },
+            {
+              "title": "衝口而出",
+              "number": "3",
+              "id": "ea3e0d32-b00a-431e-a397-2a2c2d094e5f",
+              "length": 204000,
+              "position": 3,
+              "artist-credit": [
+                {
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "name": "陳奕迅"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "video": false,
+                "id": "2fc6fbb0-138b-431a-a672-3e5201f7ebb0",
+                "length": 204000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "衝口而出",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "name": "陳奕迅"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02"
+              }
+            },
+            {
+              "number": "4",
+              "title": "花街70號",
+              "length": 228000,
+              "id": "763aa1c7-0585-4e3d-a1a1-ac340ed8ffdb",
+              "position": 4,
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "sort-name": "Lam, George",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "花街70號",
+                "video": false,
+                "id": "cf5912f0-cec8-46f4-8c04-c5beedd49fb2",
+                "length": 228000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ]
+              }
+            },
+            {
+              "length": 315000,
+              "id": "1306be62-c251-4bce-bd44-8b7ee0fe9916",
+              "number": "5",
+              "title": "愛是懷疑",
+              "artist-credit": [
+                {
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "陳奕迅",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "id": "ac1b070a-dddd-4917-b02d-bb776b9fb912",
+                "video": false,
+                "length": 315000,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "愛是懷疑"
+              },
+              "position": 5
+            },
+            {
+              "title": "活色生香",
+              "number": "6",
+              "id": "3b6915ff-f60a-4fe2-9d89-c1440017f102",
+              "length": 190000,
+              "position": 6,
+              "recording": {
+                "length": 190000,
+                "video": false,
+                "id": "76da6d01-c688-4dea-9d1f-ff9b310ca8b7",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "活色生香",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥"
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "name": "林子祥",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK"
+                  },
+                  "name": "林子祥"
+                }
+              ]
+            },
+            {
+              "position": 7,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "name": "陳奕迅"
+                  }
+                }
+              ],
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "單車",
+                "id": "b22f9e54-962d-47ce-9b33-07d1a23a0287",
+                "video": false,
+                "length": 204000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166"
+                    },
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "title": "單車",
+              "number": "7",
+              "id": "946bb899-25e0-4c4b-9460-8f814b5275b0",
+              "length": 204000
+            },
+            {
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person"
+                  }
+                }
+              ],
+              "recording": {
+                "video": false,
+                "id": "9815508e-093b-4595-9a6c-883732f7efc0",
+                "length": 209000,
+                "title": "追憶",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "林子祥",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "position": 8,
+              "id": "0aad78ec-5ad2-4667-b328-acb7d6994675",
+              "length": 209000,
+              "title": "追憶",
+              "number": "8"
+            },
+            {
+              "position": 9,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "recording": {
+                "id": "df5ed8ef-21cf-4e91-8ad3-1c081770c177",
+                "video": false,
+                "length": 268000,
+                "title": "天使的禮物",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "陳奕迅",
+                    "artist": {
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "number": "9",
+              "title": "天使的禮物",
+              "length": 268000,
+              "id": "241a57fc-72fc-48e3-aa02-c099f44499cd"
+            },
+            {
+              "number": "10",
+              "title": "我不好愛",
+              "length": 231000,
+              "id": "694278ef-bf64-41ba-9fd7-9f57b0b66661",
+              "position": 10,
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "我不好愛",
+                "id": "c9aeb606-05d4-4a4b-845a-2af545fe18e8",
+                "video": false,
+                "length": 231000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "sort-name": "Chan, Eason",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "name": "陳奕迅"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "disambiguation": "Hong Kong singer",
+                    "country": "HK",
+                    "sort-name": "Chan, Eason",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅"
+                }
+              ]
+            },
+            {
+              "position": 11,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "陳奕迅",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "sort-name": "Chan, Eason"
+                  }
+                }
+              ],
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "大開眼戒",
+                "length": 241000,
+                "video": false,
+                "id": "94e58fc8-a2a5-4021-be7f-0b03bb238eb2",
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "陳奕迅",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "type": "Person",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer"
+                    }
+                  }
+                ]
+              },
+              "title": "大開眼戒",
+              "number": "11",
+              "id": "f37d7963-6929-4d09-8571-4aec4b98120b",
+              "length": 241000
+            },
+            {
+              "position": 12,
+              "artist-credit": [
+                {
+                  "joinphrase": "",
+                  "name": "林子祥",
+                  "artist": {
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "name": "林子祥"
+                  }
+                }
+              ],
+              "recording": {
+                "length": 197000,
+                "id": "3e98bf2d-82d3-4627-9bd8-5d87d34e3db3",
+                "video": false,
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "最愛是誰",
+                "artist-credit": [
+                  {
+                    "name": "林子祥",
+                    "artist": {
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "name": "林子祥"
+                    },
+                    "joinphrase": ""
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "number": "12",
+              "title": "最愛是誰",
+              "length": 197000,
+              "id": "05467dc4-a83b-4413-b419-8e8537ea1271"
+            },
+            {
+              "title": "友愛長存",
+              "number": "13",
+              "id": "063ca008-0e12-4557-a704-92aaf945c53f",
+              "length": 283000,
+              "position": 13,
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "sort-name": "Lam, George",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "name": "林子祥"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "recording": {
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "name": "林子祥"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02",
+                "id": "c5763147-3cd5-487b-9d09-f1eb7342d1c6",
+                "video": false,
+                "length": 283000,
+                "title": "友愛長存",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre"
+              }
+            },
+            {
+              "recording": {
+                "video": false,
+                "id": "95d71891-ac4e-425c-bbd7-9ebb05d8c962",
+                "length": 278000,
+                "title": "千億個夜晚",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "artist-credit": [
+                  {
+                    "joinphrase": "",
+                    "name": "林子祥",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George",
+                      "name": "林子祥"
+                    }
+                  }
+                ],
+                "first-release-date": "2002-02"
+              },
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK"
+                  },
+                  "joinphrase": ""
+                }
+              ],
+              "position": 14,
+              "id": "f49059a5-ff57-471f-8199-74a5c8324538",
+              "length": 278000,
+              "title": "千億個夜晚",
+              "number": "14"
+            },
+            {
+              "recording": {
+                "title": "敢愛敢做",
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "id": "377dfe1c-e2bf-48d0-9898-e1630dadbc65",
+                "video": false,
+                "length": 241000,
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Lam, George",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": ""
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "artist": {
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type": "Person",
+                    "country": "HK",
+                    "disambiguation": "",
+                    "sort-name": "Lam, George",
+                    "name": "林子祥"
+                  },
+                  "name": "林子祥",
+                  "joinphrase": ""
+                }
+              ],
+              "position": 15,
+              "id": "59d4dd9b-5e5f-4401-a67f-cf86cbe3f354",
+              "length": 241000,
+              "title": "敢愛敢做",
+              "number": "15"
+            },
+            {
+              "length": 273000,
+              "id": "14861e4c-f75e-4b75-9fd5-523abddd6974",
+              "number": "16",
+              "title": "在水中央",
+              "recording": {
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "在水中央",
+                "length": 273000,
+                "video": false,
+                "id": "28663d93-2d9a-4fc4-be21-b3d4433f0439",
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "artist": {
+                      "name": "林子祥",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "type": "Person",
+                      "disambiguation": "",
+                      "country": "HK",
+                      "sort-name": "Lam, George"
+                    },
+                    "name": "林子祥",
+                    "joinphrase": "/"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "sort-name": "Chan, Eason",
+                      "disambiguation": "Hong Kong singer",
+                      "country": "HK",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ]
+              },
+              "artist-credit": [
+                {
+                  "joinphrase": "/",
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "sort-name": "Lam, George",
+                    "disambiguation": "",
+                    "country": "HK",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df"
+                  }
+                },
+                {
+                  "artist": {
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type": "Person",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer",
+                    "name": "陳奕迅"
+                  },
+                  "name": "陳奕迅",
+                  "joinphrase": ""
+                }
+              ],
+              "position": 16
+            },
+            {
+              "artist-credit": [
+                {
+                  "name": "林子祥",
+                  "artist": {
+                    "name": "林子祥",
+                    "type": "Person",
+                    "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Lam, George",
+                    "country": "HK",
+                    "disambiguation": ""
+                  },
+                  "joinphrase": "/"
+                },
+                {
+                  "joinphrase": "",
+                  "artist": {
+                    "name": "陳奕迅",
+                    "type": "Person",
+                    "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                    "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                    "sort-name": "Chan, Eason",
+                    "country": "HK",
+                    "disambiguation": "Hong Kong singer"
+                  },
+                  "name": "陳奕迅"
+                }
+              ],
+              "recording": {
+                "first-release-date": "2002-02",
+                "artist-credit": [
+                  {
+                    "joinphrase": "/",
+                    "artist": {
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "type": "Person",
+                      "id": "d9e26c52-9cf4-4982-9ae6-fb6160f8df07",
+                      "country": "HK",
+                      "disambiguation": "",
+                      "sort-name": "Lam, George",
+                      "name": "林子祥"
+                    },
+                    "name": "林子祥"
+                  },
+                  {
+                    "joinphrase": "",
+                    "artist": {
+                      "name": "陳奕迅",
+                      "id": "86119d30-d930-4e65-a97a-e31e22388166",
+                      "type": "Person",
+                      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                      "sort-name": "Chan, Eason",
+                      "country": "HK",
+                      "disambiguation": "Hong Kong singer"
+                    },
+                    "name": "陳奕迅"
+                  }
+                ],
+                "disambiguation": "live, 2001-12-14: Hong Kong Convention and Exhibition Centre",
+                "title": "Shall We Talk",
+                "id": "c0c91fdb-b9a4-4733-8763-1e87a30e8b7a",
+                "video": false,
+                "length": 249000
+              },
+              "position": 17,
+              "id": "5f30ddad-9a76-42e8-a65e-d2f919600988",
+              "length": 249000,
+              "title": "Shall We Talk",
+              "number": "17"
+            }
+          ],
+          "track-offset": 0,
+          "position": 2,
+          "format-id": "6c521ee3-f723-41de-bc6b-ec3621b9ffa9"
+        }
+      ],
+      "barcode": "4895087601310",
+      "status": "Official",
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "title": "拉闊壓軸：林子祥 / 陳奕迅",
+      "disambiguation": "",
+      "packaging": "Super Jewel Box",
+      "date": "2003",
+      "cover-art-archive": {
+        "count": 1,
+        "front": true,
+        "artwork": true,
+        "darkened": false,
+        "back": false
+      },
+      "label-info": [
+        {
+          "catalog-number": "EEG 1056SA",
+          "label": {
+            "name": "MUSICPLUS",
+            "label-code": null,
+            "id": "392adeb5-6a12-4bbd-bd48-42ffb240e4fd",
+            "type": "Imprint",
+            "type-id": "b6285b2a-3514-3d43-80df-fcf528824ded",
+            "sort-name": "MUSICPLUS",
+            "disambiguation": "Hong Kong label"
+          }
+        }
+      ],
+      "quality": "normal",
+      "id": "8714dc02-1729-49d9-b559-d5ad448cac0e",
+      "release-events": [
+        {
+          "area": {
+            "disambiguation": "",
+            "sort-name": "Hong Kong",
+            "iso-3166-2-codes": [
+              "CN-91"
+            ],
+            "type-id": null,
+            "type": null,
+            "id": "0373cdff-eac8-3fbc-92dc-36a607da06d1",
+            "iso-3166-1-codes": [
+              "HK"
+            ],
+            "name": "Hong Kong"
+          },
+          "date": "2003"
+        }
+      ],
+      "text-representation": {
+        "language": "zho",
+        "script": "Hant"
+      },
+      "country": "HK"
+    }
+  ]
+}

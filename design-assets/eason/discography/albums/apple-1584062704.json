@@ -1,0 +1,67 @@
+{
+  "id": "apple-1584062704",
+  "appleCollectionId": "1584062704",
+  "musicbrainzReleaseId": null,
+  "title": "世界上不存在的歌 (2020 重唱版) - Single",
+  "artist": "陈奕迅",
+  "type": "single",
+  "selectedForStudioShelf": false,
+  "releaseDate": "2021-09-16",
+  "releaseDateMeaning": "Apple 当前发行版本的日期；不保证为实体首版日期",
+  "originalReleaseDateCandidates": [],
+  "storefronts": [
+    "cn"
+  ],
+  "preferredStorefront": "cn",
+  "genre": "国语流行",
+  "copyright": "℗ 2021 Eas Music Ltd",
+  "declaredTrackCount": 1,
+  "cover": {
+    "id": "1584062704",
+    "path": "covers/1584062704-世界上不存在的歌 (2020 重唱版) - Single.jpg",
+    "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/3a/c9/813ac9f9-66a6-4cf7-852b-95687a5f8acd/21UMGIM79321.rgb.jpg/3000x3000bb.jpg",
+    "originalArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/3a/c9/813ac9f9-66a6-4cf7-852b-95687a5f8acd/21UMGIM79321.rgb.jpg/100x100bb.jpg",
+    "requestedSize": 3000,
+    "width": 3000,
+    "height": 3000,
+    "bytes": 1768909,
+    "sha256": "a61d206dc17d3a5aab3c0f374cdbfd9277541574d95084500c89c90875da53e1",
+    "format": "JPEG",
+    "via": "https://coverbox.henry-hu.com/"
+  },
+  "tracks": [
+    {
+      "id": "apple-1584062886",
+      "albumId": "apple-1584062704",
+      "title": "世界上不存在的歌 (2020 重唱版)",
+      "artist": "陈奕迅",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "kind": "song",
+      "durationMs": 233000,
+      "duration": "3:53",
+      "appleTrackId": "1584062886",
+      "musicbrainzRecordingId": null,
+      "url": "https://music.apple.com/cn/album/%E4%B8%96%E7%95%8C%E4%B8%8A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C-2020-%E9%87%8D%E5%94%B1%E7%89%88/1584062704?i=1584062886",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8a/97/bf/8a97bf9f-4021-64d4-b6e0-6d6b76e05a01/mzaf_3733654486579386442.plus.aac.p.m4a",
+      "composer": "赵英俊",
+      "isStreamable": true,
+      "explicitness": null,
+      "source": "Apple Music public album page",
+      "sourceUrl": "https://music.apple.com/cn/album/%E4%B8%96%E7%95%8C%E4%B8%8A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C-2020-%E9%87%8D%E5%94%B1%E7%89%88-single/1584062704?uo=4",
+      "supplemented": true
+    }
+  ],
+  "notes": [],
+  "metadataStatus": "catalog",
+  "sourceUrls": [
+    "https://music.apple.com/cn/album/%E4%B8%96%E7%95%8C%E4%B8%8A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E6%AD%8C-2020-%E9%87%8D%E5%94%B1%E7%89%88-single/1584062704?uo=4"
+  ],
+  "releaseGroupIds": [],
+  "trackCount": 1,
+  "songCount": 1,
+  "videoCount": 0,
+  "durationMs": 233000,
+  "durationComplete": true,
+  "missingTrackCount": 0
+}

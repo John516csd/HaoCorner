@@ -1,0 +1,25 @@
+{
+  "id": "1494891188",
+  "sourceUrl": "https://music.apple.com/cn/album/%E7%A9%A9%E7%A9%A9%E7%9A%84%E5%B9%B8%E7%A6%8F-single/1494891188?uo=4",
+  "storefront": "cn",
+  "tracks": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "collectionId": 1494891188,
+      "trackId": 1494891191,
+      "trackName": "稳稳的幸福",
+      "artistName": "陈奕迅",
+      "collectionName": "穩穩的幸福 - Single",
+      "discNumber": 1,
+      "trackNumber": 1,
+      "trackTimeMillis": 223149,
+      "trackViewUrl": "https://music.apple.com/cn/album/%E7%A8%B3%E7%A8%B3%E7%9A%84%E5%B9%B8%E7%A6%8F/1494891188?i=1494891191",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/97/a4/df/97a4dfba-0bc0-1ffe-f175-d8a57ca732e7/mzaf_16816127988744019840.plus.aac.p.m4a",
+      "composer": "小柯",
+      "isStreamable": true,
+      "metadataSource": "Apple Music public album page",
+      "metadataSourceUrl": "https://music.apple.com/cn/album/%E7%A9%A9%E7%A9%A9%E7%9A%84%E5%B9%B8%E7%A6%8F-single/1494891188?uo=4"
+    }
+  ]
+}
