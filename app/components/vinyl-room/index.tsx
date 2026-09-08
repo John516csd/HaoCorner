@@ -10,6 +10,7 @@ import { createVinylScene } from './vinyl-scene';
 import { durationLabel } from './record-math';
 import type { VinylTrack } from './share/types';
 import ArtistAtmosphere, { type ArtistRoomTheme } from './artist-atmosphere';
+import RoomNavigation from './room-navigation';
 
 const ShareWorkshop = dynamic(() => import('./share/workshop'), { ssr: false });
 
@@ -123,7 +124,7 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
       <h1 className={styles['visually-hidden']}>{artist}黑胶室</h1>
       <header className={styles['masthead']}>
         {!minimalDetail && <Link href="/#music" className={styles['wordmark']} aria-label="返回 HaoCorner 首页音乐区"><Disc3 size={29} strokeWidth={1.2} /><span>黑胶室<small>THE VINYL ROOM</small></span></Link>}
-        <p className={styles['artist-heading']}>{artistEnglish} <span>{artist}</span></p>
+        <RoomNavigation room={theme} artist={artist} artistEnglish={artistEnglish} />
         {detail ? !minimalDetail && <button className={styles['close-detail']} ref={closeButton} onClick={close}><span>返回唱片架</span><X size={20} /></button> : <span className={styles['edition']}>VOL. {edition} <span>—</span> {albums.length} RECORDS</span>}
       </header>
 

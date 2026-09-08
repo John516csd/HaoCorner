@@ -6,12 +6,10 @@
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .vinyl-room { --room-base: #17181e; --room-panel: #17181ef5; --room-share-top: #191c29a8; --room-share-bottom: #11131edd; position: relative; width: 100%; height: 100dvh; min-height: 400px; isolation: isolate; overflow: hidden; background: var(--room-base); }
 .vinyl-room[data-room-theme='mayday'] { --room-base: #2d271e; --room-panel: #2d271ef5; --room-share-top: #3b3324a8; --room-share-bottom: #191713dd; }
-.masthead { position: absolute; z-index: 5; top: 28px; left: 38px; right: 38px; display: flex; justify-content: space-between; align-items: center; gap: 20px; pointer-events: none; }
+.masthead { position: absolute; z-index: 9; top: 28px; left: 38px; right: 38px; min-height: 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; pointer-events: none; }
 .wordmark { pointer-events: auto; display: inline-flex; align-items: center; gap: 11px; }
 .wordmark > span { font-size: 16px; font-weight: 500; letter-spacing: .18em; }
 .wordmark small { display: block; font-size: 9px; font-weight: 400; letter-spacing: .17em; margin-top: 5px; opacity: .65; }
-.artist-heading { position: absolute; left: 50%; transform: translateX(-50%); margin: 0; font-size: 12px; letter-spacing: .18em; white-space: nowrap; }
-.artist-heading span { margin-left: 12px; opacity: .6; letter-spacing: .1em; }
 .edition { margin-left: auto; font-size: 10px; letter-spacing: .16em; opacity: .65; }
 .edition span { padding: 0 7px; }
 .close-detail { display: inline-flex; align-items: center; gap: 17px; padding: 8px 0 8px 12px; font-size: 13px; pointer-events: auto; }
@@ -74,11 +72,11 @@
 .graphics-fallback img { width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 10px; }
 .fallback-detail-cover { position: absolute; left: 8%; top: 50%; transform: translateY(-50%); width: 35%; aspect-ratio: 1; object-fit: cover; }
 @keyframes details-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-@media (max-width: 1050px) { .artist-heading { display: none; } .track-panel { right: 5%; left: 52%; top: 120px; bottom: 50px; } .track-list a { padding: 12px 2px; } .collection-label { display: none; } .browse-hint { font-size: 11px; } }
+@media (max-width: 1050px) { .track-panel { right: 5%; left: 52%; top: 120px; bottom: 50px; } .track-list a { padding: 12px 2px; } .collection-label { display: none; } .browse-hint { font-size: 11px; } }
 @media (max-width: 759px) {
   .masthead { top: 23px; left: 22px; right: 22px; }
   .wordmark > span { font-size: 14px; } .wordmark small { font-size: 8px; }
-  .wordmark svg { width: 25px; } .edition { font-size: 9px; letter-spacing: .07em; } .edition span { padding: 0 4px; }
+  .wordmark svg { width: 25px; } .edition { display: none; }
   .album-index { right: 13px; } .album-index button { width: 26px; height: 24px; }
   .selection-marker { left: 7%; right: 7%; } .selection-marker span { width: 8px; }
   .browse-footer { bottom: 24px; left: 23px; right: 23px; align-items: flex-end; gap: 20px; }
