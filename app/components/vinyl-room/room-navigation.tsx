@@ -2,14 +2,11 @@
 
 import { useEffect, useId, useLayoutEffect, useRef, useState, type KeyboardEvent } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Check, ChevronDown, House } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronDown, House, PackageOpen } from 'lucide-react';
 import type { ArtistRoomTheme } from './artist-atmosphere';
 import styles from './room-navigation.module.css';
 
-const rooms = [
-  { id: 'eason', name: '陈奕迅', english: 'EASON CHAN', cover: '/eason/covers/u87.webp' },
-  { id: 'mayday', name: '五月天', english: 'MAYDAY', cover: '/mayday/covers/gods-children.webp' },
-] as const;
+import { musicArtists as rooms } from './artists';
 
 export default function RoomNavigation({ room, artist, artistEnglish }: {
   room: ArtistRoomTheme;
@@ -81,7 +78,7 @@ export default function RoomNavigation({ room, artist, artistEnglish }: {
       <div id={panelId} className={styles.panel} {...(!open ? { inert: true, 'aria-hidden': true } : {})}>
         <div className={styles.rooms}>
           {rooms.map(item => (
-            <Link key={item.id} href={`/${item.id}`} className={styles.room} aria-current={room === item.id ? 'page' : undefined}
+            <Link key={item.id} href={`/${item.id}`} scroll={false} className={styles.room} aria-current={room === item.id ? 'page' : undefined}
               onClick={event => {
                 if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
                 if (room === item.id) { event.preventDefault(); close(true); } else close();
@@ -93,6 +90,11 @@ export default function RoomNavigation({ room, artist, artistEnglish }: {
             </Link>
           ))}
         </div>
+        <Link href="/music" scroll={false} className={styles.home} onClick={() => close()}>
+          <PackageOpen size={17} strokeWidth={1.3} aria-hidden="true" />
+          <span className={styles.label}><span>唱片收藏室</span><small>ALL ARTISTS</small></span>
+          <ArrowUpRight size={15} strokeWidth={1.5} className={styles.arrow} aria-hidden="true" />
+        </Link>
         <Link href="/" className={styles.home} onClick={() => close()}>
           <House size={17} strokeWidth={1.3} aria-hidden="true" />
           <span className={styles.label}><span>个人主页</span><small>yanchenhao.com</small></span>

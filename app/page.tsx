@@ -802,20 +802,9 @@ export default function Page() {
           </Sticker>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 -mt-8 mb-12">
-          <Link
-            href="/eason"
-            prefetch={false}
-            className="font-handnote text-xl text-gray-700 underline decoration-dashed underline-offset-8 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-8"
-          >
-            Explore Eason’s vinyl room ↗
-          </Link>
-          <Link
-            href="/mayday"
-            prefetch={false}
-            className="font-handnote text-xl text-gray-700 underline decoration-dashed underline-offset-8 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-8"
-          >
-            Explore Mayday’s vinyl room ↗
+        <div className="flex justify-center -mt-8 mb-12">
+          <Link href="/music" prefetch={false} className="font-handnote text-xl text-gray-700 underline decoration-dashed underline-offset-8 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-8">
+            Explore my record collection ↗
           </Link>
         </div>
 

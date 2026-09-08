@@ -15,8 +15,9 @@
 
 ## 黑胶室
 
-- 页面：`/eason`，目前只展示全屏黑胶室；首页 Music 区提供入口，专辑详情点击空白处或按 Esc 返回唱片架。
-- 共用组件：`app/components/vinyl-room`，使用 CSS Modules 隔离样式，Three.js 渲染 3D 唱片；各艺人页面只传入专辑数据与名称。
+- 收藏入口：`/music`，按歌手分箱，箱长随专辑数量变化。点击开箱进入 `/eason` 或 `/mayday`，返回时收回 CD 并保留收藏页滚动位置。
+- 共用组件：`app/components/vinyl-room`，路由组 `app/(records)` 保留同一个 Three.js 画布，让开箱与唱片架连续过渡；直接访问歌手地址或歌曲二维码仍进入唱片架。专辑详情点击空白处或按 Esc 返回。
+- 添加歌手：准备专辑 JSON 和本地封面后，在 `app/components/vinyl-room/artists.ts` 登记一次，收藏箱、切换菜单、静态路由、Sitemap 和歌词接口自动使用该数据；可选 `sticker` 指向歌手标识贴纸。运行 `node --experimental-strip-types scripts/check-music-collection.mjs` 检查登记和开箱阶段顺序。
 - 素材：`public/eason/covers`，12 张高清封面与预模糊背景；滚动/拖动翻阅、专辑旋转展开、背景缓冲渐变均保留。
 - 曲目：119 首，118 条经过核对的 Apple Music 中国区直链；《六月飛霜》暂未找到直链。地区发行版本说明见模块的 `SOURCES.md`。
 - 数据与交互计算检查：Node.js 22.18+ 运行 `node --experimental-strip-types scripts/check-eason.mjs`。另运行 `pnpm exec tsc --noEmit` 和 `pnpm build`。

@@ -1,11 +1,20 @@
-.vinyl-room { color: #f5f3e9; font-family: 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.vinyl-room { color: #39352c; font-family: 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 .vinyl-room button, .vinyl-room a { -webkit-tap-highlight-color: transparent; }
 .vinyl-room :where(button) { font: inherit; color: inherit; cursor: pointer; background: transparent; border: 0; }
 .vinyl-room a { color: inherit; text-decoration: none; }
-.vinyl-room button:focus-visible, .vinyl-room a:focus-visible { outline: 2px solid #edeedf; outline-offset: 5px; }
+.vinyl-room button:focus-visible, .vinyl-room a:focus-visible { outline: 2px solid #8e6f44; outline-offset: 5px; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.vinyl-room { --room-base: #17181e; --room-panel: #17181ef5; --room-share-top: #191c29a8; --room-share-bottom: #11131edd; position: relative; width: 100%; height: 100dvh; min-height: 400px; isolation: isolate; overflow: hidden; background: var(--room-base); }
-.vinyl-room[data-room-theme='mayday'] { --room-base: #2d271e; --room-panel: #2d271ef5; --room-share-top: #3b3324a8; --room-share-bottom: #191713dd; }
+.vinyl-room { --room-base: #eee9df; --room-panel: #f2ede3f5; --room-share-top: #eee9dfdb; --room-share-bottom: #e8e1d3f5; position: relative; width: 100%; height: 100dvh; min-height: 400px; isolation: isolate; overflow: hidden; background: var(--room-base); }
+.vinyl-room[data-room-theme='mayday'] { --room-base: #eee8da; --room-panel: #f3ecdef5; }
+.vinyl-room { transition: background-color 600ms ease; }
+.vinyl-room[data-collection='true'] { background: #eee9df; }
+.room-atmosphere { position: absolute; inset: 0; transition: opacity 650ms ease; }
+.vinyl-room[data-instant='true'], [data-instant='true'] .room-atmosphere { transition: none; }
+[data-collection='true'] .room-atmosphere { opacity: 0; }
+[data-collection='true'] .vinyl-canvas { pointer-events: none; touch-action: auto; }
+.back-collection { position: absolute; z-index: 10; top: 28px; left: 38px; min-height: 44px; display: flex; align-items: center; gap: 8px; font-size: 11px; color: #756b5d; }
+@media (max-width: 759px) { .back-collection { top: auto; left: 23px; bottom: 102px; min-height: 44px; font-size: 11px; } }
+@media (prefers-reduced-motion: reduce) { .vinyl-room, .room-atmosphere { transition: none; } }
 .masthead { position: absolute; z-index: 9; top: 28px; left: 38px; right: 38px; min-height: 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; pointer-events: none; }
 .mobile-back { display: none; }
 .wordmark { pointer-events: auto; display: inline-flex; align-items: center; gap: 11px; }
@@ -18,53 +27,51 @@
 .vinyl-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; outline: none; }
 .vinyl-canvas:active { cursor: grabbing; }
 .detail-open .vinyl-canvas { pointer-events: none; cursor: default; }
-.collection-label { position: absolute; top: 43%; left: 38px; display: flex; flex-direction: column; gap: 10px; pointer-events: none; font-size: 10px; letter-spacing: .18em; color: #f2f0e69c; }
+.collection-label { position: absolute; top: 43%; left: 38px; display: flex; flex-direction: column; gap: 10px; pointer-events: none; font-size: 10px; letter-spacing: .18em; color: #756b5d; }
 .collection-label span:last-child { font-size: 11px; letter-spacing: .08em; opacity: .6; }
 .selection-marker { position: absolute; top: 50%; left: 19%; right: 19%; display: flex; justify-content: space-between; pointer-events: none; }
-.selection-marker span { width: 20px; height: 1px; background: #f5f3e54a; }
+.selection-marker span { width: 20px; height: 1px; background: #39352c4a; }
 .album-index { position: absolute; z-index: 4; right: 34px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 1px; }
 .album-index button { width: 30px; height: 25px; display: grid; place-items: center; padding: 0; }
-.album-index button span { width: 3px; height: 3px; border-radius: 50%; background: #f2f0e64d; }
-.album-index button[aria-current='true'] span { height: 17px; border-radius: 3px; background: #f2f0e6; }
-.album-index button:hover span { background: #f2f0e6; }
+.album-index button span { width: 3px; height: 3px; border-radius: 50%; background: #39352c4d; }
+.album-index button[aria-current='true'] span { height: 17px; border-radius: 3px; background: #39352c; }
+.album-index button:hover span { background: #39352c; }
 .browse-footer { position: absolute; z-index: 4; bottom: 28px; left: 38px; right: 38px; display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; pointer-events: none; }
 .current-album { padding: 5px 0; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; text-align: left; pointer-events: auto; max-width: 35%; }
-.current-kicker { font-size: 11px; letter-spacing: .12em; color: #f1eee0a6; }
+.current-kicker { font-size: 11px; letter-spacing: .12em; color: #756b5d; }
 .current-kicker > span { margin: 0 8px; opacity: .6; }
 .current-title { display: flex; align-items: baseline; gap: 20px; font-size: clamp(20px, 2.4vw, 32px); letter-spacing: -.025em; line-height: 1.1; }
 .current-title svg { flex-shrink: 0; opacity: .6; transition: transform .2s; }
 .current-album:hover .current-title svg { transform: translate(3px,-3px); }
-.browse-hint { position: absolute; left: 50%; bottom: 4px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; white-space: nowrap; margin: 0; font-size: 12px; letter-spacing: .04em; color: #f0ede2aa; }
-.touch-hint { display: none; }
 .arrow-controls { display: flex; gap: 10px; pointer-events: auto; }
-.arrow-controls button { width: 42px; height: 42px; border: 1px solid #f4f0e53d; border-radius: 50%; display: grid; place-items: center; background: #11152218; transition: background .2s; }
-.arrow-controls button:hover { background: #f3f0e525; }
-.detail-caption { position: absolute; left: 8%; right: 55%; top: calc(50% + min(17.5vw, 31dvh, 310px) + 22px); z-index: 4; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: .08em; color: #eeeddf80; animation: details-in .6s .15s both; }
+.arrow-controls button { width: 42px; height: 42px; border: 1px solid #39352c3d; border-radius: 50%; display: grid; place-items: center; background: #f6f1e86b; transition: background .2s; }
+.arrow-controls button:hover { background: #39352c25; }
+.detail-caption { position: absolute; left: 8%; right: 55%; top: calc(50% + min(17.5vw, 31dvh, 310px) + 22px); z-index: 4; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: .08em; color: #756b5d; animation: details-in .6s .15s both; }
 .detail-caption a { display: flex; align-items: center; gap: 5px; }
 .track-panel { position: absolute; z-index: 4; left: 54%; right: 7%; top: max(130px, 15%); bottom: max(66px, 8%); display: flex; flex-direction: column; }
 .album-back { position: absolute; top: -48px; left: 0; display: inline-flex; align-items: center; gap: 9px; min-height: 40px; padding: 10px 0; font-size: 12px; pointer-events: auto; transition: transform 120ms cubic-bezier(.23, 1, .32, 1), opacity 160ms ease; }
 .album-back:active { transform: scale(.97); }
 @media (hover: hover) and (pointer: fine) { .album-back:hover { opacity: .8; } }
-.eyebrow { display: flex; gap: 11px; margin: 0 0 16px; font-size: 12px; letter-spacing: .08em; color: #eeeddf91; }
+.eyebrow { display: flex; gap: 11px; margin: 0 0 16px; font-size: 12px; letter-spacing: .08em; color: #756b5d; }
 .eyebrow span { opacity: .5; }
 .album-heading h2 { font-family: 'Baskerville', 'Iowan Old Style', 'PingFang SC', serif; font-weight: 400; font-size: clamp(32px, 4.8vw, 64px); letter-spacing: -.045em; line-height: 1.05; margin: 0 0 16px; overflow-wrap: anywhere; }
-.album-artist { margin: 0 0 32px; color: #f1efe1b3; font-size: 14px; letter-spacing: .04em; }
-.track-scroll { overflow-y: auto; min-height: 0; flex: 1; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #efeedd40 transparent; padding-right: 9px; margin-right: -9px; }
+.album-artist { margin: 0 0 32px; color: #756b5d; font-size: 14px; letter-spacing: .04em; }
+.track-scroll { overflow-y: auto; min-height: 0; flex: 1; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #39352c40 transparent; padding-right: 9px; margin-right: -9px; }
 .track-list { list-style: none; margin: 0; padding: 0; }
-.track-list li { border-top: 1px solid #f3f0e21a; }
+.track-list li { border-top: 1px solid #39352c1a; }
 .track-list a { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; position: relative; gap: 13px; padding: 15px 2px; min-height: 49px; }
 .track-list a[aria-disabled] { cursor: default; opacity: .6; }
-.track-number { font-size: 11px; color: #edeadd69; font-variant-numeric: tabular-nums; }
-.track-name { font-size: 14px; color: #f0efdf; line-height: 1.4; }
-.track-duration { font-size: 12px; color: #eeeadd7a; font-variant-numeric: tabular-nums; text-align: right; }
+.track-number { font-size: 11px; color: #756b5d; font-variant-numeric: tabular-nums; }
+.track-name { font-size: 14px; color: #39352c; line-height: 1.4; }
+.track-duration { font-size: 12px; color: #756b5d; font-variant-numeric: tabular-nums; text-align: right; }
 .track-link-icon { display: none; position: absolute; right: 3px; }
-.track-list a[href]:hover { background: #e8e9df09; }
+.track-list a[href]:hover { background: #39352c09; }
 .track-list a[href]:hover .track-duration { visibility: hidden; }
 .track-list a[href]:hover .track-link-icon { display: block; }
-.album-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid #e8e9df25; margin-top: 12px; padding-top: 20px; color: #eeeddf91; font-size: 12px; }
-.album-footer a { display: flex; align-items: center; gap: 8px; color: #edeedd; }
-.copyright { font-size: 10px; line-height: 1.6; margin: 17px 0 0; color: #eeeddf54; }
-.availability-note { font-size: 12px; line-height: 1.7; color: #e5dcb3; margin: 0 0 15px; }
+.album-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid #39352c25; margin-top: 12px; padding-top: 20px; color: #756b5d; font-size: 12px; }
+.album-footer a { display: flex; align-items: center; gap: 8px; color: #39352c; }
+.copyright { font-size: 10px; line-height: 1.6; margin: 17px 0 0; color: #756b5d; }
+.availability-note { font-size: 12px; line-height: 1.7; color: #856837; margin: 0 0 15px; }
 .loading-note { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 13px; letter-spacing: .1em; }
 .graphics-fallback { position: absolute; inset: 110px 7% 100px; overflow: auto; }
 .graphics-fallback > p { font-size: 14px; }
@@ -73,7 +80,7 @@
 .graphics-fallback img { width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 10px; }
 .fallback-detail-cover { position: absolute; left: 8%; top: 50%; transform: translateY(-50%); width: 35%; aspect-ratio: 1; object-fit: cover; }
 @keyframes details-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-@media (max-width: 1050px) { .track-panel { right: 5%; left: 52%; top: 120px; bottom: 50px; } .track-list a { padding: 12px 2px; } .collection-label { display: none; } .browse-hint { font-size: 11px; } }
+@media (max-width: 1050px) { .track-panel { right: 5%; left: 52%; top: 120px; bottom: 50px; } .track-list a { padding: 12px 2px; } .collection-label { display: none; } }
 @media (max-width: 759px), (max-width: 950px) and (max-height: 500px) {
   .masthead { top: 23px; left: 22px; right: 22px; }
   .wordmark > span { font-size: 14px; } .wordmark small { font-size: 8px; }
@@ -83,8 +90,6 @@
   .browse-footer { bottom: 24px; left: 23px; right: 23px; align-items: flex-end; gap: 20px; }
   .current-album { max-width: 75%; gap: 8px; } .current-title { font-size: 22px; gap: 12px; }
   .current-kicker { font-size: 10px; }
-  .browse-hint { left: 0; top: -33px; bottom: auto; transform: none; font-size: 10px; gap: 7px; opacity: .7; }
-  .browse-hint svg { width: 15px; } .desktop-hint { display: none; } .touch-hint { display: inline; }
   .arrow-controls { gap: 6px; } .arrow-controls button { width: 32px; height: 32px; }
   .close-detail { font-size: 11px; gap: 9px; }
   .track-panel { top: calc(126px + min(66vw, 32dvh)); left: 24px; right: 24px; bottom: 24px; }
@@ -104,7 +109,7 @@
 
 /* Fade the outer sleeves so the full-screen controls keep a clear reading area. */
 .vinyl-canvas { mask-image: linear-gradient(to bottom, transparent, #000 13%, #000 82%, transparent 99%); }
-.detail-open .vinyl-canvas { mask-image: none; }
+.detail-open .vinyl-canvas, [data-collection='true'] .vinyl-canvas, [data-transitioning='true'] .vinyl-canvas { mask-image: none; }
 
 /* Eason's detail view closes from the empty backdrop; content stays interactive. */
 .minimal-detail .masthead { min-height: 51px; }
@@ -133,11 +138,11 @@ div.detail-cover { transform: translate(-50%, -50%) scale(1.07); }
 .song-row { display: flex; align-items: stretch; }
 .vinyl-room .song-select { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; gap: 13px; flex: 1; min-width: 0; text-align: left; min-height: 49px; padding: 15px 2px; }
 .track-list .song-listen { display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 40px; padding: 0; margin-left: 10px; opacity: .6; }
-.share-hint { font-size: 11px; color: #eeeddf70; margin: 0 0 15px; }
+.share-hint { font-size: 11px; color: #756b5d; margin: 0 0 15px; }
 .vinyl-room[data-instant='true'] .track-panel { animation: none; transition: none; }
 .vinyl-room[data-instant='true'] .album-back { transition: none; }
 .vinyl-room[data-instant='true'] .vinyl-canvas, .vinyl-room[data-instant='true'] .share-backdrop { transition: none; }
-@media (hover: hover) and (pointer: fine) { .song-select:hover { background: #e8e9df09; } .track-list .song-listen:hover { opacity: 1; } }
+@media (hover: hover) and (pointer: fine) { .song-select:hover { background: #39352c09; } .track-list .song-listen:hover { opacity: 1; } }
 @media (max-width: 759px), (max-width: 950px) and (max-height: 500px) { .vinyl-room .song-select { padding: 10px 2px; gap: 9px; min-height: 44px; } .sharing .masthead { visibility: hidden; } .share-hint { font-size: 10px; margin-bottom: 12px; } }
 
 /* Keep the album context compact so the track list gets the remaining viewport. */

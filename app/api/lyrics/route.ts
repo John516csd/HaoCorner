@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import eason from '../../modules/eason-page/albums.json';
-import mayday from '../../modules/mayday-page/albums.json';
+import { findMusicArtist } from '../../components/vinyl-room/artists';
 import { matchLyrics, traditional } from '../../components/vinyl-room/share/lyrics-match.mjs';
 
 export const runtime = 'nodejs';
@@ -8,7 +7,7 @@ export const runtime = 'nodejs';
 export async function GET(request: NextRequest) {
   const room = request.nextUrl.searchParams.get('room');
   const trackId = Number(request.nextUrl.searchParams.get('track'));
-  const albums = room === 'eason' ? eason : room === 'mayday' ? mayday : [];
+  const albums = findMusicArtist(room)?.albums || [];
   const album = albums.find(item => item.tracks.some(track => track.trackId === trackId));
   const track = album?.tracks.find(item => item.trackId === trackId);
   if (!album || !track) return NextResponse.json({ error: '未找到这首歌曲。' }, { status: 404 });

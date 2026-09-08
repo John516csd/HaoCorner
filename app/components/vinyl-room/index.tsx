@@ -1,11 +1,13 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useRef, useState, type PointerEvent } from 'react';
-import { ArrowDown, ArrowLeft, ArrowUp, ArrowUpRight, Disc3, Mouse, X } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowUp, ArrowUpRight, Disc3, X } from 'lucide-react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
 import styles from './index.module.css';
-import type { VinylAlbum } from './types';
+import { findMusicArtist, musicArtists } from './artists';
+import Collection from './collection';
 import { createVinylScene } from './vinyl-scene';
 import { durationLabel } from './record-math';
 import type { VinylTrack } from './share/types';
@@ -14,14 +16,19 @@ import RoomNavigation from './room-navigation';
 
 const ShareWorkshop = dynamic(() => import('./share/workshop'), { ssr: false });
 
-export default function VinylRoom({ albums, artist, artistEnglish, edition, theme, minimalDetail = false }: {
-  albums: VinylAlbum[];
-  artist: string;
-  artistEnglish: string;
-  edition: string;
-  theme: ArtistRoomTheme;
-  minimalDetail?: boolean;
-}) {
+export default function VinylRoom() {
+  const pathname = usePathname();
+  const requestedArtist = findMusicArtist(pathname.slice(1));
+  const isCollection = !requestedArtist;
+  const lastArtist = useRef(requestedArtist || musicArtists[0]);
+  const initialRoom = useRef(requestedArtist?.id ?? null);
+  const profile = requestedArtist || lastArtist.current;
+  const { albums, name: artist, english: artistEnglish, id: theme } = profile;
+  const edition = String(musicArtists.indexOf(profile) + 1).padStart(3, '0');
+  const minimalDetail = true;
+  const [transitioning, setTransitioning] = useState(false);
+  const changedRoute = useRef(false);
+  const previousPath = useRef(pathname);
   const initialIndex = Math.min(4, albums.length - 1);
   const [current, setCurrent] = useState(initialIndex);
   const [opened, setOpened] = useState<number | null>(null);
@@ -39,23 +46,45 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
   const closeButton = useRef<HTMLButtonElement>(null);
   const openButton = useRef<HTMLButtonElement>(null);
   const hadDetails = useRef(false);
-  const album = albums[opened ?? current];
+  const album = albums[Math.min(opened ?? current, albums.length - 1)];
+  const showRoom = !isCollection && !transitioning;
   const detail = opened !== null;
 
   useEffect(() => {
     if (!canvas.current) return;
     try {
-      const scene = createVinylScene(canvas.current, albums,
+      const scene = createVinylScene(canvas.current, musicArtists, initialRoom.current,
         setCurrent,
         setOpened,
-        () => setReady(true));
+        () => setReady(true), setTransitioning);
       controls.current = scene;
       return () => { controls.current = null; scene.destroy(); };
     } catch (error) {
       console.error('Unable to initialize the vinyl renderer', error);
       setGraphicsError(true);
     }
-  }, [albums]);
+  }, []);
+
+  useLayoutEffect(() => {
+    if (requestedArtist) lastArtist.current = requestedArtist;
+    setOpened(null); setSharing(null); setShareReady(false); setComposing(false);
+    selectedSharedAlbum.current = false;
+    if (controls.current) controls.current.navigate(requestedArtist?.id ?? null, roomRoot.current?.dataset.instant === 'true');
+    if (graphicsError) setCurrent(Math.min(4, albums.length - 1));
+    changedRoute.current = previousPath.current !== pathname;
+    previousPath.current = pathname;
+  }, [pathname, graphicsError]);
+
+  useEffect(() => {
+    if (transitioning || !ready || !changedRoute.current) return;
+    const frame = requestAnimationFrame(() => {
+      const target = isCollection ? roomRoot.current?.querySelector<HTMLElement>(`a[href="/${lastArtist.current.id}"]`) : roomRoot.current;
+      if (!target || target.closest('[inert]')) return;
+      target.focus({ preventScroll: true });
+      changedRoute.current = false;
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [transitioning, ready, isCollection]);
 
   useEffect(() => {
     if (detail) { (minimalDetail ? detailPanel.current : closeButton.current)?.focus({ preventScroll: true }); hadDetails.current = true; }
@@ -81,14 +110,14 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
   }, [sharing]);
 
   useEffect(() => {
-    if ((!ready && !graphicsError) || selectedSharedAlbum.current) return;
+    if (isCollection || transitioning || (!ready && !graphicsError) || selectedSharedAlbum.current) return;
     selectedSharedAlbum.current = true;
     const trackId = Number(new URLSearchParams(window.location.search).get('track'));
     const index = albums.findIndex(item => item.tracks.some(track => track.trackId === trackId));
     if (index < 0) return;
     // Existing QR links identify a song; let visitors start from its album on the shelf.
     if (graphicsError) setCurrent(index); else controls.current?.select(index);
-  }, [ready, graphicsError, albums]);
+  }, [ready, graphicsError, albums, transitioning, isCollection]);
 
   function closeShare() {
     setSharing(null); setShareReady(false); setComposing(false);
@@ -119,20 +148,23 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
   }
 
   return (
-    <section ref={roomRoot} tabIndex={-1} lang="zh-CN" data-room-theme={theme} aria-label={`${artist}黑胶室`} aria-busy={!ready && !graphicsError} className={[styles['vinyl-room'], detail ? styles['detail-open'] : '', detail && minimalDetail ? styles['minimal-detail'] : '', sharing ? styles.sharing : '', composing ? styles.composing : ''].join(' ')} onPointerDownCapture={event => { event.currentTarget.dataset.instant = 'false'; }} onKeyDownCapture={event => { event.currentTarget.dataset.instant = 'true'; }} onPointerMoveCapture={handleDetailPointerMove} onPointerLeave={() => controls.current?.tilt(0, 0)} onKeyDown={event => { if (detail && event.key === 'Escape') { event.stopPropagation(); close(); } }}>
-      <ArtistAtmosphere theme={theme} subdued={detail} />
-      <h1 className={styles['visually-hidden']}>{artist}黑胶室</h1>
-      <header className={styles['masthead']}>
+    <section ref={roomRoot} tabIndex={-1} lang="zh-CN" data-room-theme={theme} data-collection={isCollection} data-transitioning={transitioning} aria-label={isCollection ? '唱片收藏室' : `${artist}黑胶室`} aria-busy={(!ready && !graphicsError) || transitioning} className={[styles['vinyl-room'], detail ? styles['detail-open'] : '', detail && minimalDetail ? styles['minimal-detail'] : '', sharing ? styles.sharing : '', composing ? styles.composing : ''].join(' ')} onPointerDownCapture={event => { event.currentTarget.dataset.instant = 'false'; }} onKeyDownCapture={event => { event.currentTarget.dataset.instant = 'true'; }} onPointerMoveCapture={handleDetailPointerMove} onPointerLeave={() => controls.current?.tilt(0, 0)} onKeyDown={event => { if (detail && event.key === 'Escape') { event.stopPropagation(); close(); } }}>
+      <div className={styles['room-atmosphere']}><ArtistAtmosphere theme={theme} /></div>
+      {!isCollection && <h1 className={styles['visually-hidden']}>{artist}黑胶室</h1>}
+      {showRoom && <header className={styles['masthead']}>
         {detail && minimalDetail && !sharing && <button className={styles['mobile-back']} onClick={close}><ArrowLeft size={18} />返回唱片架</button>}
         {!minimalDetail && <Link href="/#music" className={styles['wordmark']} aria-label="返回 HaoCorner 首页音乐区"><Disc3 size={29} strokeWidth={1.2} /><span>黑胶室<small>THE VINYL ROOM</small></span></Link>}
         {!detail && <RoomNavigation room={theme} artist={artist} artistEnglish={artistEnglish} />}
         {detail ? !minimalDetail && <button className={styles['close-detail']} ref={closeButton} onClick={close}><span>返回唱片架</span><X size={20} /></button> : <span className={styles['edition']}>VOL. {edition} <span>—</span> {albums.length} RECORDS</span>}
-      </header>
+      </header>}
 
       <div className={styles['share-backdrop']} style={{ backgroundImage: `linear-gradient(var(--room-share-top), var(--room-share-bottom)), url(${album.background})` }} aria-hidden="true" />
-      <canvas ref={canvas} className={styles['vinyl-canvas']} aria-label={`${artist} 3D 唱片架，滚动或拖动翻阅；点击专辑查看歌曲`} />
+      <canvas ref={canvas} className={styles['vinyl-canvas']} aria-label={isCollection ? '歌手的半开纸箱和 CD 收藏' : `${artist} 3D 唱片架，滚动或拖动翻阅；点击专辑查看歌曲`} />
 
-      {!detail && <>
+      <Collection visible={isCollection && !transitioning} fallback={graphicsError} onScroll={() => controls.current?.refreshCollection()} onHover={id => controls.current?.hoverBox(id)} />
+
+      {showRoom && !detail && <>
+        <Link className={styles['back-collection']} href="/music" scroll={false}><ArrowLeft size={15} />唱片收藏室</Link>
         <div className={styles['collection-label']} aria-hidden="true"><span>THE COLLECTION</span><span>{albums[0].year} — {albums[albums.length - 1].year}</span></div>
         <div className={styles['selection-marker']} aria-hidden="true"><span /><span /></div>
         <nav className={styles['album-index']} aria-label="选择专辑">{albums.map((record, index) => <button key={record.id} onClick={() => open(index)} aria-label={`打开 ${record.title} 的歌曲列表`} aria-current={current === index ? 'true' : undefined} title={`${record.year} · ${record.title}`}><span /></button>)}</nav>
@@ -141,12 +173,11 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
             <span className={styles['current-kicker']}>{album.year}<span> / </span>{String(current + 1).padStart(2, '0')} — {albums.length}</span>
             <span className={styles['current-title']}>{album.title}<ArrowUpRight size={20} strokeWidth={1.2} /></span>
           </button>
-          <p className={styles['browse-hint']}><Mouse size={19} strokeWidth={1.2} /><span className={styles['desktop-hint']}>滚动翻阅 · 点击展开歌曲</span><span className={styles['touch-hint']}>上下滑动 · 轻触查看歌曲</span></p>
           <div className={styles['arrow-controls']}><button onClick={() => controls.current?.step(-1)} aria-label="上一张专辑"><ArrowUp size={19} /></button><button onClick={() => controls.current?.step(1)} aria-label="下一张专辑"><ArrowDown size={19} /></button></div>
         </div>
       </>}
 
-      {detail && <>
+      {showRoom && detail && <>
         {minimalDetail && !sharing && <button className={styles['detail-dismiss']} onClick={close} aria-label="关闭专辑详情，返回唱片架" />}
         {/* Keep clicks on the CD, including its transparent rim, off the backdrop. */}
         <div className={styles['detail-cover']} />
@@ -168,10 +199,10 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
         </section>
       </>}
 
-      {sharing && detail && <ShareWorkshop key={sharing.trackId} entered={shareReady} album={album} track={sharing} room={theme} onClose={closeShare} onStageChange={setComposing} />}
+      {showRoom && sharing && detail && <ShareWorkshop key={sharing.trackId} entered={shareReady} album={album} track={sharing} room={theme} onClose={closeShare} onStageChange={setComposing} />}
 
       {!ready && !graphicsError && <output className={styles['loading-note']}>正在摆放唱片…</output>}
-      {graphicsError && !detail && <div className={styles['graphics-fallback']}><p>当前浏览器未能启用 3D，仍可选择专辑查看歌曲。</p><div>{albums.map((record,index)=><button key={record.id} onClick={()=>open(index)}><img src={record.artwork} alt={record.title} /><span>{record.title}</span></button>)}</div></div>}
+      {showRoom && graphicsError && !detail && <div className={styles['graphics-fallback']}><p>当前浏览器未能启用 3D，仍可选择专辑查看歌曲。</p><div>{albums.map((record,index)=><button key={record.id} onClick={()=>open(index)}><img src={record.artwork} alt={record.title} /><span>{record.title}</span></button>)}</div></div>}
     </section>
   );
 }

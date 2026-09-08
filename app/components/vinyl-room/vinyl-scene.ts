@@ -1,14 +1,26 @@
 import * as THREE from 'three';
 import type { VinylAlbum } from './types';
-import { loopIndex, nearestPosition, releaseVelocity, coast } from './record-math';
+import type { MusicArtist } from './artists';
+import { createCollectionBox } from './collection-box';
+import { loopIndex, nearestPosition, releaseVelocity, coast, collectionEase, collectionMotion, collectionSlot } from './record-math';
 
 export function createVinylScene(
   canvas: HTMLCanvasElement,
-  albums: VinylAlbum[],
+  artists: MusicArtist[],
+  initialRoom: string | null,
   onSelect: (index: number) => void,
   onOpen: (index: number | null) => void,
   onReady: () => void,
+  onTransition: (moving: boolean) => void,
 ) {
+  let artistIndex = Math.max(0, artists.findIndex(artist => artist.id === initialRoom));
+  let albums = artists[artistIndex].albums;
+  let destination = initialRoom;
+  let unpack = initialRoom ? 1 : 0;
+  let transitioning = false;
+  let instantTransition = false;
+  let hoveredBox: string | null = null;
+  const savedPositions = new Map<string, number>();
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -70,7 +82,7 @@ export function createVinylScene(
   }
   const reflectionTexture = textureSetup(new THREE.CanvasTexture(reflection));
 
-  const records = albums.map((album, index) => {
+  function createRecords(albums: VinylAlbum[]) { return albums.map((album, index) => {
     const group = new THREE.Group();
     group.userData.index = index; group.userData.lift = 0;
     const sideMaterial = new THREE.MeshBasicMaterial({ color: new THREE.Color(album.color).lerp(new THREE.Color('#242c2d'), .2) });
@@ -145,13 +157,87 @@ export function createVinylScene(
     }, undefined, () => { if (!disposed) { start(); onReady(); } });
     textureSetup(cover);
     return group;
+  }); }
+
+  const boxes = artists.map((artist, index) => {
+    const carton = createCollectionBox(artist, index, start); scene.add(carton.group);
+    const rotation = new THREE.Quaternion().setFromEuler(new THREE.Euler(.38, index % 2 ? -.3 : .3, index % 2 ? .025 : -.04));
+    return { ...carton, records: null as THREE.Group[] | null, hover: 0, pose: new THREE.Matrix4(), scale: 1, rotation };
   });
+  // ponytail: cache visited boxes for continuous return trips; evict offscreen artist meshes if GPU memory becomes an issue.
+  function getRecords(index: number) { return boxes[index].records ??= createRecords(artists[index].albums); }
+  let records = getRecords(artistIndex);
+  const boxedPosition = new THREE.Vector3();
+  const boxedRotation = new THREE.Quaternion();
+  const screenNormal = new THREE.Vector3(0, 0, 1);
+  const cdRotation = new THREE.Quaternion().setFromEuler(new THREE.Euler(.06, Math.PI / 2 - .14, 0));
+  const alignedCD = new THREE.Quaternion().setFromEuler(new THREE.Euler(0, Math.PI / 2, 0));
+  // Long box axis points down; its opening faces the viewer and its CDs already match the shelf.
+  const uprightBox = new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.PI / 2, -Math.PI / 2, 0));
+  function inShelf() { return unpack === 1 && destination === artists[artistIndex].id; }
+
+  function navigate(id: string | null, instant = false) {
+    if (id === destination || (id !== null && !artists.some(artist => artist.id === id))) return;
+    savedPositions.set(artists[artistIndex].id, position);
+    stopMotion(); target = position; opened = null; onOpen(null); destination = id;
+    instantTransition = instant;
+    transitioning = true; onTransition(true); start();
+  }
 
   function draw(now: number) {
     frame = 0;
     if (disposed || document.hidden) return;
     const dt = Math.min(now - (lastTime || now - 16.67), 40);
     lastTime = now;
+    if (unpack === 0 && destination && destination !== artists[artistIndex].id) {
+      artistIndex = artists.findIndex(artist => artist.id === destination);
+      albums = artists[artistIndex].albums; records = getRecords(artistIndex);
+      position = target = savedPositions.get(destination) ?? Math.min(4, albums.length - 1);
+      active = featured = loopIndex(Math.round(position), albums.length); opening = 0;
+      onSelect(active);
+    }
+    const unpackGoal = destination === artists[artistIndex].id ? 1 : 0;
+    unpack = reducedMotion.matches || instantTransition ? unpackGoal : Math.max(0, Math.min(1, unpack + (unpackGoal ? 1 : -1) * dt / (unpackGoal ? 1800 : 1200)));
+    const motion = collectionMotion(unpack);
+    const moving = destination ? unpack < 1 || destination !== artists[artistIndex].id : unpack > 0;
+    if (transitioning && !moving) { transitioning = false; onTransition(false); }
+    canvas.dataset.collectionProgress = unpack.toFixed(3);
+    const canvasRect = canvas.getBoundingClientRect();
+    let boxMoving = false;
+    boxes.forEach((box, index) => {
+      const anchor = canvas.parentElement?.querySelector(`[data-music-box="${artists[index].id}"]`);
+      const rect = anchor?.getBoundingClientRect();
+      if (!rect) return;
+      const selected = index === artistIndex;
+      const hoverGoal = destination === null && artists[index].id === hoveredBox ? 1 : 0;
+      box.hover += (hoverGoal - box.hover) * (reducedMotion.matches ? 1 : 1 - Math.exp(-dt / 85));
+      if (Math.abs(hoverGoal - box.hover) < .001) box.hover = hoverGoal; else boxMoving = true;
+      const baseScale = Math.min(rect.width / Math.max(3.7, box.width + 1.25), rect.height / 2.25);
+      const shift = selected ? motion.turn : 0;
+      const retreat = 1 - (selected ? motion.fade : collectionEase(unpack / .35));
+      box.scale = (baseScale + (Math.min(width * .54, height * .52) / (box.width + 1.1) - baseScale) * shift) * (1 + box.hover * .025 * (1 - shift));
+      box.group.scale.setScalar(box.scale);
+      const x = rect.left - canvasRect.left + rect.width / 2 - width / 2;
+      const y = height / 2 - (rect.top - canvasRect.top + rect.height / 2);
+      box.group.position.set(x * (1 - shift), y * (1 - shift) + box.hover * 5 * (1 - shift), selected ? -size * 1.3 * motion.retreat : 0);
+      box.group.quaternion.copy(box.rotation).slerp(uprightBox, shift);
+      box.flaps.forEach(({ pivot, axis, sign, rest }) => { pivot.rotation[axis] = sign * (rest * (1 - shift) - box.hover * .16 * (1 - shift)); });
+      // Recede behind departing sleeves, then fade the empty carton without shrinking it to a point.
+      box.group.updateMatrixWorld(true);
+      box.pose.copy(box.group.matrixWorld);
+      box.group.scale.multiplyScalar(selected ? .94 + .06 * retreat : retreat);
+      box.setOpacity(selected ? retreat : 1);
+      box.group.visible = retreat > .001;
+      box.group.updateMatrixWorld(true);
+      if (rect.bottom > canvasRect.top - 160 && rect.top < canvasRect.bottom + 160 && !box.records) getRecords(index);
+      if (!selected) box.records?.forEach((record, recordIndex) => {
+        const count = artists[index].albums.length;
+        const slot = collectionSlot(recordIndex, savedPositions.get(artists[index].id) ?? Math.min(4, count - 1), count);
+        boxedPosition.set((slot - (count - 1) / 2) * (box.width - .24) / count, .18, 0).applyMatrix4(box.group.matrixWorld);
+        record.position.copy(boxedPosition); record.quaternion.copy(box.group.quaternion).multiply(cdRotation);
+        record.scale.setScalar(box.group.scale.x * .85); record.visible = box.group.visible;
+      });
+    });
     if (inertia && pointerId === null && now - lastInput >= wheelQuietTime) {
       if (!reducedMotion.matches && Math.abs(velocity) > .00035) {
         const next = coast(velocity, dt);
@@ -193,8 +279,7 @@ export function createVinylScene(
       record.scale.setScalar(chosen ? size + (detailSize - size) * opening : size);
       if (chosen) {
         record.position.set(detailX * opening, baseY * (1 - opening) + detailY * opening, 0);
-        record.rotation.x = Math.PI / 2 * (1 - opening) - tiltCurrent.y * .055 * opening;
-        record.rotation.y = tiltCurrent.x * .065 * opening;
+        record.rotation.set(Math.PI / 2 * (1 - opening) - tiltCurrent.y * .055 * opening, tiltCurrent.x * .065 * opening, 0);
         record.position.x += tiltCurrent.x * 5 * opening;
         record.position.y -= tiltCurrent.y * 5 * opening;
       } else {
@@ -203,9 +288,27 @@ export function createVinylScene(
         record.rotation.set(Math.PI / 2, 0, 0);
       }
       if (!reducedMotion.matches) record.position.z += lift * 32 * (1 - opening);
+      if (unpack < 1) {
+        const box = boxes[artistIndex];
+        const slot = collectionSlot(index, position, records.length);
+        const departure = collectionMotion(unpack, slot, records.length);
+        const flight = departure.spread;
+        boxedPosition.set((slot - (records.length - 1) / 2) * (box.width - .24) / records.length, .18 + 1.05 * departure.extract, 0).applyMatrix4(box.pose);
+        record.position.lerp(boxedPosition, 1 - flight);
+        boxedRotation.copy(cdRotation).slerp(alignedCD, motion.turn).premultiply(box.group.quaternion);
+        record.quaternion.slerp(boxedRotation, 1 - flight);
+        record.scale.setScalar(record.scale.x * flight + box.scale * .85 * (1 - flight));
+        // A shallow, shared sweep carries the cascade; no wide turn or random wobble.
+        const sweep = (artistIndex % 2 ? -1 : 1) * departure.arc;
+        record.position.x += sweep * Math.min(48, width * .07);
+        record.position.y += departure.arc * gap * .12 * (1 - 2 * slot / Math.max(1, records.length - 1));
+        record.rotateOnWorldAxis(screenNormal, -sweep * .04);
+        record.rotateX(-departure.arc * .035);
+        record.visible = flight < .98 || record.visible;
+      }
     });
     renderer.render(scene, camera);
-    if (tiltMoving || hoverMoving || inertia || Math.abs(target - position) > .0005 || opening !== goal) frame = requestAnimationFrame(draw);
+    if (moving || boxMoving || tiltMoving || hoverMoving || inertia || Math.abs(target - position) > .0005 || opening !== goal) frame = requestAnimationFrame(draw);
     else lastTime = 0;
   }
   function start() { if (!frame && !disposed && !document.hidden) frame = requestAnimationFrame(draw); }
@@ -234,26 +337,26 @@ export function createVinylScene(
     onOpen(null); start();
   }
   function open(index = active) {
-    if (!Number.isInteger(index) || index < 0 || index >= albums.length) return;
+    if (!inShelf() || !Number.isInteger(index) || index < 0 || index >= albums.length) return;
     stopMotion();
     target = position; tiltCurrent.set(0, 0);
     opened = index; active = index; featured = index;
     onSelect(index); onOpen(index); start();
   }
   function select(index: number) {
-    if (!Number.isInteger(index) || index < 0 || index >= albums.length) return;
+    if (!inShelf() || !Number.isInteger(index) || index < 0 || index >= albums.length) return;
     if (opened !== null) close();
     stopMotion();
     target = nearestPosition(target, index, albums.length);
     start();
   }
   function step(direction: number) {
-    if (opened !== null) return;
+    if (!inShelf() || opened !== null) return;
     const next = Math.round(inertia ? position : target) + direction;
     stopMotion(); target = next; start();
   }
   function wheel(event: WheelEvent) {
-    if (opened !== null || pointerId !== null || event.ctrlKey) return;
+    if (!inShelf() || opened !== null || pointerId !== null || event.ctrlKey) return;
     const delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
     const pixels = delta * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? height : 1);
     if (!Number.isFinite(pixels) || pixels === 0) return;
@@ -269,13 +372,14 @@ export function createVinylScene(
     lastInput = now; inertia = true; start();
   }
   function down(event: PointerEvent) {
-    if (opened !== null || pointerId !== null || event.button !== 0 || !event.isPrimary) return;
+    if (!inShelf() || opened !== null || pointerId !== null || event.button !== 0 || !event.isPrimary) return;
     stopMotion(); target = position;
     pointerId = event.pointerId; moved = false;
     startY = event.clientY; startTarget = position; lastInput = performance.now();
     canvas.setPointerCapture(event.pointerId);
   }
   function move(event: PointerEvent) {
+    if (!inShelf()) return;
     if (pointerId === null) {
       const next = canHover.matches && event.pointerType === 'mouse' && opened === null && !inertia ? recordAt(event) : null;
       if (hovered !== next) { hovered = next; keyboardFocus = null; canvas.style.cursor = next === null ? '' : 'pointer'; start(); }
@@ -326,6 +430,7 @@ export function createVinylScene(
     } else start();
   }
   function key(event: KeyboardEvent) {
+    if (!inShelf()) return;
     if ((event.target as HTMLElement).closest('input, textarea, select, [contenteditable=true]')) return;
     if (event.key === 'Escape') close();
     if (opened !== null) return;
@@ -351,7 +456,7 @@ export function createVinylScene(
   reducedMotion.addEventListener('change', start);
   resize();
   return {
-    select, step, open, close, tilt,
+    select, step, open, close, tilt, navigate, refreshCollection: start, hoverBox(id: string | null) { hoveredBox = id; start(); },
     destroy() {
       disposed = true; stopMotion(); cancelAnimationFrame(frame); observer.disconnect();
       canvas.removeEventListener('wheel', wheel);
@@ -364,6 +469,7 @@ export function createVinylScene(
       document.removeEventListener('visibilitychange', visibility);
       window.removeEventListener('keydown', key);
       reducedMotion.removeEventListener('change', start);
+      boxes.forEach(box => box.dispose());
       textures.forEach(texture => texture.dispose()); materials.forEach(material => material.dispose());
       plane.dispose(); body.dispose(); edge.dispose(); caseGeometry.dispose(); caseEdges.dispose(); renderer.dispose();
     },

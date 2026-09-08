@@ -1,0 +1,30 @@
+.collection { position: absolute; inset: 0; z-index: 5; overflow-y: auto; overscroll-behavior: contain; color: #39352c; opacity: 0; pointer-events: none; visibility: hidden; transition: opacity 200ms ease, visibility 0s 200ms; scrollbar-width: thin; scrollbar-color: #a69b87 transparent; }
+.collection[data-visible='true'] { opacity: 1; pointer-events: auto; visibility: visible; transition-delay: 0s; }
+[data-instant='true'] .collection { transition: none; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 24px 4vw; font-size: 11px; }
+.header a { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; }
+.title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.boxes { min-height: calc(100dvh - 92px); align-content: center; box-sizing: border-box; max-width: 1240px; margin: 0 auto; padding: 24px 40px 100px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 64px; row-gap: 24px; }
+.artist { display: block; min-width: 0; border-radius: 4px; outline-offset: 8px; }
+.artist:nth-child(even) { margin-top: 46px; }
+.boxArt { height: clamp(240px, 25vw, 330px); position: relative; }
+.caption { display: flex; gap: 20px; align-items: center; margin: -4px 16px 0; padding: 20px 0 0; border-top: 1px solid #b8ad993e; }
+.number { font-size: 8px; letter-spacing: .1em; color: #8e806c; writing-mode: vertical-rl; transform: rotate(180deg); }
+.caption h2 { font-size: 25px; font-weight: 400; letter-spacing: .07em; display: flex; align-items: center; gap: 16px; margin: 0; }
+.caption h2 svg { color: #97836a; transition: transform 160ms ease; }
+.caption p { font-size: 9px; color: #8c806e; letter-spacing: .16em; margin: 6px 0 0; }
+.count { margin-left: auto; color: #6e6354; font-size: 11px; text-align: right; white-space: nowrap; }
+.count small { display: block; font-size: 9px; color: #9a8c79; letter-spacing: .04em; margin-top: 7px; }
+.fallbackBox { position: absolute; inset: 28% 8% 10%; background: #ae8255; transform: rotate(-5deg); border: 8px solid #c09a6c; box-shadow: 8px 14px 18px #57412a25; display: flex; align-items: center; justify-content: space-around; }
+.fallbackBox img { width: 35%; transform: translateY(-30%) rotate(-8deg); }
+.fallbackBox span { color: #46351f; font-size: 12px; letter-spacing: .12em; }
+.fallbackBox .fallbackSticker { position: absolute; right: 8px; bottom: 8px; width: 18%; transform: rotate(8deg); }
+@media (hover: hover) and (pointer: fine) { .artist:hover h2 svg { transform: translate(3px, -3px); } .header a:hover { color: #996b48; } }
+@media (max-width: 759px) {
+  .header { padding: calc(12px + env(safe-area-inset-top, 0px)) 22px 8px; }
+  .boxes { min-height: 0; grid-template-columns: 1fr; gap: 24px; padding: 0 24px max(40px, env(safe-area-inset-bottom)); margin-top: 4px; }
+  .artist:nth-child(even) { margin-top: 0; }
+  .boxArt { height: 250px; } .caption { margin: -8px 8px 0; padding-top: 16px; gap: 16px; }
+  .caption h2 { font-size: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .collection, .caption h2 svg { transition: none; } }
