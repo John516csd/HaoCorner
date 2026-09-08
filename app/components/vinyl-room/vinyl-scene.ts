@@ -162,7 +162,8 @@ export function createVinylScene(
   const boxes = artists.map((artist, index) => {
     const carton = createCollectionBox(artist, index, start); scene.add(carton.group);
     const rotation = new THREE.Quaternion().setFromEuler(new THREE.Euler(.38, index % 2 ? -.3 : .3, index % 2 ? .025 : -.04));
-    return { ...carton, records: null as THREE.Group[] | null, hover: 0, pose: new THREE.Matrix4(), scale: 1, rotation };
+    const anchor = canvas.parentElement?.querySelector<HTMLElement>(`[data-music-box="${artist.id}"]`);
+    return { ...carton, anchor, snapshot: anchor?.querySelector('canvas'), records: null as THREE.Group[] | null, hover: 0, pose: new THREE.Matrix4(), scale: 1, rotation };
   });
   // ponytail: cache visited boxes for continuous return trips; evict offscreen artist meshes if GPU memory becomes an issue.
   function getRecords(index: number) { return boxes[index].records ??= createRecords(artists[index].albums); }
@@ -175,6 +176,7 @@ export function createVinylScene(
   // Long box axis points down; its opening faces the viewer and its CDs already match the shelf.
   const uprightBox = new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.PI / 2, -Math.PI / 2, 0));
   function inShelf() { return unpack === 1 && destination === artists[artistIndex].id; }
+  function nativeCollection() { return width < 760 || !canHover.matches; }
 
   function navigate(id: string | null, instant = false) {
     if (id === destination || (id !== null && !artists.some(artist => artist.id === id))) return;
@@ -201,15 +203,15 @@ export function createVinylScene(
     const motion = collectionMotion(unpack);
     const moving = destination ? unpack < 1 || destination !== artists[artistIndex].id : unpack > 0;
     if (transitioning && !moving) { transitioning = false; onTransition(false); }
-    canvas.dataset.collectionProgress = unpack.toFixed(3);
     const canvasRect = canvas.getBoundingClientRect();
+    const boxRects = boxes.map(box => box.anchor?.getBoundingClientRect());
+    canvas.dataset.collectionProgress = unpack.toFixed(3);
     let boxMoving = false;
     boxes.forEach((box, index) => {
-      const anchor = canvas.parentElement?.querySelector(`[data-music-box="${artists[index].id}"]`);
-      const rect = anchor?.getBoundingClientRect();
+      const rect = boxRects[index];
       if (!rect) return;
       const selected = index === artistIndex;
-      const hoverGoal = destination === null && artists[index].id === hoveredBox ? 1 : 0;
+      const hoverGoal = !nativeCollection() && destination === null && artists[index].id === hoveredBox ? 1 : 0;
       box.hover += (hoverGoal - box.hover) * (reducedMotion.matches ? 1 : 1 - Math.exp(-dt / 85));
       if (Math.abs(hoverGoal - box.hover) < .001) box.hover = hoverGoal; else boxMoving = true;
       const baseScale = Math.min(rect.width / Math.max(3.7, box.width + 1.25), rect.height / 2.25);
@@ -307,12 +309,32 @@ export function createVinylScene(
         record.visible = flight < .98 || record.visible;
       }
     });
-    renderer.render(scene, camera);
+    const cachedCollection = nativeCollection() && destination === null && unpack === 0;
+    if (cachedCollection) {
+      // Copy the same 3D scene into card-sized canvases once; native scrolling needs no WebGL frames.
+      const pixelRatio = renderer.getPixelRatio();
+      boxes.forEach((box, index) => {
+        const rect = boxRects[index], snapshot = box.snapshot;
+        const context = snapshot?.getContext('2d');
+        if (!rect?.width || !rect.height || !snapshot || !context || !box.records) return;
+        const scale = Math.min(1, width / rect.width, height / rect.height);
+        snapshot.width = Math.round(rect.width * pixelRatio * scale);
+        snapshot.height = Math.round(rect.height * pixelRatio * scale);
+        camera.setViewOffset(width, height, rect.left - canvasRect.left, rect.top - canvasRect.top, rect.width, rect.height);
+        renderer.setViewport(0, 0, snapshot.width / pixelRatio, snapshot.height / pixelRatio);
+        renderer.render(scene, camera);
+        context.drawImage(canvas, 0, canvas.height - snapshot.height, snapshot.width, snapshot.height, 0, 0, snapshot.width, snapshot.height);
+      });
+      camera.clearViewOffset();
+      renderer.setViewport(0, 0, width, height);
+    } else renderer.render(scene, camera);
+    canvas.parentElement!.dataset.collectionCached = String(cachedCollection);
     if (moving || boxMoving || tiltMoving || hoverMoving || inertia || Math.abs(target - position) > .0005 || opening !== goal) frame = requestAnimationFrame(draw);
     else lastTime = 0;
   }
   function start() { if (!frame && !disposed && !document.hidden) frame = requestAnimationFrame(draw); }
   function resize() {
+    const previousWidth = width;
     width = canvas.clientWidth; height = canvas.clientHeight;
     if (!width || !height) return;
     safeTop = parseFloat(getComputedStyle(canvas).getPropertyValue('--room-safe-top')) || 0;
@@ -322,7 +344,8 @@ export function createVinylScene(
     camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(height / (2 * camera.position.z)));
     camera.updateProjectionMatrix();
     renderer.setSize(width, height, false);
-    start();
+    // Mobile browser chrome can resize the viewport during a swipe; the cached cards stay valid.
+    if (previousWidth !== width || canvas.parentElement?.dataset.collectionCached !== 'true') start();
   }
   function tilt(x: number, y: number) {
     if (opened === null || !canHover.matches || reducedMotion.matches || !Number.isFinite(x) || !Number.isFinite(y)) return;
@@ -444,6 +467,10 @@ export function createVinylScene(
   }
   const observer = new ResizeObserver(resize);
   observer.observe(canvas);
+  const collectionObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting && !boxes.find(box => box.anchor === entry.target)?.records)) start();
+  }, { root: boxes[0].anchor?.closest('[data-visible]'), rootMargin: '160px' });
+  boxes.forEach(box => { if (box.anchor) collectionObserver.observe(box.anchor); });
   canvas.addEventListener('wheel', wheel, { passive: false });
   canvas.addEventListener('pointerdown', down);
   canvas.addEventListener('pointermove', move);
@@ -456,9 +483,12 @@ export function createVinylScene(
   reducedMotion.addEventListener('change', start);
   resize();
   return {
-    select, step, open, close, tilt, navigate, refreshCollection: start, hoverBox(id: string | null) { hoveredBox = id; start(); },
+    select, step, open, close, tilt, navigate,
+    refreshCollection() { if (!nativeCollection()) start(); },
+    hoverBox(id: string | null) { if (!nativeCollection()) { hoveredBox = id; start(); } },
     destroy() {
-      disposed = true; stopMotion(); cancelAnimationFrame(frame); observer.disconnect();
+      disposed = true; stopMotion(); cancelAnimationFrame(frame); observer.disconnect(); collectionObserver.disconnect();
+      delete canvas.parentElement?.dataset.collectionCached;
       canvas.removeEventListener('wheel', wheel);
       canvas.removeEventListener('pointerdown', down);
       canvas.removeEventListener('pointermove', move);

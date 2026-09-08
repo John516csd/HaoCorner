@@ -17,6 +17,7 @@ export default function Collection({ visible, fallback, onScroll, onHover }: {
         onPointerEnter={event => { if (event.pointerType === 'mouse') onHover(artist.id); }} onPointerLeave={() => onHover(null)}
         onFocus={() => onHover(artist.id)} onBlur={() => onHover(null)}>
         <div className={styles.boxArt} data-music-box={artist.id} aria-hidden="true">
+          <canvas className={styles.boxSnapshot} />
           {fallback && <div className={styles.fallbackBox}><img src={artist.cover} alt="" /><span>{artist.english}</span>{artist.sticker && <img src={artist.sticker} className={styles.fallbackSticker} alt="" />}</div>}
         </div>
         <div className={styles.caption}>

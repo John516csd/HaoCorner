@@ -26,6 +26,7 @@
 .close-detail:hover { opacity: .75; }
 .vinyl-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; outline: none; }
 .vinyl-canvas:active { cursor: grabbing; }
+[data-collection-cached='true'] .vinyl-canvas { visibility: hidden; }
 .detail-open .vinyl-canvas { pointer-events: none; cursor: default; }
 .collection-label { position: absolute; top: 43%; left: 38px; display: flex; flex-direction: column; gap: 10px; pointer-events: none; font-size: 10px; letter-spacing: .18em; color: #756b5d; }
 .collection-label span:last-child { font-size: 11px; letter-spacing: .08em; opacity: .6; }
