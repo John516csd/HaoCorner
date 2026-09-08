@@ -73,7 +73,7 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
   useEffect(() => {
     if (!entered) return;
     onStageChange(stage !== 'lyrics'); heading.current?.focus({ preventScroll: true });
-    if (root.current && matchMedia('(max-width: 759px)').matches) {
+    if (root.current && matchMedia('(max-width: 759px), (max-width: 950px) and (max-height: 500px)').matches) {
       root.current.scrollTop = stage === 'export' ? Math.max(0, (panel.current?.offsetTop || 0) - 82) : 0;
     }
   }, [stage, entered, onStageChange]);
@@ -194,10 +194,11 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
               {entered && !loading && chosen && <ol ref={lyricList} key={chosen.id} className={styles.lyricLines}>{lines.map((line, index) => <li key={index}><button aria-pressed={selected.includes(index)} onClick={() => selectLine(index)}><span>{line}</span><span className={styles.lineCheck}>{selected.includes(index) ? <Check size={15} /> : '+'}</span></button></li>)}</ol>}
             </>}
             {loadError && <p className={styles.serviceNote}>{loadError} <button onClick={() => setAttempt(value => value + 1)}>重试</button></p>}
+            {track.musicUrl && <a className={`${styles.listen} ${styles.mobileListen}`} href={track.musicUrl} target="_blank" rel="noreferrer">在 Apple Music 听这首歌 <ArrowUpRight size={12} /></a>}
           </div>
           {!loading && chosen && !manual && <p className={styles.source}>歌词来自 <a href={`https://lrclib.net/api/get/${chosen.id}`} target="_blank" rel="noreferrer">LRCLIB <ArrowUpRight size={10} /></a> · {chosen.album}<button onClick={() => { setChosen(null); setSelected([]); update({ quote: '' }); }}>更换版本</button></p>}
           <div className={styles.stageFooter}><p className={styles.selectionCount}>{draft.quote.trim() ? `已选 ${draft.quote.length} 字` : '请先选择歌词'}</p><button className={styles.primary} disabled={!draft.quote.trim()} onClick={() => { setStage('edit'); setMessage(''); }}>下一步 <ArrowRight size={16} /></button></div>
-          {track.musicUrl && <a className={styles.listen} href={track.musicUrl} target="_blank" rel="noreferrer">在 Apple Music 听这首歌 <ArrowUpRight size={12} /></a>}
+          {track.musicUrl && <a className={`${styles.listen} ${styles.desktopListen}`} href={track.musicUrl} target="_blank" rel="noreferrer">在 Apple Music 听这首歌 <ArrowUpRight size={12} /></a>}
         </section>
 
         <section className={styles.stage} data-active={stage === 'edit'} {...inactive(stage !== 'edit')} aria-label="编辑分享图">
@@ -208,7 +209,7 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
             <label className={styles.fieldLabel} htmlFor="share-note">感悟 <span>选填</span></label><textarea id="share-note" rows={3} maxLength={MAX_NOTE} placeholder="输入感悟，可留空" value={draft.note} onChange={event => update({ note: event.target.value })} /><p className={styles.fieldHint}>{draft.note.length} / {MAX_NOTE}</p>
             <div className={styles.fieldRow}><div><label className={styles.fieldLabel} htmlFor="share-signature">署名 <span>选填</span></label><input id="share-signature" maxLength={24} placeholder="输入名字或日期" value={draft.signature} onChange={event => update({ signature: event.target.value })} /></div></div>
           </div>
-          <div className={styles.stageFooter}><p className={styles.draftNote}>{storageError ? '浏览器未能保存草稿，请暂时保留页面。' : '草稿已自动保存'}<span>扫码打开歌曲页面</span></p><button className={styles.primary} disabled={busy || Boolean(previewError)} onClick={generate}>{busy ? '正在生成…' : '生成分享图'} <ArrowRight size={16} /></button></div>
+          <div className={styles.stageFooter}><p className={styles.draftNote}>{storageError ? '浏览器未能保存草稿，请暂时保留页面。' : '草稿已自动保存'}<span>扫码查看专辑</span></p><button className={styles.primary} disabled={busy || Boolean(previewError)} onClick={generate}>{busy ? '正在生成…' : '生成分享图'} <ArrowRight size={16} /></button></div>
         </section>
 
         <section className={styles.stage} data-active={stage === 'export'} {...inactive(stage !== 'export')} aria-label="导出分享图">

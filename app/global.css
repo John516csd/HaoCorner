@@ -29,6 +29,11 @@ html {
   -ms-overflow-style: none; /* IE and Edge */
 }
 
+/* The record rooms use the available phone viewport, including narrow screens. */
+html:has([data-room-theme]) {
+  min-width: 0;
+}
+
 /* 隐藏基于 WebKit 浏览器的原生滚动条 */
 ::-webkit-scrollbar {
   display: none;

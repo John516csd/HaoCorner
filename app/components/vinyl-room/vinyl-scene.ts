@@ -32,7 +32,7 @@ export function createVinylScene(
   let frame = 0, lastTime = 0;
   const initialIndex = Math.min(4, albums.length - 1);
   let position = initialIndex, target = initialIndex, active = initialIndex;
-  let width = 1, height = 1, size = 500, gap = 90;
+  let width = 1, height = 1, size = 500, gap = 90, safeTop = 0;
   let opened: number | null = null, opening = 0, featured = initialIndex;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let velocity = 0, lastInput = 0, inertia = false;
@@ -167,10 +167,11 @@ export function createVinylScene(
     if (Math.abs(opening - goal) < .001) opening = goal;
     const current = loopIndex(Math.round(position), albums.length);
     if (opened === null && opening === 0 && current !== active) { active = current; onSelect(current); }
-    const compact = width < 760;
-    const detailSize = compact ? Math.min(width * .66, height * .32) : Math.min(width * .35, height * .62, 620);
-    const detailX = compact ? 0 : -width * .235;
-    const detailY = compact ? height * .5 - 106 - detailSize * .5 : 15;
+    const compact = width < 760 || (width <= 950 && height <= 500);
+    // Match the mobile album header and its CSS cover hit area.
+    const detailSize = compact ? Math.min(width * .29, height * .2, 116) : Math.min(width * .35, height * .62, 620);
+    const detailX = compact ? -width * .5 + 20 + detailSize * .5 : -width * .235;
+    const detailY = compact ? height * .5 - 72 - safeTop - detailSize * .5 : 15;
     if (reducedMotion.matches) { tiltTarget.set(0, 0); tiltCurrent.set(0, 0); }
     tiltCurrent.lerp(tiltTarget, 1 - Math.exp(-dt / 60));
     const tiltMoving = tiltCurrent.distanceTo(tiltTarget) > .0005;
@@ -211,6 +212,7 @@ export function createVinylScene(
   function resize() {
     width = canvas.clientWidth; height = canvas.clientHeight;
     if (!width || !height) return;
+    safeTop = parseFloat(getComputedStyle(canvas).getPropertyValue('--room-safe-top')) || 0;
     size = Math.min(width * (width < 760 ? .72 : .47), height * .83, 590);
     gap = height / 9.2;
     camera.aspect = width / height;

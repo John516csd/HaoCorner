@@ -32,7 +32,7 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
   const [composing, setComposing] = useState(false);
   const roomRoot = useRef<HTMLElement>(null);
   const selectedTrackButton = useRef<HTMLButtonElement | null>(null);
-  const openedDeepLink = useRef(false);
+  const selectedSharedAlbum = useRef(false);
   const canvas = useRef<HTMLCanvasElement>(null);
   const controls = useRef<ReturnType<typeof createVinylScene> | null>(null);
   const detailPanel = useRef<HTMLElement>(null);
@@ -81,13 +81,13 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
   }, [sharing]);
 
   useEffect(() => {
-    if ((!ready && !graphicsError) || openedDeepLink.current) return;
-    openedDeepLink.current = true;
+    if ((!ready && !graphicsError) || selectedSharedAlbum.current) return;
+    selectedSharedAlbum.current = true;
     const trackId = Number(new URLSearchParams(window.location.search).get('track'));
     const index = albums.findIndex(item => item.tracks.some(track => track.trackId === trackId));
     if (index < 0) return;
-    if (graphicsError) setOpened(index); else controls.current?.open(index);
-    setSharing(albums[index].tracks.find(track => track.trackId === trackId)!);
+    // Existing QR links identify a song; let visitors start from its album on the shelf.
+    if (graphicsError) setCurrent(index); else controls.current?.select(index);
   }, [ready, graphicsError, albums]);
 
   function closeShare() {
@@ -108,7 +108,7 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
     if (!detail || composing || event.pointerType !== 'mouse' || !detailPanel.current) return;
     const rect = event.currentTarget.getBoundingClientRect();
     const panel = detailPanel.current.getBoundingClientRect();
-    const compact = rect.width < 760;
+    const compact = rect.width < 760 || (rect.width <= 950 && rect.height <= 500);
     // Include all of the gap between the CD and the song panel.
     const width = compact ? rect.width : panel.left - rect.left;
     const height = compact ? panel.top - rect.top : rect.height;
@@ -123,8 +123,9 @@ export default function VinylRoom({ albums, artist, artistEnglish, edition, them
       <ArtistAtmosphere theme={theme} subdued={detail} />
       <h1 className={styles['visually-hidden']}>{artist}黑胶室</h1>
       <header className={styles['masthead']}>
+        {detail && minimalDetail && !sharing && <button className={styles['mobile-back']} onClick={close}><ArrowLeft size={18} />返回唱片架</button>}
         {!minimalDetail && <Link href="/#music" className={styles['wordmark']} aria-label="返回 HaoCorner 首页音乐区"><Disc3 size={29} strokeWidth={1.2} /><span>黑胶室<small>THE VINYL ROOM</small></span></Link>}
-        <RoomNavigation room={theme} artist={artist} artistEnglish={artistEnglish} />
+        {!detail && <RoomNavigation room={theme} artist={artist} artistEnglish={artistEnglish} />}
         {detail ? !minimalDetail && <button className={styles['close-detail']} ref={closeButton} onClick={close}><span>返回唱片架</span><X size={20} /></button> : <span className={styles['edition']}>VOL. {edition} <span>—</span> {albums.length} RECORDS</span>}
       </header>
 

@@ -7,6 +7,7 @@
 .vinyl-room { --room-base: #17181e; --room-panel: #17181ef5; --room-share-top: #191c29a8; --room-share-bottom: #11131edd; position: relative; width: 100%; height: 100dvh; min-height: 400px; isolation: isolate; overflow: hidden; background: var(--room-base); }
 .vinyl-room[data-room-theme='mayday'] { --room-base: #2d271e; --room-panel: #2d271ef5; --room-share-top: #3b3324a8; --room-share-bottom: #191713dd; }
 .masthead { position: absolute; z-index: 9; top: 28px; left: 38px; right: 38px; min-height: 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; pointer-events: none; }
+.mobile-back { display: none; }
 .wordmark { pointer-events: auto; display: inline-flex; align-items: center; gap: 11px; }
 .wordmark > span { font-size: 16px; font-weight: 500; letter-spacing: .18em; }
 .wordmark small { display: block; font-size: 9px; font-weight: 400; letter-spacing: .17em; margin-top: 5px; opacity: .65; }
@@ -73,7 +74,7 @@
 .fallback-detail-cover { position: absolute; left: 8%; top: 50%; transform: translateY(-50%); width: 35%; aspect-ratio: 1; object-fit: cover; }
 @keyframes details-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 1050px) { .track-panel { right: 5%; left: 52%; top: 120px; bottom: 50px; } .track-list a { padding: 12px 2px; } .collection-label { display: none; } .browse-hint { font-size: 11px; } }
-@media (max-width: 759px) {
+@media (max-width: 759px), (max-width: 950px) and (max-height: 500px) {
   .masthead { top: 23px; left: 22px; right: 22px; }
   .wordmark > span { font-size: 14px; } .wordmark small { font-size: 8px; }
   .wordmark svg { width: 25px; } .edition { display: none; }
@@ -115,7 +116,7 @@ div.detail-cover { transform: translate(-50%, -50%) scale(1.07); }
 .minimal-detail .track-panel { outline: none; }
 .minimal-detail .album-heading, .minimal-detail .track-scroll { pointer-events: auto; }
 .minimal-detail .track-scroll { flex: 0 1 auto; }
-@media (max-width: 759px) {
+@media (max-width: 759px), (max-width: 950px) and (max-height: 500px) {
   .detail-cover { top: 106px; left: 50%; width: min(66vw, 32dvh); transform: translateX(-50%); }
   div.detail-cover { transform: translateX(-50%) scale(1.06); }
 }
@@ -137,4 +138,27 @@ div.detail-cover { transform: translate(-50%, -50%) scale(1.07); }
 .vinyl-room[data-instant='true'] .album-back { transition: none; }
 .vinyl-room[data-instant='true'] .vinyl-canvas, .vinyl-room[data-instant='true'] .share-backdrop { transition: none; }
 @media (hover: hover) and (pointer: fine) { .song-select:hover { background: #e8e9df09; } .track-list .song-listen:hover { opacity: 1; } }
-@media (max-width: 759px) { .vinyl-room .song-select { padding: 10px 2px; gap: 9px; min-height: 44px; } .sharing .masthead { visibility: hidden; } .share-hint { font-size: 10px; margin-bottom: 12px; } }
+@media (max-width: 759px), (max-width: 950px) and (max-height: 500px) { .vinyl-room .song-select { padding: 10px 2px; gap: 9px; min-height: 44px; } .sharing .masthead { visibility: hidden; } .share-hint { font-size: 10px; margin-bottom: 12px; } }
+
+/* Keep the album context compact so the track list gets the remaining viewport. */
+@media (max-width: 759px), (max-width: 950px) and (max-height: 500px) {
+  .vinyl-room { min-height: 0; --room-safe-top: env(safe-area-inset-top, 0px); --mobile-cover-size: min(29vw, 20dvh, 116px); --mobile-cover-top: calc(72px + var(--room-safe-top)); }
+  .detail-open .masthead { top: calc(8px + var(--room-safe-top)); left: 20px; right: 20px; min-height: 48px; }
+  .vinyl-room .mobile-back { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 0; font-size: 13px; pointer-events: auto; }
+  .detail-open .album-back { display: none; }
+  .detail-caption { display: none; }
+  .detail-cover, .fallback-detail-cover { top: var(--mobile-cover-top); left: 20px; width: var(--mobile-cover-size); max-height: none; transform: none; }
+  div.detail-cover { transform: scale(1.06); }
+  .track-panel { top: var(--mobile-cover-top); left: 20px; right: 20px; bottom: max(12px, env(safe-area-inset-bottom)); }
+  .album-heading { min-height: var(--mobile-cover-size); flex-shrink: 0; padding-left: calc(var(--mobile-cover-size) + 18px); display: flex; flex-direction: column; justify-content: center; }
+  .album-heading .eyebrow { gap: 8px; font-size: 11px; margin-bottom: 8px; }
+  .album-heading h2 { font-size: 25px; line-height: 1.2; margin-bottom: 6px; letter-spacing: -.025em; }
+  .album-artist { font-size: 12px; margin-bottom: 0; }
+  .track-scroll, .minimal-detail .track-scroll { flex: 1; margin-top: 20px; padding-bottom: 8px; }
+  .share-hint { font-size: 11px; margin-bottom: 10px; }
+  .vinyl-room .song-select { grid-template-columns: 23px minmax(0, 1fr) auto; gap: 9px; min-height: 52px; padding: 12px 2px; }
+  .track-name { font-size: 15px; }
+  .track-duration { font-size: 12px; }
+  .track-list .song-listen { width: 44px; margin-left: 2px; }
+  .sharing .vinyl-canvas, .sharing .detail-cover { opacity: 0; }
+}
