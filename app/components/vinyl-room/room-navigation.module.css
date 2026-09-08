@@ -1,5 +1,6 @@
 .navigation {
   position: absolute;
+  width: max-content;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: auto;
