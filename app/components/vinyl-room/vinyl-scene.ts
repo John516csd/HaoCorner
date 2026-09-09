@@ -162,7 +162,7 @@ export function createVinylScene(
       if (index === initialIndex) onReady();
     }, undefined, () => { if (!disposed) { start(); onReady(); } });
     textureSetup(cover);
-    // Keep full-size GPU textures only for visible sleeves; the complete catalog uses thumbnails in boxes.
+    // Keep full-size textures for the nearby shelf; detail visibility must not evict its return path.
     group.userData.setArtwork = (visible: boolean) => {
       wantsFullCover = visible;
       if (!visible) { if (fullCover) { fullCover.dispose(); fullCover = null; coverMaterial.map = cover; coverMaterial.needsUpdate = true; } return; }
@@ -337,7 +337,9 @@ export function createVinylScene(
         record.visible = flight < .98 || record.visible;
       }
       if (walk.enabled && unpack === 0) record.visible = false;
-      record.userData.setArtwork(unpack === 1 && record.visible);
+      // Neighbors move out of view in details, then return. Keep their uploaded artwork
+      // until they leave the shelf window so closing does not upload it all again.
+      record.userData.setArtwork(unpack === 1 && Math.abs(relative) < 6);
     });
     const cachedCollection = nativeCollection() && destination === null && unpack === 0;
     if (cachedCollection) {
