@@ -12,4 +12,6 @@ Export supports individual images, ZIP archives and the Web Share API when the b
 
 Opening a QR link (`/{room}?track=…`) now stays on the outer record shelf and selects the shared song's album. It does not open the song list or lyric editor automatically. The URL format is unchanged, so previously exported QR codes get the same behavior. Unknown track IDs leave the default shelf selection in place.
 
-Validation: `node scripts/check-lyric-sharing.mjs`, `pnpm typecheck`, `pnpm build`, plus browser checks of both rooms, three poster styles, nine PNG dimensions, draft restoration, keyboard back navigation, and mobile layouts.
+Temporary lyric request failures retry twice by default (three requests total), with 600 ms and 1200 ms delays. Missing matches and permanent client errors do not retry automatically. Leaving the song cancels both requests and retry delays. A successful manual retry opens online lyrics or version selection; voluntarily pasted text and restored drafts are retained. Loading and retry progress remain visible in paste mode.
+
+Validation: `node scripts/check-lyric-sharing.mjs`, `node --test scripts/check-lyrics-request.mjs`, `pnpm typecheck`, `pnpm build`, plus browser checks of both rooms, three poster styles, nine PNG dimensions, draft restoration, keyboard back navigation, and mobile layouts.

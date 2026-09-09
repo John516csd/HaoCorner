@@ -1,7 +1,7 @@
-// On /music at a phone-sized viewport, wait for covers to load and run in the browser console.
+// On /music at a phone-sized viewport with Reduce Motion enabled, wait for covers to load and run in the browser console.
 (async () => {
   const root = document.querySelector('[data-collection-cached="true"]');
-  if (!root) throw new Error('Open /music at a phone-sized viewport first');
+  if (!root) throw new Error('Open /music at a phone-sized viewport with Reduce Motion enabled first');
   const scroller = root.querySelector('[data-visible="true"]');
   const max = scroller.scrollHeight - scroller.clientHeight;
   if (max <= 0) throw new Error('Use a viewport short enough to scroll the collection');

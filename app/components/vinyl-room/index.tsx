@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import styles from './index.module.css';
 import { findMusicArtist, musicArtists } from './artists';
 import Collection from './collection';
+import RecordLoading from './record-loading';
 import { createVinylScene } from './vinyl-scene';
 import { durationLabel } from './record-math';
 import type { VinylTrack } from './share/types';
@@ -78,7 +79,8 @@ export default function VinylRoom() {
   useEffect(() => {
     if (transitioning || !ready || !changedRoute.current) return;
     const frame = requestAnimationFrame(() => {
-      const target = isCollection ? roomRoot.current?.querySelector<HTMLElement>(`a[href="/${lastArtist.current.id}"]`) : roomRoot.current;
+      const selectedBox = roomRoot.current?.querySelector<HTMLElement>('[data-collection-scroll]')?.dataset.selectedBox;
+      const target = isCollection ? roomRoot.current?.querySelector<HTMLElement>(selectedBox ? `[data-walk-box="${selectedBox}"]` : `a[href="/${lastArtist.current.id}"]`) : roomRoot.current;
       if (!target || target.closest('[inert]')) return;
       target.focus({ preventScroll: true });
       changedRoute.current = false;
@@ -161,7 +163,7 @@ export default function VinylRoom() {
       <div className={styles['share-backdrop']} style={{ backgroundImage: `linear-gradient(var(--room-share-top), var(--room-share-bottom)), url(${album.background})` }} aria-hidden="true" />
       <canvas ref={canvas} className={styles['vinyl-canvas']} aria-label={isCollection ? '歌手的半开纸箱和 CD 收藏' : `${artist} 3D 唱片架，滚动或拖动翻阅；点击专辑查看歌曲`} />
 
-      <Collection visible={isCollection && !transitioning} fallback={graphicsError} onScroll={() => controls.current?.refreshCollection()} onHover={id => controls.current?.hoverBox(id)} />
+      <Collection visible={isCollection && !transitioning} fallback={graphicsError} onScroll={() => controls.current?.refreshCollection()} onHover={id => controls.current?.hoverBox(id)} onChoose={entryId => controls.current?.chooseCollectionBox(entryId)} />
 
       {showRoom && !detail && <>
         <Link className={styles['back-collection']} href="/music" scroll={false}><ArrowLeft size={15} />唱片收藏室</Link>
@@ -201,7 +203,7 @@ export default function VinylRoom() {
 
       {showRoom && sharing && detail && <ShareWorkshop key={sharing.trackId} entered={shareReady} album={album} track={sharing} room={theme} onClose={closeShare} onStageChange={setComposing} />}
 
-      {!ready && !graphicsError && <output className={styles['loading-note']}>正在摆放唱片…</output>}
+      <RecordLoading active={!ready && !graphicsError} />
       {showRoom && graphicsError && !detail && <div className={styles['graphics-fallback']}><p>当前浏览器未能启用 3D，仍可选择专辑查看歌曲。</p><div>{albums.map((record,index)=><button key={record.id} onClick={()=>open(index)}><img src={record.artwork} alt={record.title} /><span>{record.title}</span></button>)}</div></div>}
     </section>
   );

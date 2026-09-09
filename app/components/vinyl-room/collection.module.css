@@ -1,12 +1,26 @@
 .collection { position: absolute; inset: 0; z-index: 5; overflow-y: auto; overscroll-behavior: contain; color: #39352c; opacity: 0; pointer-events: none; visibility: hidden; transition: opacity 200ms ease, visibility 0s 200ms; scrollbar-width: thin; scrollbar-color: #a69b87 transparent; }
 .collection[data-visible='true'] { opacity: 1; pointer-events: auto; visibility: visible; transition-delay: 0s; }
-[data-instant='true'] .collection { transition: none; }
+[data-instant='true'] .collection, [data-instant='true'] .caption { transition: none; }
 .header { display: flex; justify-content: space-between; align-items: center; padding: 24px 4vw; font-size: 11px; }
 .header a { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; }
 .title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .boxes { min-height: calc(100dvh - 92px); align-content: center; box-sizing: border-box; max-width: 1240px; margin: 0 auto; padding: 24px 40px 100px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 64px; row-gap: 24px; }
 .artist { display: block; min-width: 0; border-radius: 4px; outline-offset: 8px; }
 .artist:nth-child(even) { margin-top: 46px; }
+.walkHint { display: none; }
+.collection[data-walking='true'] { overflow-anchor: none; }
+.collection[data-walking='true'] .trail { height: 460dvh; }
+.collection[data-walking='true'] .walkStage { position: sticky; top: 0; height: 100dvh; overflow: hidden; }
+.collection[data-walking='true'] .header { position: absolute; top: 0; left: 0; right: 0; z-index: 3; pointer-events: none; }
+.collection[data-walking='true'] .header a { pointer-events: auto; }
+.collection[data-walking='true'] .boxes { position: absolute; inset: 0; z-index: 1; display: block; padding: 0; margin: 0; max-width: none; min-height: 0; }
+.collection[data-walking='true'] .artist { position: absolute; top: 0; left: 0; margin: 0; transform-origin: 0 0; will-change: transform; }
+.collection[data-walking='true'] .caption { transition: opacity 140ms ease; }
+.collection[data-walking='true'] .walkHint { position: absolute; bottom: max(26px, env(safe-area-inset-bottom)); left: 4vw; right: 4vw; display: flex; justify-content: space-between; pointer-events: none; color: #8c806e; font-size: 10px; letter-spacing: .08em; }
+.walkHint span:first-child { display: inline-flex; align-items: center; gap: 9px; }
+.walkHint b { color: #5b5042; font-weight: 400; }
+/* A regular list remains available when motion or 3D is disabled. */
+.collection:not([data-walking='true']) .artist[data-walk-primary='false'] { display: none; }
 .boxArt { height: clamp(240px, 25vw, 330px); position: relative; }
 .boxSnapshot { display: none; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 [data-collection-cached='true'] .boxSnapshot { display: block; }
@@ -23,6 +37,12 @@
 .fallbackBox .fallbackSticker { position: absolute; right: 8px; bottom: 8px; width: 18%; transform: rotate(8deg); }
 @media (hover: hover) and (pointer: fine) { .artist:hover h2 svg { transform: translate(3px, -3px); } .header a:hover { color: #996b48; } }
 @media (max-width: 759px) {
+  .collection[data-walking='true'] .caption { margin: -6px 8px 0; gap: 9px; padding-top: 12px; }
+  .collection[data-walking='true'] .caption h2 { font-size: 24px; gap: 12px; }
+  .collection[data-walking='true'] .caption h2 svg { width: 20px; height: 20px; }
+  .collection[data-walking='true'] .caption p { font-size: 9px; }
+  .collection[data-walking='true'] .count { display: none; }
+  .collection[data-walking='true'] .walkHint { left: 23px; right: 23px; }
   .header { padding: calc(12px + env(safe-area-inset-top, 0px)) 22px 8px; }
   .boxes { min-height: 0; grid-template-columns: 1fr; gap: 24px; padding: 0 24px max(40px, env(safe-area-inset-bottom)); margin-top: 4px; }
   .artist:nth-child(even) { margin-top: 0; }

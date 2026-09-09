@@ -73,7 +73,6 @@
 .album-footer a { display: flex; align-items: center; gap: 8px; color: #39352c; }
 .copyright { font-size: 10px; line-height: 1.6; margin: 17px 0 0; color: #756b5d; }
 .availability-note { font-size: 12px; line-height: 1.7; color: #856837; margin: 0 0 15px; }
-.loading-note { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 13px; letter-spacing: .1em; }
 .graphics-fallback { position: absolute; inset: 110px 7% 100px; overflow: auto; }
 .graphics-fallback > p { font-size: 14px; }
 .graphics-fallback > div { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }

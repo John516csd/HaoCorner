@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Download, Grid2X2, ImageIco
 import type { VinylAlbum } from '../types';
 import { durationLabel } from '../record-math';
 import { download, exportPosters, renderPoster } from './poster';
+import { LYRIC_MAX_RETRIES, requestLyrics } from './lyrics-request';
 import { draftKey, emptyDraft, MAX_NOTE, MAX_QUOTE, readDraft, type Draft, type LyricCandidate, type ShareFile, type VinylTrack } from './types';
 import styles from './workshop.module.css';
 
@@ -23,6 +24,7 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
   const [selected, setSelected] = useState<number[]>([]);
   const [loading, setLoading] = useState(true);
   const [attempt, setAttempt] = useState(0);
+  const [retry, setRetry] = useState(0);
   const [loadError, setLoadError] = useState('');
   const [message, setMessage] = useState('');
   const [storageError, setStorageError] = useState(false);
@@ -41,12 +43,14 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
   const lyricAnimations = useRef<Animation[]>([]);
   const generated = useRef<ShareFile[]>([]);
   const alive = useRef(true);
+  const preferOnlineLyrics = useRef(true);
   const lines = chosen?.lyrics.split(/\r?\n/).map(line => line.trim()).filter(Boolean) || [];
   const update = (patch: Partial<Draft>) => { setDraft(value => ({ ...value, ...patch })); setMessage(''); };
 
   useEffect(() => {
     alive.current = true;
     const saved = readDraft(track.trackId); setDraft(saved); setManual(Boolean(saved.quote)); setHydrated(true);
+    preferOnlineLyrics.current = !saved.quote;
     return () => { alive.current = false; generated.current.forEach(file => URL.revokeObjectURL(file.url)); };
   }, [track.trackId]);
 
@@ -57,18 +61,28 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
   }, [draft, hydrated, track.trackId]);
 
   useEffect(() => {
-    const abort = new AbortController(); setLoading(true); setLoadError('');
-    fetch(`/api/lyrics?room=${room}&track=${track.trackId}`, { signal: abort.signal })
-      .then(async response => { const data = await response.json(); if (!response.ok) throw new Error(data.error); return data; })
-      .then(data => {
+    const abort = new AbortController(); setLoading(true); setLoadError(''); setRetry(0);
+    requestLyrics(`/api/lyrics?room=${room}&track=${track.trackId}`, {
+      signal: abort.signal, onRetry: value => { if (!abort.signal.aborted) setRetry(value); },
+    })
+      .then(next => {
         if (abort.signal.aborted) return;
-        setCandidates(data.candidates); setChosen(data.candidates.find((item: LyricCandidate) => item.exact) || null);
-        if (!data.candidates.length) { setLoadError('暂未找到这首歌的歌词，粘贴喜欢的几句也可以。'); setManual(true); }
+        setCandidates(next); setChosen(next.find(item => item.exact) || null); setSelected([]);
+        if (!next.length) { setLoadError('暂未找到这首歌的歌词，可以粘贴歌词或重试。'); setManual(true); }
+        // Recovery opens online lyrics (or version selection), while an intentional
+        // paste or restored draft stays put. Never discard the user's draft here.
+        else if (preferOnlineLyrics.current) setManual(false);
       })
       .catch(error => { if (!abort.signal.aborted) { setLoadError(error.message || '歌词加载失败，请重试。'); setManual(true); } })
       .finally(() => { if (!abort.signal.aborted) setLoading(false); });
     return () => abort.abort();
   }, [track.trackId, room, attempt]);
+
+  function retryLyrics() {
+    if (loading) return;
+    preferOnlineLyrics.current = true;
+    setLoading(true); setLoadError(''); setRetry(0); setAttempt(value => value + 1);
+  }
 
   useEffect(() => {
     if (!entered) return;
@@ -185,15 +199,16 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
         <section className={styles.stage} data-active={stage === 'lyrics'} {...inactive(stage !== 'lyrics')} aria-label="选择歌词">
           <div className={styles.lyricToolbar}><span>{manual ? '粘贴你想分享的片段' : '轻点选句 · 最多 6 句'}</span><button onClick={() => {
             if (manual && chosen) setSelected([]);
+            preferOnlineLyrics.current = manual;
             setManual(value => !value);
           }}>{manual ? '查看在线歌词' : '粘贴歌词'}</button></div>
           <div className={styles.lyricScroll} onScroll={() => lyricAnimations.current.forEach(animation => animation.cancel())}>
-            {manual ? <><label className={styles.srOnly} htmlFor="custom-lyrics">歌词片段</label><textarea id="custom-lyrics" className={styles.manualLyrics} rows={7} placeholder="粘贴要分享的歌词，支持换行。" maxLength={MAX_QUOTE} value={draft.quote} onChange={event => update({ quote: event.target.value })} /><p className={styles.fieldHint}>{draft.quote.length} / {MAX_QUOTE} 字 · 保留你输入的换行</p></> : <>
-              {loading && <p role="status" className={styles.serviceNote}>正在加载歌词…</p>}
+            {loading && <p role="status" className={styles.serviceNote}>{retry ? `正在重试（${retry}/${LYRIC_MAX_RETRIES}）…` : '正在加载歌词…'}</p>}
+            {manual ? <><label className={styles.srOnly} htmlFor="custom-lyrics">歌词片段</label><textarea id="custom-lyrics" className={styles.manualLyrics} rows={7} placeholder="粘贴要分享的歌词，支持换行。" maxLength={MAX_QUOTE} value={draft.quote} onChange={event => { preferOnlineLyrics.current = false; update({ quote: event.target.value }); }} /><p className={styles.fieldHint}>{draft.quote.length} / {MAX_QUOTE} 字 · 保留你输入的换行</p></> : <>
               {!loading && !chosen && candidates.length > 0 && <div className={styles.candidates}><p>找到这些版本，请确认专辑和时长。</p>{candidates.map(item => <button key={item.id} onClick={() => { setChosen(item); setSelected([]); update({ quote: '' }); }}><span>{item.title}<small>{item.album}</small></span><span>{durationLabel(item.duration * 1000)}<ArrowRight size={14} /></span></button>)}</div>}
               {entered && !loading && chosen && <ol ref={lyricList} key={chosen.id} className={styles.lyricLines}>{lines.map((line, index) => <li key={index}><button aria-pressed={selected.includes(index)} onClick={() => selectLine(index)}><span>{line}</span><span className={styles.lineCheck}>{selected.includes(index) ? <Check size={15} /> : '+'}</span></button></li>)}</ol>}
             </>}
-            {loadError && <p className={styles.serviceNote}>{loadError} <button onClick={() => setAttempt(value => value + 1)}>重试</button></p>}
+            {loadError && <p className={styles.serviceNote}>{loadError} <button disabled={loading} onClick={retryLyrics}>重试</button></p>}
             {track.musicUrl && <a className={`${styles.listen} ${styles.mobileListen}`} href={track.musicUrl} target="_blank" rel="noreferrer">在 Apple Music 听这首歌 <ArrowUpRight size={12} /></a>}
           </div>
           {!loading && chosen && !manual && <p className={styles.source}>歌词来自 <a href={`https://lrclib.net/api/get/${chosen.id}`} target="_blank" rel="noreferrer">LRCLIB <ArrowUpRight size={10} /></a> · {chosen.album}<button onClick={() => { setChosen(null); setSelected([]); update({ quote: '' }); }}>更换版本</button></p>}

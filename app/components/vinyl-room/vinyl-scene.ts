@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import type { VinylAlbum } from './types';
 import type { MusicArtist } from './artists';
 import { createCollectionBox } from './collection-box';
+import { createCollectionWalk } from './collection-walk';
 import { loopIndex, nearestPosition, releaseVelocity, coast, collectionEase, collectionMotion, collectionSlot } from './record-math';
 
 export function createVinylScene(
@@ -175,8 +176,11 @@ export function createVinylScene(
   const alignedCD = new THREE.Quaternion().setFromEuler(new THREE.Euler(0, Math.PI / 2, 0));
   // Long box axis points down; its opening faces the viewer and its CDs already match the shelf.
   const uprightBox = new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.PI / 2, -Math.PI / 2, 0));
+  const walk = createCollectionWalk(canvas, artists, boxes, getRecords,
+    index => savedPositions.get(artists[index].id) ?? Math.min(4, artists[index].albums.length - 1), start);
+  scene.add(walk.group);
   function inShelf() { return unpack === 1 && destination === artists[artistIndex].id; }
-  function nativeCollection() { return width < 760 || !canHover.matches; }
+  function nativeCollection() { return !walk.enabled && (width < 760 || !canHover.matches); }
 
   function navigate(id: string | null, instant = false) {
     if (id === destination || (id !== null && !artists.some(artist => artist.id === id))) return;
@@ -205,6 +209,7 @@ export function createVinylScene(
     if (transitioning && !moving) { transitioning = false; onTransition(false); }
     const canvasRect = canvas.getBoundingClientRect();
     const boxRects = boxes.map(box => box.anchor?.getBoundingClientRect());
+    const walkMoving = walk.update(dt, unpack, destination === null);
     canvas.dataset.collectionProgress = unpack.toFixed(3);
     let boxMoving = false;
     boxes.forEach((box, index) => {
@@ -214,14 +219,16 @@ export function createVinylScene(
       const hoverGoal = !nativeCollection() && destination === null && artists[index].id === hoveredBox ? 1 : 0;
       box.hover += (hoverGoal - box.hover) * (reducedMotion.matches ? 1 : 1 - Math.exp(-dt / 85));
       if (Math.abs(hoverGoal - box.hover) < .001) box.hover = hoverGoal; else boxMoving = true;
-      const baseScale = Math.min(rect.width / Math.max(3.7, box.width + 1.25), rect.height / 2.25);
+      const walkPose = walk.enabled ? walk.pose(index) : null;
+      const baseScale = walkPose?.scale ?? Math.min(rect.width / Math.max(3.7, box.width + 1.25), rect.height / 2.25);
       const shift = selected ? motion.turn : 0;
       const retreat = 1 - (selected ? motion.fade : collectionEase(unpack / .35));
       box.scale = (baseScale + (Math.min(width * .54, height * .52) / (box.width + 1.1) - baseScale) * shift) * (1 + box.hover * .025 * (1 - shift));
       box.group.scale.setScalar(box.scale);
-      const x = rect.left - canvasRect.left + rect.width / 2 - width / 2;
-      const y = height / 2 - (rect.top - canvasRect.top + rect.height / 2);
-      box.group.position.set(x * (1 - shift), y * (1 - shift) + box.hover * 5 * (1 - shift), selected ? -size * 1.3 * motion.retreat : 0);
+      const x = walkPose?.x ?? rect.left - canvasRect.left + rect.width / 2 - width / 2;
+      const y = walkPose?.y ?? height / 2 - (rect.top - canvasRect.top + rect.height / 2);
+      box.group.position.set(x * (1 - shift), y * (1 - shift) + box.hover * 5 * (1 - shift), (walkPose?.z ?? 0) * (1 - shift) - (selected ? size * 1.3 * motion.retreat : 0));
+      if (walkPose) box.rotation.setFromEuler(new THREE.Euler(walkPose.pitch, walkPose.yaw, walkPose.roll));
       box.group.quaternion.copy(box.rotation).slerp(uprightBox, shift);
       box.flaps.forEach(({ pivot, axis, sign, rest }) => { pivot.rotation[axis] = sign * (rest * (1 - shift) - box.hover * .16 * (1 - shift)); });
       // Recede behind departing sleeves, then fade the empty carton without shrinking it to a point.
@@ -229,7 +236,7 @@ export function createVinylScene(
       box.pose.copy(box.group.matrixWorld);
       box.group.scale.multiplyScalar(selected ? .94 + .06 * retreat : retreat);
       box.setOpacity(selected ? retreat : 1);
-      box.group.visible = retreat > .001;
+      box.group.visible = retreat > .001 && (!walk.enabled || (selected && unpack > 0));
       box.group.updateMatrixWorld(true);
       if (rect.bottom > canvasRect.top - 160 && rect.top < canvasRect.bottom + 160 && !box.records) getRecords(index);
       if (!selected) box.records?.forEach((record, recordIndex) => {
@@ -308,6 +315,7 @@ export function createVinylScene(
         record.rotateX(-departure.arc * .035);
         record.visible = flight < .98 || record.visible;
       }
+      if (walk.enabled && unpack === 0) record.visible = false;
     });
     const cachedCollection = nativeCollection() && destination === null && unpack === 0;
     if (cachedCollection) {
@@ -329,7 +337,7 @@ export function createVinylScene(
       renderer.setViewport(0, 0, width, height);
     } else renderer.render(scene, camera);
     canvas.parentElement!.dataset.collectionCached = String(cachedCollection);
-    if (moving || boxMoving || tiltMoving || hoverMoving || inertia || Math.abs(target - position) > .0005 || opening !== goal) frame = requestAnimationFrame(draw);
+    if (moving || walkMoving || boxMoving || tiltMoving || hoverMoving || inertia || Math.abs(target - position) > .0005 || opening !== goal) frame = requestAnimationFrame(draw);
     else lastTime = 0;
   }
   function start() { if (!frame && !disposed && !document.hidden) frame = requestAnimationFrame(draw); }
@@ -344,6 +352,7 @@ export function createVinylScene(
     camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(height / (2 * camera.position.z)));
     camera.updateProjectionMatrix();
     renderer.setSize(width, height, false);
+    walk.resize(width, height);
     // Mobile browser chrome can resize the viewport during a swipe; the cached cards stay valid.
     if (previousWidth !== width || canvas.parentElement?.dataset.collectionCached !== 'true') start();
   }
@@ -484,10 +493,12 @@ export function createVinylScene(
   resize();
   return {
     select, step, open, close, tilt, navigate,
+    chooseCollectionBox(id: string) { walk.choose(id); },
     refreshCollection() { if (!nativeCollection()) start(); },
     hoverBox(id: string | null) { if (!nativeCollection()) { hoveredBox = id; start(); } },
     destroy() {
       disposed = true; stopMotion(); cancelAnimationFrame(frame); observer.disconnect(); collectionObserver.disconnect();
+      walk.destroy();
       delete canvas.parentElement?.dataset.collectionCached;
       canvas.removeEventListener('wheel', wheel);
       canvas.removeEventListener('pointerdown', down);

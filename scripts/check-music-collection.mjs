@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { musicArtists, findMusicArtist } from '../app/components/vinyl-room/artists.ts';
 import { collectionBoxLength, collectionEase, collectionMotion, collectionSlot, nearestPosition } from '../app/components/vinyl-room/record-math.ts';
+import { collectionWalkArrival, collectionWalkEntries, collectionWalkPose, collectionWalkStops, WALK_ROWS } from '../app/components/vinyl-room/collection-walk-layout.ts';
 
 const ids = new Set();
 for (const artist of musicArtists) {
@@ -63,4 +64,43 @@ const starts = Array.from({length:12}, (_, slot) => {
 assert.ok(starts[1] - starts[0] > (starts[11] - starts[10]) * 1.5, 'Trailing CDs catch up rather than march at equal intervals');
 assert.ok(collectionMotion(.54).spread - collectionMotion(.53).spread > (collectionMotion(.82).spread - collectionMotion(.81).spread) * 4, 'Release has momentum and a soft landing');
 assert.equal(collectionMotion(0).arc, 0); assert.equal(collectionMotion(1).arc, 0);
+const walkEntries = collectionWalkEntries(musicArtists.map(artist => artist.id));
+assert.equal(walkEntries.length, 8, 'The prototype contains four pairs');
+assert.equal(new Set(walkEntries.map(entry => entry.id)).size, walkEntries.length);
+for (const count of [1, 3, 9]) {
+  const ids = Array.from({ length: count }, (_, i) => `artist-${i}`);
+  const entries = collectionWalkEntries(ids);
+  assert.equal(new Set(entries.map(entry => `${entry.row}:${entry.column}`)).size, entries.length, 'Additional artists never overlap existing slots');
+  ids.forEach(id => assert.ok(entries.some(entry => entry.artistId === id)));
+}
+for (const [width, height] of [[320, 568], [390, 664], [626, 1328], [1280, 720], [2560, 1320]]) {
+  for (const { row, column } of walkEntries) {
+    const arrival = collectionWalkPose(row, column, collectionWalkArrival(row, column, width), width, height);
+    const start = collectionWalkPose(0, 0, 0, width, height);
+    assert.ok(Math.abs(arrival.distance) <= 85, 'Every box, including the final right-hand box, reaches the foreground');
+    assert.equal(arrival.scale, start.scale, 'All boxes have a consistent physical size');
+    assert.ok(Number.isFinite(arrival.screenX) && Number.isFinite(arrival.screenY));
+    if (row > 0) {
+      const distant = collectionWalkPose(row, 0, 0, width, height);
+      assert.ok(arrival.perspective > distant.perspective, 'Boxes grow as the camera approaches');
+      assert.ok(arrival.screenY > distant.screenY, 'Distant boxes move down toward the viewer');
+    }
+    if (width < 760) {
+      assert.ok(arrival.artWidth >= width * .8, 'Mobile gives the foreground box most of the screen width');
+      assert.ok(arrival.screenX - arrival.artWidth / 2 >= 0 && arrival.screenX + arrival.artWidth / 2 <= width, 'Both alternating foreground boxes fit within a narrow viewport');
+    }
+  }
+  const first = collectionWalkPose(0, 0, 0, width, height);
+  const second = collectionWalkPose(0, 1, 0, width, height);
+  assert.equal(collectionWalkStops(width), width < 760 ? 8 : 4);
+  if (width < 760) {
+    assert.ok(second.screenY + second.artHeight * second.perspective / 2 < first.screenY, 'The next mobile box is distinctly farther away');
+    assert.ok(second.perspective < first.perspective * .6, 'Mobile boxes alternate in depth instead of sitting side by side');
+  } else {
+    assert.ok(Math.abs(first.distance - second.distance) < 100, 'Desktop keeps the paired arrangement');
+  }
+  assert.deepEqual(collectionWalkPose(0, 0, -1, width, height), collectionWalkPose(0, 0, 0, width, height));
+  assert.deepEqual(collectionWalkPose(3, 1, 2, width, height), collectionWalkPose(3, 1, 1, width, height));
+  assert.equal(collectionWalkPose(0, 0, 1, width, height).visible, false, 'Passed boxes are culled before the camera');
+}
 console.log(`PASS: ${musicArtists.length} artists, compressed cascade, curved travel, soft landing, circular packing and carton clearance.`);
