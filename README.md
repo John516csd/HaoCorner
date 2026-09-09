@@ -15,14 +15,15 @@
 
 ## 黑胶室
 
-- 收藏入口：`/music`，按歌手分箱，箱长随专辑数量变化。点击开箱进入 `/eason` 或 `/mayday`，返回时收回 CD 并保留收藏页滚动位置。
+- 收藏入口：`/music`，按歌手分箱，现有 10 位歌手、365 个专辑发行版本。纸箱最多展示 12 张唱片，宽度不再随完整目录增长；点击开箱仍可浏览该歌手全部专辑，返回时保留收藏页滚动位置。
 - 共用组件：`app/components/vinyl-room`，路由组 `app/(records)` 保留同一个 Three.js 画布，让开箱与唱片架连续过渡；直接访问歌手地址或歌曲二维码仍进入唱片架。专辑详情点击空白处或按 Esc 返回。
 - 添加歌手：准备专辑 JSON 和本地封面后，在 `app/components/vinyl-room/artists.ts` 登记一次，收藏箱、切换菜单、静态路由、Sitemap 和歌词接口自动使用该数据；可选 `sticker` 指向歌手标识贴纸。运行 `node --experimental-strip-types scripts/check-music-collection.mjs` 检查登记和开箱阶段顺序。
-- 素材：`public/eason/covers`，12 张高清封面与预模糊背景；滚动/拖动翻阅、专辑旋转展开、背景缓冲渐变均保留。
-- 曲目：119 首，118 条经过核对的 Apple Music 中国区直链；《六月飛霜》暂未找到直链。地区发行版本说明见模块的 `SOURCES.md`。
+- 目录：`app/modules/music-artists/albums.json`，共 5129 条曲目，包含录音室、EP、现场、精选、原声带及不同内容版本；范围和逐张来源见该目录的 `SOURCES.md`，地区不可读的歌曲不伪造直链。
+- 素材：`public/{artist}/covers`，包含封面、256px 缩略图与预模糊背景；收藏箱使用缩略图，唱片架仅保留可见唱片的高清纹理。侧边专辑索引支持滚动。
 - 数据与交互计算检查：Node.js 22.18+ 运行 `node --experimental-strip-types scripts/check-eason.mjs`。另运行 `pnpm exec tsc --noEmit` 和 `pnpm build`。
-- 五月天页面：`/mayday`，首页 Music 区提供入口；九张录音室专辑、116 条已核对的 Apple Music 中国区歌曲直链。数据在 `app/modules/mayday-page`，素材在 `public/mayday/covers`，来源和原图分辨率见该模块的 `SOURCES.md`。
+- 原有 `app/modules/eason-page` 和 `app/modules/mayday-page` 保留最初已核对的数据及来源，扩充后的两个页面统一使用 `music-artists` 目录。
 - 五月天数据检查：`node --experimental-strip-types scripts/check-mayday.mjs`；更改共用组件时同时运行两个检查脚本并回归两个页面。
+- 完整目录交互检查：打开 `/music` 后在浏览器控制台执行 `scripts/check-complete-catalog.js`，遍历全部专辑并检查高清纹理释放。
 
 ## 技术栈
 

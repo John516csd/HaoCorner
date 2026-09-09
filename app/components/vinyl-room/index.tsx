@@ -184,18 +184,18 @@ export default function VinylRoom() {
         {/* Keep clicks on the CD, including its transparent rim, off the backdrop. */}
         <div className={styles['detail-cover']} />
         {graphicsError && <img className={minimalDetail ? styles['detail-cover'] : styles['fallback-detail-cover']} src={album.artwork} alt={`${album.title} 封面`} />}
-        <div className={styles['detail-caption']}><span>{String(opened + 1).padStart(2, '0')} / {albums.length}</span>{!minimalDetail && <a href={album.sourceUrl} target="_blank" rel="noreferrer">CoverBox <ArrowUpRight size={13} /></a>}</div>
+        <div className={styles['detail-caption']}><span>{String(opened + 1).padStart(2, '0')} / {albums.length}</span>{!minimalDetail && <a href={album.sourceUrl} target="_blank" rel="noreferrer">专辑来源 <ArrowUpRight size={13} /></a>}</div>
         <section ref={detailPanel} tabIndex={-1} className={styles['track-panel']} aria-label={`${album.title} 的歌曲`} {...(sharing ? { 'aria-hidden': true, inert: true } : {})}>
           {minimalDetail && <button ref={closeButton} className={styles['album-back']} onClick={close}><ArrowLeft size={16} />返回唱片架</button>}
           <div className={styles['album-heading']}><p className={styles['eyebrow']}>{album.year}<span>·</span>{album.songCount} 首歌曲</p><h2>{album.title}</h2><p className={styles['album-artist']}>{album.artist}</p></div>
           <div className={styles['track-scroll']}>
-            {album.unreturnedItemCount > 0 && <p className={styles['availability-note']}>当前地区可读取 {album.songCount} 首，另 {album.unreturnedItemCount} 首暂未提供；保留原曲序。</p>}
+            {album.unreturnedItemCount > 0 && <p className={styles['availability-note']}>当前目录已读取 {album.songCount} 首歌曲，另 {album.unreturnedItemCount} 项暂未提供；保留原曲序。</p>}
             {album.musicNote && <p className={styles['availability-note']}>{album.musicNote}</p>}
             <p className={styles['share-hint']}>点击歌曲，选择歌词并生成分享图。</p>
             <ol className={styles['track-list']}>{album.tracks.map(track => <li key={track.trackId} className={styles['song-row']}><button className={styles['song-select']} onClick={event => { selectedTrackButton.current = event.currentTarget; roomRoot.current?.focus({ preventScroll: true }); controls.current?.tilt(0, 0); setShareReady(false); setSharing(track); }} aria-label={`选择 ${track.trackName} 的歌词`}><span className={styles['track-number']}>{String(track.trackNumber).padStart(2, '0')}</span><span className={styles['track-name']}>{track.trackName}</span><span className={styles['track-duration']}>{durationLabel(track.trackTimeMillis)}</span></button>{track.musicUrl && <a className={styles['song-listen']} href={track.musicUrl} target="_blank" rel="noreferrer" aria-label={`在 Apple Music 打开 ${track.trackName}`} title="在 Apple Music 听歌"><ArrowUpRight size={15} /></a>}</li>)}</ol>
           </div>
           {!minimalDetail && <>
-          <div className={styles['album-footer']}><span>{Math.round(album.totalSongTimeMillis / 60000)} 分钟{album.unreturnedItemCount > 0 ? ' · 已读取曲目' : ''}</span><a href={album.musicUrl} target="_blank" rel="noreferrer">Apple Music 中国区 <ArrowUpRight size={15} /></a></div>
+          <div className={styles['album-footer']}><span>{Math.round(album.totalSongTimeMillis / 60000)} 分钟{album.unreturnedItemCount > 0 ? ' · 已读取曲目' : ''}</span><a href={album.musicUrl} target="_blank" rel="noreferrer">专辑页面 <ArrowUpRight size={15} /></a></div>
           <p className={styles['copyright']}>{album.copyright}</p>
           </>}
         </section>

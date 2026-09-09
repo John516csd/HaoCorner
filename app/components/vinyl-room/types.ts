@@ -4,6 +4,7 @@ export type VinylAlbum = {
   artist: string;
   year: number;
   artwork: string;
+  thumbnail?: string;
   background: string;
   sourceUrl: string;
   musicUrl: string;

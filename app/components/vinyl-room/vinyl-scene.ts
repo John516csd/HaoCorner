@@ -3,7 +3,7 @@ import type { VinylAlbum } from './types';
 import type { MusicArtist } from './artists';
 import { createCollectionBox } from './collection-box';
 import { createCollectionWalk } from './collection-walk';
-import { loopIndex, nearestPosition, releaseVelocity, coast, collectionEase, collectionMotion, collectionSlot } from './record-math';
+import { loopIndex, nearestPosition, releaseVelocity, coast, collectionEase, collectionMotion, collectionSlot, COLLECTION_PREVIEW_COUNT } from './record-math';
 
 export function createVinylScene(
   canvas: HTMLCanvasElement,
@@ -57,11 +57,11 @@ export function createVinylScene(
   const pointer = new THREE.Vector2();
   const raycaster = new THREE.Raycaster();
 
-  function textureSetup(texture: THREE.Texture) {
+  function textureSetup(texture: THREE.Texture, retain = true) {
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.anisotropy = anisotropy;
     texture.minFilter = THREE.LinearMipmapLinearFilter;
-    textures.push(texture);
+    if (retain) textures.push(texture);
     return texture;
   }
 
@@ -111,8 +111,9 @@ export function createVinylScene(
     group.userData.rim = rimMaterial;
 
     const label = document.createElement('canvas');
-    label.width = 2048; label.height = 104;
+    label.width = 1024; label.height = 52;
     const ctx = label.getContext('2d')!;
+    ctx.scale(.5, .5);
     const plasticEdge = ctx.createLinearGradient(0, 0, 0, 104);
     plasticEdge.addColorStop(0, '#e4eff1'); plasticEdge.addColorStop(.08, '#819497');
     plasticEdge.addColorStop(.2, '#334346'); plasticEdge.addColorStop(.78, '#39474a');
@@ -146,17 +147,33 @@ export function createVinylScene(
     group.add(spine);
     group.rotation.x = Math.PI / 2;
     scene.add(group);
-    const cover = loader.load(album.artwork, texture => {
-      if (disposed) { texture.dispose(); return; }
+    let fullCover: THREE.Texture | null = null, loadingCover = false, wantsFullCover = false, coverFailed = false;
+    const setCover = (texture: THREE.Texture) => {
       const image = texture.image as HTMLImageElement;
       if (image.width > image.height) { texture.repeat.x = image.height / image.width; texture.offset.x = (1 - texture.repeat.x) / 2; }
       else { texture.repeat.y = image.width / image.height; texture.offset.y = (1 - texture.repeat.y) / 2; }
-      coverMaterial.map = texture;
-      coverMaterial.needsUpdate = true;
+      coverMaterial.map = texture; coverMaterial.needsUpdate = true;
+    };
+    const cover = loader.load(album.thumbnail || album.background, texture => {
+      if (disposed) { texture.dispose(); return; }
+      coverMaterial.userData.preview = texture;
+      if (!fullCover) setCover(texture);
       start();
       if (index === initialIndex) onReady();
     }, undefined, () => { if (!disposed) { start(); onReady(); } });
     textureSetup(cover);
+    // Keep full-size GPU textures only for visible sleeves; the complete catalog uses thumbnails in boxes.
+    group.userData.setArtwork = (visible: boolean) => {
+      wantsFullCover = visible;
+      if (!visible) { if (fullCover) { fullCover.dispose(); fullCover = null; coverMaterial.map = cover; coverMaterial.needsUpdate = true; } return; }
+      if (fullCover || loadingCover || coverFailed) return;
+      loadingCover = true;
+      textureSetup(loader.load(album.artwork, texture => {
+        loadingCover = false;
+        if (disposed || !wantsFullCover) { texture.dispose(); return; }
+        fullCover = texture; setCover(texture); start();
+      }, undefined, () => { loadingCover = false; coverFailed = true; }), false);
+    };
     return group;
   }); }
 
@@ -240,11 +257,13 @@ export function createVinylScene(
       box.group.updateMatrixWorld(true);
       if (rect.bottom > canvasRect.top - 160 && rect.top < canvasRect.bottom + 160 && !box.records) getRecords(index);
       if (!selected) box.records?.forEach((record, recordIndex) => {
+        record.userData.setArtwork(false);
         const count = artists[index].albums.length;
-        const slot = collectionSlot(recordIndex, savedPositions.get(artists[index].id) ?? Math.min(4, count - 1), count);
-        boxedPosition.set((slot - (count - 1) / 2) * (box.width - .24) / count, .18, 0).applyMatrix4(box.group.matrixWorld);
+        const capacity = Math.min(count, COLLECTION_PREVIEW_COUNT);
+        const slot = collectionSlot(recordIndex, savedPositions.get(artists[index].id) ?? Math.min(4, count - 1), count, capacity);
+        boxedPosition.set((slot - (capacity - 1) / 2) * (box.width - .24) / capacity, .18, 0).applyMatrix4(box.group.matrixWorld);
         record.position.copy(boxedPosition); record.quaternion.copy(box.group.quaternion).multiply(cdRotation);
-        record.scale.setScalar(box.group.scale.x * .85); record.visible = box.group.visible;
+        record.scale.setScalar(box.group.scale.x * .85); record.visible = box.group.visible && slot < capacity;
       });
     });
     if (inertia && pointerId === null && now - lastInput >= wheelQuietTime) {
@@ -299,10 +318,12 @@ export function createVinylScene(
       if (!reducedMotion.matches) record.position.z += lift * 32 * (1 - opening);
       if (unpack < 1) {
         const box = boxes[artistIndex];
-        const slot = collectionSlot(index, position, records.length);
-        const departure = collectionMotion(unpack, slot, records.length);
+        const capacity = Math.min(records.length, COLLECTION_PREVIEW_COUNT);
+        const slot = collectionSlot(index, position, records.length, capacity);
+        if (slot >= capacity) { record.visible = false; record.userData.setArtwork(false); return; }
+        const departure = collectionMotion(unpack, slot, capacity);
         const flight = departure.spread;
-        boxedPosition.set((slot - (records.length - 1) / 2) * (box.width - .24) / records.length, .18 + 1.05 * departure.extract, 0).applyMatrix4(box.pose);
+        boxedPosition.set((slot - (capacity - 1) / 2) * (box.width - .24) / capacity, .18 + 1.05 * departure.extract, 0).applyMatrix4(box.pose);
         record.position.lerp(boxedPosition, 1 - flight);
         boxedRotation.copy(cdRotation).slerp(alignedCD, motion.turn).premultiply(box.group.quaternion);
         record.quaternion.slerp(boxedRotation, 1 - flight);
@@ -310,12 +331,13 @@ export function createVinylScene(
         // A shallow, shared sweep carries the cascade; no wide turn or random wobble.
         const sweep = (artistIndex % 2 ? -1 : 1) * departure.arc;
         record.position.x += sweep * Math.min(48, width * .07);
-        record.position.y += departure.arc * gap * .12 * (1 - 2 * slot / Math.max(1, records.length - 1));
+        record.position.y += departure.arc * gap * .12 * (1 - 2 * slot / Math.max(1, capacity - 1));
         record.rotateOnWorldAxis(screenNormal, -sweep * .04);
         record.rotateX(-departure.arc * .035);
         record.visible = flight < .98 || record.visible;
       }
       if (walk.enabled && unpack === 0) record.visible = false;
+      record.userData.setArtwork(unpack === 1 && record.visible);
     });
     const cachedCollection = nativeCollection() && destination === null && unpack === 0;
     if (cachedCollection) {
@@ -510,7 +532,7 @@ export function createVinylScene(
       document.removeEventListener('visibilitychange', visibility);
       window.removeEventListener('keydown', key);
       reducedMotion.removeEventListener('change', start);
-      boxes.forEach(box => box.dispose());
+      boxes.forEach(box => { box.records?.forEach(record => record.userData.setArtwork(false)); box.dispose(); });
       textures.forEach(texture => texture.dispose()); materials.forEach(material => material.dispose());
       plane.dispose(); body.dispose(); edge.dispose(); caseGeometry.dispose(); caseEdges.dispose(); renderer.dispose();
     },

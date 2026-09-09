@@ -72,7 +72,7 @@ export default function RoomNavigation({ room, artist, artistEnglish }: {
       <button ref={trigger} type="button" className={styles.trigger} aria-expanded={open} aria-controls={panelId}
         aria-label={`${artist} · 切换页面`} onClick={() => setOpen(value => !value)}>
         <span className={styles.english}>{artistEnglish}</span>
-        <span className={styles.chinese}>{artist}</span>
+        {artist.toUpperCase() !== artistEnglish && <span className={styles.chinese}>{artist}</span>}
         <ChevronDown size={13} strokeWidth={1.5} className={styles.chevron} aria-hidden="true" />
       </button>
       <div id={panelId} className={styles.panel} {...(!open ? { inert: true, 'aria-hidden': true } : {})}>

@@ -25,12 +25,13 @@ export function coast(velocity: number, elapsed: number) {
   const decay = Math.exp(-elapsed / friction);
   return { distance: velocity * friction * (1 - decay), velocity: velocity * decay };
 }
-export const collectionBoxLength = (count: number) => 1.25 + Math.min(36, Math.max(1, count)) * .075;
+export const COLLECTION_PREVIEW_COUNT = 12;
+export const collectionBoxLength = (count: number) => 1.25 + Math.min(COLLECTION_PREVIEW_COUNT, Math.max(1, count)) * .075;
 export const collectionEase = (value: number) => { const t = Math.max(0, Math.min(1, value)); return t * t * (3 - 2 * t); };
 
 // Pack in the shelf's circular order so no sleeve has to cross the whole stack.
-export const collectionSlot = (index: number, position: number, count: number) =>
-  loopIndex(index - Math.floor(position - count / 2) - 1, count);
+export const collectionSlot = (index: number, position: number, count: number, capacity = count) =>
+  loopIndex(index - Math.floor(position - capacity / 2) - 1, count);
 
 const clampProgress = (value: number) => Math.max(0, Math.min(1, value));
 const turnCurve = cubicBezier(.77, 0, .175, 1);

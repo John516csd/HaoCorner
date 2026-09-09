@@ -32,8 +32,8 @@
 .collection-label span:last-child { font-size: 11px; letter-spacing: .08em; opacity: .6; }
 .selection-marker { position: absolute; top: 50%; left: 19%; right: 19%; display: flex; justify-content: space-between; pointer-events: none; }
 .selection-marker span { width: 20px; height: 1px; background: #39352c4a; }
-.album-index { position: absolute; z-index: 4; right: 34px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 1px; }
-.album-index button { width: 30px; height: 25px; display: grid; place-items: center; padding: 0; }
+.album-index { position: absolute; z-index: 4; right: 34px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 1px; max-height: calc(100dvh - 220px); overflow-y: auto; scrollbar-width: thin; }
+.album-index button { width: 30px; height: 25px; flex-shrink: 0; display: grid; place-items: center; padding: 0; }
 .album-index button span { width: 3px; height: 3px; border-radius: 50%; background: #39352c4d; }
 .album-index button[aria-current='true'] span { height: 17px; border-radius: 3px; background: #39352c; }
 .album-index button:hover span { background: #39352c; }

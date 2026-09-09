@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { MusicArtist } from './artists';
 import type { createCollectionBox } from './collection-box';
-import { collectionSlot, collectionEase } from './record-math';
+import { collectionSlot, collectionEase, COLLECTION_PREVIEW_COUNT } from './record-math';
 import { collectionWalkArrival, collectionWalkEntries, collectionWalkPose, collectionWalkStops, WALK_SPACING } from './collection-walk-layout';
 
 export function createCollectionWalk(canvas: HTMLCanvasElement, artists: MusicArtist[],
@@ -100,15 +100,18 @@ export function createCollectionWalk(canvas: HTMLCanvasElement, artists: MusicAr
       entry.carton.rotation.set(pitch, pose.yaw, pose.roll);
       entry.carton.scale.setScalar(scale);
       const count = entry.sleeves.length;
+      const capacity = Math.min(count, COLLECTION_PREVIEW_COUNT);
       entry.sleeves.forEach((sleeve, i) => {
-        const slot = collectionSlot(i, savedPosition(entry.artistIndex), count);
-        sleeve.position.set((slot - (count - 1) / 2) * (boxes[entry.artistIndex].width - .24) / count, .18, 0);
+        const slot = collectionSlot(i, savedPosition(entry.artistIndex), count, capacity);
+        sleeve.visible = slot < capacity;
+        sleeve.position.set((slot - (capacity - 1) / 2) * (boxes[entry.artistIndex].width - .24) / capacity, .18, 0);
         sleeve.quaternion.copy(cdRotation); sleeve.scale.setScalar(.85);
       });
       const fade = (1 - collectionEase(unpack / .35)) * (1 - .7 * collectionEase((distance / WALK_SPACING - 1.4) / 1.8));
       entry.copies.forEach((copy, original) => {
         const from = original as THREE.MeshBasicMaterial, to = copy.material as THREE.MeshBasicMaterial;
-        if ('map' in from && to.map !== from.map) { to.map = from.map; to.needsUpdate = true; }
+        const map = from.userData.preview || from.map;
+        if ('map' in from && to.map !== map) { to.map = map; to.needsUpdate = true; }
         copy.material.opacity = copy.opacity * fade;
         copy.material.transparent = copy.transparent || fade < 1;
       });
