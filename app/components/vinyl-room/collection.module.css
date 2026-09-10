@@ -17,7 +17,7 @@
 .collection[data-walking='true'] .artist { position: absolute; top: 0; left: 0; margin: 0; transform-origin: 0 0; will-change: transform; }
 .collection[data-walking='true'] .caption { transition: opacity 140ms ease; }
 .collection[data-walking='true'] .walkHint { position: absolute; bottom: max(26px, env(safe-area-inset-bottom)); left: 4vw; right: 4vw; display: flex; justify-content: space-between; pointer-events: none; color: #8c806e; font-size: 10px; letter-spacing: .08em; }
-.walkHint span:first-child { display: inline-flex; align-items: center; gap: 9px; }
+.walkHint > span:first-child { display: inline-flex; align-items: center; gap: 9px; }
 .walkHint b { color: #5b5042; font-weight: 400; }
 /* A regular list remains available when motion or 3D is disabled. */
 .collection:not([data-walking='true']) .artist[data-walk-primary='false'] { display: none; }
@@ -26,6 +26,10 @@
 [data-collection-cached='true'] .boxSnapshot { display: block; }
 .caption { display: flex; gap: 20px; align-items: center; margin: -4px 16px 0; padding: 20px 0 0; border-top: 1px solid #b8ad993e; }
 .number { font-size: 8px; letter-spacing: .1em; color: #8e806c; writing-mode: vertical-rl; transform: rotate(180deg); }
+.artistName { min-width: 0; }
+.artistName h2 { overflow-wrap: anywhere; }
+.artistName h2 svg { flex-shrink: 0; }
+[lang='en'] .artistName h2 { letter-spacing: .015em; }
 .caption h2 { font-size: 25px; font-weight: 400; letter-spacing: .07em; display: flex; align-items: center; gap: 16px; margin: 0; }
 .caption h2 svg { color: #97836a; transition: transform 160ms ease; }
 .caption p { font-size: 9px; color: #8c806e; letter-spacing: .16em; margin: 6px 0 0; }

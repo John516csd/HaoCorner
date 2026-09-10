@@ -8,6 +8,8 @@ import { download, exportPosters, renderPoster } from './poster';
 import { LYRIC_MAX_RETRIES, requestLyrics } from './lyrics-request';
 import { draftKey, emptyDraft, MAX_NOTE, MAX_QUOTE, readDraft, type Draft, type LyricCandidate, type ShareFile, type VinylTrack } from './types';
 import styles from './workshop.module.css';
+import { useMusicLanguage } from '../locale';
+import { messageKey, type MusicMessage } from '../messages';
 
 type Stage = 'lyrics' | 'edit' | 'export';
 const inactive = (value: boolean) => value ? { 'aria-hidden': true as const, inert: true } : {};
@@ -15,6 +17,7 @@ const inactive = (value: boolean) => value ? { 'aria-hidden': true as const, ine
 export default function ShareWorkshop({ album, track, room, entered, onClose, onStageChange }: {
   album: VinylAlbum; track: VinylTrack; room: string; entered: boolean; onClose: () => void; onStageChange: (composing: boolean) => void;
 }) {
+  const { t } = useMusicLanguage();
   const [stage, setStage] = useState<Stage>('lyrics');
   const [draft, setDraft] = useState<Draft>(emptyDraft);
   const [hydrated, setHydrated] = useState(false);
@@ -25,11 +28,11 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
   const [loading, setLoading] = useState(true);
   const [attempt, setAttempt] = useState(0);
   const [retry, setRetry] = useState(0);
-  const [loadError, setLoadError] = useState('');
-  const [message, setMessage] = useState('');
+  const [loadError, setLoadError] = useState<MusicMessage | ''>('');
+  const [message, setMessage] = useState<MusicMessage | ''>('');
   const [storageError, setStorageError] = useState(false);
   const [preview, setPreview] = useState('');
-  const [previewError, setPreviewError] = useState('');
+  const [previewError, setPreviewError] = useState<MusicMessage | ''>('');
   const [gaps, setGaps] = useState(false);
   const [files, setFiles] = useState<ShareFile[]>([]);
   const [busy, setBusy] = useState(false);
@@ -73,7 +76,7 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
         // paste or restored draft stays put. Never discard the user's draft here.
         else if (preferOnlineLyrics.current) setManual(false);
       })
-      .catch(error => { if (!abort.signal.aborted) { setLoadError(error.message || '歌词加载失败，请重试。'); setManual(true); } })
+      .catch(error => { if (!abort.signal.aborted) { setLoadError(messageKey(error, '歌词加载失败，请重试。')); setManual(true); } })
       .finally(() => { if (!abort.signal.aborted) setLoading(false); });
     return () => abort.abort();
   }, [track.trackId, room, attempt]);
@@ -116,7 +119,7 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
     renderPoster(album, track, draft, room).then(canvas => {
       if (cancelled) return;
       setPreview(canvas.toDataURL('image/png')); setPreviewError('');
-    }).catch(error => { if (!cancelled) setPreviewError(error.message); });
+    }).catch(error => { if (!cancelled) setPreviewError(messageKey(error, '生成图片失败，请重试。')); });
     return () => { cancelled = true; };
   }, [album, track, draft, room, stage]);
 
@@ -153,7 +156,7 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
       setFiles(next); setActiveFile(0); setStage('export');
       const nativeFiles = next.map(file => new File([file.blob], file.name, { type: 'image/png' }));
       setCanShare(Boolean(navigator.canShare?.({ files: nativeFiles })));
-    } catch (error) { if (alive.current) setMessage(error instanceof Error ? error.message : '生成失败，请重试。'); }
+    } catch (error) { if (alive.current) setMessage(messageKey(error, '生成失败，请重试。')); }
     finally { if (alive.current) setBusy(false); }
   }
 
@@ -162,9 +165,9 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
     setBusy(true);
     try {
       const { zipSync, strToU8 } = await import('fflate');
-      const entries: Record<string, Uint8Array> = { '保存顺序.txt': strToU8('按 01–09 顺序选择图片：从左到右，从上到下。\n打开微信朋友圈，选择这九张图片即可拼成整张海报。\nHaoCorner · https://yanchenhao.com') };
+      const entries: Record<string, Uint8Array> = { [t('保存顺序.txt')]: strToU8(t('按 01–09 顺序选择图片：从左到右，从上到下。\n打开微信朋友圈，选择这九张图片即可拼成整张海报。\nyanchenhao.com')) };
       for (const file of files) entries[file.name] = new Uint8Array(await file.blob.arrayBuffer());
-      download(new Blob([new Uint8Array(zipSync(entries, { level: 0 }))], { type: 'application/zip' }), `HaoCorner-${track.trackId}-九宫格.zip`);
+      download(new Blob([new Uint8Array(zipSync(entries, { level: 0 }))], { type: 'application/zip' }), `HaoCorner-${track.trackId}-${t('九宫格')}.zip`);
       setMessage('已开始下载九宫格 ZIP，解压后按 01–09 顺序选图。');
     } catch { setMessage('打包失败，仍可逐张保存下方图片。'); }
     finally { setBusy(false); }
@@ -181,63 +184,63 @@ export default function ShareWorkshop({ album, track, room, entered, onClose, on
     onPointerDownCapture={() => { if (root.current) root.current.dataset.instant = 'false'; }}
     onKeyDownCapture={() => { if (root.current) root.current.dataset.instant = 'true'; lyricAnimations.current.forEach(animation => animation.cancel()); }}
     onKeyDown={event => { if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); back(); } }}>
-    <div className={styles.topbar}><button onClick={back} disabled={busy}><ArrowLeft size={16} />{stage === 'lyrics' ? '返回歌曲' : stage === 'edit' ? '重新选句' : '继续编辑'}</button><span>LYRIC SHARE <i>/</i> {stage === 'lyrics' ? '01' : stage === 'edit' ? '02' : '03'}</span></div>
+    <div className={styles.topbar}><button onClick={back} disabled={busy}><ArrowLeft size={16} />{stage === 'lyrics' ? t("返回歌曲") : stage === 'edit' ? t("重新选句") : t("继续编辑")}</button><span>LYRIC SHARE <i>/</i> {stage === 'lyrics' ? '01' : stage === 'edit' ? '02' : '03'}</span></div>
 
     <div className={styles.previewSide} {...inactive(stage === 'lyrics')}>
-      <div className={styles.previewCaption}><span>分享图预览</span><span>{draft.format === 'grid' ? 'NINE IMAGES' : 'SINGLE IMAGE'}</span></div>
-      <div ref={previewElement} className={styles.preview} data-gaps={gaps && draft.format === 'grid'} aria-label="分享图实时预览">
-        {preview && (draft.format === 'grid' ? <><div className={styles.tiles}>{Array.from({ length: 9 }, (_, index) => <div key={index} style={{ backgroundImage: `url(${preview})`, backgroundPosition: `${index % 3 * 50}% ${Math.floor(index / 3) * 50}%`, transform: gaps ? `translate(${(index % 3 - 1) * 5}px, ${(Math.floor(index / 3) - 1) * 5}px)` : 'translate(0,0)' }} />)}</div><img className={styles.wholePoster} style={{ opacity: gaps ? 0 : 1 }} src={preview} alt={`${track.trackName}九宫格完整海报`} /></> : <img src={preview} alt={`${track.trackName}歌词分享图`} />)}
-        {!preview && <span className={styles.previewLoading}>正在生成预览…</span>}
+      <div className={styles.previewCaption}><span>{t("分享图预览")}</span><span>{draft.format === 'grid' ? 'NINE IMAGES' : 'SINGLE IMAGE'}</span></div>
+      <div ref={previewElement} className={styles.preview} data-gaps={gaps && draft.format === 'grid'} aria-label={t("分享图实时预览")}>
+        {preview && (draft.format === 'grid' ? <><div className={styles.tiles}>{Array.from({ length: 9 }, (_, index) => <div key={index} style={{ backgroundImage: `url(${preview})`, backgroundPosition: `${index % 3 * 50}% ${Math.floor(index / 3) * 50}%`, transform: gaps ? `translate(${(index % 3 - 1) * 5}px, ${(Math.floor(index / 3) - 1) * 5}px)` : 'translate(0,0)' }} />)}</div><img className={styles.wholePoster} style={{ opacity: gaps ? 0 : 1 }} src={preview} alt={t('{track}九宫格完整海报', { track: track.trackName })} /></> : <img src={preview} alt={t('{track}歌词分享图', { track: track.trackName })} />)}
+        {!preview && <span className={styles.previewLoading}>{t("正在生成预览…")}</span>}
       </div>
-      <div className={styles.previewTools}>{draft.format === 'grid' ? <button aria-pressed={gaps} onClick={() => setGaps(value => !value)}><Grid2X2 size={14} />{gaps ? '查看完整海报' : '预览朋友圈间距'}</button> : <span>1080 × 1080 · 高清图片</span>}<span>{draft.format === 'grid' ? '整图 3240 × 3240' : 'PNG 格式'}</span></div>
-      {previewError && <p role="alert" className={styles.error}>{previewError}</p>}
+      <div className={styles.previewTools}>{draft.format === 'grid' ? <button aria-pressed={gaps} onClick={() => setGaps(value => !value)}><Grid2X2 size={14} />{gaps ? t("查看完整海报") : t("预览朋友圈间距")}</button> : <span>{t("1080 × 1080 · 高清图片")}</span>}<span>{draft.format === 'grid' ? t("整图 3240 × 3240") : t("PNG 格式")}</span></div>
+      {previewError && <p role="alert" className={styles.error}>{t(previewError)}</p>}
     </div>
 
     <div ref={panel} className={styles.panel}>
-      <div className={styles.panelHeading}><p className={styles.eyebrow}>{album.title} <span>·</span> {album.year}</p><h2 ref={heading} tabIndex={-1}>{stage === 'lyrics' ? track.trackName : stage === 'edit' ? '编辑分享图' : '保存分享图'}</h2><p className={styles.subtitle}>{stage === 'lyrics' ? `${album.artist} · ${durationLabel(track.trackTimeMillis)}` : stage === 'edit' ? '选择样式，添加感悟和署名（选填）。' : files.length === 9 ? '从左到右、从上到下，按 01–09 顺序选图。' : '图片已生成，可下载保存。'}</p></div>
+      <div className={styles.panelHeading}><p className={styles.eyebrow}>{album.title} <span>·</span> {album.year}</p><h2 ref={heading} tabIndex={-1}>{stage === 'lyrics' ? track.trackName : stage === 'edit' ? t("编辑分享图") : t("保存分享图")}</h2><p className={styles.subtitle}>{stage === 'lyrics' ? `${album.artist} · ${durationLabel(track.trackTimeMillis)}` : stage === 'edit' ? t("选择样式，添加感悟和署名（选填）。") : files.length === 9 ? t("从左到右、从上到下，按 01–09 顺序选图。") : t("图片已生成，可下载保存。")}</p></div>
       <div className={styles.stageStack}>
-        <section className={styles.stage} data-active={stage === 'lyrics'} {...inactive(stage !== 'lyrics')} aria-label="选择歌词">
-          <div className={styles.lyricToolbar}><span>{manual ? '粘贴你想分享的片段' : '轻点选句 · 最多 6 句'}</span><button onClick={() => {
+        <section className={styles.stage} data-active={stage === 'lyrics'} {...inactive(stage !== 'lyrics')} aria-label={t("选择歌词")}>
+          <div className={styles.lyricToolbar}><span>{manual ? t("粘贴你想分享的片段") : t("轻点选句 · 最多 6 句")}</span><button onClick={() => {
             if (manual && chosen) setSelected([]);
             preferOnlineLyrics.current = manual;
             setManual(value => !value);
-          }}>{manual ? '查看在线歌词' : '粘贴歌词'}</button></div>
+          }}>{manual ? t("查看在线歌词") : t("粘贴歌词")}</button></div>
           <div className={styles.lyricScroll} onScroll={() => lyricAnimations.current.forEach(animation => animation.cancel())}>
-            {loading && <p role="status" className={styles.serviceNote}>{retry ? `正在重试（${retry}/${LYRIC_MAX_RETRIES}）…` : '正在加载歌词…'}</p>}
-            {manual ? <><label className={styles.srOnly} htmlFor="custom-lyrics">歌词片段</label><textarea id="custom-lyrics" className={styles.manualLyrics} rows={7} placeholder="粘贴要分享的歌词，支持换行。" maxLength={MAX_QUOTE} value={draft.quote} onChange={event => { preferOnlineLyrics.current = false; update({ quote: event.target.value }); }} /><p className={styles.fieldHint}>{draft.quote.length} / {MAX_QUOTE} 字 · 保留你输入的换行</p></> : <>
-              {!loading && !chosen && candidates.length > 0 && <div className={styles.candidates}><p>找到这些版本，请确认专辑和时长。</p>{candidates.map(item => <button key={item.id} onClick={() => { setChosen(item); setSelected([]); update({ quote: '' }); }}><span>{item.title}<small>{item.album}</small></span><span>{durationLabel(item.duration * 1000)}<ArrowRight size={14} /></span></button>)}</div>}
+            {loading && <p role="status" className={styles.serviceNote}>{retry ? t('正在重试（{retry}/{max}）…', { retry, max: LYRIC_MAX_RETRIES }) : t("正在加载歌词…")}</p>}
+            {manual ? <><label className={styles.srOnly} htmlFor="custom-lyrics">{t("歌词片段")}</label><textarea id="custom-lyrics" className={styles.manualLyrics} rows={7} placeholder={t("粘贴要分享的歌词，支持换行。")} maxLength={MAX_QUOTE} value={draft.quote} onChange={event => { preferOnlineLyrics.current = false; update({ quote: event.target.value }); }} /><p className={styles.fieldHint}>{t('{count} / {max} 字 · 保留你输入的换行', { count: draft.quote.length, max: MAX_QUOTE })}</p></> : <>
+              {!loading && !chosen && candidates.length > 0 && <div className={styles.candidates}><p>{t("找到这些版本，请确认专辑和时长。")}</p>{candidates.map(item => <button key={item.id} onClick={() => { setChosen(item); setSelected([]); update({ quote: '' }); }}><span>{item.title}<small>{item.album}</small></span><span>{durationLabel(item.duration * 1000)}<ArrowRight size={14} /></span></button>)}</div>}
               {entered && !loading && chosen && <ol ref={lyricList} key={chosen.id} className={styles.lyricLines}>{lines.map((line, index) => <li key={index}><button aria-pressed={selected.includes(index)} onClick={() => selectLine(index)}><span>{line}</span><span className={styles.lineCheck}>{selected.includes(index) ? <Check size={15} /> : '+'}</span></button></li>)}</ol>}
             </>}
-            {loadError && <p className={styles.serviceNote}>{loadError} <button disabled={loading} onClick={retryLyrics}>重试</button></p>}
-            {track.musicUrl && <a className={`${styles.listen} ${styles.mobileListen}`} href={track.musicUrl} target="_blank" rel="noreferrer">在 Apple Music 听这首歌 <ArrowUpRight size={12} /></a>}
+            {loadError && <p className={styles.serviceNote}>{t(loadError)} <button disabled={loading} onClick={retryLyrics}>{t("重试")}</button></p>}
+            {track.musicUrl && <a className={`${styles.listen} ${styles.mobileListen}`} href={track.musicUrl} target="_blank" rel="noreferrer">{t("在 Apple Music 听这首歌")} <ArrowUpRight size={12} /></a>}
           </div>
-          {!loading && chosen && !manual && <p className={styles.source}>歌词来自 <a href={`https://lrclib.net/api/get/${chosen.id}`} target="_blank" rel="noreferrer">LRCLIB <ArrowUpRight size={10} /></a> · {chosen.album}<button onClick={() => { setChosen(null); setSelected([]); update({ quote: '' }); }}>更换版本</button></p>}
-          <div className={styles.stageFooter}><p className={styles.selectionCount}>{draft.quote.trim() ? `已选 ${draft.quote.length} 字` : '请先选择歌词'}</p><button className={styles.primary} disabled={!draft.quote.trim()} onClick={() => { setStage('edit'); setMessage(''); }}>下一步 <ArrowRight size={16} /></button></div>
-          {track.musicUrl && <a className={`${styles.listen} ${styles.desktopListen}`} href={track.musicUrl} target="_blank" rel="noreferrer">在 Apple Music 听这首歌 <ArrowUpRight size={12} /></a>}
+          {!loading && chosen && !manual && <p className={styles.source}>{t("歌词来自")} <a href={`https://lrclib.net/api/get/${chosen.id}`} target="_blank" rel="noreferrer">LRCLIB <ArrowUpRight size={10} /></a> · {chosen.album}<button onClick={() => { setChosen(null); setSelected([]); update({ quote: '' }); }}>{t("更换版本")}</button></p>}
+          <div className={styles.stageFooter}><p className={styles.selectionCount}>{draft.quote.trim() ? t('已选 {count} 字', { count: draft.quote.length }) : t("请先选择歌词")}</p><button className={styles.primary} disabled={!draft.quote.trim()} onClick={() => { setStage('edit'); setMessage(''); }}>{t("下一步")} <ArrowRight size={16} /></button></div>
+          {track.musicUrl && <a className={`${styles.listen} ${styles.desktopListen}`} href={track.musicUrl} target="_blank" rel="noreferrer">{t("在 Apple Music 听这首歌")} <ArrowUpRight size={12} /></a>}
         </section>
 
-        <section className={styles.stage} data-active={stage === 'edit'} {...inactive(stage !== 'edit')} aria-label="编辑分享图">
+        <section className={styles.stage} data-active={stage === 'edit'} {...inactive(stage !== 'edit')} aria-label={t("编辑分享图")}>
           <div className={styles.editScroll}>
-            <div className={styles.segment} role="group" aria-label="分享形式"><span style={{ transform: draft.format === 'grid' ? 'translateX(100%)' : 'translateX(0)' }} />{(['single', 'grid'] as const).map(format => <button key={format} aria-pressed={draft.format === format} onClick={() => update({ format })}>{format === 'single' ? <ImageIcon size={15} /> : <Grid2X2 size={15} />}{format === 'single' ? '单张图片' : '九宫格海报'}</button>)}</div>
-            {draft.format === 'single' ? <div className={styles.stylePicker} role="group" aria-label="单图样式"><button aria-pressed={draft.style === 'color'} onClick={() => update({ style: 'color' })}><i />纯色背景</button><button aria-pressed={draft.style === 'ambient'} onClick={() => update({ style: 'ambient' })}><i />渐变背景</button></div> : <p className={styles.formatNote}>专辑封面铺满画面，歌词和感悟显示在底部。</p>}
-            <blockquote className={styles.selectedQuote}>{draft.quote}<button onClick={() => setStage('lyrics')} aria-label="重新选择歌词"><RotateCcw size={13} /></button></blockquote>
-            <label className={styles.fieldLabel} htmlFor="share-note">感悟 <span>选填</span></label><textarea id="share-note" rows={3} maxLength={MAX_NOTE} placeholder="输入感悟，可留空" value={draft.note} onChange={event => update({ note: event.target.value })} /><p className={styles.fieldHint}>{draft.note.length} / {MAX_NOTE}</p>
-            <div className={styles.fieldRow}><div><label className={styles.fieldLabel} htmlFor="share-signature">署名 <span>选填</span></label><input id="share-signature" maxLength={24} placeholder="输入名字或日期" value={draft.signature} onChange={event => update({ signature: event.target.value })} /></div></div>
+            <div className={styles.segment} role="group" aria-label={t("分享形式")}><span style={{ transform: draft.format === 'grid' ? 'translateX(100%)' : 'translateX(0)' }} />{(['single', 'grid'] as const).map(format => <button key={format} aria-pressed={draft.format === format} onClick={() => update({ format })}>{format === 'single' ? <ImageIcon size={15} /> : <Grid2X2 size={15} />}{format === 'single' ? t("单张图片") : t("九宫格海报")}</button>)}</div>
+            {draft.format === 'single' ? <div className={styles.stylePicker} role="group" aria-label={t("单图样式")}><button aria-pressed={draft.style === 'color'} onClick={() => update({ style: 'color' })}><i />{t("纯色背景")}</button><button aria-pressed={draft.style === 'ambient'} onClick={() => update({ style: 'ambient' })}><i />{t("渐变背景")}</button></div> : <p className={styles.formatNote}>{t("专辑封面铺满画面，歌词和感悟显示在底部。")}</p>}
+            <blockquote className={styles.selectedQuote}>{draft.quote}<button onClick={() => setStage('lyrics')} aria-label={t("重新选择歌词")}><RotateCcw size={13} /></button></blockquote>
+            <label className={styles.fieldLabel} htmlFor="share-note">{t("感悟")} <span>{t("选填")}</span></label><textarea id="share-note" rows={3} maxLength={MAX_NOTE} placeholder={t("输入感悟，可留空")} value={draft.note} onChange={event => update({ note: event.target.value })} /><p className={styles.fieldHint}>{draft.note.length} / {MAX_NOTE}</p>
+            <div className={styles.fieldRow}><div><label className={styles.fieldLabel} htmlFor="share-signature">{t("署名")} <span>{t("选填")}</span></label><input id="share-signature" maxLength={24} placeholder={t("输入名字或日期")} value={draft.signature} onChange={event => update({ signature: event.target.value })} /></div></div>
           </div>
-          <div className={styles.stageFooter}><p className={styles.draftNote}>{storageError ? '浏览器未能保存草稿，请暂时保留页面。' : '草稿已自动保存'}<span>扫码查看专辑</span></p><button className={styles.primary} disabled={busy || Boolean(previewError)} onClick={generate}>{busy ? '正在生成…' : '生成分享图'} <ArrowRight size={16} /></button></div>
+          <div className={styles.stageFooter}><p className={styles.draftNote}>{storageError ? t("浏览器未能保存草稿，请暂时保留页面。") : t("草稿已自动保存")}<span>{t("扫码查看专辑")}</span></p><button className={styles.primary} disabled={busy || Boolean(previewError)} onClick={generate}>{busy ? t("正在生成…") : t("生成分享图")} <ArrowRight size={16} /></button></div>
         </section>
 
-        <section className={styles.stage} data-active={stage === 'export'} {...inactive(stage !== 'export')} aria-label="导出分享图">
+        <section className={styles.stage} data-active={stage === 'export'} {...inactive(stage !== 'export')} aria-label={t("导出分享图")}>
           <div className={styles.exportScroll}>
-            <div className={styles.exportActions}><button className={styles.primary} disabled={busy} onClick={saveAll}><Download size={16} />{busy ? '正在打包…' : files.length === 9 ? '下载九宫格 ZIP' : '下载高清图片'}</button>{canShare && <button className={styles.secondary} onClick={nativeShare}><Share2 size={16} />系统分享</button>}</div>
-            <p className={styles.saveHelp}>保存后打开微信朋友圈，选择图片发布。手机也可以长按下方图片保存。</p>
-            {files.length === 9 && <div className={styles.fileGrid} aria-label="九宫格保存顺序">{files.map((file, index) => <button key={file.name} aria-pressed={activeFile === index} aria-label={`查看第 ${index + 1} 张图片`} onClick={() => setActiveFile(index)}><img src={file.url} alt={`第 ${index + 1} 张`} /><span>{String(index + 1).padStart(2, '0')}</span></button>)}</div>}
-            {files[activeFile] && <div className={styles.saveImage}><div><span>{files.length === 9 ? `第 ${String(activeFile + 1).padStart(2, '0')} / 09 张` : '高清原图'}</span><button onClick={() => download(files[activeFile].blob, files[activeFile].name)}>保存这张 <Download size={13} /></button></div><img src={files[activeFile].url} alt={`长按保存：${track.trackName}分享图 ${activeFile + 1}`} /></div>}
+            <div className={styles.exportActions}><button className={styles.primary} disabled={busy} onClick={saveAll}><Download size={16} />{busy ? t("正在打包…") : files.length === 9 ? t("下载九宫格 ZIP") : t("下载高清图片")}</button>{canShare && <button className={styles.secondary} onClick={nativeShare}><Share2 size={16} />{t("系统分享")}</button>}</div>
+            <p className={styles.saveHelp}>{t("保存后打开微信朋友圈，选择图片发布。手机也可以长按下方图片保存。")}</p>
+            {files.length === 9 && <div className={styles.fileGrid} aria-label={t("九宫格保存顺序")}>{files.map((file, index) => <button key={file.name} aria-pressed={activeFile === index} aria-label={t('查看第 {number} 张图片', { number: index + 1 })} onClick={() => setActiveFile(index)}><img src={file.url} alt={t('第 {number} 张', { number: index + 1 })} /><span>{String(index + 1).padStart(2, '0')}</span></button>)}</div>}
+            {files[activeFile] && <div className={styles.saveImage}><div><span>{files.length === 9 ? t('第 {number} / 09 张', { number: String(activeFile + 1).padStart(2, '0') }) : t("高清原图")}</span><button onClick={() => download(files[activeFile].blob, files[activeFile].name)}>{t("保存这张")} <Download size={13} /></button></div><img src={files[activeFile].url} alt={t('长按保存：{track}分享图 {number}', { track: track.trackName, number: activeFile + 1 })} /></div>}
           </div>
-          <p className={styles.privateNote}>感悟仅保存在你的设备和导出的图片里。</p>
+          <p className={styles.privateNote}>{t("感悟仅保存在你的设备和导出的图片里。")}</p>
         </section>
       </div>
-      <p className={styles.message} role="status" aria-live="polite">{message}</p>
+      <p className={styles.message} role="status" aria-live="polite">{message ? t(message) : ''}</p>
     </div>
   </div>;
 }

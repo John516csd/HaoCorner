@@ -1,0 +1,11 @@
+.switcher { position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(2, 44px); padding: 3px; border: 1px solid #9a8a702e; border-radius: 8px; background: #e5ded04d; pointer-events: auto; }
+.indicator { position: absolute; z-index: -1; top: 3px; bottom: 3px; left: 3px; width: 44px; border-radius: 5px; background: #fcf9f0; box-shadow: 0 1px 3px #4f3c2310; transition: transform 180ms cubic-bezier(.23,1,.32,1); }
+.switcher[data-locale='en'] .indicator { transform: translateX(100%); }
+.switcher button { min-height: 38px; padding: 0; border-radius: 5px; color: #8c806e; font-size: 11px; font-weight: 500; letter-spacing: .04em; transition: color 160ms ease, transform 120ms cubic-bezier(.23,1,.32,1); }
+.switcher button[aria-pressed='true'] { color: #39352c; }
+.switcher button:active { transform: scale(.96); }
+.switcher button:focus-visible { outline: 2px solid #8e6f44; outline-offset: -2px; }
+@media (hover:hover) { .switcher button:hover { color: #39352c; } }
+@media (pointer:coarse), (max-width:759px) { .switcher button { min-height: 44px; } }
+[data-instant='true'] .switcher *, .switcher:has(:focus-visible) * { transition: none; }
+@media (prefers-reduced-motion:reduce) { .switcher * { transition: none; } }

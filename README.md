@@ -16,6 +16,7 @@
 ## 黑胶室
 
 - 收藏入口：`/music`，按歌手分箱，现有 10 位歌手、365 个专辑发行版本。纸箱最多展示 12 张唱片，宽度不再随完整目录增长；点击开箱仍可浏览该歌手全部专辑，返回时保留收藏页滚动位置。
+- 中英文：收藏室右上角可切换「中文 / EN」，默认中文，选择保存在本机并同步到其他已打开的音乐页面。界面文案集中在 `app/components/vinyl-room/messages.ts`；专辑、歌曲、歌词及用户填写的内容保留原文。运行 `node --test scripts/check-music-language.mjs` 检查翻译、数量格式和目录说明。
 - 共用组件：`app/components/vinyl-room`，路由组 `app/(records)` 保留同一个 Three.js 画布，让开箱与唱片架连续过渡；直接访问歌手地址或歌曲二维码仍进入唱片架。专辑详情点击空白处或按 Esc 返回。
 - 添加歌手：准备专辑 JSON 和本地封面后，在 `app/components/vinyl-room/artists.ts` 登记一次，收藏箱、切换菜单、静态路由、Sitemap 和歌词接口自动使用该数据；可选 `sticker` 指向歌手标识贴纸。运行 `node --experimental-strip-types scripts/check-music-collection.mjs` 检查登记和开箱阶段顺序。
 - 目录：`app/modules/music-artists/albums.json`，共 5129 条曲目，包含录音室、EP、现场、精选、原声带及不同内容版本；范围和逐张来源见该目录的 `SOURCES.md`，地区不可读的歌曲不伪造直链。

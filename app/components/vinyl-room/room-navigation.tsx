@@ -7,12 +7,15 @@ import type { ArtistRoomTheme } from './artist-atmosphere';
 import styles from './room-navigation.module.css';
 
 import { musicArtists as rooms } from './artists';
+import { useMusicLanguage } from './locale';
+import { artistDisplayName } from './messages';
 
 export default function RoomNavigation({ room, artist, artistEnglish }: {
   room: ArtistRoomTheme;
   artist: string;
   artistEnglish: string;
 }) {
+  const { locale, t } = useMusicLanguage();
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const root = useRef<HTMLElement>(null);
@@ -64,13 +67,13 @@ export default function RoomNavigation({ room, artist, artistEnglish }: {
   }
 
   return (
-    <nav ref={root} className={styles.navigation} aria-label="站点导航" data-open={open}
+    <nav ref={root} className={styles.navigation} aria-label={t("站点导航")} data-open={open}
       onPointerDownCapture={event => { event.currentTarget.dataset.instant = 'false'; }}
       onKeyDownCapture={event => { event.currentTarget.dataset.instant = 'true'; }}
       onKeyDown={onKeyDown}
       onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) close(); }}>
       <button ref={trigger} type="button" className={styles.trigger} aria-expanded={open} aria-controls={panelId}
-        aria-label={`${artist} · 切换页面`} onClick={() => setOpen(value => !value)}>
+        aria-label={t('{artist} · 切换页面', { artist: artistDisplayName({ name: artist, english: artistEnglish }, locale) })} onClick={() => setOpen(value => !value)}>
         <span className={styles.english}>{artistEnglish}</span>
         {artist.toUpperCase() !== artistEnglish && <span className={styles.chinese}>{artist}</span>}
         <ChevronDown size={13} strokeWidth={1.5} className={styles.chevron} aria-hidden="true" />
@@ -84,7 +87,7 @@ export default function RoomNavigation({ room, artist, artistEnglish }: {
                 if (room === item.id) { event.preventDefault(); close(true); } else close();
               }}>
               <span className={styles.sleeve}><img src={item.cover} width={40} height={40} alt="" /></span>
-              <span className={styles.label}><span>{item.name}</span><small>{item.english}</small></span>
+              <span className={styles.label}><span>{artistDisplayName(item, locale)}</span><small>{locale === 'en' ? item.name : item.english}</small></span>
               {room === item.id ? <Check size={15} strokeWidth={1.5} className={styles.current} aria-hidden="true" />
                 : <ArrowUpRight size={15} strokeWidth={1.5} className={styles.arrow} aria-hidden="true" />}
             </Link>
@@ -92,12 +95,12 @@ export default function RoomNavigation({ room, artist, artistEnglish }: {
         </div>
         <Link href="/music" scroll={false} className={styles.home} onClick={() => close()}>
           <PackageOpen size={17} strokeWidth={1.3} aria-hidden="true" />
-          <span className={styles.label}><span>唱片收藏室</span><small>ALL ARTISTS</small></span>
+          <span className={styles.label}><span>{t("唱片收藏室")}</span><small>ALL ARTISTS</small></span>
           <ArrowUpRight size={15} strokeWidth={1.5} className={styles.arrow} aria-hidden="true" />
         </Link>
         <Link href="/" className={styles.home} onClick={() => close()}>
           <House size={17} strokeWidth={1.3} aria-hidden="true" />
-          <span className={styles.label}><span>个人主页</span><small>yanchenhao.com</small></span>
+          <span className={styles.label}><span>{t("个人主页")}</span><small>yanchenhao.com</small></span>
           <ArrowUpRight size={15} strokeWidth={1.5} className={styles.arrow} aria-hidden="true" />
         </Link>
       </div>
